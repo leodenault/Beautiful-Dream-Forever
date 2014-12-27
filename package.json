@@ -1,0 +1,23 @@
+{
+  "name": "fashion",
+  "version": "0.0.1",
+  "author": "Curly and Lion",
+  "description": "A fashion game",
+  "main": "server.js",
+  
+  "scripts": {
+    "start": "node server.js"
+  },
+  
+  "dependencies": {
+        "phaser": "2.2.1",
+        "express": "4.10.6"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "repository": {
+    "type": "git"
+  }
+}
+

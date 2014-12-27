@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Fashion</title>
+        
+        <meta name="description" content="A game about fashion."/>
+        <meta name="keywords" content="fashion"/>
+        <meta name="author" content="Curly and Lion"/>
+        
+        <script src="static/js/phaser-no-physics.min.js"></script>
+    </head>
+    <body>
+
+    <script type="text/javascript">
+
+    window.onload = function() {
+
+        var game = new Phaser.Game(1024, 600, Phaser.AUTO, '', { preload: preload, create: create });
+
+        function preload () {
+            game.load.image('lol', 'static/img/finishLineRobot.png');
+        }
+
+        function create () {
+            var lol = game.add.sprite(game.world.centerX, game.world.centerY, 'lol');
+            lol.anchor.setTo(0.5, 0.5);
+        }
+
+    };
+
+    </script>
+
+    </body>
+</html>
