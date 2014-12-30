@@ -7,7 +7,7 @@ app.use('/static', express.static(__dirname + '/static'))
 app.get("/", function (req, res) {
 	console.log(req.url);
     res.writeHead(200);
-    res.write(fs.readFileSync(__dirname + "/tutorial/part1.html"));
+    res.write(fs.readFileSync(__dirname + "/index.html"));
     res.end();
 });
 
