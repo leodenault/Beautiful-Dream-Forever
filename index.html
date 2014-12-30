@@ -24,20 +24,20 @@
 		}
 
 		function create () {
-			var wardrobe_button = game.add.button(0, 600, 'wardrobe_button', clicked);
+			var wardrobe_button = game.add.button(74, 600, 'wardrobe_button', clicked);
 			wardrobe_button.name = "Wardrobe";
 			wardrobe_button.anchor.setTo(0, 1);
-			wardrobe_button.scale.setTo(0.35, 0.35);
+			wardrobe_button.scale.setTo(0.64, 0.66);
 			
 			var options_button = game.add.button(game.world.centerX, 600, 'options_button', clicked);
 			options_button.name = "Options";
 			options_button.anchor.setTo(0.5, 1);
-			options_button.scale.setTo(0.35, 0.35);
+			options_button.scale.setTo(0.64, 0.66);
 			
-			var back_button = game.add.button(1024, 600, 'back_button', clicked);
+			var back_button = game.add.button(950, 600, 'back_button', clicked);
 			back_button.name = "Back";
 			back_button.anchor.setTo(1, 1);
-			back_button.scale.setTo(0.35, 0.35);
+			back_button.scale.setTo(0.64, 0.66);
 		}
 
 		function clicked(button) {
