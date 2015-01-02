@@ -1,21 +1,21 @@
 #menu {
 	position: absolute;
-	width: 1024px;
-	height: 600px;
+	width: 800px;
+	height: 450px;
 	overflow: hidden;
 }
 
 #main-menu {
 	position: absolute;
 	width: inherit;
-	bottom: -4px;
+	bottom: -18px;
 	height: 106px;
 }
 
 #main-menu > div {
 	text-align: center;
 	position: absolute;
-	bottom: -85px;
+	bottom: -60px;
 	width: inherit;
 }
 
@@ -23,21 +23,22 @@
 	-webkit-animation: show 0.5s;
 	-webkit-animation-fill-mode: forwards;
 	animation: show 0.5s;
-	animation-fill-mode: { bottom: -4px; }
+	animation-fill-mode: forwards;
 }
 
 @keyframes show {
-	from { bottom: -85px; }
-    to { bottom: -4px; }
+	from { bottom: -60px; }
+    to { bottom: 0px; }
 }
 
 @-webkit-keyframes show {
-	from { bottom: -85px; }
-    to { bottom: -4px; }
+	from { bottom: -60px; }
+    to { bottom: 0px; }
 }
 
 .button {
 	cursor: pointer;
+	box-shadow: 10px 10px 10px #888888;
 }
 
 .options {
