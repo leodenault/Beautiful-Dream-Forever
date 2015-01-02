@@ -12,14 +12,14 @@
 #main-menu {
 	position: absolute;
 	width: inherit;
-	bottom: -18px;
+	bottom: -4px;
 	height: 106px;
 }
 
 #main-menu > div {
 	text-align: center;
 	position: absolute;
-	bottom: -60px;
+	bottom: -68px;
 	width: inherit;
 }
 

@@ -4,7 +4,7 @@ $(document).ready(function () {
 		$("#main-menu > div").animate({bottom: '0px'});
 	});
 	mainMenu.mouseleave(function () {
-		$("#main-menu > div").animate({bottom: '-60px'});
+		$("#main-menu > div").animate({bottom: '-68px'});
 	});
 });
 
