@@ -1,3 +1,7 @@
+#canvas > canvas {
+	border: 1px solid black;
+}
+
 #menu {
 	position: absolute;
 	width: 800px;
@@ -19,26 +23,9 @@
 	width: inherit;
 }
 
-#main-menu:hover > div {
-	-webkit-animation: show 0.5s;
-	-webkit-animation-fill-mode: forwards;
-	animation: show 0.5s;
-	animation-fill-mode: forwards;
-}
-
-@keyframes show {
-	from { bottom: -60px; }
-    to { bottom: 0px; }
-}
-
-@-webkit-keyframes show {
-	from { bottom: -60px; }
-    to { bottom: 0px; }
-}
-
 .button {
 	cursor: pointer;
-	box-shadow: 10px 10px 10px rgba(0,0,0,192);
+	box-shadow: 10px 10px 10px rgba(0,0,0,0.75);
 }
 
 .options {

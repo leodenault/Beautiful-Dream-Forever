@@ -9,8 +9,10 @@
 		<meta name="author" content="Curly and Lion"/>
 		
 		<link rel="stylesheet" type="text/css" href="static/css/ui.css"></link>
-		<script src="static/js/phaser-no-physics.min.js"></script>
-		</head>
+		<script src="static/js/lib/phaser/phaser-no-physics.min.js"></script>
+		<script src="static/js/lib/jquery/jquery.min.js"></script>
+		<script src="static/js/ui/main-menu.js"></script>
+	</head>
 	<body>
 	
 	<div id="container">
@@ -39,34 +41,12 @@
 		var game = new Phaser.Game(800, 450, Phaser.CANVAS, 'canvas', { preload: preload, create: create });
 
 		function preload () {
-			/*game.load.image('back_button', 'static/img/ui/options_tab_ui_back.png');
-			game.load.image('options_button', 'static/img/ui/options_tab_ui_options.png');
-			game.load.image('wardrobe_button', 'static/img/ui/options_tab_ui_wardrobe.png');*/
 			game.load.image('background', 'static/img/shop_formal.png');
 		}
 
 		function create () {
 			var background = game.add.sprite(0, 0, 'background');
-			/*var wardrobe_button = game.add.button(74, 600, 'wardrobe_button', clicked);
-			wardrobe_button.name = "Wardrobe";
-			wardrobe_button.anchor.setTo(0, 1);
-			wardrobe_button.scale.setTo(0.64, 0.66);
-			
-			var options_button = game.add.button(game.world.centerX, 600, 'options_button', clicked);
-			options_button.name = "Options";
-			options_button.anchor.setTo(0.5, 1);
-			options_button.scale.setTo(0.64, 0.66);
-			
-			var back_button = game.add.button(950, 600, 'back_button', clicked);
-			back_button.name = "Back";
-			back_button.anchor.setTo(1, 1);
-			back_button.scale.setTo(0.64, 0.66);*/
 		}
-
-		function clicked(button) {
-			//alert(button.name);
-		}
-
 	};
 
 	</script>
