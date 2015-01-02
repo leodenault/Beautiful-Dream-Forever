@@ -1,0 +1,45 @@
+#menu {
+	position: absolute;
+	width: 1024px;
+	height: 600px;
+	overflow: hidden;
+}
+
+#main-menu {
+	position: absolute;
+	width: inherit;
+	bottom: -4px;
+	height: 106px;
+}
+
+#main-menu > div {
+	text-align: center;
+	position: absolute;
+	bottom: -85px;
+	width: inherit;
+}
+
+#main-menu:hover > div {
+	-webkit-animation: show 0.5s;
+	-webkit-animation-fill-mode: forwards;
+	animation: show 0.5s;
+	animation-fill-mode: { bottom: -4px; }
+}
+
+@keyframes show {
+	from { bottom: -85px; }
+    to { bottom: -4px; }
+}
+
+@-webkit-keyframes show {
+	from { bottom: -85px; }
+    to { bottom: -4px; }
+}
+
+.button {
+	cursor: pointer;
+}
+
+.options {
+	margin: 0 10%;
+}

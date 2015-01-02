@@ -7,24 +7,45 @@
 		<meta name="description" content="A game about fashion."/>
 		<meta name="keywords" content="fashion"/>
 		<meta name="author" content="Curly and Lion"/>
+		
+		<link rel="stylesheet" type="text/css" href="static/css/ui.css"></link>
 		<script src="static/js/phaser-no-physics.min.js"></script>
 		</head>
 	<body>
+	
+	<div id="container">
+		<div id="menu">
+			<div id="main-menu">
+				<div>
+					<img src="static/img/ui/options_tab_ui_wardrobe.png" width="235px" height="102px"
+						class="button wardrobe"></img>
+					<img id="options" src="static/img/ui/options_tab_ui_options.png" width="235px" height="102px"
+						class="button options"></img>
+					<img src="static/img/ui/options_tab_ui_back.png" width="235px" height="102px"
+						class="button back"></img>
+				</div>
+			</div>
+		</div>
+		<div id="canvas"></div>
+	</div>
 
 	<script type="text/javascript">
 
 	window.onload = function() {
+		document.getElementById("options").addEventListener("click", function (event) {
+			alert("LOL");
+		});
 
-		var game = new Phaser.Game(1024, 600, Phaser.AUTO, '', { preload: preload, create: create });
+		var game = new Phaser.Game(1024, 600, Phaser.CANVAS, 'canvas', { preload: preload, create: create });
 
 		function preload () {
-			game.load.image('back_button', 'static/img/ui/options_tab_ui_back.png');
+			/*game.load.image('back_button', 'static/img/ui/options_tab_ui_back.png');
 			game.load.image('options_button', 'static/img/ui/options_tab_ui_options.png');
-			game.load.image('wardrobe_button', 'static/img/ui/options_tab_ui_wardrobe.png');
+			game.load.image('wardrobe_button', 'static/img/ui/options_tab_ui_wardrobe.png');*/
 		}
 
 		function create () {
-			var wardrobe_button = game.add.button(74, 600, 'wardrobe_button', clicked);
+			/*var wardrobe_button = game.add.button(74, 600, 'wardrobe_button', clicked);
 			wardrobe_button.name = "Wardrobe";
 			wardrobe_button.anchor.setTo(0, 1);
 			wardrobe_button.scale.setTo(0.64, 0.66);
@@ -37,11 +58,11 @@
 			var back_button = game.add.button(950, 600, 'back_button', clicked);
 			back_button.name = "Back";
 			back_button.anchor.setTo(1, 1);
-			back_button.scale.setTo(0.64, 0.66);
+			back_button.scale.setTo(0.64, 0.66);*/
 		}
 
 		function clicked(button) {
-			alert(button.name);
+			//alert(button.name);
 		}
 
 	};
