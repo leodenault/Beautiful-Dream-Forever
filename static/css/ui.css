@@ -38,7 +38,7 @@
 
 .button {
 	cursor: pointer;
-	box-shadow: 10px 10px 10px #888888;
+	box-shadow: 10px 10px 10px rgba(0,0,0,192);
 }
 
 .options {

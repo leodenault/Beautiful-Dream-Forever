@@ -42,9 +42,11 @@
 			/*game.load.image('back_button', 'static/img/ui/options_tab_ui_back.png');
 			game.load.image('options_button', 'static/img/ui/options_tab_ui_options.png');
 			game.load.image('wardrobe_button', 'static/img/ui/options_tab_ui_wardrobe.png');*/
+			game.load.image('background', 'static/img/shop_formal.png');
 		}
 
 		function create () {
+			var background = game.add.sprite(0, 0, 'background');
 			/*var wardrobe_button = game.add.button(74, 600, 'wardrobe_button', clicked);
 			wardrobe_button.name = "Wardrobe";
 			wardrobe_button.anchor.setTo(0, 1);
