@@ -12,6 +12,7 @@
 		<script src="static/js/lib/phaser/phaser-no-physics.min.js"></script>
 		<script src="static/js/lib/jquery/jquery.min.js"></script>
 		<script src="static/js/ui/main-menu.js"></script>
+		<script src="static/js/ui/options-menu.js"></script>
 	</head>
 	<body>
 	
@@ -20,11 +21,28 @@
 			<div id="main-menu">
 				<div>
 					<img src="static/img/ui/options_tab_ui_wardrobe.png" width="182px" height="88px"
-						class="button wardrobe"></img>
+						class="button tab"></img>
 					<img id="options" src="static/img/ui/options_tab_ui_options.png" width="182px" height="88px"
-						class="button options"></img>
+						class="button tab options"></img>
 					<img src="static/img/ui/options_tab_ui_back.png" width="182px" height="88px"
-						class="button back"></img>
+						class="button tab"></img>
+				</div>
+			</div>
+			<div id="outer-options-menu" class="outer modal">
+				<div class="middle">
+					<div id="options-menu" class="inner">
+						<div class="outer">
+							<div class="middle">
+								<div class="inner">
+									<ul>
+										<li><span class="button">SAVE</span></li>
+										<li><span id="music" class="button music">MUSIC</span></li>
+										<li><span id="exit" class="button">EXIT</span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -34,10 +52,6 @@
 	<script type="text/javascript">
 
 	window.onload = function() {
-		document.getElementById("options").addEventListener("click", function (event) {
-			alert("LOL");
-		});
-
 		var game = new Phaser.Game(800, 450, Phaser.CANVAS, 'canvas', { preload: preload, create: create });
 
 		function preload () {

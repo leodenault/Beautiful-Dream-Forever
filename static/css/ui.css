@@ -4,8 +4,8 @@
 
 #menu {
 	position: absolute;
-	width: 800px;
-	height: 450px;
+	width: 801px;
+	height: 451px;
 	overflow: hidden;
 }
 
@@ -23,11 +23,77 @@
 	width: inherit;
 }
 
+#options-menu {
+	width: 492px;
+	height: 292px;
+	border: 8px solid #c41e68;
+	border-radius: 25px;
+	background: -webkit-linear-gradient(top, #fef28c 41%, rgba(254,242,140,0.5));
+	background: -moz-linear-gradient(top, #fef28c 41%, rgba(254,242,140,0.5));
+	background: linear-gradient(top, #fef28c 41%, rgba(254,242,140,0.5));
+}
+
+#options-menu ul {
+	padding: 0;
+	text-align: center;
+	display: inline-block;
+}
+
+#options-menu li {
+	list-style-type: none;
+	font-family: arial;
+	font-weight: bold;
+	font-size: 40px;
+	color: #c41e68;
+	line-height: 32px;
+}
+
+#options-menu li span:hover {
+	color: #e6408a;
+}
+
+.modal {
+	background-color: rgba(0,0,0,0.3);
+}
+
 .button {
 	cursor: pointer;
+	display: inline-block;
+}
+
+.tab {
 	box-shadow: 10px 10px 10px rgba(0,0,0,0.75);
 }
 
 .options {
 	margin: 0 10%;
+}
+
+.music {
+	margin: 47px 0;
+}
+
+.music-off {
+	color: #7b7273;
+}
+
+#options-menu li span.music-off:hover {
+	color: #aba2a3;
+}
+
+.outer {
+	display: table;
+	position: absolute;
+	height: inherit;
+	width: inherit;
+}
+
+.middle {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.inner {
+	margin: 0 auto;
+	text-align: center;
 }
