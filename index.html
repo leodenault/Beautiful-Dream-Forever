@@ -9,61 +9,51 @@
 		<meta name="author" content="Curly and Lion"/>
 		
 		<link rel="stylesheet" type="text/css" href="static/css/ui.css"></link>
+		
+		<!-- Libraries -->
 		<script src="static/js/lib/phaser/phaser-no-physics.min.js"></script>
 		<script src="static/js/lib/jquery/jquery.min.js"></script>
+		
+		<!-- Core Code -->
+		<script src="static/js/states/main-menu.js"></script>
+		<script src="static/js/states/main.js"></script>
+		
+		<!-- UI -->
 		<script src="static/js/ui/main-menu.js"></script>
 		<script src="static/js/ui/options-menu.js"></script>
 	</head>
 	<body>
-	
-	<div id="container">
-		<div id="menu">
-			<div id="main-menu">
-				<div>
-					<img src="static/img/ui/options_tab_ui_wardrobe.png" width="182px" height="88px"
-						class="button tab"></img>
-					<img id="options" src="static/img/ui/options_tab_ui_options.png" width="182px" height="88px"
-						class="button tab options"></img>
-					<img src="static/img/ui/options_tab_ui_back.png" width="182px" height="88px"
-						class="button tab"></img>
+		<div id="container">
+			<div id="menu">
+				<div id="main-menu">
+					<div>
+						<img src="static/img/ui/options_tab_ui_wardrobe.png" width="182px" height="88px"
+							class="button tab"></img>
+						<img id="options" src="static/img/ui/options_tab_ui_options.png" width="182px" height="88px"
+							class="button tab options"></img>
+						<img src="static/img/ui/options_tab_ui_back.png" width="182px" height="88px"
+							class="button tab"></img>
+					</div>
 				</div>
-			</div>
-			<div id="outer-options-menu" class="outer modal">
-				<div class="middle">
-					<div id="options-menu" class="inner">
-						<div class="outer">
-							<div class="middle">
-								<div class="inner">
-									<ul>
-										<li><span class="button">SAVE</span></li>
-										<li><span id="music" class="button music">MUSIC</span></li>
-										<li><span id="exit" class="button">EXIT</span></li>
-									</ul>
+				<div id="outer-options-menu" class="outer modal">
+					<div class="middle">
+						<div id="options-menu" class="inner">
+							<div class="outer">
+								<div class="middle">
+									<div class="inner">
+										<ul>
+											<li><span class="button">SAVE</span></li>
+											<li><span id="music" class="button music">MUSIC</span></li>
+											<li><span id="exit" class="button">EXIT</span></li>
+										</ul>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			<div id="canvas"></div>
 		</div>
-		<div id="canvas"></div>
-	</div>
-
-	<script type="text/javascript">
-
-	window.onload = function() {
-		var game = new Phaser.Game(800, 450, Phaser.CANVAS, 'canvas', { preload: preload, create: create });
-
-		function preload () {
-			game.load.image('background', 'static/img/shop_formal.png');
-		}
-
-		function create () {
-			var background = game.add.sprite(0, 0, 'background');
-		}
-	};
-
-	</script>
-
 	</body>
 </html>
