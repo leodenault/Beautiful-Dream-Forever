@@ -6,5 +6,9 @@ $(document).ready(function () {
 	mainMenu.mouseleave(function () {
 		$("#main-menu > div").animate({bottom: '-68px'}, 250);
 	});
+	
+	$("#options").click(function (event) {
+		$("#outer-options-menu").fadeIn(250);
+	});
 });
 
