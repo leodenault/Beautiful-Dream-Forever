@@ -24,26 +24,24 @@
 }
 
 #options-menu {
-	width: 492px;
-	height: 292px;
-	border: 8px solid #c41e68;
-	border-radius: 25px;
-	background: -webkit-linear-gradient(top, #fef28c 41%, rgba(254,242,140,0.5));
-	background: -moz-linear-gradient(top, #fef28c 41%, rgba(254,242,140,0.5));
-	background: linear-gradient(top, #fef28c 41%, rgba(254,242,140,0.5));
+	width: 256px;
+	height: 156px;
+	background-image: url("../img/ui/options_window_background.png");
+	box-shadow: 10px 10px 10px rgba(0,0,0,0.75);
 }
 
 #options-menu ul {
 	padding: 0;
 	text-align: center;
 	display: inline-block;
+	margin: 4px;
 }
 
 #options-menu li {
 	list-style-type: none;
 	font-family: arial;
 	font-weight: bold;
-	font-size: 40px;
+	font-size: 29px;
 	color: #c41e68;
 	line-height: 32px;
 }
@@ -70,7 +68,7 @@
 }
 
 .music {
-	margin: 47px 0;
+	margin: 21px 0;
 }
 
 .music-off {
