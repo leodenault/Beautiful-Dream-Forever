@@ -1,15 +1,20 @@
-function MainMenu() {
-	Phaser.State.call(this);
-}
+var DUB = DUB || {};
+DUB.states = DUB.states || {};
 
-MainMenu.prototype = Object.create(Phaser.State.prototype);
-MainMenu.prototype.constructor = MainMenu;
+(function (ns) {
+	ns.MainMenu = function () {
+		Phaser.State.call(this);
+	}
+
+	ns.MainMenu.prototype = Object.create(Phaser.State.prototype);
+	ns.MainMenu.prototype.constructor = ns.MainMenu;
 
 
-MainMenu.prototype.preload = function () {
-	this.load.image('background', 'static/img/shop_formal.png');
-}
+	ns.MainMenu.prototype.preload = function () {
+		this.load.image('background', 'static/img/shop_formal.png');
+	}
 
-MainMenu.prototype.create = function () {
-	this.add.sprite(0, 0, 'background');
-}
+	ns.MainMenu.prototype.create = function () {
+		this.add.sprite(0, 0, 'background');
+	}
+}(DUB.states));
