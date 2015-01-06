@@ -10,5 +10,9 @@ $(document).ready(function () {
 	$("#options").click(function (event) {
 		$("#outer-options-menu").fadeIn(250);
 	});
+	
+	$("#wardrobe").click(function (event) {
+		game.state.start("wardrobe");
+	});
 });
 

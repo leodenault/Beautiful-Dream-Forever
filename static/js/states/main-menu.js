@@ -9,7 +9,6 @@ DUB.states = DUB.states || {};
 	ns.MainMenu.prototype = Object.create(Phaser.State.prototype);
 	ns.MainMenu.prototype.constructor = ns.MainMenu;
 
-
 	ns.MainMenu.prototype.preload = function () {
 		this.load.image('background', 'static/img/shop_formal.png');
 	}
