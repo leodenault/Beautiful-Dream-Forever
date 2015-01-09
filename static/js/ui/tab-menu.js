@@ -1,10 +1,10 @@
 $(document).ready(function () {
-	var mainMenu = $("#main-menu");
+	var mainMenu = $("#tab-menu");
 	mainMenu.mouseenter(function () {
-		$("#main-menu > div").animate({bottom: '0px'}, 250);
+		$("#tab-menu > div").animate({bottom: '0px'}, 250);
 	});
 	mainMenu.mouseleave(function () {
-		$("#main-menu > div").animate({bottom: '-68px'}, 250);
+		$("#tab-menu > div").animate({bottom: '-68px'}, 250);
 	});
 	
 	$("#wardrobe").click(function (event) {

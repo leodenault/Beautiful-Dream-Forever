@@ -1,0 +1,39 @@
+#options-menu {
+	width: 256px;
+	height: 156px;
+	background-image: url("../img/ui/options_window_background.png");
+	box-shadow: 10px 10px 10px rgba(0,0,0,0.75);
+}
+
+#options-menu ul {
+	padding: 0;
+	text-align: center;
+	display: inline-block;
+	margin: 4px;
+}
+
+#options-menu li {
+	list-style-type: none;
+	font-family: arial;
+	font-weight: bold;
+	font-size: 29px;
+	color: #c41e68;
+	line-height: 32px;
+}
+
+#options-menu li span:hover {
+	color: #e6408a;
+}
+
+.music {
+	margin: 21px 0;
+}
+
+.music-off {
+	color: #7b7273;
+}
+
+#options-menu li span.music-off:hover {
+	color: #aba2a3;
+}
+
