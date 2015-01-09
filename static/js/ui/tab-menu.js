@@ -8,8 +8,8 @@ $(document).ready(function () {
 	});
 	
 	$("#wardrobe").click(function (event) {
-		if (game.state.current != "wardrobe") {
-			game.state.start("wardrobe");
+		if (DUB.game.state.current != DUB.STATES.WARDROBE) {
+			DUB.game.state.start(DUB.STATES.WARDROBE);
 		}
 	});
 	

@@ -3,8 +3,8 @@ DUB.controller = DUB.controller || {};
 
 (function (ns) {
 	ns.back = function() {
-		if (game.state.current != "main-menu") {
-			game.state.start("main-menu"); // TODO: Add actual back logic here
+		if (DUB.game.state.current != DUB.STATES.MAIN_MENU) {
+			DUB.game.state.start(DUB.STATES.MAIN_MENU); // TODO: Add actual back logic here
 		}
 	}
 }(DUB.controller));

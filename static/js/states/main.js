@@ -1,7 +1,19 @@
-var game;
+var DUB = DUB || {};
 
-window.onload = function() {
-	game = new Phaser.Game(800, 450, Phaser.CANVAS, 'canvas', {});
-	game.state.add("main-menu", new DUB.states.MainMenu(), true);
-	game.state.add("wardrobe", new DUB.states.Wardrobe());
-};
+(function (ns) {
+	var WIDTH = 800;
+	var HEIGHT = 450;
+		
+	ns.game;
+
+	ns.STATES = {
+		MAIN_MENU:	"main-menu",
+		WARDROBE:	"wardrobe"
+	};
+
+	window.onload = function() {
+		ns.game = new Phaser.Game(WIDTH, HEIGHT, Phaser.CANVAS, 'canvas', {});
+		ns.game.state.add(ns.STATES.MAIN_MENU, new DUB.states.MainMenu(), true);
+		ns.game.state.add(ns.STATES.WARDROBE, new DUB.states.Wardrobe());
+	};
+}(DUB));
