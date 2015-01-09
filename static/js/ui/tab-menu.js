@@ -8,7 +8,9 @@ $(document).ready(function () {
 	});
 	
 	$("#wardrobe").click(function (event) {
-		game.state.start("wardrobe");
+		if (game.state.current != "wardrobe") {
+			game.state.start("wardrobe");
+		}
 	});
 	
 	$("#options").click(function (event) {
