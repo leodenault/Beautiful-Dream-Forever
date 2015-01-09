@@ -3,8 +3,8 @@ DUB.controller = DUB.controller || {};
 
 (function (ns) {
 	ns.back = function() {
-		if (DUB.game.state.current != DUB.STATES.MAIN_MENU) {
-			DUB.game.state.start(DUB.STATES.MAIN_MENU); // TODO: Add actual back logic here
+		if (DUB.model.game.state.current != DUB.model.STATES.MAIN_MENU) {
+			DUB.model.game.state.start(DUB.model.STATES.MAIN_MENU); // TODO: Add actual back logic here
 		}
 	}
 }(DUB.controller));

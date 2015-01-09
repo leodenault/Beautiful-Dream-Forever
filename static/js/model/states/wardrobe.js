@@ -1,5 +1,6 @@
 var DUB = DUB || {};
-DUB.states = DUB.states || {};
+DUB.model = DUB.model || {};
+DUB.model.states = DUB.model.states || {};
 
 (function (ns) {
 	ns.Wardrobe = function () {
@@ -16,4 +17,4 @@ DUB.states = DUB.states || {};
 	ns.Wardrobe.prototype.create = function () {
 		this.add.sprite(0, 0, "wardrobe-background");
 	}
-}(DUB.states));
+}(DUB.model.states));

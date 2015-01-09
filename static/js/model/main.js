@@ -1,4 +1,5 @@
 var DUB = DUB || {};
+DUB.model = DUB.model || {};
 
 (function (ns) {
 	var WIDTH = 800;
@@ -13,7 +14,7 @@ var DUB = DUB || {};
 
 	window.onload = function() {
 		ns.game = new Phaser.Game(WIDTH, HEIGHT, Phaser.CANVAS, 'canvas', {});
-		ns.game.state.add(ns.STATES.MAIN_MENU, new DUB.states.MainMenu(), true);
-		ns.game.state.add(ns.STATES.WARDROBE, new DUB.states.Wardrobe());
+		ns.game.state.add(ns.STATES.MAIN_MENU, new ns.states.MainMenu(), true);
+		ns.game.state.add(ns.STATES.WARDROBE, new ns.states.Wardrobe());
 	};
-}(DUB));
+}(DUB.model));

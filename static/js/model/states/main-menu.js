@@ -1,5 +1,6 @@
 var DUB = DUB || {};
-DUB.states = DUB.states || {};
+DUB.model = DUB.model || {};
+DUB.model.states = DUB.model.states || {};
 
 (function (ns) {
 	ns.MainMenu = function () {
@@ -16,4 +17,4 @@ DUB.states = DUB.states || {};
 	ns.MainMenu.prototype.create = function () {
 		this.add.sprite(0, 0, 'background');
 	}
-}(DUB.states));
+}(DUB.model.states));
