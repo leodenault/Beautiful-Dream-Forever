@@ -1,7 +1,7 @@
 #options-menu {
 	width: 256px;
 	height: 156px;
-	background-image: url("../img/ui/options_window_background.png");
+	background-image: url("/static/img/ui/options_window_background.png");
 	box-shadow: 10px 10px 10px rgba(0,0,0,0.75);
 }
 
