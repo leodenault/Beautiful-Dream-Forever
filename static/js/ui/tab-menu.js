@@ -8,9 +8,7 @@ $(document).ready(function () {
 	});
 	
 	$("#wardrobe").click(function (event) {
-		if (DUB.model.game.state.current != DUB.model.STATES.WARDROBE) {
-			DUB.model.game.state.start(DUB.model.STATES.WARDROBE);
-		}
+		DUB.coreController.forward(DUB.model.GameWrapper.STATES.WARDROBE);
 	});
 	
 	$("#options").click(function (event) {
@@ -18,7 +16,7 @@ $(document).ready(function () {
 	});
 	
 	$("#back").click(function (event) {
-		DUB.controller.back();
+		DUB.coreController.back();
 	});
 });
 

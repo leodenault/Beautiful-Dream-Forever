@@ -1,34 +1,38 @@
-var buster = require("buster");
 var assert = buster.referee.assert;
 var refute = buster.referee.refute;
-var StateTracker = require("../../static/js/model/state-tracker");
+var StateTracker = DUB.model.StateTracker;
+var CoreController = DUB.controller.CoreController;
 
 buster.testCase("State Tracker tests", {
+	setUp: function () {
+		this.tracker = new StateTracker();
+	},
+
 	"back returns StateTracker.EMPTY when empty": function () {
-		assert.equals(StateTracker.EMPTY, StateTracker.back());
+		assert.equals(StateTracker.EMPTY, this.tracker.back());
 	},
 	
 	"back returns a state when not empty": function () {
-		StateTracker.forward("state1");
-		StateTracker.forward("state2");
-		StateTracker.back();
-		refute.equals(StateTracker.EMPTY, StateTracker.back());
+		this.tracker.forward("state1");
+		this.tracker.forward("state2");
+		this.tracker.back();
+		refute.equals(StateTracker.EMPTY, this.tracker.back());
 	},
 	
 	"forward adds state to stack": function() {
 		var state = "next-state";
-		StateTracker.forward(state);
-		assert.equals(state, StateTracker.back());
+		this.tracker.forward(state);
+		assert.equals(state, this.tracker.back());
 	},
 	
 	"forward adds state to stack and removes first state if gone forward over max": function() {
 		var state = "next-state";
 		for (var i = 0; i < 251; i++) {
-			StateTracker.forward(state + i.toString());
+			this.tracker.forward(state + i.toString());
 		}
 		
-		var lastState, current = StateTracker.EMPTY;
-		while ((current = StateTracker.back()) != StateTracker.EMPTY) {
+		var lastState, current = this.tracker.EMPTY;
+		while ((current = this.tracker.back()) != StateTracker.EMPTY) {
 			lastState = current;
 		}
 		
@@ -37,8 +41,9 @@ buster.testCase("State Tracker tests", {
 	},
 	
 	"forward throws error if not given string": function() {
+		var tracker = this.tracker;
 		assert.exception(function () {
-			StateTracker.forward(123);
+			tracker.forward(123);
 		}, { name: "TypeError",
 			message: "State Tracker only accepts strings"} );
 	},

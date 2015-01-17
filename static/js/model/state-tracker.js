@@ -2,15 +2,13 @@ var DUB = DUB || {};
 DUB.model = DUB.model || {};
 
 (function (ns) {
-	ns.StateTracker = (function () {
+	var EMPTY = -1;
+
+	ns.StateTracker = function () {
 		var MAX_STATES = 250;
-		var EMPTY = -1;
-		
 		var stateStack = [];
 		
 		return {
-			EMPTY: EMPTY,
-			
 			forward: function (state) {
 				if (typeof state === "string") {
 					stateStack.push(state);
@@ -27,8 +25,8 @@ DUB.model = DUB.model || {};
 					stateStack.pop() : EMPTY;
 			}
 		};
-		
-	}());
+	};
+	
+	ns.StateTracker.EMPTY = EMPTY;
 }(DUB.model));
 
-module.exports = DUB.model.StateTracker;
