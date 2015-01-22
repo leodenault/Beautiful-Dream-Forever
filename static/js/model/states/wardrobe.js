@@ -16,5 +16,10 @@ DUB.model.states = DUB.model.states || {};
 	
 	ns.Wardrobe.prototype.create = function () {
 		this.add.sprite(0, 0, "wardrobe-background");
+		$("#wardrobe-menu").show(); // TODO: Change if time is available to separate UI and model!!!
+	}
+	
+	ns.Wardrobe.prototype.shutdown = function () {
+		$("#wardrobe-menu").hide(); // TODO: Change if time is available to separate UI and model!!!
 	}
 }(DUB.model.states));

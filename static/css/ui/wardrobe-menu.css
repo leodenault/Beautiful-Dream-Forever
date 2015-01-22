@@ -1,0 +1,41 @@
+#wardrobe-menu {
+	position: absolute;
+	width: 392px;
+	height: 356px;
+	left: 45px;
+	top: 27px;
+	display: none;
+}
+
+#wardrobe-menu-items {
+	padding: 18px 10px 28px 5px;
+	width: 154px;
+	height: 235px;
+	position: absolute;
+	left: 114px;
+	top: 8px;
+}
+
+.item-row {
+	width: 100%;
+	height: 35px;
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+.item-cell {
+	width: 34px;
+	height: 29px;
+	display: inline-block;
+	padding: 4px;
+}
+
+.item-middle {
+	margin: 0px 10px; /* TODO: Only tested under Chrome. Firefo doesn't work :( */
+}
+
+.item-cell > img {
+	max-width: 100%;
+	max-height: 100%
+}
+
