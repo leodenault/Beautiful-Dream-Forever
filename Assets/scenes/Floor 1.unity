@@ -87,6 +87,7 @@ GameObject:
   - 124: {fileID: 280678519}
   - 81: {fileID: 280678518}
   - 114: {fileID: 280678522}
+  - 114: {fileID: 280678523}
   m_Layer: 0
   m_Name: Canvas Camera
   m_TagString: MainCamera
@@ -171,6 +172,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 280678517}
+--- !u!114 &280678523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 280678516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11834af9c50e53b46a046881efff7d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &315014333
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,7 +239,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 315014335}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 280678523}
+        m_MethodName: LoadFormal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &315014335
