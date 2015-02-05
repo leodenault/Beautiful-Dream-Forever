@@ -3,22 +3,29 @@ using System.Collections.Generic;
 
 public class StateTracker {
 	private const int MAX_STATES = 250;
-	private Stack<string> stateStack;
+	private List<string> states;
 	
 	public static string EMPTY = "EMPTY";
 	
 	public StateTracker() {
-		this.stateStack = new Stack<string>();
+		this.states = new List<string>();
 	}
 	
 	public void Forward(string state) {
-		stateStack.Push(state);
-		if (stateStack.Count > 250) {
-			//stateStack.shift();
+		states.Add(state);
+		if (states.Count > 250) {
+			this.states.RemoveAt(0);
 		}
 	}
 			
 	public string Back() {
-		return stateStack.Count > 0 ? stateStack.Pop() : EMPTY;
+		if (states.Count > 0) {
+			int lastIndex = states.Count - 1;
+			string state = states[lastIndex];
+			states.RemoveAt(lastIndex);
+			return state;
+		} else {
+			return EMPTY;
+		}
 	}
 }
