@@ -1221,7 +1221,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1309857911}
-        m_MethodName: ChangeToTest2
+        m_MethodName: ChangeToWardrobe
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

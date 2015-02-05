@@ -10,6 +10,6 @@ public class Floor1UI : MonoBehaviour {
 	}              
 
 	public void LoadFormal() {
-		controller.Forward("test");
+		controller.Forward("Formal Shop");
 	}
 }

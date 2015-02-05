@@ -527,6 +527,46 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 514653436}
   m_GameObject: {fileID: 1384599209}
+--- !u!1 &1548092309
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 140916, guid: 5d59ce84dfbe186469ccb12abe5d87c7, type: 2}
+  m_PrefabInternal: {fileID: 514653436}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1548092310}
+  - 114: {fileID: 1548092311}
+  m_Layer: 5
+  m_Name: Scripts
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1548092310
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 440916, guid: 5d59ce84dfbe186469ccb12abe5d87c7, type: 2}
+  m_PrefabInternal: {fileID: 514653436}
+  m_GameObject: {fileID: 1548092309}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1778756789}
+  m_RootOrder: 2
+--- !u!114 &1548092311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11440916, guid: 5d59ce84dfbe186469ccb12abe5d87c7,
+    type: 2}
+  m_PrefabInternal: {fileID: 514653436}
+  m_GameObject: {fileID: 1548092309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56287acc2df9fa949b06b1e4ce935460, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1641286912
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,7 +721,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -223.899994, y: -129.300003}
+  m_AnchoredPosition: {x: 12, y: -129.300003}
   m_SizeDelta: {x: 80, y: 50}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1671965385
@@ -798,6 +838,7 @@ RectTransform:
   m_Children:
   - {fileID: 1671965384}
   - {fileID: 1641286913}
+  - {fileID: 1548092310}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 0}
@@ -861,4 +902,4 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
