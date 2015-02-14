@@ -11,3 +11,4 @@ Obj
 *.userprefs
 *.DS_store
 UnityTestTools*
+*.suo
