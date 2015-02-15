@@ -329,6 +329,22 @@ Prefab:
       propertyPath: m_AnchoredPosition.y
       value: -114
       objectReference: {fileID: 0}
+    - target: {fileID: 158224, guid: 19ad825b443a4174da4e5eda0e49cdb5, type: 2}
+      propertyPath: m_Name
+      value: Hipster Shop
+      objectReference: {fileID: 0}
+    - target: {fileID: 158240, guid: 19ad825b443a4174da4e5eda0e49cdb5, type: 2}
+      propertyPath: m_Name
+      value: FLOOR 2 background 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 158232, guid: 19ad825b443a4174da4e5eda0e49cdb5, type: 2}
+      propertyPath: m_Name
+      value: Shoe Shop
+      objectReference: {fileID: 0}
+    - target: {fileID: 158226, guid: 19ad825b443a4174da4e5eda0e49cdb5, type: 2}
+      propertyPath: m_Name
+      value: Athletic Shop
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 19ad825b443a4174da4e5eda0e49cdb5, type: 2}
   m_RootGameObject: {fileID: 546464327}
@@ -346,7 +362,7 @@ GameObject:
   - 114: {fileID: 360303263}
   - 114: {fileID: 360303262}
   m_Layer: 5
-  m_Name: Preppy Shop
+  m_Name: Hipster Shop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -537,7 +553,7 @@ GameObject:
   - 114: {fileID: 840897872}
   - 114: {fileID: 840897871}
   m_Layer: 5
-  m_Name: Wig Shop
+  m_Name: Shoe Shop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1544,7 +1560,7 @@ GameObject:
   - 4: {fileID: 2004518883}
   - 212: {fileID: 2004518884}
   m_Layer: 0
-  m_Name: FLOOR 1 background 1
+  m_Name: FLOOR 2 background 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1597,7 +1613,7 @@ GameObject:
   - 114: {fileID: 2086716584}
   - 114: {fileID: 2086716583}
   m_Layer: 5
-  m_Name: Uniform Shop
+  m_Name: Athletic Shop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
