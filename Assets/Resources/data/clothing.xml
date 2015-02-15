@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfClothingData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!-- THIS DATA SHOULD STAY ALPHABETIZED -->
+  <ClothingData>
+    <Name>Leg Warmers</Name>
+    <Path>clothing/athletic/Athletic_Cute_Accessory_Orange1_Light_Pink_DarkDark_Cotton_LegWarmers</Path>
+  </ClothingData>
+  <ClothingData>
+    <Name>Pointe Sweatshirt</Name>
+    <Path>clothing/athletic/Athletic_Cute_Top_Green2_Light_Pink_DarkDark_Cotton_PointeSweatshirt</Path>
+  </ClothingData>
+  <ClothingData>
+    <Name>Spandex Shorts</Name>
+    <Path>clothing/athletic/Athletic_Cute_Bottom_Pink_DarkDark_Cotton_SpandexShorts</Path>
+  </ClothingData>
+  <ClothingData>
+    <Name>White Cotton Hogwarts</Name>
+    <Path>clothing/athletic/Athletic_Cool_Bottom_White_Cotton_Hogwarts</Path>
+  </ClothingData>
+</ArrayOfClothingData>
