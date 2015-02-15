@@ -1141,7 +1141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipButton: {fileID: 1043490146}
-  equipImage: {fileID: 0}
+  equipImage: {fileID: 21300000, guid: 2c914b49a0a08d041a9d5d2391ec81ef, type: 3}
   unequipImage: {fileID: 21300000, guid: 21fb8274b8011504584228ff668da939, type: 3}
 --- !u!1 &1328860991
 GameObject:
