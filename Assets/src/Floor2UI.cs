@@ -17,7 +17,11 @@ public class Floor2UI : MonoBehaviour {
         controller.Forward("Athletic Shop");
     }
 
-    public void LoadFloor() {
+    public void LoadFloor3() {
         controller.Forward("Floor 3");
+    }
+
+    public void LoadFloor2() {
+        controller.Forward("Floor 1");
     }
 }
