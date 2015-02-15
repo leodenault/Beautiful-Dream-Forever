@@ -2,16 +2,24 @@
 <ArrayOfClothingData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <!-- THIS DATA SHOULD STAY ALPHABETIZED -->
   <ClothingData>
+    <Name>Ballet Spandex Shorts</Name>
+    <Path>clothing/athletic/Athletic_Cute_Bottom_Pink_DarkDark_Cotton_SpandexShorts</Path>
+  </ClothingData>
+  <ClothingData>
+    <Name>Formal Cute Shoes</Name>
+    <Path>clothing/formal/Formal_Cute_Shoes_Orange2_Muted_Yellow_Light_Cotton_BowFlats</Path>
+  </ClothingData>  
+  <ClothingData>
+    <Name>Formal Cute Wig Dark</Name>
+    <Path>clothing/formal/Formal_Cute_Wig_Brown_Dark</Path>
+  </ClothingData>
+  <ClothingData>
     <Name>Leg Warmers</Name>
     <Path>clothing/athletic/Athletic_Cute_Accessory_Orange1_Light_Pink_DarkDark_Cotton_LegWarmers</Path>
   </ClothingData>
   <ClothingData>
     <Name>Pointe Sweatshirt</Name>
     <Path>clothing/athletic/Athletic_Cute_Top_Green2_Light_Pink_DarkDark_Cotton_PointeSweatshirt</Path>
-  </ClothingData>
-  <ClothingData>
-    <Name>Spandex Shorts</Name>
-    <Path>clothing/athletic/Athletic_Cute_Bottom_Pink_DarkDark_Cotton_SpandexShorts</Path>
   </ClothingData>
   <ClothingData>
     <Name>White Cotton Hogwarts</Name>

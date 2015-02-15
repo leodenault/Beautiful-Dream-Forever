@@ -9,7 +9,15 @@ public class Floor1UI : MonoBehaviour {
 		controller = TabMenuController.GetInstance();
 	}              
 
-	public void LoadFormal() {
-		controller.Forward("Formal Shop");
+	public void LoadPreppy() {
+		controller.Forward("Preppy Shop");
 	}
+
+    public void LoadUniform() {
+        controller.Forward("Uniform Shop");
+    }
+
+    public void LoadFloor() {
+        controller.Forward("Floor 2");
+    }
 }
