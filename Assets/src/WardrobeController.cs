@@ -1,9 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System;
 using System.Collections;
 
 public class WardrobeController {
     private static WardrobeController INSTANCE;
+    private static float ITEM_WIDTH = 42.0f;
+    private static float ITEM_HEIGHT = 35.0f;
+    private static float SCALE_MODIFIER = 0.85f;
 
     private ClothingManager manager;
 
@@ -19,6 +23,13 @@ public class WardrobeController {
         return INSTANCE;
     }
 
+    private float computeScale(float width1, float width2, float height1, float height2) {
+        float wScale = width1 / width2;
+        float hScale = height1 / height2;
+
+        return Math.Min(wScale, hScale) * SCALE_MODIFIER;
+    }
+
     public void AssignClothingBackrounds(Button[] wardrobeButtons) {
         string[] images = manager.GetClothingImages();
 
@@ -30,11 +41,11 @@ public class WardrobeController {
                 Sprite sprite = Resources.Load<Sprite>(images[i]);
                 image.sprite = sprite;
 
+                float spriteWidth = sprite.rect.width;
                 float spriteHeight = sprite.rect.height;
-                float imageHeight = image.rectTransform.sizeDelta.y;
-                float scale = imageHeight / spriteHeight;
+                float scale = computeScale(ITEM_WIDTH, spriteWidth, ITEM_HEIGHT, spriteHeight);
 
-                image.rectTransform.sizeDelta = new Vector2(sprite.rect.width * scale, image.rectTransform.sizeDelta.y);
+                image.rectTransform.sizeDelta = new Vector2(spriteWidth * scale, spriteHeight * scale);
                 image.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
             }
         }
