@@ -24,11 +24,7 @@ public class ClothingManager {
 		stream.Close();
 	}
 
-	public string[] GetClothingImages() {
-		string[] imageLocations = new string[clothingData.Length];
-		for (int i = 0; i < clothingData.Length; i++) {
-			imageLocations[i] = clothingData[i].Path;
-		}
-		return imageLocations;
+	public ClothingData[] GetClothingData() {
+		return clothingData;
 	}
 }
