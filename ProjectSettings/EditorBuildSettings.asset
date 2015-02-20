@@ -11,8 +11,6 @@ EditorBuildSettings:
     path: Assets/scenes/Formal Shop.unity
   - enabled: 1
     path: Assets/scenes/Wardrobe.unity
-  - enabled: 0
-    path: Assets/scenes/Floor 1.unity
   - enabled: 1
     path: Assets/scenes/Preppy Shop.unity
   - enabled: 1
