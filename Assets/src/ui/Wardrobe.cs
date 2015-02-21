@@ -5,6 +5,9 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class Wardrobe : MonoBehaviour {
+	private static float PREVIEW_WIDTH = 74.0f;
+	private static float PREVIEW_HEIGHT = 104.0f;
+
     private bool isEquipped;
     private WardrobeController controller;
 	private PageTile activeTile;
@@ -14,6 +17,7 @@ public class Wardrobe : MonoBehaviour {
     public Sprite equipImage;
     public Sprite unequipImage;
 	public Image clothingArea;
+	public Image preview;
 
     public GameObject pageTilePanel;
 
@@ -43,6 +47,7 @@ public class Wardrobe : MonoBehaviour {
 
 	public void SelectClothing(PageTile pageTile) {
 		activeTile = pageTile;
+		displayPreview();
 	}
 
     public void Equip() {
@@ -58,13 +63,28 @@ public class Wardrobe : MonoBehaviour {
 		isEquipped = !isEquipped;
     }
 
+	private void displayPreview() {
+		if (activeTile.Clothing != null) {
+			Sprite sprite = Resources.Load<Sprite>(activeTile.Clothing.Path);
+			float spriteWidth = sprite.rect.width;
+			float spriteHeight = sprite.rect.height;
+			float scale = Util.computeScale(PREVIEW_WIDTH, spriteWidth, PREVIEW_HEIGHT, spriteHeight);
+
+			preview.sprite = sprite;
+			preview.rectTransform.sizeDelta = new Vector2(spriteWidth * scale, spriteHeight * scale);
+			preview.gameObject.SetActive(true);
+		}
+	}
+
 	private void equipClothing() {
-		ClothingData data = activeTile.Clothing;
-		Sprite sprite = Resources.Load<Sprite>(data.Path);
-		Image slot = slotImageDictionary[data.Slot];
-		slot.sprite = sprite;
-		slot.rectTransform.sizeDelta = new Vector2(sprite.rect.width, sprite.rect.height);
-		slot.rectTransform.localPosition = data.Location;
-		slot.gameObject.SetActive(true);
+		if (activeTile.Clothing != null) {
+			ClothingData data = activeTile.Clothing;
+			Sprite sprite = Resources.Load<Sprite>(data.Path);
+			Image slot = slotImageDictionary[data.Slot];
+			slot.sprite = sprite;
+			slot.rectTransform.sizeDelta = new Vector2(sprite.rect.width, sprite.rect.height);
+			slot.rectTransform.localPosition = data.Location;
+			slot.gameObject.SetActive(true);
+		}
 	}
 }
