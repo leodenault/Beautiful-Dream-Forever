@@ -4,49 +4,55 @@
   <ClothingData>
     <Name>Ballet Spandex Shorts</Name>
     <Path>clothing/athletic/Athletic_Cute_Bottom_Pink_DarkDark_Cotton_SpandexShorts</Path>
-    <location>
+    <Slot>BOTTOM</Slot>
+    <Location>
       <x>57.0</x>
-      <y>93.0</y>
-    </location>
+      <y>158.0</y>
+    </Location>
   </ClothingData>
   <ClothingData>
     <Name>Formal Cute Shoes</Name>
     <Path>clothing/formal/Formal_Cute_Shoes_Orange2_Muted_Yellow_Light_Cotton_BowFlats</Path>
-    <location>
+    <Slot>FEET</Slot>
+    <Location>
       <x>73.0</x>
       <y>344.0</y>
-    </location>
+    </Location>
   </ClothingData>  
   <ClothingData>
     <Name>Formal Cute Wig Dark</Name>
     <Path>clothing/formal/Formal_Cute_Wig_Brown_Dark</Path>
-    <location>
+    <Slot>HEAD</Slot>
+    <Location>
       <x>65.0</x>
       <y>14.0</y>
-    </location>
+    </Location>
   </ClothingData>
   <ClothingData>
     <Name>Leg Warmers</Name>
     <Path>clothing/athletic/Athletic_Cute_Accessory_Orange1_Light_Pink_DarkDark_Cotton_LegWarmers</Path>
-    <location>
+    <Slot>ACCESSORY</Slot>
+    <Location>
       <x>66.0</x>
       <y>263.0</y>
-    </location>
+    </Location>
   </ClothingData>
   <ClothingData>
     <Name>Pointe Sweatshirt</Name>
     <Path>clothing/athletic/Athletic_Cute_Top_Green2_Light_Pink_DarkDark_Cotton_PointeSweatshirt</Path>
-    <location>
+    <Slot>TOP</Slot>
+    <Location>
       <x>34.0</x>
       <y>78.0</y>
-    </location>
+    </Location>
   </ClothingData>
   <ClothingData>
     <Name>White Cotton Hogwarts</Name>
     <Path>clothing/athletic/Athletic_Cool_Bottom_White_Cotton_Hogwarts</Path>
-    <location>
+    <Slot>BOTTOM</Slot>
+    <Location>
       <x>29.0</x>
       <y>152.0</y>
-    </location>
+    </Location>
   </ClothingData>
 </ArrayOfClothingData>

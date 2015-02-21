@@ -26,7 +26,7 @@ public class WardrobeController {
 		for (int i = 0; i < wardrobeButtons.Length && i < clothingData.Length; i++) {
 			PageTile pageTile = wardrobeButtons[i].GetComponentInChildren<PageTile>();
 
-			pageTile.SetClothing(clothingData[i]);
+			pageTile.Clothing = clothingData[i];
 		}
 	}
 }

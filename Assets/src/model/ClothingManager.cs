@@ -9,6 +9,7 @@ public class ClothingManager {
 	public ClothingManager(string file) {
 		this.file = file;
 		load();
+		normalize();
 	}
 
 	private void load() {
@@ -22,6 +23,12 @@ public class ClothingManager {
 
 		clothingData = serializer.Deserialize(stream) as ClothingData[];
 		stream.Close();
+	}
+
+	private void normalize() {
+		foreach (ClothingData datum in clothingData) {
+			datum.Location.y = -datum.Location.y;
+		}
 	}
 
 	public ClothingData[] GetClothingData() {

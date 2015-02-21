@@ -8,9 +8,24 @@ public class PageTile : MonoBehaviour {
 	private static float ITEM_HEIGHT = 35.0f;
 	private static float SCALE_MODIFIER = 0.85f;
 
-	private ClothingData clothing;
-
 	public Image clothingPreview;
+
+	private ClothingData clothing;
+	public ClothingData Clothing {
+		get { return clothing; }
+		set {
+			this.clothing = value;
+			Sprite sprite = Resources.Load<Sprite>(clothing.Path);
+			clothingPreview.sprite = sprite;
+
+			float spriteWidth = sprite.rect.width;
+			float spriteHeight = sprite.rect.height;
+			float scale = computeScale(ITEM_WIDTH, spriteWidth, ITEM_HEIGHT, spriteHeight);
+
+			clothingPreview.rectTransform.sizeDelta = new Vector2(spriteWidth * scale, spriteHeight * scale);
+			clothingPreview.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+		}
+	}
 
 	private float computeScale(float width1, float width2, float height1, float height2)
 	{
@@ -21,15 +36,6 @@ public class PageTile : MonoBehaviour {
 	}
 
 	public void SetClothing(ClothingData clothing) {
-		this.clothing = clothing;
-		Sprite sprite = Resources.Load<Sprite>(clothing.Path);
-		clothingPreview.sprite = sprite;
-
-		float spriteWidth = sprite.rect.width;
-		float spriteHeight = sprite.rect.height;
-		float scale = computeScale(ITEM_WIDTH, spriteWidth, ITEM_HEIGHT, spriteHeight);
-
-		clothingPreview.rectTransform.sizeDelta = new Vector2(spriteWidth * scale, spriteHeight * scale);
-		clothingPreview.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+		
 	}
 }
