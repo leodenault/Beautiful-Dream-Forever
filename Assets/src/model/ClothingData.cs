@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ClothingData {
 	public enum ClothingSlot {
-		HEAD, TOP, BOTTOM, DRESS, FEET, ACCESSORY
+		WIG, TOP, BOTTOM, DRESS, FEET, ACCESSORY
 	}
 
 	public enum ClothingStyle {
