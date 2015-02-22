@@ -2,10 +2,10 @@
 using System.Collections;
 
 public class TabMenu : MonoBehaviour {
-	private TabMenuController controller;
+	private GlobalController controller;
 	
 	public void Start() {
-		controller = TabMenuController.GetInstance();
+		controller = GlobalController.GetInstance();
 	}
 	
 	public void ChangeToWardrobe() {

@@ -3,10 +3,10 @@ using System.Collections;
 
 public class Floor1UI : MonoBehaviour {
 
-	TabMenuController controller;
+	GlobalController controller;
 
 	public void Start() {
-		controller = TabMenuController.GetInstance();
+		controller = GlobalController.GetInstance();
 	}              
 
 	public void LoadPreppy() {

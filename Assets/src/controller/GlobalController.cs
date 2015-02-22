@@ -1,19 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TabMenuController {
+public class GlobalController {
 
-	private static TabMenuController INSTANCE;
+	private static GlobalController INSTANCE;
 
 	private StateTracker tracker;
 	
-	private TabMenuController() {
+	private GlobalController() {
 		this.tracker = new StateTracker();
 	}
 	
-	public static TabMenuController GetInstance() {
+	public static GlobalController GetInstance() {
 		if (INSTANCE == null) {
-			INSTANCE = new TabMenuController();
+			INSTANCE = new GlobalController();
 		}
 		
 		return INSTANCE;
