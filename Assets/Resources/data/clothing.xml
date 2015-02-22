@@ -13,7 +13,7 @@
   <ClothingData>
     <Name>Formal Cute Shoes</Name>
     <Path>clothing/formal/Formal_Cute_Shoes_Orange2_Muted_Yellow_Light_Cotton_BowFlats</Path>
-    <Slot>FEET</Slot>
+    <Slot>SHOES</Slot>
     <Location>
       <x>73.0</x>
       <y>344.0</y>
