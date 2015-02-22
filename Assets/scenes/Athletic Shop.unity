@@ -87,6 +87,7 @@ GameObject:
   - 124: {fileID: 421392798}
   - 81: {fileID: 421392797}
   - 114: {fileID: 421392801}
+  - 114: {fileID: 421392802}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -171,6 +172,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   showMenu: {fileID: 1407666712}
+--- !u!114 &421392802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 421392795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f018837d83e7ee149b55c7142d9ebccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &527661880
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,7 +287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 689414b5aaa4b354cac30210e02776de, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fa01d4c7595c06c4b84f76ad95a0bc0b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -635,6 +647,16 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 421392796}
+    - target: {fileID: 11491434, guid: 5a84f940698d7fd4d8452e53205fe900, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fa01d4c7595c06c4b84f76ad95a0bc0b,
+        type: 3}
+    - target: {fileID: 11491442, guid: 5a84f940698d7fd4d8452e53205fe900, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b8283d03fb26d93489e66a8400d3bbfb,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5a84f940698d7fd4d8452e53205fe900, type: 2}
   m_RootGameObject: {fileID: 921592917}
@@ -934,8 +956,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 421392801}
-        m_MethodName: ShowMenu
+      - m_Target: {fileID: 421392802}
+        m_MethodName: LoadAthleticDressing
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1437,7 +1459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: d94b550116008ad4890b787645413dce, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b8283d03fb26d93489e66a8400d3bbfb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
