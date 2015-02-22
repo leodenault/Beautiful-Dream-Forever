@@ -11,7 +11,9 @@ public class Wardrobe : MonoBehaviour {
     private bool isEquipped;
     private WardrobeController controller;
 	private PageTile activeTile;
+	private Image activeSlot;
 	private IDictionary<ClothingData.ClothingSlot, Image> slotImageDictionary;
+	
 
     public Button equipButton;
     public Sprite equipImage;
@@ -48,20 +50,32 @@ public class Wardrobe : MonoBehaviour {
 	public void SelectClothing(PageTile pageTile) {
 		activeTile = pageTile;
 		displayPreview();
+		setEquip(true);
 	}
 
     public void Equip() {
-        if (isEquipped)
-        {
-            equipButton.image.sprite = equipImage;
-        }
-        else
-        {
-            equipButton.image.sprite = unequipImage;
-			equipClothing();
-        }
-		isEquipped = !isEquipped;
+		if (activeTile.Clothing != null) {
+			if (isEquipped)
+			{
+				unequipClothing();
+			}
+			else
+			{
+				equipClothing();
+			}
+			setEquip(isEquipped);
+		}
     }
+
+	private void setEquip(bool equipping) {
+		if (equipping) {
+			equipButton.image.sprite = equipImage;
+			isEquipped = false;
+		} else {
+			equipButton.image.sprite = unequipImage;
+			isEquipped = true;
+		}
+	}
 
 	private void displayPreview() {
 		if (activeTile.Clothing != null) {
@@ -85,6 +99,14 @@ public class Wardrobe : MonoBehaviour {
 			slot.rectTransform.sizeDelta = new Vector2(sprite.rect.width, sprite.rect.height);
 			slot.rectTransform.localPosition = data.Location;
 			slot.gameObject.SetActive(true);
+			activeSlot = slot;
+		}
+	}
+
+	private void unequipClothing() {
+		if (activeSlot != null) {
+			activeSlot.sprite = null;
+			activeSlot.gameObject.SetActive(false);
 		}
 	}
 }
