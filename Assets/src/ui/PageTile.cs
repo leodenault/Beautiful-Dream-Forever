@@ -15,13 +15,7 @@ public class PageTile : MonoBehaviour {
 		set {
 			this.clothing = value;
 			Sprite sprite = Resources.Load<Sprite>(clothing.Path);
-			clothingPreview.sprite = sprite;
-
-			float spriteWidth = sprite.rect.width;
-			float spriteHeight = sprite.rect.height;
-			float scale = Util.computeScale(ITEM_WIDTH, spriteWidth, ITEM_HEIGHT, spriteHeight);
-
-			clothingPreview.rectTransform.sizeDelta = new Vector2(spriteWidth * scale, spriteHeight * scale);
+			Util.ScaleImageToMaxDimensions(clothingPreview, sprite, ITEM_WIDTH, ITEM_HEIGHT);
 			clothingPreview.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
 		}
 	}

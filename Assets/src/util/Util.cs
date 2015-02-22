@@ -1,4 +1,6 @@
 ﻿using System;
+using UnityEngine;
+using UnityEngine.UI;
 
 public static class Util
 {
@@ -10,5 +12,14 @@ public static class Util
 		float hScale = height1 / height2;
 
 		return Math.Min(wScale, hScale) * SCALE_MODIFIER;
+	}
+
+	public static void ScaleImageToMaxDimensions(Image image, Sprite sprite, float maxWidth, float maxHeight) {
+		float spriteWidth = sprite.rect.width;
+		float spriteHeight = sprite.rect.height;
+		float scale = Util.computeScale(maxWidth, spriteWidth, maxHeight, spriteHeight);
+
+		image.sprite = sprite;
+		image.rectTransform.sizeDelta = new Vector2(spriteWidth * scale, spriteHeight * scale);
 	}
 }
