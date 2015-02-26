@@ -10,11 +10,10 @@ public class Wardrobe : MonoBehaviour {
 
     private bool isEquipped;
     private WardrobeController controller;
-	private PageTile activeTile;
-	private Button activeSlot;
+	private ClothingSelection activeTile;
+	private ClothingSelection activeSlot;
 	private IDictionary<ClothingData.ClothingSlot, Image> slotImageDictionary;
-	private IDictionary<Button, Image> buttonSlotImageDictionary;
-	private IDictionary<Button, Image> buttonSlotBackgroundDictionary;
+	private List<ClothingSelection> slotList;
 
     public Button equipButton;
     public Sprite equipImage;
@@ -22,48 +21,54 @@ public class Wardrobe : MonoBehaviour {
 	public Image clothingArea;
 	public Image preview;
     public GameObject pageTilePanel;
+	public GameObject itemSlotsPanel;
 
-	public Button wigSlotButton;
-	public Button topSlotButton;
-	public Button bottomSlotButton;
-	public Button shoesSlotButton;
-	public Button accessorySlotButton;
-	public Button dressSlotButton;
+	public ClothingSelection wigSlot;
+	public ClothingSelection topSlot;
+	public ClothingSelection bottomSlot;
+	public ClothingSelection shoesSlot;
+	public ClothingSelection accessorySlot;
+	public ClothingSelection dressSlot;
 
     public void Start()
     {
         isEquipped = false;
 		slotImageDictionary = new Dictionary<ClothingData.ClothingSlot, Image>();
-		buttonSlotImageDictionary = new Dictionary<Button, Image>();
-		buttonSlotBackgroundDictionary = new Dictionary<Button, Image>();
+		slotList = new List<ClothingSelection>();
         controller = WardrobeController.GetInstance();
         Button[] pageTiles = pageTilePanel.GetComponentsInChildren<Button>();
+		Button[] clothingSlots = itemSlotsPanel.GetComponentsInChildren<Button>();
 		Image[] clothingSlotImages = clothingArea.GetComponentsInChildren<Image>(true);
         controller.AssignClothingBackrounds(pageTiles);
 
-		activeTile = pageTiles[0].GetComponentInChildren<PageTile>();
+		activeTile = pageTiles[0].GetComponentInChildren<ClothingSelection>();
 		// Add the button click listeners for the page tiles
 		foreach (Button button in pageTiles) {
-			PageTile pageTile = button.GetComponentInChildren<PageTile>();
+			ClothingSelection pageTile = button.GetComponentInChildren<ClothingSelection>();
 			button.onClick.AddListener(() => { selectClothing(pageTile); });
 		}
 
-		// Prepare dictionaries
+		// Add the button click listeners for the clothing slots
+		foreach (Button button in clothingSlots)
+		{
+			ClothingSelection pageTile = button.GetComponentInChildren<ClothingSelection>();
+			button.onClick.AddListener(() => { selectSlot(pageTile); });
+		}
+
+		// Prepare slot to image dictionary
 		ClothingData.ClothingSlot[] slots = (ClothingData.ClothingSlot[])Enum.GetValues(typeof(ClothingData.ClothingSlot));
 		for (int i = 0; i < slots.Length && i < clothingSlotImages.Length - 1; i++) {
 			ClothingData.ClothingSlot slot = slots[i];
 			Image image = clothingSlotImages[i + 1];
-			Button slotButton = getSlotButtonForSlot(slot);
 			slotImageDictionary.Add(slot, image);
-			buttonSlotImageDictionary.Add(slotButton, image);
-			slotButton.onClick.AddListener(() => { selectSlot(slotButton); });
-			
-			// Extract the button background image and put it in the dictionary
-			Image[] buttonImages = slotButton.GetComponentsInChildren<Image>(true);
-			// First image is the button background, second is the text, third is
-			// the actual image background overlay to which we want access
-			buttonSlotBackgroundDictionary.Add(slotButton, buttonImages[2]);
 		}
+
+		slotList.Add(wigSlot);
+		slotList.Add(topSlot);
+		slotList.Add(bottomSlot);
+		slotList.Add(shoesSlot);
+		slotList.Add(accessorySlot);
+		slotList.Add(dressSlot);
     }
 
     public void Equip() {
@@ -71,25 +76,46 @@ public class Wardrobe : MonoBehaviour {
 			if (isEquipped)
 			{
 				unequipClothing();
+				ClothingSelection slot = findInEquipped(activeTile.Clothing.Name);
+				if (slot != null)
+				{
+					activeSlot = slot;
+					setEquip(false);
+				}
+				else
+				{
+					setEquip(isEquipped);
+				}
 			}
 			else
 			{
 				equipClothing();
+				setEquip(false);
 			}
-			setEquip(isEquipped);
+
+			
 		}
     }
 
-	private void selectClothing(PageTile pageTile) {
-		activeTile = pageTile;
-		displayPreview(activeTile);
-		setEquip(true);
+	private void selectClothing(ClothingSelection pageTile) {
+		if (pageTile.Clothing != null) {
+			activeTile = pageTile;
+			displayPreview(activeTile.Sprite);
+
+			ClothingSelection slot = findInEquipped(activeTile.Clothing.Name);
+			if (slot != null) {
+				activeSlot = slot;
+				setEquip(false);
+			} else {
+				setEquip(true);
+			}
+		}
 	}
 
-	private void selectSlot(Button slotButton) {
-		Sprite target = buttonSlotImageDictionary[slotButton].sprite;
+	private void selectSlot(ClothingSelection slot) {
+		Sprite target = slot.Sprite;
 		if (target != null) {
-			activeSlot = slotButton;
+			activeSlot = slot;
 			displayPreview(target);
 			setEquip(false);
 		}
@@ -102,12 +128,6 @@ public class Wardrobe : MonoBehaviour {
 		} else {
 			equipButton.image.sprite = unequipImage;
 			isEquipped = true;
-		}
-	}
-
-	private void displayPreview(PageTile pageTile) {
-		if (pageTile.Clothing != null) {
-			displayPreview(Resources.Load<Sprite>(pageTile.Clothing.Path));
 		}
 	}
 
@@ -128,38 +148,45 @@ public class Wardrobe : MonoBehaviour {
 			slot.rectTransform.localPosition = data.Location;
 			slot.gameObject.SetActive(true);
 			
-			activeSlot = getSlotButtonForSlot(data.Slot);
-			Image slotBackground = buttonSlotBackgroundDictionary[activeSlot];
-			Rect buttonRect = activeSlot.GetComponent<RectTransform>().rect;
-			Util.ScaleImageToMaxDimensions(slotBackground, sprite, buttonRect.width, buttonRect.height);
-			slotBackground.gameObject.SetActive(true);
+			activeSlot = getClothingSelectionForSlot(data.Slot);
+			activeSlot.Clothing = data;
 		}
 	}
 
 	private void unequipClothing() {
 		if (activeSlot != null) {
-			Image slotTarget = buttonSlotImageDictionary[activeSlot];
+			Image slotTarget = slotImageDictionary[activeSlot.Clothing.Slot];
 			slotTarget.sprite = null;
 			slotTarget.gameObject.SetActive(false);
-			displayPreview(activeTile);
-			buttonSlotBackgroundDictionary[activeSlot].gameObject.SetActive(false);
+			displayPreview(activeTile.Sprite);
+			activeSlot.Clothing = null;
 		}
 	}
 
-	private Button getSlotButtonForSlot(ClothingData.ClothingSlot slot) {
+	private ClothingSelection getClothingSelectionForSlot(ClothingData.ClothingSlot slot) {
 		switch (slot) {
 			case ClothingData.ClothingSlot.ACCESSORY:
-				return accessorySlotButton;
+				return accessorySlot;
 			case ClothingData.ClothingSlot.BOTTOM:
-				return bottomSlotButton;
+				return bottomSlot;
 			case ClothingData.ClothingSlot.SHOES:
-				return shoesSlotButton;
+				return shoesSlot;
 			case ClothingData.ClothingSlot.TOP:
-				return topSlotButton;
+				return topSlot;
 			case ClothingData.ClothingSlot.WIG:
-				return wigSlotButton;
+				return wigSlot;
 			default:
-				return dressSlotButton;
+				return dressSlot;
 		}
+	}
+
+	private ClothingSelection findInEquipped(string name) {
+		foreach (ClothingSelection slot in slotList) {
+			if (slot.Clothing != null && slot.Clothing.Name.Equals(name)) {
+				return slot;
+			}
+		}
+
+		return null;
 	}
 }

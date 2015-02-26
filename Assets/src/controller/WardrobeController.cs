@@ -24,7 +24,7 @@ public class WardrobeController {
 		ClothingData[] clothingData = manager.GetClothingData();
 
 		for (int i = 0; i < wardrobeButtons.Length && i < clothingData.Length; i++) {
-			PageTile pageTile = wardrobeButtons[i].GetComponentInChildren<PageTile>();
+			ClothingSelection pageTile = wardrobeButtons[i].GetComponentInChildren<ClothingSelection>();
 
 			pageTile.Clothing = clothingData[i];
 		}
