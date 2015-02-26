@@ -76,16 +76,7 @@ public class Wardrobe : MonoBehaviour {
 			if (isEquipped)
 			{
 				unequipClothing();
-				ClothingSelection slot = findInEquipped(activeTile.Clothing.Name);
-				if (slot != null)
-				{
-					activeSlot = slot;
-					setEquip(false);
-				}
-				else
-				{
-					setEquip(isEquipped);
-				}
+				setEquip(activeSlot == null);
 			}
 			else
 			{
@@ -158,8 +149,17 @@ public class Wardrobe : MonoBehaviour {
 			Image slotTarget = slotImageDictionary[activeSlot.Clothing.Slot];
 			slotTarget.sprite = null;
 			slotTarget.gameObject.SetActive(false);
-			displayPreview(activeTile.Sprite);
+
 			activeSlot.Clothing = null;
+			activeSlot = null;
+			ClothingSelection slot = findNextEquipped();
+			Sprite preview = activeTile.Sprite;
+			if (slot != null) {
+				preview = slot.Sprite;
+				activeSlot = slot;
+			}
+
+			displayPreview(preview);
 		}
 	}
 
@@ -183,6 +183,18 @@ public class Wardrobe : MonoBehaviour {
 	private ClothingSelection findInEquipped(string name) {
 		foreach (ClothingSelection slot in slotList) {
 			if (slot.Clothing != null && slot.Clothing.Name.Equals(name)) {
+				return slot;
+			}
+		}
+
+		return null;
+	}
+
+	private ClothingSelection findNextEquipped() {
+		foreach (ClothingSelection slot in slotList)
+		{
+			if (slot.Clothing != null)
+			{
 				return slot;
 			}
 		}
