@@ -83,8 +83,6 @@ public class Wardrobe : MonoBehaviour {
 				equipClothing();
 				setEquip(false);
 			}
-
-			
 		}
     }
 
