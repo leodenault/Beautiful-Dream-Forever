@@ -422,7 +422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 816d1a794fa91374d9df8e1692cb98f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 2058220}
+  mallCamera: {fileID: 2058220}
 --- !u!114 &11458222
 MonoBehaviour:
   m_ObjectHideFlags: 1
