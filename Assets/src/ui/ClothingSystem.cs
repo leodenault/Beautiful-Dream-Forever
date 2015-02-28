@@ -4,12 +4,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-public class Wardrobe : MonoBehaviour {
+public class ClothingSystem : MonoBehaviour {
 	private static float PREVIEW_WIDTH = 74.0f;
 	private static float PREVIEW_HEIGHT = 104.0f;
 
     private bool isEquipped;
-    private WardrobeController controller;
+    private ClothingSystemController controller;
 	private ClothingSelection activeTile;
 	private ClothingSelection activeSlot;
 	private IDictionary<ClothingData.ClothingSlot, Image> slotImageDictionary;
@@ -35,7 +35,7 @@ public class Wardrobe : MonoBehaviour {
         isEquipped = false;
 		slotImageDictionary = new Dictionary<ClothingData.ClothingSlot, Image>();
 		slotList = new List<ClothingSelection>();
-        controller = WardrobeController.GetInstance();
+        controller = ClothingSystemController.GetInstance();
         Button[] pageTiles = pageTilePanel.GetComponentsInChildren<Button>();
 		Button[] clothingSlots = itemSlotsPanel.GetComponentsInChildren<Button>();
 		Image[] clothingSlotImages = clothingArea.GetComponentsInChildren<Image>(true);

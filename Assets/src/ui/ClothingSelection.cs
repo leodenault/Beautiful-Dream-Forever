@@ -31,8 +31,4 @@ public class ClothingSelection : MonoBehaviour {
 	public Sprite Sprite {
 		get { return sprite; }
 	}
-
-	public void Start() {
-		clothingPreview.rectTransform.sizeDelta = new Vector2(0.0f, 0.0f);
-	}
 }

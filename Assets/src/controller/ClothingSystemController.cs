@@ -3,18 +3,18 @@ using UnityEngine.UI;
 using System;
 using System.Collections;
 
-public class WardrobeController {
-	private static WardrobeController INSTANCE;
+public class ClothingSystemController {
+	private static ClothingSystemController INSTANCE;
 
 	private ClothingManager manager;
 
-	private WardrobeController() {
+	private ClothingSystemController() {
 		this.manager = new ClothingManager("data/clothing");
 	}
 
-	public static WardrobeController GetInstance() {
+	public static ClothingSystemController GetInstance() {
 		if (INSTANCE == null) {
-			INSTANCE = new WardrobeController();
+			INSTANCE = new ClothingSystemController();
 		}
 
 		return INSTANCE;
