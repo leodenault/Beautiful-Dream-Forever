@@ -20,13 +20,12 @@ public class ClothingSystemController {
 		return INSTANCE;
 	}
 
-	public void AssignClothingBackrounds(Button[] wardrobeButtons) {
-		ClothingData[] clothingData = manager.GetClothingData();
+    public void AssignClothingBackgrounds(ClothingData.ClothingStyle style, Button[] wardrobeButtons) {
+        ClothingData[] clothingData = manager.GetClothingData(style);
 
-		for (int i = 0; i < wardrobeButtons.Length && i < clothingData.Length; i++) {
-			ClothingSelection pageTile = wardrobeButtons[i].GetComponentInChildren<ClothingSelection>();
-
-			pageTile.Clothing = clothingData[i];
-		}
-	}
+        for (int i = 0; i < clothingData.Length && i < wardrobeButtons.Length; i++) {
+            ClothingSelection pageTile = wardrobeButtons[i].GetComponentInChildren<ClothingSelection>();
+            pageTile.Clothing = clothingData[i];
+        }
+    }
 }

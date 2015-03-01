@@ -3105,6 +3105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f181674666514cb4c950830fc599fcd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shopStyle: 8
   equipButton: {fileID: 1043490146}
   equipImage: {fileID: 21300000, guid: 2841947730cedff489c8ac93692a1f1a, type: 3}
   unequipImage: {fileID: 21300000, guid: 7ce213ba0deaa8c4cae2538c4af35c90, type: 3}

@@ -5,6 +5,7 @@
     <Name>Ballet Spandex Shorts</Name>
     <Path>clothing/athletic/Athletic_Cute_Bottom_Pink_DarkDark_Cotton_SpandexShorts</Path>
     <Slot>BOTTOM</Slot>
+    <Style>ATHLETIC</Style>
     <Location>
       <x>57.0</x>
       <y>158.0</y>
@@ -14,6 +15,7 @@
     <Name>Formal Cute Shoes</Name>
     <Path>clothing/formal/Formal_Cute_Shoes_Orange2_Muted_Yellow_Light_Cotton_BowFlats</Path>
     <Slot>SHOES</Slot>
+    <Style>FORMAL</Style>
     <Location>
       <x>73.0</x>
       <y>344.0</y>
@@ -23,6 +25,7 @@
     <Name>Formal Cute Wig Dark</Name>
     <Path>clothing/formal/Formal_Cute_Wig_Brown_Dark</Path>
     <Slot>WIG</Slot>
+    <Style>FORMAL</Style>
     <Location>
       <x>65.0</x>
       <y>14.0</y>
@@ -32,6 +35,7 @@
     <Name>Leg Warmers</Name>
     <Path>clothing/athletic/Athletic_Cute_Accessory_Orange1_Light_Pink_DarkDark_Cotton_LegWarmers</Path>
     <Slot>ACCESSORY</Slot>
+    <Style>ATHLETIC</Style>
     <Location>
       <x>66.0</x>
       <y>263.0</y>
@@ -41,6 +45,7 @@
     <Name>Pointe Sweatshirt</Name>
     <Path>clothing/athletic/Athletic_Cute_Top_Green2_Light_Pink_DarkDark_Cotton_PointeSweatshirt</Path>
     <Slot>TOP</Slot>
+    <Style>ATHLETIC</Style>
     <Location>
       <x>34.0</x>
       <y>78.0</y>
@@ -50,6 +55,7 @@
     <Name>White Cotton Hogwarts</Name>
     <Path>clothing/athletic/Athletic_Cool_Bottom_White_Cotton_Hogwarts</Path>
     <Slot>BOTTOM</Slot>
+    <Style>ATHLETIC</Style>
     <Location>
       <x>29.0</x>
       <y>152.0</y>

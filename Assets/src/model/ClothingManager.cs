@@ -1,15 +1,19 @@
 ﻿using UnityEngine;
+using System;
 using System.IO;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 public class ClothingManager {
 	private string file;
 	private ClothingData[] clothingData;
+    private IDictionary<ClothingData.ClothingStyle, List<ClothingData>> categories;
 
 	public ClothingManager(string file) {
 		this.file = file;
 		load();
 		normalize();
+        categorize();
 	}
 
 	private void load() {
@@ -31,7 +35,23 @@ public class ClothingManager {
 		}
 	}
 
-	public ClothingData[] GetClothingData() {
-		return clothingData;
-	}
+    private void categorize() {
+        categories = new Dictionary<ClothingData.ClothingStyle, List<ClothingData>>();
+        ClothingData.ClothingStyle[] styles = (ClothingData.ClothingStyle[])Enum.GetValues(typeof(ClothingData.ClothingStyle));
+        foreach (ClothingData.ClothingStyle style in styles) {
+            categories.Add(style, new List<ClothingData>());
+        }
+
+        foreach (ClothingData datum in clothingData) {
+            categories[datum.Style].Add(datum);
+        }
+    }
+
+    public ClothingData[] GetClothingData(ClothingData.ClothingStyle style) {
+        if (style == ClothingData.ClothingStyle.NONE) {
+            return clothingData;
+        }
+
+        return categories[style].ToArray();
+    }
 }

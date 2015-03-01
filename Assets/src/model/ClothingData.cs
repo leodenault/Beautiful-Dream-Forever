@@ -7,7 +7,7 @@ public class ClothingData {
 	}
 
 	public enum ClothingStyle {
-		IDEALIST, HARDCORE, ATHLETIC, UNIFORM, FORMAL, COSPLAY, PREPPY, HIPSTER
+		IDEALIST, HARDCORE, ATHLETIC, UNIFORM, FORMAL, COSPLAY, PREPPY, HIPSTER, NONE
 	}
 
 	public enum ClothingEssence {

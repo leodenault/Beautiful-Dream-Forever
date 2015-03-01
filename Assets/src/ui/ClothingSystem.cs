@@ -15,6 +15,8 @@ public class ClothingSystem : MonoBehaviour {
 	private IDictionary<ClothingData.ClothingSlot, Image> slotImageDictionary;
 	private List<ClothingSelection> slotList;
 
+    public ClothingData.ClothingStyle shopStyle;
+
     public Button equipButton;
     public Sprite equipImage;
     public Sprite unequipImage;
@@ -39,7 +41,7 @@ public class ClothingSystem : MonoBehaviour {
         Button[] pageTiles = pageTilePanel.GetComponentsInChildren<Button>();
 		Button[] clothingSlots = itemSlotsPanel.GetComponentsInChildren<Button>();
 		Image[] clothingSlotImages = clothingArea.GetComponentsInChildren<Image>(true);
-        controller.AssignClothingBackrounds(pageTiles);
+        controller.AssignClothingBackgrounds(shopStyle, pageTiles);
 
 		activeTile = pageTiles[0].GetComponentInChildren<ClothingSelection>();
 		// Add the button click listeners for the page tiles
