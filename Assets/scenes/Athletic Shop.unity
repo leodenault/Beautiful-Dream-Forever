@@ -287,7 +287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: fa01d4c7595c06c4b84f76ad95a0bc0b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0b6a9c4fa5b9fdd4f8b48467530f8cba, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -650,12 +650,12 @@ Prefab:
     - target: {fileID: 11491434, guid: 5a84f940698d7fd4d8452e53205fe900, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: fa01d4c7595c06c4b84f76ad95a0bc0b,
+      objectReference: {fileID: 21300000, guid: 0b6a9c4fa5b9fdd4f8b48467530f8cba,
         type: 3}
     - target: {fileID: 11491442, guid: 5a84f940698d7fd4d8452e53205fe900, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: b8283d03fb26d93489e66a8400d3bbfb,
+      objectReference: {fileID: 21300000, guid: 3d4b56a4197f3514794bb7273e8a4a71,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5a84f940698d7fd4d8452e53205fe900, type: 2}
@@ -1459,7 +1459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: b8283d03fb26d93489e66a8400d3bbfb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3d4b56a4197f3514794bb7273e8a4a71, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
