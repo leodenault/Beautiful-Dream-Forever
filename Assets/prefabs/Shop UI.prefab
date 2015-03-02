@@ -827,6 +827,7 @@ GameObject:
   - 224: {fileID: 22490702}
   - 222: {fileID: 22290678}
   - 114: {fileID: 11490742}
+  - 114: {fileID: 11433386}
   m_Layer: 5
   m_Name: Clothing Area
   m_TagString: Untagged
@@ -1465,6 +1466,17 @@ MonoBehaviour:
   maxHeight: 35
   container: {fileID: 117390}
   clothingPreview: {fileID: 11417368}
+--- !u!114 &11433386
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78de6c2ff02cc2548b982369179e77ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11490618
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1951,8 +1963,8 @@ MonoBehaviour:
   equipButton: {fileID: 0}
   equipImage: {fileID: 21300000, guid: efc8122f3163c16469fdce1f835c4540, type: 3}
   unequipImage: {fileID: 21300000, guid: ab4fdaf0947bcda43a8f0ed15fc523bc, type: 3}
-  clothingArea: {fileID: 11490742}
   preview: {fileID: 11490810}
+  clothingAreaContainer: {fileID: 190704}
   pageTilePanel: {fileID: 190658}
   itemSlotsPanel: {fileID: 190630}
   wigSlot: {fileID: 0}

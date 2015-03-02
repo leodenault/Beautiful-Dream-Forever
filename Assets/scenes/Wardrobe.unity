@@ -73,6 +73,7 @@ NavMeshSettings:
     minRegionArea: 2
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
+    tileSizeHint: 0
   m_NavMesh: {fileID: 0}
 --- !u!1001 &9291915
 Prefab:
@@ -555,6 +556,7 @@ GameObject:
   - 224: {fileID: 187627239}
   - 222: {fileID: 187627241}
   - 114: {fileID: 187627240}
+  - 114: {fileID: 187627242}
   m_Layer: 5
   m_Name: Clothing Area
   m_TagString: Untagged
@@ -612,6 +614,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 187627238}
+--- !u!114 &187627242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 187627238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78de6c2ff02cc2548b982369179e77ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &229596231
 Prefab:
   m_ObjectHideFlags: 0
@@ -3109,8 +3122,8 @@ MonoBehaviour:
   equipButton: {fileID: 1043490146}
   equipImage: {fileID: 21300000, guid: efc8122f3163c16469fdce1f835c4540, type: 3}
   unequipImage: {fileID: 21300000, guid: ab4fdaf0947bcda43a8f0ed15fc523bc, type: 3}
-  clothingArea: {fileID: 187627240}
   preview: {fileID: 2061966520}
+  clothingAreaContainer: {fileID: 187627238}
   pageTilePanel: {fileID: 1737032823}
   itemSlotsPanel: {fileID: 1118857480}
   wigSlot: {fileID: 1247967884}
@@ -3419,8 +3432,8 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ignoreReversedGraphics: 1
-  blockingObjects: 0
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -5870,8 +5883,8 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ignoreReversedGraphics: 1
-  blockingObjects: 0
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295

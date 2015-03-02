@@ -8,21 +8,21 @@ public class ClothingSystem : MonoBehaviour {
 	private static float PREVIEW_WIDTH = 74.0f;
 	private static float PREVIEW_HEIGHT = 104.0f;
 
-    private bool isEquipped;
-    private ClothingSystemController controller;
+	private bool isEquipped;
+	private ClothingSystemController controller;
 	private ClothingSelection activeTile;
 	private ClothingSelection activeSlot;
-	private IDictionary<ClothingData.ClothingSlot, Image> slotImageDictionary;
+	private	ClothingArea clothingArea;
 	private List<ClothingSelection> slotList;
 
-    public ClothingData.ClothingStyle shopStyle;
+	public ClothingData.ClothingStyle shopStyle;
 
-    public Button equipButton;
-    public Sprite equipImage;
-    public Sprite unequipImage;
-	public Image clothingArea;
+	public Button equipButton;
+	public Sprite equipImage;
+	public Sprite unequipImage;
 	public Image preview;
-    public GameObject pageTilePanel;
+	public GameObject clothingAreaContainer;
+	public GameObject pageTilePanel;
 	public GameObject itemSlotsPanel;
 
 	public ClothingSelection wigSlot;
@@ -32,16 +32,15 @@ public class ClothingSystem : MonoBehaviour {
 	public ClothingSelection accessorySlot;
 	public ClothingSelection dressSlot;
 
-    public void Start()
-    {
-        isEquipped = false;
-		slotImageDictionary = new Dictionary<ClothingData.ClothingSlot, Image>();
+	public void Start()
+	{
+		isEquipped = false;
 		slotList = new List<ClothingSelection>();
-        controller = ClothingSystemController.GetInstance();
-        Button[] pageTiles = pageTilePanel.GetComponentsInChildren<Button>();
+		controller = ClothingSystemController.GetInstance();
+		clothingArea = clothingAreaContainer.GetComponentInChildren<ClothingArea>();
+		Button[] pageTiles = pageTilePanel.GetComponentsInChildren<Button>();
 		Button[] clothingSlots = itemSlotsPanel.GetComponentsInChildren<Button>();
-		Image[] clothingSlotImages = clothingArea.GetComponentsInChildren<Image>(true);
-        controller.AssignClothingBackgrounds(shopStyle, pageTiles);
+		controller.AssignClothingBackgrounds(shopStyle, pageTiles);
 
 		activeTile = pageTiles[0].GetComponentInChildren<ClothingSelection>();
 		// Add the button click listeners for the page tiles
@@ -57,23 +56,15 @@ public class ClothingSystem : MonoBehaviour {
 			button.onClick.AddListener(() => { selectSlot(pageTile); });
 		}
 
-		// Prepare slot to image dictionary
-		ClothingData.ClothingSlot[] slots = (ClothingData.ClothingSlot[])Enum.GetValues(typeof(ClothingData.ClothingSlot));
-		for (int i = 0; i < slots.Length && i < clothingSlotImages.Length - 1; i++) {
-			ClothingData.ClothingSlot slot = slots[i];
-			Image image = clothingSlotImages[i + 1];
-			slotImageDictionary.Add(slot, image);
-		}
-
 		slotList.Add(wigSlot);
 		slotList.Add(topSlot);
 		slotList.Add(bottomSlot);
 		slotList.Add(shoesSlot);
 		slotList.Add(accessorySlot);
 		slotList.Add(dressSlot);
-    }
+	}
 
-    public void Equip() {
+	public void Equip() {
 		if (activeTile.Clothing != null) {
 			if (isEquipped)
 			{
@@ -86,7 +77,7 @@ public class ClothingSystem : MonoBehaviour {
 				setEquip(false);
 			}
 		}
-    }
+	}
 
 	private void selectClothing(ClothingSelection pageTile) {
 		if (pageTile.Clothing != null) {
@@ -133,7 +124,7 @@ public class ClothingSystem : MonoBehaviour {
 		if (activeTile.Clothing != null) {
 			ClothingData data = activeTile.Clothing;
 			Sprite sprite = Resources.Load<Sprite>(data.Path);
-			Image slot = slotImageDictionary[data.Slot];
+			Image slot = clothingArea.SlotImageDictionary[data.Slot];
 			slot.sprite = sprite;
 			slot.rectTransform.sizeDelta = new Vector2(sprite.rect.width, sprite.rect.height);
 			slot.rectTransform.localPosition = data.Location;
@@ -146,7 +137,7 @@ public class ClothingSystem : MonoBehaviour {
 
 	private void unequipClothing() {
 		if (activeSlot != null) {
-			Image slotTarget = slotImageDictionary[activeSlot.Clothing.Slot];
+			Image slotTarget = clothingArea.SlotImageDictionary[activeSlot.Clothing.Slot];
 			slotTarget.sprite = null;
 			slotTarget.gameObject.SetActive(false);
 
