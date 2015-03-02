@@ -364,6 +364,7 @@ GameObject:
   - 222: {fileID: 22290630}
   - 114: {fileID: 11490646}
   - 114: {fileID: 11490644}
+  - 114: {fileID: 11424604}
   m_Layer: 5
   m_Name: Item Slots Panel
   m_TagString: Untagged
@@ -1466,6 +1467,23 @@ MonoBehaviour:
   maxHeight: 35
   container: {fileID: 117390}
   clothingPreview: {fileID: 11417368}
+--- !u!114 &11424604
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9848882a8ec4aa34b814ab28897af11a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wigSlot: {fileID: 0}
+  topSlot: {fileID: 0}
+  bottomSlot: {fileID: 0}
+  shoesSlot: {fileID: 0}
+  accessorySlot: {fileID: 0}
+  dressSlot: {fileID: 0}
 --- !u!114 &11433386
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1967,12 +1985,6 @@ MonoBehaviour:
   clothingAreaContainer: {fileID: 190704}
   pageTilePanel: {fileID: 190658}
   itemSlotsPanel: {fileID: 190630}
-  wigSlot: {fileID: 0}
-  topSlot: {fileID: 0}
-  bottomSlot: {fileID: 0}
-  shoesSlot: {fileID: 0}
-  accessorySlot: {fileID: 0}
-  dressSlot: {fileID: 0}
 --- !u!114 &11490670
 MonoBehaviour:
   m_ObjectHideFlags: 1
