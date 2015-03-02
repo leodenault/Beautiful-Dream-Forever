@@ -51,7 +51,7 @@ public class ClothingSlotSystem : MonoBehaviour {
 
 	public void UpdateActiveSlot(ClothingData data) {
 		Sprite sprite = Resources.Load<Sprite>(data.Path);
-		Image slot = clothingArea.SlotImageDictionary[data.Slot];
+		Image slot = clothingArea.GetImageForSlot(data.Slot);
 
 		slot.sprite = sprite;
 		slot.rectTransform.sizeDelta = new Vector2(sprite.rect.width, sprite.rect.height);
@@ -67,7 +67,7 @@ public class ClothingSlotSystem : MonoBehaviour {
 
 		if (activeSlot != null) {
 			// Remove clothing area sprite
-			Image slotTarget = clothingArea.SlotImageDictionary[activeSlot.Clothing.Slot];
+			Image slotTarget = clothingArea.GetImageForSlot(activeSlot.Clothing.Slot);
 			slotTarget.sprite = null;
 			slotTarget.gameObject.SetActive(false);
 
