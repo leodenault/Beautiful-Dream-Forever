@@ -57,7 +57,7 @@ class BattleScreen : MonoBehaviour {
 	private Button generateRandomItem() {
 		Button newItem = Instantiate(conveyorItem) as Button;
 		newItem.image.sprite = clothingPoolImages[0];
-		Util.ScaleImageToMaxDimensions(newItem.image, newItem.image.sprite, conveyorTransform.rect.width, conveyorTransform.rect.height, false);
+		Util.ScaleImageToMaxDimensions(newItem.image, newItem.image.sprite, conveyorTransform.rect.width, conveyorTransform.rect.height);
 		newItem.onClick.AddListener(() => { clothingSlotSystem.UpdateActiveSlot(clothingPool[0]); });
 		return newItem;
 	}

@@ -4028,6 +4028,7 @@ GameObject:
   - 224: {fileID: 1421993169}
   - 222: {fileID: 1421993171}
   - 114: {fileID: 1421993170}
+  - 114: {fileID: 1421993172}
   m_Layer: 5
   m_Name: ClothingConveyor
   m_TagString: Untagged
@@ -4049,9 +4050,9 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 350.800018, y: -91.6999817}
-  m_SizeDelta: {x: 98.8000031, y: 344.200012}
-  m_Pivot: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 400.200012, y: -91.6999817}
+  m_SizeDelta: {x: 98.8000031, y: 344}
+  m_Pivot: {x: .5, y: 1}
 --- !u!114 &1421993170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4064,7 +4065,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: .0117647061}
   m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -4079,6 +4080,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1421993168}
+--- !u!114 &1421993172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1421993168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1200242548, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1 &1430101397
 GameObject:
   m_ObjectHideFlags: 0
