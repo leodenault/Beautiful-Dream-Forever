@@ -1,6 +1,9 @@
 ﻿using System;
 
 public class Battle {
+	private const float START_TIME = 60.0f;
+
+	private float elapsedTime;
 	private ClothingManager manager;
 	private ClothingData[] clothingPool;
 	private Random rnd;
@@ -14,6 +17,7 @@ public class Battle {
 		this.manager = manager;
 		clothingPool = manager.GetClothingData(ClothingData.ClothingStyle.NONE);
 		rnd = new Random();
+		elapsedTime = 0.0f;
 	}
 
 	public ClothingData GenerateRandomItem() {
@@ -29,5 +33,19 @@ public class Battle {
 		}
 
 		return paths;
+	}
+
+	public float RemainingTime(float delta) {
+		if (elapsedTime + delta > START_TIME) {
+			elapsedTime = START_TIME;
+			return 0.0f;
+		}
+
+		elapsedTime += delta;
+		return START_TIME - elapsedTime;
+	}
+
+	public bool TimeOut() {
+		return START_TIME < elapsedTime || Math.Abs(START_TIME - elapsedTime) < 0.001;
 	}
 }

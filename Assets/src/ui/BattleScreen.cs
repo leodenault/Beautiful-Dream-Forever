@@ -8,7 +8,8 @@ public class BattleScreen : MonoBehaviour {
 	private const float CONVEYOR_SPEED = 0.01f;
 	private const float CONVEYOR_ITEM_PADDING = 20.0f;
 
-	private BattleController controller;
+	private GlobalController globalController;
+	private BattleController battleController;
 	private ClothingArea clothingArea;
 	private ClothingSlotSystem clothingSlotSystem;
 	private IList<Button> conveyorItems;
@@ -19,9 +20,11 @@ public class BattleScreen : MonoBehaviour {
 	public GameObject itemSlotsPanel;
 	public GameObject clothingConveyor;
 	public Button conveyorItem;
+	public Text timerText;
 
 	public void Start() {
-		controller = new BattleController();
+		globalController = GlobalController.GetInstance();
+		battleController = new BattleController();
 		conveyorTransform = clothingConveyor.transform as RectTransform;
 		conveyorItems = new List<Button>();
 		nextItem = generateNextItem();
@@ -43,13 +46,18 @@ public class BattleScreen : MonoBehaviour {
 
 	public void FixedUpdate() {
 		moveConveyorItems();
+		updateTimer(Time.deltaTime);
+
+		if (battleController.TimeOut()) {
+			globalController.Back();
+		}
 	}
 
 	private Button generateNextItem() {
 		Button newItem = Instantiate(conveyorItem) as Button;
-		ClothingData item = controller.GenerateRandomItem();
+		ClothingData item = battleController.GenerateRandomItem();
 		newItem.onClick.AddListener(() => { selectConveyorItem(newItem, item); });
-		newItem.image.sprite = controller.GetCurrentItemSprite();
+		newItem.image.sprite = battleController.GetCurrentItemSprite();
 		Util.ScaleImageToMaxDimensions(newItem.image, newItem.image.sprite, conveyorTransform.rect.width, conveyorTransform.rect.height);
 		return newItem;
 	}
@@ -97,5 +105,9 @@ public class BattleScreen : MonoBehaviour {
 	private void selectConveyorItem(Button item, ClothingData data) {
 		removeItem(item);
 		clothingSlotSystem.UpdateActiveSlot(data);
+	}
+
+	private void updateTimer(float delta) {
+		timerText.text = battleController.RemainingTime(delta);
 	}
 }
