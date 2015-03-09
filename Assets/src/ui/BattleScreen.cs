@@ -53,6 +53,10 @@ public class BattleScreen : MonoBehaviour {
 		}
 	}
 
+	public void AcceptOutfit() {
+		clothingSlotSystem.Clear();
+	}
+
 	private Button generateNextItem() {
 		Button newItem = Instantiate(conveyorItem) as Button;
 		ClothingData item = battleController.GenerateRandomItem();

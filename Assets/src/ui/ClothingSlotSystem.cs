@@ -66,13 +66,7 @@ public class ClothingSlotSystem : MonoBehaviour {
 		Sprite activeSprite = null;
 
 		if (activeSlot != null) {
-			// Remove clothing area sprite
-			Image slotTarget = clothingArea.GetImageForSlot(activeSlot.Clothing.Slot);
-			slotTarget.sprite = null;
-			slotTarget.gameObject.SetActive(false);
-
-			// Unset the active slot
-			activeSlot.Clothing = null;
+			unsetSlot(activeSlot);
 			activeSlot = null;
 
 			// See if another slot is currently filled. If it is, make it the active slot
@@ -83,6 +77,24 @@ public class ClothingSlotSystem : MonoBehaviour {
 			}
 		}
 		return activeSprite;
+	}
+
+	public void Clear() {
+		foreach (ClothingSelection slot in slotList) {
+			unsetSlot(slot);
+		}
+	}
+
+	private void unsetSlot(ClothingSelection slot) {
+		if (slot.Clothing != null) {
+			// Remove clothing area sprite
+			Image slotTarget = clothingArea.GetImageForSlot(slot.Clothing.Slot);
+			slotTarget.sprite = null;
+			slotTarget.gameObject.SetActive(false);
+
+			// Unset the slot
+			slot.Clothing = null;
+		}
 	}
 
 	private void selectSlot(ClothingSelection slot, SelectSlotCallback callback) {
