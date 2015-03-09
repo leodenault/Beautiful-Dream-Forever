@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
 class BattleScreen : MonoBehaviour {
 	private const float CONVEYOR_SPEED = 0.01f;
+	private const float CONVEYOR_ITEM_PADDING = 20.0f;
 
 	private ClothingArea clothingArea;
 	private ClothingSlotSystem clothingSlotSystem;
@@ -13,6 +15,7 @@ class BattleScreen : MonoBehaviour {
 	private IList<Button> conveyorItems;
 	private Button nextItem;
 	private RectTransform conveyorTransform;
+	private System.Random rnd;
 	
 	public GameObject clothingAreaContainer;
 	public GameObject itemSlotsPanel;
@@ -22,6 +25,7 @@ class BattleScreen : MonoBehaviour {
 	public void Start() {
 		// TODO: Use a controller to access the correct clothing
 		conveyorTransform = clothingConveyor.transform as RectTransform;
+		rnd = new System.Random();
 		clothingPool = (new ClothingManager("data/clothing")).GetClothingData(ClothingData.ClothingStyle.NONE);
 		loadClothingPoolImages();
 		conveyorItems = new List<Button>();
@@ -53,12 +57,14 @@ class BattleScreen : MonoBehaviour {
 		}
 	}
 
-	// TODO: Insert actual randomizer logic
 	private Button generateRandomItem() {
+		// TODO: Randomizer should be offloaded to a controller
 		Button newItem = Instantiate(conveyorItem) as Button;
-		newItem.image.sprite = clothingPoolImages[0];
+		System.Random random = new System.Random();
+		int index = random.Next(clothingPoolImages.Length);
+		newItem.image.sprite = clothingPoolImages[index];
 		Util.ScaleImageToMaxDimensions(newItem.image, newItem.image.sprite, conveyorTransform.rect.width, conveyorTransform.rect.height);
-		newItem.onClick.AddListener(() => { clothingSlotSystem.UpdateActiveSlot(clothingPool[0]); });
+		newItem.onClick.AddListener(() => { clothingSlotSystem.UpdateActiveSlot(clothingPool[index]); });
 		return newItem;
 	}
 
@@ -76,7 +82,7 @@ class BattleScreen : MonoBehaviour {
 		}
 		else {
 			Button firstItem = conveyorItems[0];
-			return firstItem.transform.localPosition.y < 0;
+			return firstItem.transform.localPosition.y < -CONVEYOR_ITEM_PADDING;
 		}
 	}
 
