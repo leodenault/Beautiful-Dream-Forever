@@ -4,18 +4,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-class BattleScreen : MonoBehaviour {
+public class BattleScreen : MonoBehaviour {
 	private const float CONVEYOR_SPEED = 0.01f;
 	private const float CONVEYOR_ITEM_PADDING = 20.0f;
 
+	private BattleController controller;
 	private ClothingArea clothingArea;
 	private ClothingSlotSystem clothingSlotSystem;
-	private ClothingData[] clothingPool;
-	private Sprite[] clothingPoolImages;
 	private IList<Button> conveyorItems;
 	private Button nextItem;
 	private RectTransform conveyorTransform;
-	private System.Random rnd;
 	
 	public GameObject clothingAreaContainer;
 	public GameObject itemSlotsPanel;
@@ -23,13 +21,10 @@ class BattleScreen : MonoBehaviour {
 	public Button conveyorItem;
 
 	public void Start() {
-		// TODO: Use a controller to access the correct clothing
+		controller = new BattleController();
 		conveyorTransform = clothingConveyor.transform as RectTransform;
-		rnd = new System.Random();
-		clothingPool = (new ClothingManager("data/clothing")).GetClothingData(ClothingData.ClothingStyle.NONE);
-		loadClothingPoolImages();
 		conveyorItems = new List<Button>();
-		nextItem = generateRandomItem();
+		nextItem = generateNextItem();
 
 		clothingArea = clothingAreaContainer.GetComponentInChildren<ClothingArea>();
 		clothingSlotSystem = itemSlotsPanel.GetComponentInChildren<ClothingSlotSystem>();
@@ -50,21 +45,12 @@ class BattleScreen : MonoBehaviour {
 		moveConveyorItems();
 	}
 
-	private void loadClothingPoolImages() {
-		clothingPoolImages = new Sprite[clothingPool.Length];
-		for (int i = 0; i < clothingPool.Length; i++) {
-			clothingPoolImages[i] = Resources.Load<Sprite>(clothingPool[i].Path);
-		}
-	}
-
-	private Button generateRandomItem() {
-		// TODO: Randomizer should be offloaded to a controller
+	private Button generateNextItem() {
 		Button newItem = Instantiate(conveyorItem) as Button;
-		System.Random random = new System.Random();
-		int index = random.Next(clothingPoolImages.Length);
-		newItem.image.sprite = clothingPoolImages[index];
+		ClothingData item = controller.GenerateRandomItem();
+		newItem.onClick.AddListener(() => { selectConveyorItem(newItem, item); });
+		newItem.image.sprite = controller.GetCurrentItemSprite();
 		Util.ScaleImageToMaxDimensions(newItem.image, newItem.image.sprite, conveyorTransform.rect.width, conveyorTransform.rect.height);
-		newItem.onClick.AddListener(() => { selectConveyorItem(newItem, clothingPool[index]); });
 		return newItem;
 	}
 
@@ -73,7 +59,7 @@ class BattleScreen : MonoBehaviour {
 		nextItem.image.rectTransform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
 		nextItem.transform.localPosition = new Vector3(0.0f, nextItem.image.rectTransform.rect.height, 0.0f);
 		conveyorItems.Insert(0, nextItem);
-		nextItem = generateRandomItem();
+		nextItem = generateNextItem();
 	}
 
 	private bool nextItemCanFit() {

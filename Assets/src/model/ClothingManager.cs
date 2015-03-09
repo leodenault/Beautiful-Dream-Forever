@@ -5,20 +5,29 @@ using System.Xml.Serialization;
 using System.Collections.Generic;
 
 public class ClothingManager {
-	private string file;
+	private static ClothingManager INSTANCE;
+	private static string FILE = "data/clothing";
+	
 	private ClothingData[] clothingData;
     private IDictionary<ClothingData.ClothingStyle, List<ClothingData>> categories;
 
-	public ClothingManager(string file) {
-		this.file = file;
+	private ClothingManager(string file) {
 		load();
 		normalize();
         categorize();
 	}
 
+	public static ClothingManager GetInstance() {
+		if (INSTANCE == null) {
+			INSTANCE = new ClothingManager(FILE);
+		}
+
+		return INSTANCE;
+	}
+
 	private void load() {
 		XmlSerializer serializer = new XmlSerializer(typeof(ClothingData[]));
-		TextAsset data = Resources.Load<TextAsset>(file);
+		TextAsset data = Resources.Load<TextAsset>(FILE);
 		byte[] bytes = data.bytes;
 
 		MemoryStream stream = new MemoryStream();

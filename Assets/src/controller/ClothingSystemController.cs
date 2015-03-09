@@ -9,7 +9,7 @@ public class ClothingSystemController {
 	private ClothingManager manager;
 
 	private ClothingSystemController() {
-		this.manager = new ClothingManager("data/clothing");
+		this.manager = ClothingManager.GetInstance();
 	}
 
 	public static ClothingSystemController GetInstance() {
