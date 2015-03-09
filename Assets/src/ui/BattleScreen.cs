@@ -64,7 +64,7 @@ class BattleScreen : MonoBehaviour {
 		int index = random.Next(clothingPoolImages.Length);
 		newItem.image.sprite = clothingPoolImages[index];
 		Util.ScaleImageToMaxDimensions(newItem.image, newItem.image.sprite, conveyorTransform.rect.width, conveyorTransform.rect.height);
-		newItem.onClick.AddListener(() => { clothingSlotSystem.UpdateActiveSlot(clothingPool[index]); });
+		newItem.onClick.AddListener(() => { selectConveyorItem(newItem, clothingPool[index]); });
 		return newItem;
 	}
 
@@ -94,14 +94,22 @@ class BattleScreen : MonoBehaviour {
 	private void removeLastItem() {
 		int index = conveyorItems.Count - 1;
 		Button item = conveyorItems[index];
-		conveyorItems.RemoveAt(index);
-		Destroy(item.gameObject);
+		removeItem(item);
+	}
 
+	private void removeItem(Button item) {
+		conveyorItems.Remove(item);
+		Destroy(item.gameObject);
 	}
 
 	private void moveConveyorItems() {
 		foreach (Button item in conveyorItems) {
 			item.transform.Translate(new Vector3(0.0f, -CONVEYOR_SPEED, 0.0f));
 		}
+	}
+
+	private void selectConveyorItem(Button item, ClothingData data) {
+		removeItem(item);
+		clothingSlotSystem.UpdateActiveSlot(data);
 	}
 }
