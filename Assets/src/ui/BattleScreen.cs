@@ -24,7 +24,8 @@ public class BattleScreen : MonoBehaviour {
 
 	public void Start() {
 		globalController = GlobalController.GetInstance();
-		battleController = new BattleController();
+		// TODO: Remove hardcoded style and pass it in dynamically
+		battleController = new BattleController(ClothingData.ClothingStyle.ATHLETIC);
 		conveyorTransform = clothingConveyor.transform as RectTransform;
 		conveyorItems = new List<Button>();
 		nextItem = generateNextItem();

@@ -8,12 +8,13 @@ public class BattleController {
 	private Battle battle;
 	private IDictionary<string, Sprite> itemSprites;
 
-	public BattleController() {
-		battle = new Battle(ClothingManager.GetInstance());
+	public BattleController(ClothingData.ClothingStyle style) {
+		ClothingManager manager = ClothingManager.GetInstance();
+		battle = new Battle(manager, style);
 		itemSprites = new Dictionary<string, Sprite>();
 
-		foreach (string path in battle.GetItemPaths()) {
-			itemSprites.Add(path, Resources.Load<Sprite>(path));
+		foreach (ClothingData datum in manager.GetClothingData(ClothingData.ClothingStyle.NONE)) {
+			itemSprites.Add(datum.Path, Resources.Load<Sprite>(datum.Path));
 		}
 	}
 
