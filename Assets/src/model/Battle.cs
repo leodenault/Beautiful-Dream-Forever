@@ -4,6 +4,8 @@ public class Battle {
 	private const float START_TIME = 60.0f;
 
 	private float elapsedTime;
+	private int overallScore;
+	private int outfitScore;
 	private ClothingManager manager;
 	private ClothingData[] clothingPool;
 	private Random rnd;
@@ -18,6 +20,8 @@ public class Battle {
 		clothingPool = manager.GetClothingData(ClothingData.ClothingStyle.NONE);
 		rnd = new Random();
 		elapsedTime = 0.0f;
+		overallScore = 0;
+		outfitScore = 0;
 	}
 
 	public ClothingData GenerateRandomItem() {
