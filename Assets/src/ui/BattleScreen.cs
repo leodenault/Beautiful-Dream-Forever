@@ -5,7 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class BattleScreen : MonoBehaviour {
-	private const float CONVEYOR_SPEED = 0.01f;
+	private const float DEFAULT_CONVEYOR_SPEED = 0.01f;
 	private const float CONVEYOR_ITEM_PADDING = 20.0f;
 
 	private GlobalController globalController;
@@ -15,7 +15,8 @@ public class BattleScreen : MonoBehaviour {
 	private IList<Button> conveyorItems;
 	private Button nextItem;
 	private RectTransform conveyorTransform;
-	
+
+	public float conveyorSpeed = DEFAULT_CONVEYOR_SPEED;
 	public GameObject clothingAreaContainer;
 	public GameObject itemSlotsPanel;
 	public GameObject clothingConveyor;
@@ -103,7 +104,7 @@ public class BattleScreen : MonoBehaviour {
 
 	private void moveConveyorItems() {
 		foreach (Button item in conveyorItems) {
-			item.transform.Translate(new Vector3(0.0f, -CONVEYOR_SPEED, 0.0f));
+			item.transform.Translate(new Vector3(0.0f, -conveyorSpeed, 0.0f));
 		}
 	}
 
