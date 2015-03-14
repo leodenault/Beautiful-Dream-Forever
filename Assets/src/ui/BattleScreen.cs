@@ -33,7 +33,7 @@ public class BattleScreen : MonoBehaviour {
 
 		clothingArea = clothingAreaContainer.GetComponentInChildren<ClothingArea>();
 		clothingSlotSystem = itemSlotsPanel.GetComponentInChildren<ClothingSlotSystem>();
-		clothingSlotSystem.Init(clothingArea, null);
+		clothingSlotSystem.Init(clothingArea, RemoveItem);
 	}
 
 	public void Update() {
@@ -57,6 +57,10 @@ public class BattleScreen : MonoBehaviour {
 
 	public void AcceptOutfit() {
 		clothingSlotSystem.Clear();
+	}
+
+	public void RemoveItem(Sprite activeSprite) {
+		clothingSlotSystem.UnsetActiveSlot();
 	}
 
 	private Button generateNextItem() {
