@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<ArrayOfEssenceSynergy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<EssenceSynergy>
+	<Essence>CUTE</Essence>
+	<Styles>
+		<ClothingStyle>ATHLETIC</ClothingStyle>
+		<ClothingStyle>COSPLAY</ClothingStyle>
+	</Styles>
+	<Points>2</Points>
+	</EssenceSynergy>
+	<EssenceSynergy>
+		<Essence>COOL</Essence>
+		<Styles>
+			<ClothingStyle>HARDCORE</ClothingStyle>
+			<ClothingStyle>IDEALIST</ClothingStyle>
+			<ClothingStyle>HIPSTER</ClothingStyle>
+		</Styles>
+		<Points>2</Points>
+	</EssenceSynergy>
+	<EssenceSynergy>
+		<Essence>CLASSY</Essence>
+		<Styles>
+			<ClothingStyle>FORMAL</ClothingStyle>
+			<ClothingStyle>UNIFORM</ClothingStyle>
+			<ClothingStyle>PREPPY</ClothingStyle>
+		</Styles>
+		<Points>2</Points>
+	</EssenceSynergy>
+</ArrayOfEssenceSynergy>

@@ -69,8 +69,8 @@ public class ClothingSystem : MonoBehaviour {
 		}
 	}
 
-	private void selectSlotCallback(Sprite activeSprite) {
-		displayPreview(activeSprite);
+	private void selectSlotCallback(ClothingSelection activeSelection) {
+		displayPreview(activeSelection.Sprite);
 		setEquip(false);
 	}
 

@@ -9,13 +9,18 @@ public class Battle {
 
 	private float elapsedTime;
 	private int overallScore;
-	private int outfitScore;
 	private ClothingManager manager;
+	private Outfit outfit;
 	private IList<ClothingData> shopClothing;
 	private IList<ClothingData> otherClothing;
 	private Random categorySelector;
 	private Random shopSelector;
 	private Random otherSelector;
+
+	private int outfitScore;
+	public int OutfitScore {
+		get { return outfitScore; }
+	}
 
 	private ClothingData currentItem;
 	public ClothingData CurrentItem {
@@ -25,6 +30,7 @@ public class Battle {
 	public Battle(ClothingManager manager, ClothingData.ClothingStyle style) {
 		this.manager = manager;
 		setupClothingSets(style);
+		outfit = new Outfit();
 		categorySelector = new Random();
 		shopSelector = new Random();
 		otherSelector = new Random();
@@ -57,6 +63,29 @@ public class Battle {
 
 	public bool TimeOut() {
 		return START_TIME < elapsedTime || Math.Abs(START_TIME - elapsedTime) < 0.001;
+	}
+
+	public void UpdateOutfit(ClothingData data) {
+		outfit.SetItem(data);
+		updateSynergies();
+	}
+
+	public void RemoveItem(ClothingData data) {
+		outfit.RemoveItem(data);
+		updateSynergies();
+	}
+
+	public void ClearOutfit() {
+		outfit.Clear();
+		updateSynergies();
+	}
+
+	private void updateSynergies() {
+		outfitScore = 0;
+
+		foreach (ISynergy synergy in outfit.GetSynergies()) {
+			outfitScore += synergy.GetPoints();
+		}
 	}
 
 	private void setupClothingSets(ClothingData.ClothingStyle style) {

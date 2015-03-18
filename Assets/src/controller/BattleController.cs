@@ -39,6 +39,21 @@ public class BattleController {
 		return battle.TimeOut();
 	}
 
+	public int UpdateOutfitScore(ClothingData data) {
+		battle.UpdateOutfit(data);
+		return battle.OutfitScore;
+	}
+
+	public int RemoveItem(ClothingData data) {
+		battle.RemoveItem(data);
+		return battle.OutfitScore;
+	}
+
+	public int ClearOutfit() {
+		battle.ClearOutfit();
+		return battle.OutfitScore;
+	}
+
 	private string generateNumberFormat(int number, int index) {
 		return string.Format(number < 10 ? "0{{{0}}}" : "{{{0}}}", index);
 	}

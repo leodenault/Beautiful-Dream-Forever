@@ -8,7 +8,7 @@ public class ClothingSlotSystem : MonoBehaviour {
 	private ClothingSelection activeSlot;
 	private ClothingArea clothingArea;
 
-	public delegate void SelectSlotCallback(Sprite activeSprite);
+	public delegate void SelectSlotCallback(ClothingSelection activeSelection);
 
 	public ClothingSelection wigSlot;
 	public ClothingSelection topSlot;
@@ -101,7 +101,7 @@ public class ClothingSlotSystem : MonoBehaviour {
 		Sprite target = slot.Sprite;
 		if (target != null) {
 			activeSlot = slot;
-			callback(target);
+			callback(slot);
 		}
 	}
 

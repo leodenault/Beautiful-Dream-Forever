@@ -22,6 +22,7 @@ public class BattleScreen : MonoBehaviour {
 	public GameObject clothingConveyor;
 	public Button conveyorItem;
 	public Text timerText;
+	public Text outfitScore;
 
 	public void Start() {
 		globalController = GlobalController.GetInstance();
@@ -57,9 +58,12 @@ public class BattleScreen : MonoBehaviour {
 
 	public void AcceptOutfit() {
 		clothingSlotSystem.Clear();
+		outfitScore.text = battleController.ClearOutfit().ToString();
 	}
 
-	public void RemoveItem(Sprite activeSprite) {
+	public void RemoveItem(ClothingSelection activeSelection) {
+		int score = battleController.RemoveItem(activeSelection.Clothing);
+		outfitScore.text = score.ToString();
 		clothingSlotSystem.UnsetActiveSlot();
 	}
 
@@ -115,6 +119,8 @@ public class BattleScreen : MonoBehaviour {
 	private void selectConveyorItem(Button item, ClothingData data) {
 		removeItem(item);
 		clothingSlotSystem.UpdateActiveSlot(data);
+		int score = battleController.UpdateOutfitScore(data);
+		outfitScore.text = score.ToString();
 	}
 
 	private void updateTimer(float delta) {

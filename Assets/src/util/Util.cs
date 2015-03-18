@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Xml.Serialization;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,5 +27,21 @@ public static class Util
 
 		image.sprite = sprite;
 		image.rectTransform.sizeDelta = new Vector2(spriteWidth * scale, spriteHeight * scale);
+	}
+
+	public static T LoadXmlFile<T>(string unityFilePath) {
+		T result;
+		XmlSerializer serializer = new XmlSerializer(typeof(T));
+		TextAsset data = Resources.Load<TextAsset>(unityFilePath);
+		byte[] bytes = data.bytes;
+
+		MemoryStream stream = new MemoryStream();
+		stream.Write(bytes, 0, bytes.Length);
+		stream.Seek(0, SeekOrigin.Begin);
+
+		result = (T)serializer.Deserialize(stream);
+		stream.Close();
+
+		return result;
 	}
 }

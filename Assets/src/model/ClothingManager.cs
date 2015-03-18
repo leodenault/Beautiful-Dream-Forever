@@ -11,31 +11,18 @@ public class ClothingManager {
 	private ClothingData[] clothingData;
     private IDictionary<ClothingData.ClothingStyle, List<ClothingData>> categories;
 
-	private ClothingManager(string file) {
-		load();
+	private ClothingManager() {
+		clothingData = Util.LoadXmlFile<ClothingData[]>(FILE);
 		normalize();
         categorize();
 	}
 
 	public static ClothingManager GetInstance() {
 		if (INSTANCE == null) {
-			INSTANCE = new ClothingManager(FILE);
+			INSTANCE = new ClothingManager();
 		}
 
 		return INSTANCE;
-	}
-
-	private void load() {
-		XmlSerializer serializer = new XmlSerializer(typeof(ClothingData[]));
-		TextAsset data = Resources.Load<TextAsset>(FILE);
-		byte[] bytes = data.bytes;
-
-		MemoryStream stream = new MemoryStream();
-		stream.Write(bytes, 0, bytes.Length);
-		stream.Seek(0, SeekOrigin.Begin);
-
-		clothingData = serializer.Deserialize(stream) as ClothingData[];
-		stream.Close();
 	}
 
 	private void normalize() {
