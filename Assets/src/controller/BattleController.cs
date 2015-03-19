@@ -49,9 +49,9 @@ public class BattleController {
 		return battle.OutfitScore;
 	}
 
-	public int ClearOutfit() {
-		battle.ClearOutfit();
-		return battle.OutfitScore;
+	public int AcceptOutfit() {
+		battle.AcceptOutfit();
+		return battle.OverallScore;
 	}
 
 	private string generateNumberFormat(int number, int index) {

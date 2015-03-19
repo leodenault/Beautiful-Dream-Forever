@@ -8,7 +8,6 @@ public class Battle {
 	private const int MAX_PROBABILITY = 100;
 
 	private float elapsedTime;
-	private int overallScore;
 	private ClothingManager manager;
 	private Outfit outfit;
 	private IList<ClothingData> shopClothing;
@@ -16,6 +15,11 @@ public class Battle {
 	private Random categorySelector;
 	private Random shopSelector;
 	private Random otherSelector;
+
+	private int overallScore;
+	public int OverallScore {
+		get { return overallScore; }
+	}
 
 	private int outfitScore;
 	public int OutfitScore {
@@ -75,7 +79,8 @@ public class Battle {
 		updateSynergies();
 	}
 
-	public void ClearOutfit() {
+	public void AcceptOutfit() {
+		overallScore += outfitScore;
 		outfit.Clear();
 		updateSynergies();
 	}
