@@ -25,3 +25,5 @@ EditorBuildSettings:
     path: Assets/scenes/Athletic Shop Dressingroom.unity
   - enabled: 1
     path: Assets/scenes/Battle Screen.unity
+  - enabled: 1
+    path: Assets/scenes/Preppy Shop Dressingroom.unity
