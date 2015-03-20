@@ -2,54 +2,42 @@
 using System.Collections.Generic;
 
 class Outfit {
-	private const ClothingData EMPTY = null;
-
-	private IDictionary<ClothingData.ClothingSlot, ClothingData> clothing;
-	private SynergyManager synergyManager;
+	private IDictionary<ClothingData.ClothingSlot, OutfitItem> clothing;
 
 	public Outfit() {
-		clothing = new Dictionary<ClothingData.ClothingSlot, ClothingData>();
-		synergyManager = SynergyManager.GetInstance();
+		clothing = new Dictionary<ClothingData.ClothingSlot, OutfitItem>();
+
+		ClothingData.ClothingSlot[] slots = Enum.GetValues(typeof(ClothingData.ClothingSlot)) as ClothingData.ClothingSlot[];
+		foreach (ClothingData.ClothingSlot slot in slots) {
+			clothing.Add(slot, new OutfitItem());
+		}
 	}
 
-	// TODO: This is a terribly slow way of getting a list of synergies applying
-	// to the given outfit. It iterates through
-	// ALL of the synergies from the SynergyManager. There should be some level
-	// of caching to improve performance
-	public IList<ISynergy> GetSynergies() {
-		ISynergy[] allSynergies = synergyManager.GetSynergies();
-		IList<ISynergy> synergies = new List<ISynergy>();
-
-		foreach (ClothingData item in clothing.Values) {
-			foreach (ISynergy synergy in allSynergies) {
-				if (synergy.IsSynergetic(item)) {
-					synergies.Add(synergy);
-				}
-			}
+	
+	public int GetPoints() {
+		int points = 0;
+		foreach (OutfitItem item in clothing.Values) {
+			points += item.Points;
 		}
 
-		return synergies;
+		return points;
 	}
 
 	public ClothingData GetItem(ClothingData.ClothingSlot slot) {
-		return clothing[slot];
+		return clothing[slot].Item;
 	}
 
 	public void SetItem(ClothingData item) {
-		if (clothing.ContainsKey(item.Slot)) {
-			clothing.Remove(item.Slot);
-		}
-
-		clothing.Add(item.Slot, item);
+		clothing[item.Slot].Item = item;
 	}
 
 	public void RemoveItem(ClothingData item) {
-		if (clothing.ContainsKey(item.Slot)) {
-			clothing.Remove(item.Slot);
-		}
+		clothing[item.Slot].RemoveItem();
 	}
 
 	public void Clear() {
-		clothing.Clear();
+		foreach (OutfitItem item in clothing.Values) {
+			item.RemoveItem();
+		}
 	}
 }

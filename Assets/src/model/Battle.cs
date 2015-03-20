@@ -71,26 +71,22 @@ public class Battle {
 
 	public void UpdateOutfit(ClothingData data) {
 		outfit.SetItem(data);
-		updateSynergies();
+		updateOutfitScore();
 	}
 
 	public void RemoveItem(ClothingData data) {
 		outfit.RemoveItem(data);
-		updateSynergies();
+		updateOutfitScore();
 	}
 
 	public void AcceptOutfit() {
 		overallScore += outfitScore;
 		outfit.Clear();
-		updateSynergies();
+		updateOutfitScore();
 	}
 
-	private void updateSynergies() {
-		outfitScore = 0;
-
-		foreach (ISynergy synergy in outfit.GetSynergies()) {
-			outfitScore += synergy.GetPoints();
-		}
+	private void updateOutfitScore() {
+		outfitScore = outfit.GetPoints();
 	}
 
 	private void setupClothingSets(ClothingData.ClothingStyle style) {
