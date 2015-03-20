@@ -1,0 +1,1421 @@
+From 088e7459e553952b6fad7876ebf50333a75e4122 Mon Sep 17 00:00:00 2001
+From: ransell <ransell@bu.edu>
+Date: Fri, 20 Mar 2015 12:34:34 -0400
+Subject: [PATCH] Added clothing data to XML
+
+---
+ ...ink_Pink_Light_White_Pattern_RunningShoes 1.png | Bin 0 -> 5916 bytes
+ ...ink_Light_White_Pattern_RunningShoes 1.png.meta |  47 ++++
+ ...nk_DarkDark_Pink_White_Cotton_HightopShapes.png | Bin 8371 -> 0 bytes
+ ...rkDark_Pink_White_Cotton_HightopShapes.png.meta |  47 ----
+ ..._Cool_Accessory_Green_Light_Cotton_hair-tie.png | Bin 417 -> 0 bytes
+ ..._Accessory_Green_Light_Cotton_hair-tie.png.meta |  47 ----
+ ...ink_Pink_Light_White_Pattern_RunningShoes 1.png | Bin 5916 -> 0 bytes
+ ...ink_Light_White_Pattern_RunningShoes 1.png.meta |  47 ----
+ ...nk_DarkDark_Pink_White_Cotton_HightopShapes.png | Bin 0 -> 8371 bytes
+ ...rkDark_Pink_White_Cotton_HightopShapes.png.meta |  47 ++++
+ Assets/Resources/data/clothing.xml                 | 279 ++++++++++++++++++++-
+ Assets/scenes/Preppy Shop Dressingroom.unity       |  74 ++++--
+ 12 files changed, 424 insertions(+), 164 deletions(-)
+ create mode 100644 Assets/Resources/clothing/athletic/Athletic_Classy_Shoes_Pink_Pink_Light_White_Pattern_RunningShoes 1.png
+ create mode 100644 Assets/Resources/clothing/athletic/Athletic_Classy_Shoes_Pink_Pink_Light_White_Pattern_RunningShoes 1.png.meta
+ delete mode 100644 Assets/Resources/clothing/athletic/Athletic_Classy_Shoes_Teal_Muted_Pink_DarkDark_Pink_White_Cotton_HightopShapes.png
+ delete mode 100644 Assets/Resources/clothing/athletic/Athletic_Classy_Shoes_Teal_Muted_Pink_DarkDark_Pink_White_Cotton_HightopShapes.png.meta
+ delete mode 100644 Assets/Resources/clothing/athletic/Athletic_Cool_Accessory_Green_Light_Cotton_hair-tie.png
+ delete mode 100644 Assets/Resources/clothing/athletic/Athletic_Cool_Accessory_Green_Light_Cotton_hair-tie.png.meta
+ delete mode 100644 Assets/Resources/clothing/athletic/Athletic_Cool_Shoes_Pink_Pink_Light_White_Pattern_RunningShoes 1.png
+ delete mode 100644 Assets/Resources/clothing/athletic/Athletic_Cool_Shoes_Pink_Pink_Light_White_Pattern_RunningShoes 1.png.meta
+ create mode 100644 Assets/Resources/clothing/athletic/Athletic_Cool_Shoes_Teal_Muted_Pink_DarkDark_Pink_White_Cotton_HightopShapes.png
+ create mode 100644 Assets/Resources/clothing/athletic/Athletic_Cool_Shoes_Teal_Muted_Pink_DarkDark_Pink_White_Cotton_HightopShapes.png.meta
+
+diff --git a/Assets/Resources/clothing/athletic/Athletic_Classy_Shoes_Pink_Pink_Light_White_Pattern_RunningShoes 1.png b/Assets/Resources/clothing/athletic/Athletic_Classy_Shoes_Pink_Pink_Light_White_Pattern_RunningShoes 1.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..4a1ee95bb51ff52e6f9781f7b16ebe8298274a0a
+GIT binary patch
+literal 5916
+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
+
+literal 0
+HcmV?d00001
+
+diff --git a/Assets/Resources/clothing/athletic/Athletic_Classy_Shoes_Pink_Pink_Light_White_Pattern_RunningShoes 1.png.meta b/Assets/Resources/clothing/athletic/Athletic_Classy_Shoes_Pink_Pink_Light_White_Pattern_RunningShoes 1.png.meta
+new file mode 100644
+index 0000000..4402a2b
+--- /dev/null
++++ b/Assets/Resources/clothing/athletic/Athletic_Classy_Shoes_Pink_Pink_Light_White_Pattern_RunningShoes 1.png.meta	
+@@ -0,0 +1,47 @@
++fileFormatVersion: 2
++guid: 0a1b36ae24ca3a24d9460e2ec3c3acb6
++TextureImporter:
++  fileIDToRecycleName: {}
++  serializedVersion: 2
++  mipmaps:
++    mipMapMode: 0
++    enableMipMap: 1
++    linearTexture: 0
++    correctGamma: 0
++    fadeOut: 0
++    borderMipMap: 0
++    mipMapFadeDistanceStart: 1
++    mipMapFadeDistanceEnd: 3
++  bumpmap:
++    convertToNormalMap: 0
++    externalNormalMap: 0
++    heightScale: .25
++    normalMapFilter: 0
++  isReadable: 0
++  grayScaleToAlpha: 0
++  generateCubemap: 0
++  seamlessCubemap: 0
++  textureFormat: -1
++  maxTextureSize: 1024
++  textureSettings:
++    filterMode: -1
++    aniso: -1
++    mipBias: -1
++    wrapMode: -1
++  nPOTScale: 0
++  lightmap: 0
++  compressionQuality: 50
++  spriteMode: 1
++  spriteExtrude: 1
++  spriteMeshType: 1
++  alignment: 0
++  spritePivot: {x: .5, y: .5}
++  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
++  spritePixelsToUnits: 100
++  alphaIsTransparency: 1
++  textureType: 8
++  buildTargetSettings: []
++  spriteSheet:
++    sprites: []
++  spritePackingTag: 
++  userData: 
+diff --git a/Assets/Resources/clothing/athletic/Athletic_Classy_Shoes_Teal_Muted_Pink_DarkDark_Pink_White_Cotton_HightopShapes.png b/Assets/Resources/clothing/athletic/Athletic_Classy_Shoes_Teal_Muted_Pink_DarkDark_Pink_White_Cotton_HightopShapes.png
+deleted file mode 100644
+index 4f8e8c8ed00863e990fc9336710855835616f700..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+HcmV?d00001
+
+literal 8371
+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
+JPDHLkV1lZNvqb;^
+
+diff --git a/Assets/Resources/clothing/athletic/Athletic_Classy_Shoes_Teal_Muted_Pink_DarkDark_Pink_White_Cotton_HightopShapes.png.meta b/Assets/Resources/clothing/athletic/Athletic_Classy_Shoes_Teal_Muted_Pink_DarkDark_Pink_White_Cotton_HightopShapes.png.meta
+deleted file mode 100644
+index acb9de9..0000000
+--- a/Assets/Resources/clothing/athletic/Athletic_Classy_Shoes_Teal_Muted_Pink_DarkDark_Pink_White_Cotton_HightopShapes.png.meta
++++ /dev/null
+@@ -1,47 +0,0 @@
+-fileFormatVersion: 2
+-guid: 06475c0e1b9b1c148a5366eea17208f4
+-TextureImporter:
+-  fileIDToRecycleName: {}
+-  serializedVersion: 2
+-  mipmaps:
+-    mipMapMode: 0
+-    enableMipMap: 1
+-    linearTexture: 0
+-    correctGamma: 0
+-    fadeOut: 0
+-    borderMipMap: 0
+-    mipMapFadeDistanceStart: 1
+-    mipMapFadeDistanceEnd: 3
+-  bumpmap:
+-    convertToNormalMap: 0
+-    externalNormalMap: 0
+-    heightScale: .25
+-    normalMapFilter: 0
+-  isReadable: 0
+-  grayScaleToAlpha: 0
+-  generateCubemap: 0
+-  seamlessCubemap: 0
+-  textureFormat: -1
+-  maxTextureSize: 1024
+-  textureSettings:
+-    filterMode: -1
+-    aniso: -1
+-    mipBias: -1
+-    wrapMode: -1
+-  nPOTScale: 0
+-  lightmap: 0
+-  compressionQuality: 50
+-  spriteMode: 1
+-  spriteExtrude: 1
+-  spriteMeshType: 1
+-  alignment: 0
+-  spritePivot: {x: .5, y: .5}
+-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+-  spritePixelsToUnits: 100
+-  alphaIsTransparency: 1
+-  textureType: 8
+-  buildTargetSettings: []
+-  spriteSheet:
+-    sprites: []
+-  spritePackingTag: 
+-  userData: 
+diff --git a/Assets/Resources/clothing/athletic/Athletic_Cool_Accessory_Green_Light_Cotton_hair-tie.png b/Assets/Resources/clothing/athletic/Athletic_Cool_Accessory_Green_Light_Cotton_hair-tie.png
+deleted file mode 100644
+index f552fc135d703d0b3b5b64fa1948a90c3fdb8c03..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+HcmV?d00001
+
+literal 417
+zcmeAS@N?(olHy`uVBq!ia0vp^oIuRY!3HGPMlP2I2^4rl76ZkEL70(Y)*K0-phB`o
+zkS_y6l_~>6Lo)-z&;LOBB?CjL0RzLU1O^7H84L{K`IF+0x-l>?s(ZRPhE&{2N=Qjb
+zX-JfK@aQSW1CgZlp&O@8O9KieBpzT<I`ymQs!q>;)7B#uTi^ewpLOui0U%I6xAf!N
+z$LHtO*Z+I}@B8!n%-Q0)WueNM?~<+8X&M+9eAx8o|9^X*3H|2Qi>(gyMbC=fr<tUu
+zzhC3{`EY%^e|0~9yp45pJNErdPfyRP|B(`^|Ns5ee*Yj_<GFD5$-IXv^f%TWZG8TF
+z+I-_*|KI=jPjTOUTBB>8=1jq_rI*is`!DtE)Ad$S7B2}2iIl*aV<%2zWWQPS@z}ZW
+z@50Q?&GO7<36E9<oj-Bphrgq<O&g=Q!It3LI$DS8xngBh=RCQ3G%C)f>a&bxf+WxY
+z327-Qi5%mZ5)zV<694}EKL73Q_xtyIczXUPa-BP$n!>=tpnNdW`bSBY4KR2aJYD@<
+J);T3K0RXC{vQq#6
+
+diff --git a/Assets/Resources/clothing/athletic/Athletic_Cool_Accessory_Green_Light_Cotton_hair-tie.png.meta b/Assets/Resources/clothing/athletic/Athletic_Cool_Accessory_Green_Light_Cotton_hair-tie.png.meta
+deleted file mode 100644
+index ee4fe2c..0000000
+--- a/Assets/Resources/clothing/athletic/Athletic_Cool_Accessory_Green_Light_Cotton_hair-tie.png.meta
++++ /dev/null
+@@ -1,47 +0,0 @@
+-fileFormatVersion: 2
+-guid: c962a8e560381d043a9b8886bac66d7c
+-TextureImporter:
+-  fileIDToRecycleName: {}
+-  serializedVersion: 2
+-  mipmaps:
+-    mipMapMode: 0
+-    enableMipMap: 1
+-    linearTexture: 0
+-    correctGamma: 0
+-    fadeOut: 0
+-    borderMipMap: 0
+-    mipMapFadeDistanceStart: 1
+-    mipMapFadeDistanceEnd: 3
+-  bumpmap:
+-    convertToNormalMap: 0
+-    externalNormalMap: 0
+-    heightScale: .25
+-    normalMapFilter: 0
+-  isReadable: 0
+-  grayScaleToAlpha: 0
+-  generateCubemap: 0
+-  seamlessCubemap: 0
+-  textureFormat: -1
+-  maxTextureSize: 1024
+-  textureSettings:
+-    filterMode: -1
+-    aniso: -1
+-    mipBias: -1
+-    wrapMode: -1
+-  nPOTScale: 0
+-  lightmap: 0
+-  compressionQuality: 50
+-  spriteMode: 1
+-  spriteExtrude: 1
+-  spriteMeshType: 1
+-  alignment: 0
+-  spritePivot: {x: .5, y: .5}
+-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+-  spritePixelsToUnits: 100
+-  alphaIsTransparency: 1
+-  textureType: 8
+-  buildTargetSettings: []
+-  spriteSheet:
+-    sprites: []
+-  spritePackingTag: 
+-  userData: 
+diff --git a/Assets/Resources/clothing/athletic/Athletic_Cool_Shoes_Pink_Pink_Light_White_Pattern_RunningShoes 1.png b/Assets/Resources/clothing/athletic/Athletic_Cool_Shoes_Pink_Pink_Light_White_Pattern_RunningShoes 1.png
+deleted file mode 100644
+index 4a1ee95bb51ff52e6f9781f7b16ebe8298274a0a..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+HcmV?d00001
+
+literal 5916
+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
+
+diff --git a/Assets/Resources/clothing/athletic/Athletic_Cool_Shoes_Pink_Pink_Light_White_Pattern_RunningShoes 1.png.meta b/Assets/Resources/clothing/athletic/Athletic_Cool_Shoes_Pink_Pink_Light_White_Pattern_RunningShoes 1.png.meta
+deleted file mode 100644
+index 4402a2b..0000000
+--- a/Assets/Resources/clothing/athletic/Athletic_Cool_Shoes_Pink_Pink_Light_White_Pattern_RunningShoes 1.png.meta	
++++ /dev/null
+@@ -1,47 +0,0 @@
+-fileFormatVersion: 2
+-guid: 0a1b36ae24ca3a24d9460e2ec3c3acb6
+-TextureImporter:
+-  fileIDToRecycleName: {}
+-  serializedVersion: 2
+-  mipmaps:
+-    mipMapMode: 0
+-    enableMipMap: 1
+-    linearTexture: 0
+-    correctGamma: 0
+-    fadeOut: 0
+-    borderMipMap: 0
+-    mipMapFadeDistanceStart: 1
+-    mipMapFadeDistanceEnd: 3
+-  bumpmap:
+-    convertToNormalMap: 0
+-    externalNormalMap: 0
+-    heightScale: .25
+-    normalMapFilter: 0
+-  isReadable: 0
+-  grayScaleToAlpha: 0
+-  generateCubemap: 0
+-  seamlessCubemap: 0
+-  textureFormat: -1
+-  maxTextureSize: 1024
+-  textureSettings:
+-    filterMode: -1
+-    aniso: -1
+-    mipBias: -1
+-    wrapMode: -1
+-  nPOTScale: 0
+-  lightmap: 0
+-  compressionQuality: 50
+-  spriteMode: 1
+-  spriteExtrude: 1
+-  spriteMeshType: 1
+-  alignment: 0
+-  spritePivot: {x: .5, y: .5}
+-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+-  spritePixelsToUnits: 100
+-  alphaIsTransparency: 1
+-  textureType: 8
+-  buildTargetSettings: []
+-  spriteSheet:
+-    sprites: []
+-  spritePackingTag: 
+-  userData: 
+diff --git a/Assets/Resources/clothing/athletic/Athletic_Cool_Shoes_Teal_Muted_Pink_DarkDark_Pink_White_Cotton_HightopShapes.png b/Assets/Resources/clothing/athletic/Athletic_Cool_Shoes_Teal_Muted_Pink_DarkDark_Pink_White_Cotton_HightopShapes.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..4f8e8c8ed00863e990fc9336710855835616f700
+GIT binary patch
+literal 8371
+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
+JPDHLkV1lZNvqb;^
+
+literal 0
+HcmV?d00001
+
+diff --git a/Assets/Resources/clothing/athletic/Athletic_Cool_Shoes_Teal_Muted_Pink_DarkDark_Pink_White_Cotton_HightopShapes.png.meta b/Assets/Resources/clothing/athletic/Athletic_Cool_Shoes_Teal_Muted_Pink_DarkDark_Pink_White_Cotton_HightopShapes.png.meta
+new file mode 100644
+index 0000000..acb9de9
+--- /dev/null
++++ b/Assets/Resources/clothing/athletic/Athletic_Cool_Shoes_Teal_Muted_Pink_DarkDark_Pink_White_Cotton_HightopShapes.png.meta
+@@ -0,0 +1,47 @@
++fileFormatVersion: 2
++guid: 06475c0e1b9b1c148a5366eea17208f4
++TextureImporter:
++  fileIDToRecycleName: {}
++  serializedVersion: 2
++  mipmaps:
++    mipMapMode: 0
++    enableMipMap: 1
++    linearTexture: 0
++    correctGamma: 0
++    fadeOut: 0
++    borderMipMap: 0
++    mipMapFadeDistanceStart: 1
++    mipMapFadeDistanceEnd: 3
++  bumpmap:
++    convertToNormalMap: 0
++    externalNormalMap: 0
++    heightScale: .25
++    normalMapFilter: 0
++  isReadable: 0
++  grayScaleToAlpha: 0
++  generateCubemap: 0
++  seamlessCubemap: 0
++  textureFormat: -1
++  maxTextureSize: 1024
++  textureSettings:
++    filterMode: -1
++    aniso: -1
++    mipBias: -1
++    wrapMode: -1
++  nPOTScale: 0
++  lightmap: 0
++  compressionQuality: 50
++  spriteMode: 1
++  spriteExtrude: 1
++  spriteMeshType: 1
++  alignment: 0
++  spritePivot: {x: .5, y: .5}
++  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
++  spritePixelsToUnits: 100
++  alphaIsTransparency: 1
++  textureType: 8
++  buildTargetSettings: []
++  spriteSheet:
++    sprites: []
++  spritePackingTag: 
++  userData: 
+diff --git a/Assets/Resources/data/clothing.xml b/Assets/Resources/data/clothing.xml
+index e64bb27..adec1a8 100644
+--- a/Assets/Resources/data/clothing.xml
++++ b/Assets/Resources/data/clothing.xml
+@@ -2,6 +2,39 @@
+ <ArrayOfClothingData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <!-- THIS DATA SHOULD STAY ALPHABETIZED -->
+   <ClothingData>
++    <Name>Athletic Halter Top</Name>
++    <Path>clothing/athletic/Athletic_Classy_Top_Black_Teal_Light_White_Cotton_HalterTankTop</Path>
++    <Slot>TOP</Slot>
++    <Style>ATHLETIC</Style>
++    <Essence>CLASSY</Essence>
++    <Location>
++      <x>60.0</x>
++      <y>77.0</y>
++    </Location>
++  </ClothingData>
++  <ClothingData>
++    <Name>Athletic Wig Greenish</Name>
++    <Path>clothing/athletic/Athletic_Classy_Wig_Greenish</Path>
++    <Slot>WIG</Slot>
++    <Style>ATHLETCI</Style>
++    <Essence>CLASSY</Essence>
++    <Location>
++      <x>67</x>
++      <y>17</y>
++    </Location>
++  </ClothingData>
++  <ClothingData>
++    <Name>Ballet Slippers</Name>
++    <Path>clothing/athletic/Athletic_Cute_Shoes_White_Cotton_BalletSlippers</Path>
++    <Slot>SHOES</Slot>
++    <Style>ATHLETIC</Style>
++    <Essence>CUTE</Essence>
++    <Location>
++      <x>74.0</x>
++      <y>344.0</y>
++    </Location>
++  </ClothingData>
++  <ClothingData>
+     <Name>Ballet Spandex Shorts</Name>
+     <Path>clothing/athletic/Athletic_Cute_Bottom_Pink_DarkDark_Cotton_SpandexShorts</Path>
+     <Slot>BOTTOM</Slot>
+@@ -13,6 +46,72 @@
+     </Location>
+   </ClothingData>
+   <ClothingData>
++    <Name>Bandages Hand</Name>
++    <Path>clothing/athletic/Athletic_Cool_Accessory_White_Cotton_Bandages</Path>
++    <Slot>ACCESSORY</Slot>
++    <Style>ATHLETIC</Style>
++    <Essence>COOL</Essence>
++    <Location>
++      <x>36.0</x>
++      <y>170.0</y>
++    </Location>
++  </ClothingData>
++  <ClothingData>
++    <Name>Blonde Bun</Name>
++    <Path>clothing/athletic/Athletic_Cute_Wig_BlondeBun</Path>
++    <Slot>WIG</Slot>
++    <Style>ATHLETIC</Style>
++    <Essence>CUTE</Essence>
++    <Location>
++      <x>71.0</x>
++      <y>17.0</y>
++    </Location>
++  </ClothingData>
++  <ClothingData>
++    <Name>Bow Wedges</Name>
++    <Path>clothing/preppy/Preppy_Cute_Shoes_Green_Muted_Orange_DarkMuted_Cotton_Wedges</Path>
++    <Slot>SHOES</Slot>
++    <Style>PREPPY</Style>
++    <Essence>CUTE</Essence>
++    <Location>
++      <x>73.0</x>
++      <y>339.0</y>
++    </Location>
++  </ClothingData>
++  <ClothingData>
++    <Name>Cool Hightops</Name>
++    <Path>clothing/athletic/Athletic_Cool_Shoes_Teal_Muted_Pink_DarkDark_Pink_White_Cotton_HightopShapes</Path>
++    <Slot>SHOES</Slot>
++    <Style>ATHLETIC</Style>
++    <Essence>COOL</Essence>
++    <Location>
++      <x>73.0</x>
++      <y>326.0</y>
++    </Location>
++  </ClothingData>
++  <ClothingData>
++    <Name>Double Headband</Name>
++    <Path>clothing/athletic/Athletic_Classy_Accessory_Black_Cotton_DoubleHeadband</Path>
++    <Slot>ACCESSORY</Slot>
++    <Style>ATHLETIC</Style>
++    <Essence>CLASSY</Essence>
++    <Location>
++      <x>78.0</x>
++      <y>16.0</y>
++    </Location>
++  </ClothingData>
++  <ClothingData>
++    <Name>Flower Running Shorts</Name>
++    <Path>clothing/athletic/Athletic_Classy_Bottom_Pink_Dark_Teal_Light_White_Yellow_Light_Cotton_RunningShorts</Path>
++    <Slot>BOTTOM</Slot>
++    <Style>ATHLETIC</Style>
++    <Essence>CLASSY</Essence>
++    <Location>
++      <x>56.0</x>
++      <y>163.0</y>
++    </Location>
++  </ClothingData>
++  <ClothingData>
+     <Name>Formal Cute Shoes</Name>
+     <Path>clothing/formal/Formal_Cute_Shoes_Orange2_Muted_Yellow_Light_Cotton_BowFlats</Path>
+     <Slot>SHOES</Slot>
+@@ -35,28 +134,204 @@
+     </Location>
+   </ClothingData>
+   <ClothingData>
++    <Name>Greenish Yellow Wig</Name>
++    <Path>clothing/preppy/Preppy_Cute_Wig_GreenishYellow</Path>
++    <Slot>WIG</Slot>
++    <Style>PREPPY</Style>
++    <Essence>CUTE</Essence>
++    <Location>
++      <x>75.0</x>
++      <y>20.0</y>
++    </Location>
++  </ClothingData>
++  <ClothingData>
++    <Name>Hair Bow Pink</Name>
++    <Path>clothing/preppy/Preppy_Cute_Accessory_Orange_Light_Red_Cotton_HairBow</Path>
++    <Slot>ACCESSORY</Slot>
++    <Style>PREPPY</Style>
++    <Essence>CUTE</Essence>
++    <Location>
++      <x>69.0</x>
++      <y>26.0</y>
++    </Location>
++  </ClothingData>
++  <ClothingData>
+     <Name>Leg Warmers</Name>
+     <Path>clothing/athletic/Athletic_Cute_Accessory_Orange1_Light_Pink_DarkDark_Cotton_LegWarmers</Path>
+     <Slot>ACCESSORY</Slot>
+     <Style>ATHLETIC</Style>
+-	<Essence>CUTE</Essence>
++	  <Essence>CUTE</Essence>
+     <Location>
+       <x>66.0</x>
+       <y>263.0</y>
+     </Location>
+   </ClothingData>
+   <ClothingData>
++    <Name>Light Orange Jacket</Name>
++    <Path>clothing/preppy/Preppy_Cool_Top_Orange_Light_White_Cotton_JacketandShirt</Path>
++    <Slot>TOP</Slot>
++    <Style>PREPPY</Style>
++    <Essence>COOL</Essence>
++    <Location>
++      <x>36.0</x>
++      <y>70.0</y>
++    </Location>
++  </ClothingData>
++  <ClothingData>
++    <Name>Light Orange Shorts</Name>
++    <Path>clothing/preppy/Preppy_Cool_Bottom_Orange_Light_Cotton_Shorts</Path>
++    <Slot>BOTTOM</Slot>
++    <Style>PREPPY</Style>
++    <Essence>COOL</Essence>
++    <Location>
++      <x>53.0</x>
++      <y>151.0</y>
++    </Location>
++  </ClothingData>
++  <ClothingData>
++    <Name>Long Ribbon Bow</Name>
++    <Path>clothing/preppy/Preppy_Cool_Accessory_Black_Cotton_LongRibbonBow</Path>
++    <Slot>ACCESSORY</Slot>
++    <Style>PREPPY</Style>
++    <Essence>COOL</Essence>
++    <Location>
++      <x>90.0</x>
++      <y>85.0</y>
++    </Location>
++  </ClothingData>
++  <ClothingData>
++    <Name>Mom Shoes</Name>
++    <Path>clothing/preppy/Preppy_Cool_Shoes_Black_Gray_Cotton</Path>
++    <Slot>SHOES</Slot>
++    <Style>PREPPY</Style>
++    <Essence>COOL</Essence>
++    <Location>
++      <x>74.0</x>
++      <y>333.0</y>
++    </Location>
++  </ClothingData>
++  <ClothingData>
++    <Name>Pearl String Necklace</Name>
++    <Path>clothing/preppy/Preppy_Classy_Accessory_White_Blue_DarkDark_Cotton_PearlString</Path>
++    <Slot>ACCESSORY</Slot>
++    <Style>PREPPY</Style>
++    <Essence>CLASSY</Essence>
++    <Location>
++      <x>80.0</x>
++      <y>73.0</y>
++    </Location>
++  </ClothingData>
++  <ClothingData>
++    <Name>Peter Pan Dress</Name>
++    <Path>clothing/preppy/Preppy_Cute_Dress_Oragne2_Muted_Orange_Muted_Green_Muted_Cotton_PeterPanCollar</Path>
++    <Slot>DRESS</Slot>
++    <Style>PREPPY</Style>
++    <Essence>CUTE</Essence>
++    <Location>
++      <x>35.0</x>
++      <y>69.0</y>
++    </Location>
++  </ClothingData>
++  <ClothingData>
+     <Name>Pointe Sweatshirt</Name>
+     <Path>clothing/athletic/Athletic_Cute_Top_Green2_Light_Pink_DarkDark_Cotton_PointeSweatshirt</Path>
+     <Slot>TOP</Slot>
+     <Style>ATHLETIC</Style>
+-	<Essence>CUTE</Essence>
++	  <Essence>CUTE</Essence>
+     <Location>
+       <x>34.0</x>
+       <y>78.0</y>
+     </Location>
+   </ClothingData>
+   <ClothingData>
++    <Name>Ponytail Braid Wig</Name>
++    <Path>clothing/athletic/Athletic_Cool_Wig_PonytailBraid</Path>
++    <Slot>WIG</Slot>
++    <Style>ATHLETIC</Style>
++    <Essence>COOL</Essence>
++    <Location>
++      <x>73.0</x>
++      <y>19.0</y>
++    </Location>
++  </ClothingData>
++  <ClothingData>
++    <Name>Preppy Cool Wig</Name>
++    <Path>clothing/preppy/Preppy_Cool_Wig_Blue</Path>
++    <Slot>WIG</Slot>
++    <Style>PREPPY</Style>
++    <Essence>COOL</Essence>
++    <Location>
++      <x>73.0</x>
++      <y>18.0</y>
++    </Location>
++  </ClothingData>
++   <ClothingData>
++    <Name>Preppy Long Flowing Skirt</Name>
++    <Path>clothing/preppy/Preppy_Classy_Bottom_Skirt_Red_LongFlow</Path>
++    <Slot>BOTTOM</Slot>
++    <Style>PREPPY</Style>
++    <Essence>CLASSY</Essence>
++    <Location>
++      <x>35.0</x>
++      <y>144.0</y>
++    </Location>
++  </ClothingData>
++  <ClothingData>
++    <Name>Preppy Pale Pink Wig</Name>
++    <Path>clothing/preppy/Preppy_Classy_Wig_PalePink</Path>
++    <Slot>WIG</Slot>
++    <Style>PREPPY</Style>
++    <Essence>CLASSY</Essence>
++    <Location>
++      <x>71</x>
++      <y>18</y>
++    </Location>
++  </ClothingData>
++  <ClothingData>
++    <Name>Running Shoes</Name>
++    <Path>clothing/athletic/Athletic_Classy_Shoes_Pink_Pink_Light_White_Pattern_RunningShoes</Path>
++    <Slot>SHOES</Slot>
++    <Style>ATHLETIC</Style>
++    <Essence>CLASSY</Essence>
++    <Location>
++      <x>73.0</x>
++      <y>341.0</y>
++    </Location>
++  </ClothingData>
++  <ClothingData>
++    <Name>Sandal Heels</Name>
++    <Path>clothing/preppy/Preppy_Classy_Shoes_Yellow_Light_Red_Cotton_SandalHeels</Path>
++    <Slot>SHOES</Slot>
++    <Style>PREPPY</Style>
++    <Essence>CLASSY</Essence>
++    <Location>
++      <x>73.0</x>
++      <y>336.0</y>
++    </Location>
++  </ClothingData>
++  <ClothingData>
++    <Name>Sports Bra</Name>
++    <Path>clothing/athletic/Athletic_Cool_Top_Black_Pink_Muted_Cotton_SportsBra</Path>
++    <Slot>TOP</Slot>
++    <Style>ATHLETIC</Style>
++    <Essence>COOL</Essence>
++    <Location>
++      <x>73.0</x>
++      <y>77.0</y>
++    </Location>
++  </ClothingData>
++  <ClothingData>
++    <Name>Thick Stripes</Name>
++    <Path>clothing/preppy/Preppy_Classy_Top_Black_White_Cotton_Striped</Path>
++    <Slot>TOP</Slot>
++    <Style>PREPPY</Style>
++    <Essence>CLASSY</Essence>
++    <Location>
++      <x>38.0</x>
++      <y>78.0</y>
++    </Location>
++  </ClothingData>
++  <ClothingData>
+     <Name>White Cotton Hogwarts</Name>
+     <Path>clothing/athletic/Athletic_Cool_Bottom_White_Cotton_Hogwarts</Path>
+     <Slot>BOTTOM</Slot>
+diff --git a/Assets/scenes/Preppy Shop Dressingroom.unity b/Assets/scenes/Preppy Shop Dressingroom.unity
+index 6625ca7..a086b62 100644
+--- a/Assets/scenes/Preppy Shop Dressingroom.unity	
++++ b/Assets/scenes/Preppy Shop Dressingroom.unity	
+@@ -2124,7 +2124,7 @@ MonoBehaviour:
+   m_Script: {fileID: 11500000, guid: f181674666514cb4c950830fc599fcd1, type: 3}
+   m_Name: 
+   m_EditorClassIdentifier: 
+-  shopStyle: 8
++  shopStyle: 6
+   equipButton: {fileID: 0}
+   equipImage: {fileID: 21300000, guid: efc8122f3163c16469fdce1f835c4540, type: 3}
+   unequipImage: {fileID: 21300000, guid: ab4fdaf0947bcda43a8f0ed15fc523bc, type: 3}
+@@ -2161,7 +2161,7 @@ MonoBehaviour:
+   m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+   m_Name: 
+   m_EditorClassIdentifier: 
+-  m_UiScaleMode: 1
++  m_UiScaleMode: 0
+   m_ReferencePixelsPerUnit: 100
+   m_ScaleFactor: 1
+   m_ReferenceResolution: {x: 800, y: 600}
+@@ -2278,11 +2278,11 @@ Prefab:
+       objectReference: {fileID: 0}
+     - target: {fileID: 22490706, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
+       propertyPath: m_AnchoredPosition.x
+-      value: 58.5
++      value: 4069658.5
+       objectReference: {fileID: 0}
+     - target: {fileID: 22490706, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
+       propertyPath: m_AnchoredPosition.y
+-      value: -46.0000916
++      value: -1634820.88
+       objectReference: {fileID: 0}
+     - target: {fileID: 22490706, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
+       propertyPath: m_SizeDelta.x
+@@ -2302,11 +2302,11 @@ Prefab:
+       objectReference: {fileID: 0}
+     - target: {fileID: 22490728, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
+       propertyPath: m_AnchoredPosition.x
+-      value: 58.5
++      value: 4069658.5
+       objectReference: {fileID: 0}
+     - target: {fileID: 22490728, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
+       propertyPath: m_AnchoredPosition.y
+-      value: -128.000092
++      value: -1634902.88
+       objectReference: {fileID: 0}
+     - target: {fileID: 22490728, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
+       propertyPath: m_SizeDelta.x
+@@ -2326,11 +2326,11 @@ Prefab:
+       objectReference: {fileID: 0}
+     - target: {fileID: 22490708, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
+       propertyPath: m_AnchoredPosition.x
+-      value: 58.5
++      value: 4069658.5
+       objectReference: {fileID: 0}
+     - target: {fileID: 22490708, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
+       propertyPath: m_AnchoredPosition.y
+-      value: -210.000092
++      value: -1634984.88
+       objectReference: {fileID: 0}
+     - target: {fileID: 22490708, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
+       propertyPath: m_SizeDelta.x
+@@ -2350,11 +2350,11 @@ Prefab:
+       objectReference: {fileID: 0}
+     - target: {fileID: 22490698, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
+       propertyPath: m_AnchoredPosition.x
+-      value: 58.5
++      value: 4069658.5
+       objectReference: {fileID: 0}
+     - target: {fileID: 22490698, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
+       propertyPath: m_AnchoredPosition.y
+-      value: -292.000092
++      value: -1635066.88
+       objectReference: {fileID: 0}
+     - target: {fileID: 22490698, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
+       propertyPath: m_SizeDelta.x
+@@ -2374,11 +2374,11 @@ Prefab:
+       objectReference: {fileID: 0}
+     - target: {fileID: 22490650, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
+       propertyPath: m_AnchoredPosition.x
+-      value: 58.5
++      value: 4069658.5
+       objectReference: {fileID: 0}
+     - target: {fileID: 22490650, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
+       propertyPath: m_AnchoredPosition.y
+-      value: -374.000092
++      value: -1635148.88
+       objectReference: {fileID: 0}
+     - target: {fileID: 22490650, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
+       propertyPath: m_SizeDelta.x
+@@ -2590,11 +2590,11 @@ Prefab:
+       objectReference: {fileID: 0}
+     - target: {fileID: 22490660, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
+       propertyPath: m_AnchoredPosition.x
+-      value: 60
++      value: 4069660
+       objectReference: {fileID: 0}
+     - target: {fileID: 22490660, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
+       propertyPath: m_AnchoredPosition.y
+-      value: -27.6880302
++      value: -1634800.88
+       objectReference: {fileID: 0}
+     - target: {fileID: 22490688, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
+       propertyPath: m_AnchorMin.y
+@@ -2606,11 +2606,11 @@ Prefab:
+       objectReference: {fileID: 0}
+     - target: {fileID: 22490688, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
+       propertyPath: m_AnchoredPosition.x
+-      value: 60
++      value: 4069660
+       objectReference: {fileID: 0}
+     - target: {fileID: 22490688, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
+       propertyPath: m_AnchoredPosition.y
+-      value: -98.0640869
++      value: -1634872.88
+       objectReference: {fileID: 0}
+     - target: {fileID: 22490618, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
+       propertyPath: m_AnchorMin.y
+@@ -2622,11 +2622,11 @@ Prefab:
+       objectReference: {fileID: 0}
+     - target: {fileID: 22490618, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
+       propertyPath: m_AnchoredPosition.x
+-      value: 60
++      value: 4069660
+       objectReference: {fileID: 0}
+     - target: {fileID: 22490618, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
+       propertyPath: m_AnchoredPosition.y
+-      value: -168.440155
++      value: -1634944.88
+       objectReference: {fileID: 0}
+     - target: {fileID: 22390618, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
+       propertyPath: m_Camera
+@@ -2708,7 +2708,7 @@ Prefab:
+       objectReference: {fileID: 0}
+     - target: {fileID: 22490660, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
+       propertyPath: m_SizeDelta.y
+-      value: 55.3760605
++      value: 57
+       objectReference: {fileID: 0}
+     - target: {fileID: 11490722, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
+       propertyPath: m_Sprite
+@@ -2721,7 +2721,7 @@ Prefab:
+       objectReference: {fileID: 0}
+     - target: {fileID: 22490688, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
+       propertyPath: m_SizeDelta.y
+-      value: 55.3760605
++      value: 57
+       objectReference: {fileID: 0}
+     - target: {fileID: 11490620, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
+       propertyPath: m_Sprite
+@@ -2734,7 +2734,39 @@ Prefab:
+       objectReference: {fileID: 0}
+     - target: {fileID: 22490618, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
+       propertyPath: m_SizeDelta.y
+-      value: 55.3760605
++      value: 57
++      objectReference: {fileID: 0}
++    - target: {fileID: 22390618, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
++      propertyPath: m_RenderMode
++      value: 1
++      objectReference: {fileID: 0}
++    - target: {fileID: 22490640, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
++      propertyPath: m_LocalScale.x
++      value: 0
++      objectReference: {fileID: 0}
++    - target: {fileID: 22490640, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
++      propertyPath: m_LocalScale.y
++      value: 0
++      objectReference: {fileID: 0}
++    - target: {fileID: 22490640, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
++      propertyPath: m_LocalScale.z
++      value: 0
++      objectReference: {fileID: 0}
++    - target: {fileID: 11490664, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
++      propertyPath: m_UiScaleMode
++      value: 0
++      objectReference: {fileID: 0}
++    - target: {fileID: 190640, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
++      propertyPath: m_IsActive
++      value: 1
++      objectReference: {fileID: 0}
++    - target: {fileID: 11490666, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
++      propertyPath: shopStyle
++      value: 6
++      objectReference: {fileID: 0}
++    - target: {fileID: 11490664, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
++      propertyPath: m_ScaleFactor
++      value: 1
+       objectReference: {fileID: 0}
+     m_RemovedComponents: []
+   m_ParentPrefab: {fileID: 100100000, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
+-- 
+1.9.5.github.0
+
