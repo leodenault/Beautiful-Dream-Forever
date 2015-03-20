@@ -2,7 +2,7 @@
 using System.IO;
 using System.Xml.Serialization;
 
-public class SynergyManager {
+public class SynergyManager : ISynergyManager {
 	private static SynergyManager INSTANCE;
 	private static string FILE = "data/essenceSynergies";
 
