@@ -17,7 +17,8 @@ public class ClothingData {
 	public enum ClothingTexture {
 		PVC, METAL, DENIM, COTTON, PATTERN, LEATHER
 	}
-	
+
+	public int Id;
 	public string Name;
 	public string Path;
 	public string Description;

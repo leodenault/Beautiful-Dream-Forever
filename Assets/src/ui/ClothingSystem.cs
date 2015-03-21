@@ -61,7 +61,7 @@ public class ClothingSystem : MonoBehaviour {
 			activeTile = pageTile;
 			displayPreview(activeTile.Sprite);
 
-			if (clothingSlotSystem.MakeActive(pageTile.Clothing.Name)) {
+			if (clothingSlotSystem.MakeActive(pageTile.Clothing)) {
 				setEquip(false);
 			} else {
 				setEquip(true);

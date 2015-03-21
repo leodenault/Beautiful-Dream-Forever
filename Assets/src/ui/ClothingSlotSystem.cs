@@ -38,9 +38,9 @@ public class ClothingSlotSystem : MonoBehaviour {
 		slotList.Add(dressSlot);
 	}
 
-	public bool MakeActive(string name) {
+	public bool MakeActive(ClothingData data) {
 		foreach (ClothingSelection slot in slotList) {
-			if (slot.Clothing != null && slot.Clothing.Name.Equals(name)) {
+			if (slot.Clothing != null && slot.Clothing.Id == data.Id) {
 				activeSlot = slot;
 				return true;
 			}

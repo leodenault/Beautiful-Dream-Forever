@@ -6,12 +6,14 @@ public class ClothingManager {
 	private static ClothingManager INSTANCE;
 	private static string FILE = "data/clothing";
 	private static string PREFIX = "Assets/Resources/";
+	private static int NEXT_ID = 0;
 	
 	private ClothingData[] clothingData;
     private IDictionary<ClothingData.ClothingStyle, List<ClothingData>> categories;
 
 	private ClothingManager() {
 		clothingData = Util.LoadXmlFile<ClothingData[]>(FILE);
+		assignIds();
 		validate();
 		normalize();
         categorize();
@@ -23,6 +25,12 @@ public class ClothingManager {
 		}
 
 		return INSTANCE;
+	}
+
+	private void assignIds() {
+		foreach (ClothingData item in clothingData) {
+			item.Id = NEXT_ID++;
+		}
 	}
 
 	private void validate() {
