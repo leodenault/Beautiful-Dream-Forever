@@ -27,3 +27,9 @@ EditorBuildSettings:
     path: Assets/scenes/Battle Screen.unity
   - enabled: 1
     path: Assets/scenes/Preppy Shop Dressingroom.unity
+  - enabled: 1
+    path: Assets/scenes/Floor 3.unity
+  - enabled: 1
+    path: Assets/scenes/Idealist Shop.unity
+  - enabled: 1
+    path: Assets/scenes/Hardcore Shop.unity
