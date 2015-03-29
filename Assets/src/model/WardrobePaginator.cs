@@ -4,7 +4,6 @@ using System.Collections.Generic;
 public class WardrobePaginator<T> {
 	private const int DEFAULT_PAGE_SIZE = 15;
 
-	private int pageSize;
 	private int index;
 	private IList<T[]> sets;
 
@@ -17,8 +16,6 @@ public class WardrobePaginator<T> {
 	}
 	
 	private void init(T[] data, int pageSize) {
-		this.pageSize = pageSize;
-
 		sets = new List<T[]>();
 		index = 0;
 
