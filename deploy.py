@@ -76,6 +76,7 @@ if (isStaging and branch == "staging") or (not isStaging and branch == "prod"):
 	tag_info = execute_command("git", "tag")
 	tags = tag_info.split('\n')
 	previous_tag = tags[len(tags) - 2]
+	print(str.format("Retrieved previous tag {tag} from Git", tag=previous_tag))
 	
 	# Get major and minor versions
 	decimal_index = previous_tag.find(".")
