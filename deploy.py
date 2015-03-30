@@ -66,15 +66,21 @@ branch = get_git_branch();
 print(str.format("Detecting that Git is currently on {branch} branch", branch=branch))
 
 if (isStaging and branch == "staging") or (not isStaging and branch == "prod"):
-	# Get the previous tag number from Git
-	tag_info = execute_command("git", "describe")
-	dash_index = tag_info.find("-")
-	previous_tag = tag_info[1:dash_index]
-	print(str.format("Retrieved previous tag {tag} from Git", tag=tag_info[0:dash_index]))
+	if autoMerge:
+		sourceBranch = "master" if isStaging else "staging"
+		destBranch = "staging" if isStaging else "prod"
+		print(str.format("Merging branch {src} into branch {dest}", src=sourceBranch, dest=destBranch))
+		execute_command("git", "merge", sourceBranch)
 
+	# Get the previous tag number from Git
+	tag_info = execute_command("git", "tag")
+	tags = tag_info.split('\n')
+	previous_tag = tags[len(tags) - 2]
+	print(str.format("Retrieved previous tag {tag} from Git", tag=previous_tag))
+	
 	# Get major and minor versions
 	decimal_index = previous_tag.find(".")
-	major = previous_tag[:decimal_index]
+	major = previous_tag[1:decimal_index]
 	minor = previous_tag[decimal_index+1:]
 
 	# Create the new tag number
@@ -91,12 +97,6 @@ if (isStaging and branch == "staging") or (not isStaging and branch == "prod"):
 
 	while tag_message == "":
 		tag_message = raw_input("Please enter a tag message: ")
-
-	if autoMerge:
-		sourceBranch = "master" if isStaging else "staging"
-		destBranch = "staging" if isStaging else "prod"
-		print(str.format("Merging branch {src} into branch {dest}", src=sourceBranch, dest=destBranch))
-		execute_command("git", "merge", sourceBranch)
 	
 	# Create the tag in Git
 	execute_command("git", "tag", "-a", next_tag, "-m", tag_message)
