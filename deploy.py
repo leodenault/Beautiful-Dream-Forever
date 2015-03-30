@@ -66,6 +66,12 @@ branch = get_git_branch();
 print(str.format("Detecting that Git is currently on {branch} branch", branch=branch))
 
 if (isStaging and branch == "staging") or (not isStaging and branch == "prod"):
+	if autoMerge:
+		sourceBranch = "master" if isStaging else "staging"
+		destBranch = "staging" if isStaging else "prod"
+		print(str.format("Merging branch {src} into branch {dest}", src=sourceBranch, dest=destBranch))
+		execute_command("git", "merge", sourceBranch)
+
 	# Get the previous tag number from Git
 	tag_info = execute_command("git", "describe")
 	dash_index = tag_info.find("-")
@@ -91,12 +97,6 @@ if (isStaging and branch == "staging") or (not isStaging and branch == "prod"):
 
 	while tag_message == "":
 		tag_message = raw_input("Please enter a tag message: ")
-
-	if autoMerge:
-		sourceBranch = "master" if isStaging else "staging"
-		destBranch = "staging" if isStaging else "prod"
-		print(str.format("Merging branch {src} into branch {dest}", src=sourceBranch, dest=destBranch))
-		execute_command("git", "merge", sourceBranch)
 	
 	# Create the tag in Git
 	execute_command("git", "tag", "-a", next_tag, "-m", tag_message)
