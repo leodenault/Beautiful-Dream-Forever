@@ -73,14 +73,13 @@ if (isStaging and branch == "staging") or (not isStaging and branch == "prod"):
 		execute_command("git", "merge", sourceBranch)
 
 	# Get the previous tag number from Git
-	tag_info = execute_command("git", "describe")
-	dash_index = tag_info.find("-")
-	previous_tag = tag_info[1:dash_index]
-	print(str.format("Retrieved previous tag {tag} from Git", tag=tag_info[0:dash_index]))
-
+	tag_info = execute_command("git", "tag")
+	tags = tag_info.split('\n')
+	previous_tag = tags[len(tags) - 2]
+	
 	# Get major and minor versions
 	decimal_index = previous_tag.find(".")
-	major = previous_tag[:decimal_index]
+	major = previous_tag[1:decimal_index]
 	minor = previous_tag[decimal_index+1:]
 
 	# Create the new tag number
