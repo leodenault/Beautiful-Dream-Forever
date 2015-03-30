@@ -4,28 +4,40 @@ using System;
 using System.Collections;
 
 public class ClothingSystemController {
-	private static ClothingSystemController INSTANCE;
-
 	private ClothingManager manager;
+	private WardrobePaginator<ClothingData> paginator;
 
-	private ClothingSystemController() {
+	public ClothingSystemController(ClothingData.ClothingStyle style, int pageSize) {
 		this.manager = ClothingManager.GetInstance();
+		paginator = new WardrobePaginator<ClothingData>(manager.GetClothingData(style), pageSize);
 	}
 
-	public static ClothingSystemController GetInstance() {
-		if (INSTANCE == null) {
-			INSTANCE = new ClothingSystemController();
+    public void CurrentPage(Button[] wardrobeButtons) {
+		fillButtons(wardrobeButtons, paginator.Current());
+    }
+
+	public void PreviousPage(Button[] wardrobeButtons) {
+		fillButtons(wardrobeButtons, paginator.Previous());
+	}
+
+	public void NextPage(Button[] wardrobeButtons) {
+		fillButtons(wardrobeButtons, paginator.Next());
+	}
+
+	private void fillButtons(Button[] wardrobeButtons, ClothingData[] set) {
+		int i = 0;
+		for (; i < set.Length && i < wardrobeButtons.Length; i++) {
+			setButton(wardrobeButtons[i], set[i]);
 		}
 
-		return INSTANCE;
+		// If the set was smaller than there are buttons on screen, empty out the buttons
+		for (; i < wardrobeButtons.Length; i++) {
+			setButton(wardrobeButtons[i], null);
+		}
 	}
 
-    public void AssignClothingBackgrounds(ClothingData.ClothingStyle style, Button[] wardrobeButtons) {
-        ClothingData[] clothingData = manager.GetClothingData(style);
-
-        for (int i = 0; i < clothingData.Length && i < wardrobeButtons.Length; i++) {
-            ClothingSelection pageTile = wardrobeButtons[i].GetComponentInChildren<ClothingSelection>();
-            pageTile.Clothing = clothingData[i];
-        }
-    }
+	private void setButton(Button button, ClothingData data) {
+		ClothingSelection pageTile = button.GetComponentInChildren<ClothingSelection>();
+		pageTile.Clothing = data;
+	}
 }

@@ -13,9 +13,9 @@ public class ClothingSystem : MonoBehaviour {
 	private ClothingSelection activeTile;
 	private	ClothingArea clothingArea;
 	private ClothingSlotSystem clothingSlotSystem;
+	private Button[] pageTiles;
 
 	public ClothingData.ClothingStyle shopStyle;
-
 	public Button equipButton;
 	public Sprite equipImage;
 	public Sprite unequipImage;
@@ -27,11 +27,11 @@ public class ClothingSystem : MonoBehaviour {
 	public void Start()
 	{
 		isEquipped = false;
-		controller = ClothingSystemController.GetInstance();
 		clothingArea = clothingAreaContainer.GetComponentInChildren<ClothingArea>();
 		clothingSlotSystem = itemSlotsPanel.GetComponentInChildren<ClothingSlotSystem>();
-		Button[] pageTiles = pageTilePanel.GetComponentsInChildren<Button>();
-		controller.AssignClothingBackgrounds(shopStyle, pageTiles);
+		pageTiles = pageTilePanel.GetComponentsInChildren<Button>();
+		controller = new ClothingSystemController(shopStyle, pageTiles.Length);
+		controller.CurrentPage(pageTiles);
 
 		activeTile = pageTiles[0].GetComponentInChildren<ClothingSelection>();
 		// Add the button click listeners for the page tiles
@@ -41,6 +41,7 @@ public class ClothingSystem : MonoBehaviour {
 		}
 
 		clothingSlotSystem.Init(clothingArea, selectSlotCallback);
+		displayPreview(activeTile.Sprite);
 	}
 
 	public void Equip() {
@@ -56,12 +57,22 @@ public class ClothingSystem : MonoBehaviour {
 		}
 	}
 
+	public void PreviousPage() {
+		controller.PreviousPage(pageTiles);
+		displayPreview(activeTile.Sprite);
+	}
+
+	public void NextPage() {
+		controller.NextPage(pageTiles);
+		displayPreview(activeTile.Sprite);
+	}
+
 	private void selectClothing(ClothingSelection pageTile) {
 		if (pageTile.Clothing != null) {
 			activeTile = pageTile;
 			displayPreview(activeTile.Sprite);
 
-			if (clothingSlotSystem.MakeActive(pageTile.Clothing.Name)) {
+			if (clothingSlotSystem.MakeActive(pageTile.Clothing)) {
 				setEquip(false);
 			} else {
 				setEquip(true);

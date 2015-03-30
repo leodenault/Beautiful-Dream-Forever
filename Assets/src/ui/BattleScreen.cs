@@ -24,6 +24,7 @@ public class BattleScreen : MonoBehaviour {
 	public Text timerText;
 	public Text outfitScore;
 	public Text overallScore;
+	public float maxHeight;
 
 	public void Start() {
 		globalController = GlobalController.GetInstance();
@@ -32,6 +33,10 @@ public class BattleScreen : MonoBehaviour {
 		conveyorTransform = clothingConveyor.transform as RectTransform;
 		conveyorItems = new List<Button>();
 		nextItem = generateNextItem();
+
+		if (maxHeight == 0) {
+			maxHeight = conveyorTransform.rect.width;
+		}
 
 		clothingArea = clothingAreaContainer.GetComponentInChildren<ClothingArea>();
 		clothingSlotSystem = itemSlotsPanel.GetComponentInChildren<ClothingSlotSystem>();
@@ -74,7 +79,7 @@ public class BattleScreen : MonoBehaviour {
 		ClothingData item = battleController.GenerateRandomItem();
 		newItem.onClick.AddListener(() => { selectConveyorItem(newItem, item); });
 		newItem.image.sprite = battleController.GetCurrentItemSprite();
-		Util.ScaleImageToMaxDimensions(newItem.image, newItem.image.sprite, conveyorTransform.rect.width, conveyorTransform.rect.height);
+		Util.ScaleImageToMaxDimensions(newItem.image, newItem.image.sprite, conveyorTransform.rect.width, maxHeight);
 		return newItem;
 	}
 

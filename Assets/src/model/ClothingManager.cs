@@ -1,18 +1,20 @@
-﻿using UnityEngine;
-using System;
+﻿using System;
 using System.IO;
-using System.Xml.Serialization;
 using System.Collections.Generic;
 
 public class ClothingManager {
 	private static ClothingManager INSTANCE;
 	private static string FILE = "data/clothing";
+	private static string PREFIX = "Assets/Resources/";
+	private static int NEXT_ID = 0;
 	
 	private ClothingData[] clothingData;
     private IDictionary<ClothingData.ClothingStyle, List<ClothingData>> categories;
 
 	private ClothingManager() {
 		clothingData = Util.LoadXmlFile<ClothingData[]>(FILE);
+		assignIds();
+		validate();
 		normalize();
         categorize();
 	}
@@ -23,6 +25,29 @@ public class ClothingManager {
 		}
 
 		return INSTANCE;
+	}
+
+	private void assignIds() {
+		foreach (ClothingData item in clothingData) {
+			item.Id = NEXT_ID++;
+		}
+	}
+
+	private void validate() {
+		List<ClothingData> filtered = new List<ClothingData>();
+
+		foreach (ClothingData item in clothingData) {
+			string fullImagePath = string.Format("{0}{1}", item.Path, ".png");
+			if (!File.Exists(string.Format("{0}{1}", PREFIX, fullImagePath))) {
+				UnityEngine.Debug.LogError(string.Format("Error while reading from file '{0}':\n" +
+					"Clothing item '{1}' refers to image path '{2}', but image does not exist. This entry will be ignored",
+					PREFIX + FILE + ".xml", item.Name, PREFIX + fullImagePath));
+			} else {
+				filtered.Add(item);
+			}
+		}
+
+		clothingData = filtered.ToArray();
 	}
 
 	private void normalize() {

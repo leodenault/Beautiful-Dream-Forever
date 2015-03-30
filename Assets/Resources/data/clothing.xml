@@ -2,6 +2,39 @@
 <ArrayOfClothingData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <!-- THIS DATA SHOULD STAY ALPHABETIZED -->
   <ClothingData>
+    <Name>Athletic Halter Top</Name>
+    <Path>clothing/athletic/Athletic_Classy_Top_Black_Teal_Light_White_Cotton_HalterTankTop</Path>
+    <Slot>TOP</Slot>
+    <Style>ATHLETIC</Style>
+    <Essence>CLASSY</Essence>
+    <Location>
+      <x>60.0</x>
+      <y>77.0</y>
+    </Location>
+  </ClothingData>
+  <ClothingData>
+    <Name>Athletic Wig Greenish</Name>
+    <Path>clothing/athletic/Athletic_Classy_Wig_Greenish</Path>
+    <Slot>WIG</Slot>
+    <Style>ATHLETIC</Style>
+    <Essence>CLASSY</Essence>
+    <Location>
+      <x>67</x>
+      <y>17</y>
+    </Location>
+  </ClothingData>
+  <ClothingData>
+    <Name>Ballet Slippers</Name>
+    <Path>clothing/athletic/Athletic_Cute_Shoes_White_Cotton_BalletSlippers</Path>
+    <Slot>SHOES</Slot>
+    <Style>ATHLETIC</Style>
+    <Essence>CUTE</Essence>
+    <Location>
+      <x>74.0</x>
+      <y>344.0</y>
+    </Location>
+  </ClothingData>
+  <ClothingData>
     <Name>Ballet Spandex Shorts</Name>
     <Path>clothing/athletic/Athletic_Cute_Bottom_Pink_DarkDark_Cotton_SpandexShorts</Path>
     <Slot>BOTTOM</Slot>
@@ -10,6 +43,72 @@
     <Location>
       <x>57.0</x>
       <y>158.0</y>
+    </Location>
+  </ClothingData>
+  <ClothingData>
+    <Name>Bandages Hand</Name>
+    <Path>clothing/athletic/Athletic_Cool_Accessory_White_Cotton_Bandages</Path>
+    <Slot>ACCESSORY</Slot>
+    <Style>ATHLETIC</Style>
+    <Essence>COOL</Essence>
+    <Location>
+      <x>36.0</x>
+      <y>170.0</y>
+    </Location>
+  </ClothingData>
+  <ClothingData>
+    <Name>Blonde Bun</Name>
+    <Path>clothing/athletic/Athletic_Cute_Wig_BlondeBun</Path>
+    <Slot>WIG</Slot>
+    <Style>ATHLETIC</Style>
+    <Essence>CUTE</Essence>
+    <Location>
+      <x>71.0</x>
+      <y>17.0</y>
+    </Location>
+  </ClothingData>
+  <ClothingData>
+    <Name>Bow Wedges</Name>
+    <Path>clothing/preppy/Preppy_Cute_Shoes_Green_Muted_Orange_DarkMuted_Cotton_Wedges</Path>
+    <Slot>SHOES</Slot>
+    <Style>PREPPY</Style>
+    <Essence>CUTE</Essence>
+    <Location>
+      <x>73.0</x>
+      <y>339.0</y>
+    </Location>
+  </ClothingData>
+  <ClothingData>
+    <Name>Cool Hightops</Name>
+    <Path>clothing/athletic/Athletic_Cool_Shoes_Teal_Muted_Pink_DarkDark_Pink_White_Cotton_HightopShapes</Path>
+    <Slot>SHOES</Slot>
+    <Style>ATHLETIC</Style>
+    <Essence>COOL</Essence>
+    <Location>
+      <x>73.0</x>
+      <y>326.0</y>
+    </Location>
+  </ClothingData>
+  <ClothingData>
+    <Name>Double Headband</Name>
+    <Path>clothing/athletic/Athletic_Classy_Accessory_Black_Cotton_DoubleHeadband</Path>
+    <Slot>ACCESSORY</Slot>
+    <Style>ATHLETIC</Style>
+    <Essence>CLASSY</Essence>
+    <Location>
+      <x>78.0</x>
+      <y>16.0</y>
+    </Location>
+  </ClothingData>
+  <ClothingData>
+    <Name>Flower Running Shorts</Name>
+    <Path>clothing/athletic/Athletic_Classy_Bottom_Pink_Dark_Teal_Light_White_Yellow_Light_Cotton_RunningShorts</Path>
+    <Slot>BOTTOM</Slot>
+    <Style>ATHLETIC</Style>
+    <Essence>CLASSY</Essence>
+    <Location>
+      <x>56.0</x>
+      <y>163.0</y>
     </Location>
   </ClothingData>
   <ClothingData>
@@ -35,14 +134,102 @@
     </Location>
   </ClothingData>
   <ClothingData>
+    <Name>Greenish Yellow Wig</Name>
+    <Path>clothing/preppy/Preppy_Cute_Wig_GreenishYellow</Path>
+    <Slot>WIG</Slot>
+    <Style>PREPPY</Style>
+    <Essence>CUTE</Essence>
+    <Location>
+      <x>75.0</x>
+      <y>20.0</y>
+    </Location>
+  </ClothingData>
+  <ClothingData>
+    <Name>Hair Bow Pink</Name>
+    <Path>clothing/preppy/Preppy_Cute_Accessory_Orange_Light_Red_Cotton_HairBow</Path>
+    <Slot>ACCESSORY</Slot>
+    <Style>PREPPY</Style>
+    <Essence>CUTE</Essence>
+    <Location>
+      <x>69.0</x>
+      <y>26.0</y>
+    </Location>
+  </ClothingData>
+  <ClothingData>
     <Name>Leg Warmers</Name>
     <Path>clothing/athletic/Athletic_Cute_Accessory_Orange1_Light_Pink_DarkDark_Cotton_LegWarmers</Path>
     <Slot>ACCESSORY</Slot>
     <Style>ATHLETIC</Style>
-	<Essence>CUTE</Essence>
+	  <Essence>CUTE</Essence>
     <Location>
       <x>66.0</x>
       <y>263.0</y>
+    </Location>
+  </ClothingData>
+  <ClothingData>
+    <Name>Light Orange Jacket</Name>
+    <Path>clothing/preppy/Preppy_Cool_Top_Orange_Light_White_Cotton_JacketandShirt</Path>
+    <Slot>TOP</Slot>
+    <Style>PREPPY</Style>
+    <Essence>COOL</Essence>
+    <Location>
+      <x>36.0</x>
+      <y>70.0</y>
+    </Location>
+  </ClothingData>
+  <ClothingData>
+    <Name>Light Orange Shorts</Name>
+    <Path>clothing/preppy/Preppy_Cool_Bottom_Orange_Light_Cotton_Shorts</Path>
+    <Slot>BOTTOM</Slot>
+    <Style>PREPPY</Style>
+    <Essence>COOL</Essence>
+    <Location>
+      <x>53.0</x>
+      <y>151.0</y>
+    </Location>
+  </ClothingData>
+  <ClothingData>
+    <Name>Long Ribbon Bow</Name>
+    <Path>clothing/preppy/Preppy_Cool_Accessory_Black_Cotton_LongRibbonBow</Path>
+    <Slot>ACCESSORY</Slot>
+    <Style>PREPPY</Style>
+    <Essence>COOL</Essence>
+    <Location>
+      <x>90.0</x>
+      <y>85.0</y>
+    </Location>
+  </ClothingData>
+  <ClothingData>
+    <Name>Mom Shoes</Name>
+    <Path>clothing/preppy/Preppy_Cool_Shoes_Black_Gray_Cotton</Path>
+    <Slot>SHOES</Slot>
+    <Style>PREPPY</Style>
+    <Essence>COOL</Essence>
+    <Location>
+      <x>74.0</x>
+      <y>333.0</y>
+    </Location>
+  </ClothingData>
+  <ClothingData>
+    <Name>Pearl String Necklace</Name>
+    <Path>clothing/preppy/Preppy_Classy_Accessory_White_Blue_DarkDark_Cotton_PearlString</Path>
+    <Slot>ACCESSORY</Slot>
+    <Style>PREPPY</Style>
+    <Essence>CLASSY</Essence>
+    <Location>
+      <x>80.0</x>
+      <y>73.0</y>
+    </Location>
+  </ClothingData>
+  <ClothingData>
+    <Name>Peter Pan Dress</Name>
+    <Path>clothing/preppy/Preppy_Cute_Dress_Oragne2_Muted_Orange_Muted_Green_Muted_Cotton_PeterPanCollar</Path>
+    <Slot>DRESS</Slot>
+    <Style>PREPPY</Style>
+    <Essence>CUTE</Essence>
+    <Location>
+      <x>35.0</x>
+      <y>69.0</y>
     </Location>
   </ClothingData>
   <ClothingData>
@@ -50,9 +237,97 @@
     <Path>clothing/athletic/Athletic_Cute_Top_Green2_Light_Pink_DarkDark_Cotton_PointeSweatshirt</Path>
     <Slot>TOP</Slot>
     <Style>ATHLETIC</Style>
-	<Essence>CUTE</Essence>
+	  <Essence>CUTE</Essence>
     <Location>
       <x>34.0</x>
+      <y>78.0</y>
+    </Location>
+  </ClothingData>
+  <ClothingData>
+    <Name>Ponytail Braid Wig</Name>
+    <Path>clothing/athletic/Athletic_Cool_Wig_PonytailBraid</Path>
+    <Slot>WIG</Slot>
+    <Style>ATHLETIC</Style>
+    <Essence>COOL</Essence>
+    <Location>
+      <x>73.0</x>
+      <y>19.0</y>
+    </Location>
+  </ClothingData>
+  <ClothingData>
+    <Name>Preppy Cool Wig</Name>
+    <Path>clothing/preppy/Preppy_Cool_Wig_Blue</Path>
+    <Slot>WIG</Slot>
+    <Style>PREPPY</Style>
+    <Essence>COOL</Essence>
+    <Location>
+      <x>73.0</x>
+      <y>18.0</y>
+    </Location>
+  </ClothingData>
+   <ClothingData>
+    <Name>Preppy Long Flowing Skirt</Name>
+    <Path>clothing/preppy/Preppy_Classy_Bottom_Skirt_Red_LongFlow</Path>
+    <Slot>BOTTOM</Slot>
+    <Style>PREPPY</Style>
+    <Essence>CLASSY</Essence>
+    <Location>
+      <x>35.0</x>
+      <y>144.0</y>
+    </Location>
+  </ClothingData>
+  <ClothingData>
+    <Name>Preppy Pale Pink Wig</Name>
+    <Path>clothing/preppy/Preppy_Classy_Wig_PalePink</Path>
+    <Slot>WIG</Slot>
+    <Style>PREPPY</Style>
+    <Essence>CLASSY</Essence>
+    <Location>
+      <x>71</x>
+      <y>18</y>
+    </Location>
+  </ClothingData>
+  <ClothingData>
+    <Name>Running Shoes</Name>
+    <Path>clothing/athletic/Athletic_Classy_Shoes_Pink_Pink_Light_White_Pattern_RunningShoes</Path>
+    <Slot>SHOES</Slot>
+    <Style>ATHLETIC</Style>
+    <Essence>CLASSY</Essence>
+    <Location>
+      <x>73.0</x>
+      <y>341.0</y>
+    </Location>
+  </ClothingData>
+  <ClothingData>
+    <Name>Sandal Heels</Name>
+    <Path>clothing/preppy/Preppy_Classy_Shoes_Yellow_Light_Red_Cotton_SandalHeels</Path>
+    <Slot>SHOES</Slot>
+    <Style>PREPPY</Style>
+    <Essence>CLASSY</Essence>
+    <Location>
+      <x>73.0</x>
+      <y>336.0</y>
+    </Location>
+  </ClothingData>
+  <ClothingData>
+    <Name>Sports Bra</Name>
+    <Path>clothing/athletic/Athletic_Cool_Top_Black_Pink_Muted_Cotton_SportsBra</Path>
+    <Slot>TOP</Slot>
+    <Style>ATHLETIC</Style>
+    <Essence>COOL</Essence>
+    <Location>
+      <x>73.0</x>
+      <y>77.0</y>
+    </Location>
+  </ClothingData>
+  <ClothingData>
+    <Name>Thick Stripes</Name>
+    <Path>clothing/preppy/Preppy_Classy_Top_Black_White_Cotton_Striped</Path>
+    <Slot>TOP</Slot>
+    <Style>PREPPY</Style>
+    <Essence>CLASSY</Essence>
+    <Location>
+      <x>38.0</x>
       <y>78.0</y>
     </Location>
   </ClothingData>
