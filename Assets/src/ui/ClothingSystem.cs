@@ -41,6 +41,7 @@ public class ClothingSystem : MonoBehaviour {
 		}
 
 		clothingSlotSystem.Init(clothingArea, selectSlotCallback);
+		displayPreview(activeTile.Sprite);
 	}
 
 	public void Equip() {
@@ -58,10 +59,12 @@ public class ClothingSystem : MonoBehaviour {
 
 	public void PreviousPage() {
 		controller.PreviousPage(pageTiles);
+		displayPreview(activeTile.Sprite);
 	}
 
 	public void NextPage() {
 		controller.NextPage(pageTiles);
+		displayPreview(activeTile.Sprite);
 	}
 
 	private void selectClothing(ClothingSelection pageTile) {
