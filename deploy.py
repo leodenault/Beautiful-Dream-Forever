@@ -1,9 +1,12 @@
 #!/usr/bin/python
+import sys, getopt
 from subprocess import Popen, PIPE
 from decimal import getcontext, Decimal
 
 SOURCE_REPO = "git@github.com:leodenault/fashion.git"
 STAGING_REPO = "git@heroku.com:fashion-game-staging.git"
+PROD_REPO = "git@heroku.com:fashion-game.git"
+USAGE_TEXT = "Usage: deploy.py [-h|--help] <environment>\n\nParameters:\n\tenvironment:\tEither \"staging\" for the staging environment or \"prod\" for the production environment"
 
 def execute_command(command, *args):
 	command_list = [command]
@@ -26,6 +29,36 @@ def get_git_branch():
 	branch = branch_output[asterisk_index+2:newline_index]
 	return branch
 
+def parse_args():
+	opts = []
+	args = []
+	
+	try:
+		opts, args = getopt.getopt(sys.argv[1:], "h", ["help"])
+	except getopt.GetoptError:
+		print(USAGE_TEXT)
+		sys.exit(2)
+	
+	for opt, arg in opts:
+		if opt in ("-h", "--help"):
+			print(USAGE_TEXT)
+			sys.exit()
+
+	if len(args) != 1:
+		print(USAGE_TEXT)
+		sys.exit(2)
+	
+	if args[0] == "staging":
+		return True
+	elif args[0] == "prod":
+		return False
+	else:
+		print(USAGE_TEXT)
+		sys.exit(2)
+	
+# Parse the arguments given to the file
+isStaging = parse_args()
+
 # Get the previous tag number from Git
 tag_info = execute_command("git", "describe")
 dash_index = tag_info.find("-")
@@ -38,8 +71,12 @@ major = previous_tag[:decimal_index]
 minor = previous_tag[decimal_index+1:]
 
 # Create the new tag number
-minor = int(minor) + 1
-next_tag = str.format("v{major}.{minor}", major=major, minor=minor)
+if isStaging:
+	minor = int(minor) + 1
+	next_tag = str.format("v{major}.{minor}", major=major, minor=minor)
+else:
+	major = int(major) + 1
+	next_tag = str.format("v{major}.{minor}", major=major, minor=0)
 
 
 #Get the tag message from the user
@@ -51,17 +88,18 @@ while tag_message == "":
 branch = get_git_branch();
 print(str.format("Detecting that Git is currently on {branch} branch", branch=branch))
 
-
 # Create the tag in Git
 execute_command("git", "tag", "-a", next_tag, "-m", tag_message)
 print(str.format("Created new tag {tag}", tag=next_tag))
 
 # Push the tag to Github
-execute_command("git", "push", SOURCE_REPO, str.format("{branch}:staging", branch=branch), "--tags")
+env = isStaging ? "staging" : "prod"
+execute_command("git", "push", SOURCE_REPO, str.format("{branch}:{env}", branch=branch, env=env), "--tags")
 print(str.format("Pushed tag {tag} to {repo}", tag=next_tag, repo=SOURCE_REPO))
 
 # Push the tag and commit to Heroku staging
-print(str.format("Pushing to staging server {repo}", repo=STAGING_REPO))
-execute_command("git", "push", STAGING_REPO, str.format("{branch}:master", branch=branch), "--tags")
-print(str.format("Pushed tag {tag} to {repo}", tag=next_tag, repo=STAGING_REPO))
+repo = isStaging ? STAGING_REPO : PROD_REPO
+print(str.format("Pushing to {env} server {repo}", env=env, repo=repo))
+execute_command("git", "push", repo, str.format("{branch}:master", branch=branch), "--tags")
+print(str.format("Pushed tag {tag} to {repo}", tag=next_tag, repo=repo))
 
