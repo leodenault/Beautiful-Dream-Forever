@@ -8,9 +8,14 @@ public class BattleController {
 	private Battle battle;
 	private IDictionary<string, Sprite> itemSprites;
 
+	public int TargetScore {
+		get { return 70; }
+	}
+
 	public BattleController(ClothingData.ClothingStyle style) {
 		ClothingManager manager = ClothingManager.GetInstance();
-		battle = new Battle(manager, style);
+		// TODO: Make target score dynamic for battle
+		battle = new Battle(manager, style, 70);
 		itemSprites = new Dictionary<string, Sprite>();
 
 		foreach (ClothingData datum in manager.GetClothingData(ClothingData.ClothingStyle.NONE)) {
@@ -49,9 +54,8 @@ public class BattleController {
 		return battle.OutfitScore;
 	}
 
-	public int AcceptOutfit() {
-		battle.AcceptOutfit();
-		return battle.OverallScore;
+	// TODO: Handle end of battle sequence
+	public void AcceptOutfit() {
 	}
 
 	private string generateNumberFormat(int number, int index) {

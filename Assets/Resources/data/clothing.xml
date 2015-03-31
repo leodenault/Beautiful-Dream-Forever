@@ -78,6 +78,17 @@
       <y>339.0</y>
     </Location>
   </ClothingData>
+	<ClothingData>
+		<Name>Business Flats</Name>
+		<Path>clothing/uniform/Unifrom_Classy_Shoes_Black_Pink_Dark_Cotton_BusinessFlats</Path>
+		<Slot>SHOES</Slot>
+		<Style>UNIFORM</Style>
+		<Essence>CLASSY</Essence>
+		<Location>
+			<x>73.0</x>
+			<y>341.0</y>
+		</Location>
+	</ClothingData>
   <ClothingData>
     <Name>Cool Hightops</Name>
     <Path>clothing/athletic/Athletic_Cool_Shoes_Teal_Muted_Pink_DarkDark_Pink_White_Cotton_HightopShapes</Path>
@@ -199,6 +210,50 @@
       <y>85.0</y>
     </Location>
   </ClothingData>
+	<ClothingData>
+		<Name>Military Hat Real</Name>
+		<Path>clotihng/uniform/Uniform_Cool_Accessory_Orange_Muted_Green_DarkMuted_Canvas_MilitaryHat</Path>
+		<Slot>ACCESSORY</Slot>
+		<Style>UNIFORM</Style>
+		<Essence>COOL</Essence>
+		<Location>
+			<x>67.0</x>
+			<y>9.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Military Jacket Real</Name>
+		<Path>clothing/uniform/Uniform_Cool_Top_Orange_Muted_Green_DarkMuted_Yellow_Light_Red_DarkDark_Canvas_MilitaryJacket</Path>
+		<Slot>TOP</Slot>
+		<Style>UNIFORM</Style>
+		<Essence>COOL</Essence>
+		<Location>
+			<x>36.0</x>
+			<y>67.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Military Skirt</Name>
+		<Path>clothing/uniform/Uniform_Cool_Bottom_Orange_Muted_Red_DarkDark_Canvas_MilitarySkirt</Path>
+		<Slot>BOTTOM</Slot>
+		<Style>UNIFORM</Style>
+		<Essence>COOL</Essence>
+		<Location>
+			<x>53.0</x>
+			<y>141.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Military Wig</Name>
+		<Path>clothing/uniform/Uniform_Cool_Wig_MauveYellow</Path>
+		<Slot>WIG</Slot>
+		<Style>UNIFORM</Style>
+		<Essence>COOL</Essence>
+		<Location>
+			<x>76.0</x>
+			<y>20.0</y>
+		</Location>
+	</ClothingData>
   <ClothingData>
     <Name>Mom Shoes</Name>
     <Path>clothing/preppy/Preppy_Cool_Shoes_Black_Gray_Cotton</Path>
@@ -210,6 +265,17 @@
       <y>333.0</y>
     </Location>
   </ClothingData>
+	<ClothingData>
+		<Name>Neck Scarf</Name>
+		<Path>clothing/uniform/Unifrom_Classy_Accessory_Pink_Dark_Cotton_NeckScarf</Path>
+		<Slot>ACCESSORY</Slot>
+		<Style>UNIFORM</Style>
+		<Essence>CLASSY</Essence>
+		<Location>
+			<x>77.0</x>
+			<y>69.0</y>
+		</Location>
+	</ClothingData>
   <ClothingData>
     <Name>Pearl String Necklace</Name>
     <Path>clothing/preppy/Preppy_Classy_Accessory_White_Blue_DarkDark_Cotton_PearlString</Path>
@@ -309,6 +375,17 @@
       <y>336.0</y>
     </Location>
   </ClothingData>
+	<ClothingData>
+		<Name>Short Light Pink Wig</Name>
+		<Path>clothing/uniform/Uniform_Classy_Wig_LightPink</Path>
+		<Slot>WIG</Slot>
+		<Style>UNIFORM</Style>
+		<Essence>CLASSY</Essence>
+		<Location>
+			<x>69.0</x>
+			<y>18.0</y>
+		</Location>
+	</ClothingData>
   <ClothingData>
     <Name>Sports Bra</Name>
     <Path>clothing/athletic/Athletic_Cool_Top_Black_Pink_Muted_Cotton_SportsBra</Path>
@@ -319,6 +396,39 @@
       <x>73.0</x>
       <y>77.0</y>
     </Location>
+  </ClothingData>
+	<ClothingData>
+		<Name>Strapped Military Boots</Name>
+		<Path>clothing/uniform/Uniform_Cool_Shoes_Red_DarkDark_Green_DarkMuted_Leather_StrappedBoots</Path>
+		<Slot>SHOES</Slot>
+		<Style>UNIFORM</Style>
+		<Essence>COOL</Essence>
+		<Location>
+			<x>67.0</x>
+			<y>272.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Suit Jacket</Name>
+		<Path>clothing/uniform/Unifrom_Classy_Top_Black_White_Pink_Dark_Cotton_SuitJacket</Path>
+		<Slot>TOP</Slot>
+		<Style>UNIFORM</Style>
+		<Essence>CLASSY</Essence>
+		<Location>
+			<x>36.0</x>
+			<y>70.0</y>
+		</Location>
+	</ClothingData>
+  <ClothingData>
+	<Name>Suit Pants</Name>
+	<Path>clothing/uniform/Unifrom_Classy_Bottom_Black_Cotton_SuitPants</Path>
+	<Slot>BOTTOM</Slot>
+	<Style>UNIFORM</Style>
+	<Essence>CLASSY</Essence>
+	<Locatoin>
+		<x>58.0</x>
+		<y>142.0</y>
+	</Locatoin>
   </ClothingData>
   <ClothingData>
     <Name>Thick Stripes</Name>
@@ -331,6 +441,17 @@
       <y>78.0</y>
     </Location>
   </ClothingData>
+	<ClothingData>
+		<Name>Waist Shoulder Belt</Name>
+		<Path>clothing/uniform/Uniform_Cool_Accessory_Red_DarkDark_Yellow_Light_Leather_WaistShoulderBelt</Path>
+		<Slot>ACCESSORY</Slot>
+		<Style>UNIFORM</Style>
+		<Essence>COOL</Essence>
+		<Location>
+			<x>66.0</x>
+			<y>80.0</y>
+		</Location>
+	</ClothingData>
   <ClothingData>
     <Name>White Cotton Hogwarts</Name>
     <Path>clothing/athletic/Athletic_Cool_Bottom_White_Cotton_Hogwarts</Path>

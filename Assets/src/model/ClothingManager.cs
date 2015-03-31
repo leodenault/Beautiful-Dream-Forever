@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class ClothingManager {
 	private static ClothingManager INSTANCE;
@@ -38,8 +39,8 @@ public class ClothingManager {
 
 		foreach (ClothingData item in clothingData) {
 			string fullImagePath = string.Format("{0}{1}", item.Path, ".png");
-			if (!File.Exists(string.Format("{0}{1}", PREFIX, fullImagePath))) {
-				UnityEngine.Debug.LogError(string.Format("Error while reading from file '{0}':\n" +
+			if (Resources.Load(item.Path) == null) {
+				Debug.LogError(string.Format("Error while reading from file '{0}':\n" +
 					"Clothing item '{1}' refers to image path '{2}', but image does not exist. This entry will be ignored",
 					PREFIX + FILE + ".xml", item.Name, PREFIX + fullImagePath));
 			} else {
