@@ -8,6 +8,7 @@ public class Battle {
 	private const int MAX_PROBABILITY = 100;
 
 	private float elapsedTime;
+	private int targetScore;
 	private ClothingManager manager;
 	private Outfit outfit;
 	private IList<ClothingData> shopClothing;
@@ -15,11 +16,6 @@ public class Battle {
 	private Random categorySelector;
 	private Random shopSelector;
 	private Random otherSelector;
-
-	private int overallScore;
-	public int OverallScore {
-		get { return overallScore; }
-	}
 
 	private int outfitScore;
 	public int OutfitScore {
@@ -31,15 +27,15 @@ public class Battle {
 		get { return currentItem; }
 	}
 
-	public Battle(ClothingManager manager, ClothingData.ClothingStyle style) {
+	public Battle(ClothingManager manager, ClothingData.ClothingStyle style, int targetScore) {
 		this.manager = manager;
+		this.targetScore = targetScore;
 		setupClothingSets(style);
 		outfit = new Outfit();
 		categorySelector = new Random();
 		shopSelector = new Random();
 		otherSelector = new Random();
 		elapsedTime = 0.0f;
-		overallScore = 0;
 		outfitScore = 0;
 	}
 
@@ -76,12 +72,6 @@ public class Battle {
 
 	public void RemoveItem(ClothingData data) {
 		outfit.RemoveItem(data);
-		updateOutfitScore();
-	}
-
-	public void AcceptOutfit() {
-		overallScore += outfitScore;
-		outfit.Clear();
 		updateOutfitScore();
 	}
 

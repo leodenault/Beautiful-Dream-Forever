@@ -23,7 +23,7 @@ public class BattleScreen : MonoBehaviour {
 	public Button conveyorItem;
 	public Text timerText;
 	public Text outfitScore;
-	public Text overallScore;
+	public Text targetScore;
 	public float maxHeight;
 
 	public void Start() {
@@ -41,6 +41,8 @@ public class BattleScreen : MonoBehaviour {
 		clothingArea = clothingAreaContainer.GetComponentInChildren<ClothingArea>();
 		clothingSlotSystem = itemSlotsPanel.GetComponentInChildren<ClothingSlotSystem>();
 		clothingSlotSystem.Init(clothingArea, RemoveItem);
+
+		targetScore.text = battleController.TargetScore.ToString();
 	}
 
 	public void Update() {
@@ -63,9 +65,8 @@ public class BattleScreen : MonoBehaviour {
 	}
 
 	public void AcceptOutfit() {
-		clothingSlotSystem.Clear();
-		outfitScore.text = "0";
-		overallScore.text = battleController.AcceptOutfit().ToString();
+		// TODO: Handle end of battle sequence
+		globalController.Back();
 	}
 
 	public void RemoveItem(ClothingSelection activeSelection) {
