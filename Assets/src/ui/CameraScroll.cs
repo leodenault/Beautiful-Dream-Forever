@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class CameraScroll : MonoBehaviour {
@@ -8,6 +9,8 @@ public class CameraScroll : MonoBehaviour {
 	private float translation;
 
 	public Camera mallCamera;
+	public Button leftButton;
+	public Button rightButton;
 	public float scrollSpeed = 0.1f;
 	
 	public void Start () {
@@ -24,9 +27,12 @@ public class CameraScroll : MonoBehaviour {
 			float curX = mallCamera.transform.position.x;
 			float corrected = Mathf.Clamp(translation, X_MIN - curX, X_MAX - curX);
 			mallCamera.transform.Translate(new Vector3(corrected, 0.0f, 0.0f));
+
+			setButtonVisibility(rightButton, curX, X_MAX);
+			setButtonVisibility(leftButton, curX, X_MIN);
 		}
 	}
-			
+
 	public void ScrollLeft() {
 		translation = -scrollSpeed;
 	}
@@ -37,5 +43,13 @@ public class CameraScroll : MonoBehaviour {
 
 	public void EndScroll() {
 		translation = 0.0f;
+	}
+
+	private void setButtonVisibility(Button button, float camerPosition, float border) {
+		if (camerPosition == border) {
+			button.gameObject.SetActive(false);
+		} else {
+			button.gameObject.SetActive(true);
+		}
 	}
 }

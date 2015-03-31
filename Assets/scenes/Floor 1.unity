@@ -453,6 +453,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mallCamera: {fileID: 280678517}
+  leftButton: {fileID: 2091977847}
+  rightButton: {fileID: 2032614559}
   scrollSpeed: .100000001
 --- !u!114 &280678523
 MonoBehaviour:
@@ -1240,6 +1242,18 @@ Prefab:
       propertyPath: m_Name
       value: GameObject
       objectReference: {fileID: 0}
+    - target: {fileID: 11458220, guid: 19ad825b443a4174da4e5eda0e49cdb5, type: 2}
+      propertyPath: leftButton
+      value: 
+      objectReference: {fileID: 2091977847}
+    - target: {fileID: 11458220, guid: 19ad825b443a4174da4e5eda0e49cdb5, type: 2}
+      propertyPath: rightButton
+      value: 
+      objectReference: {fileID: 2032614559}
+    - target: {fileID: 158252, guid: 19ad825b443a4174da4e5eda0e49cdb5, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 19ad825b443a4174da4e5eda0e49cdb5, type: 2}
   m_RootGameObject: {fileID: 245425390}
@@ -1615,7 +1629,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2091977846
 RectTransform:
   m_ObjectHideFlags: 0

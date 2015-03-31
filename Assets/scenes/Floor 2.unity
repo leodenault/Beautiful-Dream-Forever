@@ -1262,7 +1262,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1506787832
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1492,6 +1492,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mallCamera: {fileID: 1531174014}
+  leftButton: {fileID: 1506787834}
+  rightButton: {fileID: 72387303}
   scrollSpeed: .100000001
 --- !u!81 &1531174017
 AudioListener:
