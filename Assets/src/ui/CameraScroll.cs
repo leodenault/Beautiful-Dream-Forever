@@ -22,6 +22,16 @@ public class CameraScroll : MonoBehaviour {
 		translation = 0.0f;
 	}
 
+	public void Update() {
+		float axis = Input.GetAxisRaw("Horizontal");
+		if (axis != 0.0f) {
+			translation = axis * scrollSpeed;
+		} else if ((translation < 0.0f && (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.A))) ||
+			(translation > 0.0f && (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.D)))) {
+			EndScroll();
+		}
+	}
+
 	public void FixedUpdate() {
 		if (translation != 0.0f) {
 			float curX = mallCamera.transform.position.x;
