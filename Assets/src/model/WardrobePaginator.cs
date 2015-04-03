@@ -29,16 +29,25 @@ public class WardrobePaginator<T> {
 
 
 	public T[] Next() {
-		index = (index == sets.Count - 1) ? index : index + 1;
-		return sets[index];
+		if (sets.Count > 0) {
+			index = (index == sets.Count - 1) ? index : index + 1;
+			return sets[index];
+		}
+		return new T[] {};
 	}
 
 	public T[] Previous() {
-		index = (index > 0) ? index - 1 : index;
-		return sets[index];
+		if (sets.Count > 0) {
+			index = (index > 0) ? index - 1 : index;
+			return sets[index];
+		}
+		return new T[] {};
 	}
 
 	public T[] Current() {
-		return sets[index];
+		if (sets.Count > 0) {
+			return sets[index];
+		}
+		return new T[] {};
 	}
 }
