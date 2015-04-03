@@ -212,7 +212,7 @@
   </ClothingData>
 	<ClothingData>
 		<Name>Military Hat Real</Name>
-		<Path>clotihng/uniform/Uniform_Cool_Accessory_Orange_Muted_Green_DarkMuted_Canvas_MilitaryHat</Path>
+		<Path>clothing/uniform/Uniform_Cool_Accessory_Orange_Muted_Green_DarkMuted_Canvas_MilitaryHat</Path>
 		<Slot>ACCESSORY</Slot>
 		<Style>UNIFORM</Style>
 		<Essence>COOL</Essence>
