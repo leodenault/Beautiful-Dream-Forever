@@ -71,7 +71,7 @@ public class ClothingManager {
 
     public ClothingData[] GetClothingData(ClothingData.ClothingStyle style) {
         if (style == ClothingData.ClothingStyle.NONE) {
-            return clothingData;
+            return Protagonist.GetInstance().Inventory.Items;
         }
 
         return categories[style].ToArray();
