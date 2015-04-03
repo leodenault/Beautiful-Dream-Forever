@@ -80,7 +80,7 @@
   </ClothingData>
 	<ClothingData>
 		<Name>Business Flats</Name>
-		<Path>clothing/uniform/Unifrom_Classy_Shoes_Black_Pink_Dark_Cotton_BusinessFlats</Path>
+		<Path>clothing/uniform/Uniform_Classy_Shoes_Black_Pink_Dark_Cotton_BusinessFlats</Path>
 		<Slot>SHOES</Slot>
 		<Style>UNIFORM</Style>
 		<Essence>CLASSY</Essence>
@@ -155,6 +155,39 @@
       <y>20.0</y>
     </Location>
   </ClothingData>
+	<CLothingData>
+		<Name>Griffendor Bowtie</Name>
+		<Path>clothing/uniform/Uniform_Cute_Accessory_Red_DarkDark_Red_Cotton_Bowtie</Path>
+		<Slot>ACCESSORY</Slot>
+		<Style>UNIFORM</Style>
+		<Essence>CUTE</Essence>
+		<Location>
+			<x>93.0</x>
+			<y>78.0</y>
+		</Location>
+	</CLothingData>
+	<ClothingData>
+		<Name>Griffendor Cardigan</Name>
+		<Path>clothing/uniform/Uniform_Cute_Top_Black_White_Red_DarkDark_Cotton_RedCardigan</Path>
+		<Slot>TOP</Slot>
+		<Style>UNIFORM</Style>
+		<Essence>CUTE</Essence>
+		<Location>
+			<x>36.0</x>
+			<y>72.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Griffendor Skirt</Name>
+		<Path>clothing/uniform/Uniform_Cute_Bottom_Black_Red_DarkDark_Cotton_RedLongPlaid</Path>
+		<Slot>BOTTOM</Slot>
+		<Style>UNIFORM</Style>
+		<Essence>CUTE</Essence>
+		<Location>
+			<x>55.0</x>
+			<y>144.0</y>
+		</Location>
+	</ClothingData>
   <ClothingData>
     <Name>Hair Bow Pink</Name>
     <Path>clothing/preppy/Preppy_Cute_Accessory_Orange_Light_Red_Cotton_HairBow</Path>
@@ -166,6 +199,39 @@
       <y>26.0</y>
     </Location>
   </ClothingData>
+	<CLothingData>
+		<Name>Japanese School Loafers</Name>
+		<Path>clothing/uniform/Uniform_Cute_Shoes_Black_Cotton_Loafers</Path>
+		<Slot>SHOES</Slot>
+		<Style>UNIFORM</Style>
+		<Essence>CUTE</Essence>
+		<Location>
+			<x>72.0</x>
+			<y>339.0</y>
+		</Location>
+	</CLothingData>
+	<ClothingData>
+		<Name>Japanese School Pigtails</Name>
+		<Path>clothing/uniform/Uniform_Cute_Wig_Red_Pigtails</Path>
+		<Slot>WIG</Slot>
+		<Style>UNIFORM</Style>
+		<Essence>CUTE</Essence>
+		<Location>
+			<x>70.0</x>
+			<y>18.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Japanese School Stockings Real</Name>
+		<Path>clothing/uniform/Uniform_Cute_Accessory_Black_Cotton_Stockings</Path>
+		<Slot>ACCESSORY</Slot>
+		<Style>UNIFORM</Style>
+		<Essence>CUTE</Essence>
+		<Location>
+			<x>62.0</x>
+			<y>217.0</y>
+		</Location>
+	</ClothingData>
   <ClothingData>
     <Name>Leg Warmers</Name>
     <Path>clothing/athletic/Athletic_Cute_Accessory_Orange1_Light_Pink_DarkDark_Cotton_LegWarmers</Path>
@@ -267,7 +333,7 @@
   </ClothingData>
 	<ClothingData>
 		<Name>Neck Scarf</Name>
-		<Path>clothing/uniform/Unifrom_Classy_Accessory_Pink_Dark_Cotton_NeckScarf</Path>
+		<Path>clothing/uniform/Uniform_Classy_Accessory_Pink_Dark_Cotton_NeckScarf</Path>
 		<Slot>ACCESSORY</Slot>
 		<Style>UNIFORM</Style>
 		<Essence>CLASSY</Essence>
@@ -410,7 +476,7 @@
 	</ClothingData>
 	<ClothingData>
 		<Name>Suit Jacket</Name>
-		<Path>clothing/uniform/Unifrom_Classy_Top_Black_White_Pink_Dark_Cotton_SuitJacket</Path>
+		<Path>clothing/uniform/Uniform_Classy_Top_Black_White_Pink_Dark_Cotton_SuitJacket</Path>
 		<Slot>TOP</Slot>
 		<Style>UNIFORM</Style>
 		<Essence>CLASSY</Essence>
@@ -421,14 +487,14 @@
 	</ClothingData>
   <ClothingData>
 	<Name>Suit Pants</Name>
-	<Path>clothing/uniform/Unifrom_Classy_Bottom_Black_Cotton_SuitPants</Path>
+	<Path>clothing/uniform/Uniform_Classy_Bottom_Black_Cotton_SuitPants</Path>
 	<Slot>BOTTOM</Slot>
 	<Style>UNIFORM</Style>
 	<Essence>CLASSY</Essence>
-	<Locatoin>
+	<Location>
 		<x>58.0</x>
 		<y>142.0</y>
-	</Locatoin>
+	</Location>
   </ClothingData>
   <ClothingData>
     <Name>Thick Stripes</Name>
