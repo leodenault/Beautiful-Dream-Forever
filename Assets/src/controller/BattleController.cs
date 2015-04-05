@@ -18,7 +18,7 @@ public class BattleController {
 		battle = new Battle(manager, style, 70);
 		itemSprites = new Dictionary<string, Sprite>();
 
-		foreach (ClothingData datum in manager.GetClothingData(ClothingData.ClothingStyle.NONE)) {
+		foreach (ClothingData datum in manager.GetClothingData()) {
 			itemSprites.Add(datum.Path, Resources.Load<Sprite>(datum.Path));
 		}
 	}

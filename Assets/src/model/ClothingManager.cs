@@ -69,6 +69,13 @@ public class ClothingManager {
         }
     }
 
+	/// <returns>All clothing data</returns>
+	public ClothingData[] GetClothingData() {
+		return clothingData;
+	}
+
+	/// <param name="style">The clothing style of the clothing data to return</param>
+	/// <returns>The clothing data matching the given style</returns>
     public ClothingData[] GetClothingData(ClothingData.ClothingStyle style) {
         if (style == ClothingData.ClothingStyle.NONE) {
             return Protagonist.GetInstance().Inventory.Items;

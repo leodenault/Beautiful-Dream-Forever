@@ -81,7 +81,7 @@ public class Battle {
 
 	private void setupClothingSets(ClothingData.ClothingStyle style) {
 		HashSet<ClothingData> shopSet = new HashSet<ClothingData>(manager.GetClothingData(style));
-		HashSet<ClothingData> otherSet = new HashSet<ClothingData>(manager.GetClothingData(ClothingData.ClothingStyle.NONE));
+		HashSet<ClothingData> otherSet = new HashSet<ClothingData>(manager.GetClothingData());
 		otherSet.ExceptWith(shopSet);
 
 		shopClothing = new List<ClothingData>(shopSet);
