@@ -83,4 +83,11 @@ public class ClothingManager {
 
         return categories[style].ToArray();
     }
+
+	public ClothingData[] GetClothingDataExceptPlayerInventory(ClothingData.ClothingStyle style) {
+		HashSet<ClothingData> styleData = new HashSet<ClothingData>(GetClothingData(style));
+		HashSet<ClothingData> playerData = new HashSet<ClothingData>(Protagonist.GetInstance().Inventory.Items);
+		styleData.ExceptWith(playerData);
+		return new List<ClothingData>(styleData).ToArray();
+	}
 }
