@@ -33,3 +33,7 @@ EditorBuildSettings:
     path: Assets/scenes/Idealist Shop.unity
   - enabled: 1
     path: Assets/scenes/Hardcore Shop.unity
+  - enabled: 0
+    path: Assets/scenes/Uniform Shop.unity
+  - enabled: 1
+    path: Assets/scenes/Cosplay Shop.unity
