@@ -18,7 +18,7 @@ public class ShopController {
 	}
 
 	private ShopController() {
-		shopStyle = ClothingData.ClothingStyle.NONE;
+		shopStyle = ClothingData.ClothingStyle.ATHLETIC;
 	}
 
 	public static ShopController GetInstance() {

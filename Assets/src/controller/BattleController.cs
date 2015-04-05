@@ -5,14 +5,18 @@ using System.Collections.Generic;
 public class BattleController {
 	private static BattleController INSTANCE;
 
+	private const string SHOPKEEPER_PREFIX = "shopkeepers/Shopkeeper_";
+
 	private Battle battle;
 	private IDictionary<string, Sprite> itemSprites;
+	private ClothingData.ClothingStyle style;
 
 	public int TargetScore {
 		get { return 70; }
 	}
 
 	public BattleController(ClothingData.ClothingStyle style) {
+		this.style = style;
 		ClothingManager manager = ClothingManager.GetInstance();
 		// TODO: Make target score dynamic for battle
 		battle = new Battle(manager, style, 70);
@@ -56,6 +60,12 @@ public class BattleController {
 
 	// TODO: Handle end of battle sequence
 	public void AcceptOutfit() {
+	}
+
+	public Sprite GetShopkeeper() {
+		string name = Enum.GetName(typeof(ClothingData.ClothingStyle), style);
+		string pathSuffix = name.Substring(0, 1) + name.Substring(1).ToLower();
+		return Resources.Load<Sprite>(string.Format("{0}{1}", SHOPKEEPER_PREFIX, pathSuffix));
 	}
 
 	private string generateNumberFormat(int number, int index) {

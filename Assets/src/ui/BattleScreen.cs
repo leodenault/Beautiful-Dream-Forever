@@ -24,6 +24,7 @@ public class BattleScreen : MonoBehaviour {
 	public Text timerText;
 	public Text outfitScore;
 	public Text targetScore;
+	public Image shopkeeper;
 	public float maxHeight;
 
 	public void Start() {
@@ -42,6 +43,9 @@ public class BattleScreen : MonoBehaviour {
 		clothingSlotSystem.Init(clothingArea, RemoveItem);
 
 		targetScore.text = battleController.TargetScore.ToString();
+		Sprite shopkeeperSprite = battleController.GetShopkeeper();
+		shopkeeper.sprite = shopkeeperSprite;
+		shopkeeper.rectTransform.sizeDelta = new Vector2(shopkeeperSprite.rect.width, shopkeeperSprite.rect.height);
 	}
 
 	public void Update() {
