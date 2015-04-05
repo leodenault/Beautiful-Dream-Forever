@@ -6,6 +6,7 @@ public class PrizeButton : MonoBehaviour {
 
 	private ClothingData data;
 	public ClothingData Data {
+		get { return data; }
 		set {
 			data = value;
 			Sprite sprite = Resources.Load<Sprite>(data.Path);

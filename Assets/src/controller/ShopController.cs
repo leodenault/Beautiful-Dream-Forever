@@ -11,6 +11,12 @@ public class ShopController {
 		set { shopStyle = value; }
 	}
 
+	private ClothingData prize;
+	public ClothingData Prize {
+		get { return prize; }
+		set { prize = value; }
+	}
+
 	private ShopController() {
 		shopStyle = ClothingData.ClothingStyle.NONE;
 	}
