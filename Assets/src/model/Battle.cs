@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 
 public class Battle {
-	private const float START_TIME = 60.0f;
+	private const float DEFAULT_TIME_LIMIT = 60.0f;
 	private const int SHOP_PROBABILITY = 34;
 	private const int PLAYER_PROBABILITY = 67;
 	private const int MAX_PROBABILITY = 100;
 
+	private float timeLimit;
 	private float elapsedTime;
 	private int targetScore;
 	private ClothingManager manager;
@@ -29,7 +30,7 @@ public class Battle {
 		get { return currentItem; }
 	}
 
-	public Battle(ClothingManager manager, ClothingData.ClothingStyle style, int targetScore) {
+	public Battle(ClothingManager manager, ClothingData.ClothingStyle style, int targetScore, float timeLimit) {
 		this.manager = manager;
 		this.targetScore = targetScore;
 		setupClothingSets(style);
@@ -40,6 +41,7 @@ public class Battle {
 		otherSelector = new Random();
 		elapsedTime = 0.0f;
 		outfitScore = 0;
+		this.timeLimit = (timeLimit == 0) ? DEFAULT_TIME_LIMIT : timeLimit;
 	}
 
 	public ClothingData GenerateRandomItem() {
@@ -59,17 +61,17 @@ public class Battle {
 	}
 
 	public float RemainingTime(float delta) {
-		if (elapsedTime + delta > START_TIME) {
-			elapsedTime = START_TIME;
+		if (elapsedTime + delta > timeLimit) {
+			elapsedTime = timeLimit;
 			return 0.0f;
 		}
 
 		elapsedTime += delta;
-		return START_TIME - elapsedTime;
+		return timeLimit - elapsedTime;
 	}
 
 	public bool TimeOut() {
-		return START_TIME < elapsedTime || Math.Abs(START_TIME - elapsedTime) < 0.001;
+		return timeLimit < elapsedTime || Math.Abs(timeLimit - elapsedTime) < 0.001;
 	}
 
 	public void UpdateOutfit(ClothingData data) {

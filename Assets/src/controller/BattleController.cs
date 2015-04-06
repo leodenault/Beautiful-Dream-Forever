@@ -15,11 +15,11 @@ public class BattleController {
 		get { return 70; }
 	}
 
-	public BattleController(ClothingData.ClothingStyle style) {
+	public BattleController(ClothingData.ClothingStyle style, float timeLimit) {
 		this.style = style;
 		ClothingManager manager = ClothingManager.GetInstance();
 		// TODO: Make target score dynamic for battle
-		battle = new Battle(manager, style, 70);
+		battle = new Battle(manager, style, 70, timeLimit);
 		itemSprites = new Dictionary<string, Sprite>();
 
 		foreach (ClothingData datum in manager.GetClothingData()) {

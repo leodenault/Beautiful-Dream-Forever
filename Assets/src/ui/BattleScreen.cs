@@ -8,6 +8,7 @@ public class BattleScreen : MonoBehaviour {
 	private const float DEFAULT_CONVEYOR_SPEED = 0.01f;
 	private const float CONVEYOR_ITEM_PADDING = 20.0f;
 
+	private bool started;
 	private GlobalController globalController;
 	private BattleController battleController;
 	private ClothingArea clothingArea;
@@ -17,6 +18,7 @@ public class BattleScreen : MonoBehaviour {
 	private RectTransform conveyorTransform;
 
 	public float conveyorSpeed = DEFAULT_CONVEYOR_SPEED;
+	public float timeLimit;
 	public GameObject clothingAreaContainer;
 	public GameObject itemSlotsPanel;
 	public GameObject clothingConveyor;
@@ -28,8 +30,9 @@ public class BattleScreen : MonoBehaviour {
 	public float maxHeight;
 
 	public void Start() {
+		started = false;
 		globalController = GlobalController.GetInstance();
-		battleController = new BattleController(ShopController.GetInstance().ShopStyle);
+		battleController = new BattleController(ShopController.GetInstance().ShopStyle, timeLimit);
 		conveyorTransform = clothingConveyor.transform as RectTransform;
 		conveyorItems = new List<Button>();
 		nextItem = generateNextItem();
@@ -43,27 +46,32 @@ public class BattleScreen : MonoBehaviour {
 		clothingSlotSystem.Init(clothingArea, RemoveItem);
 
 		targetScore.text = battleController.TargetScore.ToString();
+		timerText.text = battleController.RemainingTime(0);
 		Sprite shopkeeperSprite = battleController.GetShopkeeper();
 		shopkeeper.sprite = shopkeeperSprite;
 		shopkeeper.rectTransform.sizeDelta = new Vector2(shopkeeperSprite.rect.width, shopkeeperSprite.rect.height);
 	}
 
 	public void Update() {
-		if (nextItemCanFit()) {
-			setupNextItem();
-		}
+		if (started) {
+			if (nextItemCanFit()) {
+				setupNextItem();
+			}
 
-		if (lastItemIsOutOfBounds()) {
-			removeLastItem();
+			if (lastItemIsOutOfBounds()) {
+				removeLastItem();
+			}
 		}
 	}
 
 	public void FixedUpdate() {
-		moveConveyorItems();
-		updateTimer(Time.deltaTime);
+		if (started) {
+			moveConveyorItems();
+			updateTimer(Time.deltaTime);
 
-		if (battleController.TimeOut()) {
-			globalController.Back();
+			if (battleController.TimeOut()) {
+				globalController.Back();
+			}
 		}
 	}
 
@@ -76,6 +84,10 @@ public class BattleScreen : MonoBehaviour {
 		int score = battleController.RemoveItem(activeSelection.Clothing);
 		outfitScore.text = score.ToString();
 		clothingSlotSystem.UnsetActiveSlot();
+	}
+
+	public void StartBattle() {
+		started = true;
 	}
 
 	private Button generateNextItem() {
