@@ -20,4 +20,8 @@ public class Inventory {
 	public bool Contains(ClothingData item) {
 		return inventory.Contains(item);
 	}
+
+	public void Clear() {
+		inventory.Clear();
+	}
 }
