@@ -4,6 +4,7 @@ public class Inventory {
 
 	public ClothingData[] Items {
 		get { return inventory.ToArray(); }
+		set { inventory = new List<ClothingData>(value); }
 	}
 
 	private List<ClothingData> inventory;
