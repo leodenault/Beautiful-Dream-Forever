@@ -8,20 +8,21 @@ public class BattleScreen : MonoBehaviour {
 	private const float DEFAULT_CONVEYOR_SPEED = 0.01f;
 	private const float CONVEYOR_ITEM_PADDING = 20.0f;
 
-	private bool started;
-	private GlobalController globalController;
-	private BattleController battleController;
+	private bool running;
+	private BattleController controller;
 	private ClothingArea clothingArea;
 	private ClothingSlotSystem clothingSlotSystem;
 	private IList<Button> conveyorItems;
 	private Button nextItem;
 	private RectTransform conveyorTransform;
+	private BattleResultsPanel resultsPanel;
 
 	public float conveyorSpeed = DEFAULT_CONVEYOR_SPEED;
 	public float timeLimit;
 	public GameObject clothingAreaContainer;
 	public GameObject itemSlotsPanel;
 	public GameObject clothingConveyor;
+	public GameObject results;
 	public Button conveyorItem;
 	public Text timerText;
 	public Text outfitScore;
@@ -30,9 +31,8 @@ public class BattleScreen : MonoBehaviour {
 	public float maxHeight;
 
 	public void Start() {
-		started = false;
-		globalController = GlobalController.GetInstance();
-		battleController = new BattleController(ShopController.GetInstance().ShopStyle, timeLimit);
+		running = false;
+		controller = new BattleController(timeLimit);
 		conveyorTransform = clothingConveyor.transform as RectTransform;
 		conveyorItems = new List<Button>();
 		nextItem = generateNextItem();
@@ -45,15 +45,17 @@ public class BattleScreen : MonoBehaviour {
 		clothingSlotSystem = itemSlotsPanel.GetComponentInChildren<ClothingSlotSystem>();
 		clothingSlotSystem.Init(clothingArea, RemoveItem);
 
-		targetScore.text = battleController.TargetScore.ToString();
-		timerText.text = battleController.RemainingTime(0);
-		Sprite shopkeeperSprite = battleController.GetShopkeeper();
+		targetScore.text = controller.TargetScore.ToString();
+		timerText.text = controller.RemainingTime(0);
+		Sprite shopkeeperSprite = controller.GetShopkeeper();
 		shopkeeper.sprite = shopkeeperSprite;
 		shopkeeper.rectTransform.sizeDelta = new Vector2(shopkeeperSprite.rect.width, shopkeeperSprite.rect.height);
+		resultsPanel = results.GetComponent<BattleResultsPanel>();
+		resultsPanel.Controller = controller;
 	}
 
 	public void Update() {
-		if (started) {
+		if (running) {
 			if (nextItemCanFit()) {
 				setupNextItem();
 			}
@@ -65,36 +67,35 @@ public class BattleScreen : MonoBehaviour {
 	}
 
 	public void FixedUpdate() {
-		if (started) {
+		if (running) {
 			moveConveyorItems();
 			updateTimer(Time.deltaTime);
 
-			if (battleController.TimeOut()) {
-				globalController.Back();
+			if (controller.TimeOut()) {
+				endBattle();
 			}
 		}
 	}
 
 	public void AcceptOutfit() {
-		// TODO: Handle end of battle sequence
-		globalController.Back();
+		endBattle();
 	}
 
 	public void RemoveItem(ClothingSelection activeSelection) {
-		int score = battleController.RemoveItem(activeSelection.Clothing);
+		int score = controller.RemoveItem(activeSelection.Clothing);
 		outfitScore.text = score.ToString();
 		clothingSlotSystem.UnsetActiveSlot();
 	}
 
 	public void StartBattle() {
-		started = true;
+		running = true;
 	}
 
 	private Button generateNextItem() {
 		Button newItem = Instantiate(conveyorItem) as Button;
-		ClothingData item = battleController.GenerateRandomItem();
+		ClothingData item = controller.GenerateRandomItem();
 		newItem.onClick.AddListener(() => { selectConveyorItem(newItem, item); });
-		newItem.image.sprite = battleController.GetCurrentItemSprite();
+		newItem.image.sprite = controller.GetCurrentItemSprite();
 		Util.ScaleImageToMaxDimensions(newItem.image, newItem.image.sprite, conveyorTransform.rect.width, maxHeight);
 		return newItem;
 	}
@@ -142,11 +143,16 @@ public class BattleScreen : MonoBehaviour {
 	private void selectConveyorItem(Button item, ClothingData data) {
 		removeItem(item);
 		clothingSlotSystem.UpdateActiveSlot(data);
-		int score = battleController.UpdateOutfitScore(data);
+		int score = controller.UpdateOutfitScore(data);
 		outfitScore.text = score.ToString();
 	}
 
 	private void updateTimer(float delta) {
-		timerText.text = battleController.RemainingTime(delta);
+		timerText.text = controller.RemainingTime(delta);
+	}
+
+	private void endBattle() {
+		running = false;
+		resultsPanel.EndBattle();
 	}
 }

@@ -9,17 +9,17 @@ public class BattleController {
 
 	private Battle battle;
 	private IDictionary<string, Sprite> itemSprites;
-	private ClothingData.ClothingStyle style;
+	private ShopController shopController;
 
 	public int TargetScore {
 		get { return 70; }
 	}
 
-	public BattleController(ClothingData.ClothingStyle style, float timeLimit) {
-		this.style = style;
+	public BattleController(float timeLimit) {
+		shopController = ShopController.GetInstance();
 		ClothingManager manager = ClothingManager.GetInstance();
 		// TODO: Make target score dynamic for battle
-		battle = new Battle(manager, style, 70, timeLimit);
+		battle = new Battle(manager, shopController.ShopStyle, 70, timeLimit);
 		itemSprites = new Dictionary<string, Sprite>();
 
 		foreach (ClothingData datum in manager.GetClothingData()) {
@@ -58,14 +58,24 @@ public class BattleController {
 		return battle.OutfitScore;
 	}
 
-	// TODO: Handle end of battle sequence
-	public void AcceptOutfit() {
+	public void EndBattle() {
+		if (battle.IsSuccessful()) {
+			Protagonist.GetInstance().Inventory.Add(shopController.Prize);
+		}
 	}
 
 	public Sprite GetShopkeeper() {
-		string name = Enum.GetName(typeof(ClothingData.ClothingStyle), style);
+		string name = Enum.GetName(typeof(ClothingData.ClothingStyle), shopController.ShopStyle);
 		string pathSuffix = name.Substring(0, 1) + name.Substring(1).ToLower();
 		return Resources.Load<Sprite>(string.Format("{0}{1}", SHOPKEEPER_PREFIX, pathSuffix));
+	}
+
+	public bool IsSuccessful() {
+		return battle.IsSuccessful();
+	}
+
+	public Sprite PrizeSprite() {
+		return Resources.Load<Sprite>(shopController.Prize.Path);
 	}
 
 	private string generateNumberFormat(int number, int index) {

@@ -84,6 +84,10 @@ public class Battle {
 		updateOutfitScore();
 	}
 
+	public bool IsSuccessful() {
+		return outfitScore >= targetScore;
+	}
+
 	private void updateOutfitScore() {
 		outfitScore = outfit.GetPoints();
 	}
