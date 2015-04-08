@@ -17,6 +17,7 @@ public class ClothingSystem : MonoBehaviour {
 
 	public ClothingData.ClothingStyle shopStyle;
 	public Button equipButton;
+	public Button battleButton;
 	public Sprite equipImage;
 	public Sprite unequipImage;
 	public Image preview;
@@ -42,6 +43,12 @@ public class ClothingSystem : MonoBehaviour {
 
 		clothingSlotSystem.Init(clothingArea, selectSlotCallback);
 		displayPreview(activeTile.Sprite);
+
+		if (controller.AllItemsAreOwned()) {
+			battleButton.image.sprite = controller.DisabledBattleButton();
+			Debug.Log(controller.DisabledBattleButton());
+			battleButton.interactable = false;
+		}
 	}
 
 	public void Equip() {

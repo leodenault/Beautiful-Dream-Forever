@@ -4,10 +4,14 @@ using System;
 using System.Collections;
 
 public class ClothingSystemController {
+	private static string DISABLED_BATTLE_BUTTON_FILE = "buttons/Battle Button GREY";
+
 	private ClothingManager manager;
 	private WardrobePaginator<ClothingData> paginator;
+	private ClothingData.ClothingStyle style;
 
 	public ClothingSystemController(ClothingData.ClothingStyle style, int pageSize) {
+		this.style = style;
 		this.manager = ClothingManager.GetInstance();
 		paginator = new WardrobePaginator<ClothingData>(manager.GetClothingData(style), pageSize);
 	}
@@ -22,6 +26,21 @@ public class ClothingSystemController {
 
 	public void NextPage(Button[] wardrobeButtons) {
 		fillButtons(wardrobeButtons, paginator.Next());
+	}
+
+	// TODO: This could be optimized for way better performance
+	public bool AllItemsAreOwned() {
+		Inventory inventory = Protagonist.GetInstance().Inventory;
+		foreach (ClothingData item in manager.GetClothingData(style)) {
+			if (!inventory.Contains(item)) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	public Sprite DisabledBattleButton() {
+		return Resources.Load<Sprite>(DISABLED_BATTLE_BUTTON_FILE);
 	}
 
 	private void fillButtons(Button[] wardrobeButtons, ClothingData[] set) {

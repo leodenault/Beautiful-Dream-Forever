@@ -30,15 +30,21 @@ public class ShopController {
 	}
 
 	public ClothingData[] GenerateBattlePrizes(int numPrizes) {
-		ClothingData[] clothing = ClothingManager.GetInstance().GetClothingData(shopStyle);
-		Random itemGenerator = new Random();
+		ClothingData[] clothing = ClothingManager.GetInstance().GetClothingDataExceptPlayerInventory(shopStyle);
+		List<ClothingData> selected;
 
-		List<int> indices = new List<int>();
-		List<ClothingData> selected = new List<ClothingData>();
-		for (int i = 0; i < numPrizes; i++) {
-			int index = generateIndex(clothing.Length, itemGenerator, indices);
-			indices.Add(index);
-			selected.Add(clothing[index]);
+		if (clothing.Length <= numPrizes) {
+			selected = new List<ClothingData>(clothing);
+		} else {
+			Random itemGenerator = new Random();
+
+			selected = new List<ClothingData>();
+			List<int> indices = new List<int>();
+			for (int i = 0; i < numPrizes; i++) {
+				int index = generateIndex(clothing.Length, itemGenerator, indices);
+				indices.Add(index);
+				selected.Add(clothing[index]);
+			}
 		}
 		return selected.ToArray();
 	}
