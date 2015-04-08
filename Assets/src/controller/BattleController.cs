@@ -60,7 +60,7 @@ public class BattleController {
 
 	public void EndBattle() {
 		if (battle.IsSuccessful()) {
-			Protagonist.GetInstance().Inventory.Add(shopController.Prize);
+			shopController.AwardPrize();
 		}
 	}
 

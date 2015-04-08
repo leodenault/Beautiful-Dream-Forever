@@ -4,6 +4,7 @@ using System.Collections.Generic;
 public class ShopController {
 
 	private static ShopController INSTANCE;
+	private static int NUM_PRIZES = 3;
 
 	private ClothingData.ClothingStyle shopStyle;
 	public ClothingData.ClothingStyle ShopStyle {
@@ -17,8 +18,20 @@ public class ShopController {
 		set { prize = value; }
 	}
 
+	private IDictionary<ClothingData.ClothingStyle, Shop> shops;
+
 	private ShopController() {
 		shopStyle = ClothingData.ClothingStyle.ATHLETIC;
+		shops = new Dictionary<ClothingData.ClothingStyle, Shop>();
+
+		ClothingData.ClothingStyle[] styles = Enum.GetValues(typeof(ClothingData.ClothingStyle)) as ClothingData.ClothingStyle[];
+		foreach (ClothingData.ClothingStyle style in styles) {
+			if (style != ClothingData.ClothingStyle.NONE) {
+				Shop shop = new Shop(style);
+				shop.GenerateBattlePrizes(NUM_PRIZES);
+				shops.Add(style, shop);
+			}
+		}
 	}
 
 	public static ShopController GetInstance() {
@@ -29,31 +42,13 @@ public class ShopController {
 		return INSTANCE;
 	}
 
-	public ClothingData[] GenerateBattlePrizes(int numPrizes) {
-		ClothingData[] clothing = ClothingManager.GetInstance().GetClothingDataExceptPlayerInventory(shopStyle);
-		List<ClothingData> selected;
-
-		if (clothing.Length <= numPrizes) {
-			selected = new List<ClothingData>(clothing);
-		} else {
-			Random itemGenerator = new Random();
-
-			selected = new List<ClothingData>();
-			List<int> indices = new List<int>();
-			for (int i = 0; i < numPrizes; i++) {
-				int index = generateIndex(clothing.Length, itemGenerator, indices);
-				indices.Add(index);
-				selected.Add(clothing[index]);
-			}
-		}
-		return selected.ToArray();
+	public IList<ClothingData> GetPrizes() {
+		return shops[shopStyle].Prizes;
 	}
 
-	private int generateIndex(int max, Random generator, List<int> previous) {
-		int index;
-		do {
-			index = generator.Next(max);
-		} while (previous.Contains(index));
-		return index;
+	public void AwardPrize() {
+		Shop shop = shops[shopStyle];
+		shop.AwardPrize(prize);
+		shop.GenerateBattlePrizes(NUM_PRIZES);
 	}
 }

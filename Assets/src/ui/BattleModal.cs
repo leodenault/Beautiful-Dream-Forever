@@ -6,7 +6,6 @@ using System.Collections.Generic;
 public class BattleModal : MonoBehaviour {
 
 	private ShopController shopController;
-	private IList<PrizeButton> prizeData;
 	private PrizeButton activeButton;
 
 	public int numPrizes;
@@ -19,20 +18,18 @@ public class BattleModal : MonoBehaviour {
 	public void Start () {
 		shopController = ShopController.GetInstance();
 		shopController.ShopStyle = shopStyle;
-		ClothingData[] prizes = shopController.GenerateBattlePrizes(numPrizes);
-		prizeData = new List<PrizeButton>();
+		IList<ClothingData> prizes = shopController.GetPrizes();
 
-		for (int i = 0; i < prizes.Length; i++) {
-			GameObject prize = Instantiate(prizeButtonPrefab) as GameObject;
-			prize.transform.SetParent(prizeSelector.transform);
-			prize.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-			
-			PrizeButton prizeButton = prize.GetComponent<PrizeButton>();
-			prizeButton.Data = prizes[i];
+		foreach (ClothingData prize in prizes) {
+			GameObject prizeObject = Instantiate(prizeButtonPrefab) as GameObject;
+			prizeObject.transform.SetParent(prizeSelector.transform);
+			prizeObject.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
 
-			Button button = prize.GetComponentInChildren<Button>();
+			PrizeButton prizeButton = prizeObject.GetComponent<PrizeButton>();
+			prizeButton.Data = prize;
+
+			Button button = prizeObject.GetComponentInChildren<Button>();
 			button.onClick.AddListener(() => { selectItem(prizeButton); });
-			prizeData.Add(prizeButton);
 		}
 	}
 
