@@ -8,11 +8,9 @@ public class Shop {
 		set { prizes = value; }
 	}
 
-	private ClothingData.ClothingStyle shopStyle;
 	private IList<ClothingData> availableClothing;
 
 	public Shop(ClothingData.ClothingStyle shopStyle) {
-		this.shopStyle = shopStyle;
 		availableClothing = new List<ClothingData>(ClothingManager.GetInstance().GetClothingDataExceptPlayerInventory(shopStyle));
 	}
 
