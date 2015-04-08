@@ -7,13 +7,14 @@ using UnityEngine.UI;
 public static class Util
 {
 	private static float PAD = 0.85f;
+	private static float MAX_SCALE = 2.0f;
 
 	public static float computeScale(float width1, float width2, float height1, float height2, float pad)
 	{
 		float wScale = width1 / width2;
 		float hScale = height1 / height2;
 
-		return Math.Min(wScale, hScale) * pad;
+		return Math.Min(Math.Min(wScale, hScale), MAX_SCALE) * pad;
 	}
 
 	public static void ScaleImageToMaxDimensions(Image image, Sprite sprite, float maxWidth, float maxHeight) {
