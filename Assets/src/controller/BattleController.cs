@@ -65,8 +65,7 @@ public class BattleController {
 	}
 
 	public Sprite GetShopkeeper() {
-		string name = Enum.GetName(typeof(ClothingData.ClothingStyle), shopController.ShopStyle);
-		string pathSuffix = name.Substring(0, 1) + name.Substring(1).ToLower();
+		string pathSuffix = Util.ConvertStyleEnumToReadable(shopController.ShopStyle);
 		return Resources.Load<Sprite>(string.Format("{0}{1}", SHOPKEEPER_PREFIX, pathSuffix));
 	}
 
