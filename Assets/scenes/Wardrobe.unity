@@ -73,6 +73,7 @@ NavMeshSettings:
     minRegionArea: 2
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
+    tileSizeHint: 0
   m_NavMesh: {fileID: 0}
 --- !u!1001 &9291915
 Prefab:
@@ -391,6 +392,7 @@ GameObject:
   - 224: {fileID: 118757388}
   - 222: {fileID: 118757390}
   - 114: {fileID: 118757389}
+  - 114: {fileID: 118757391}
   m_Layer: 5
   m_Name: Clothing Slot
   m_TagString: Untagged
@@ -445,6 +447,19 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 781147723}
   m_GameObject: {fileID: 118757387}
+--- !u!114 &118757391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11468506, guid: 46a8594c67a3af543b1adb21334d838a,
+    type: 2}
+  m_PrefabInternal: {fileID: 781147723}
+  m_GameObject: {fileID: 118757387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59544eae40fe1f94691c7c92a220f541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 118757389}
 --- !u!1 &142254338
 GameObject:
   m_ObjectHideFlags: 0
@@ -1592,6 +1607,7 @@ GameObject:
   - 224: {fileID: 664046595}
   - 222: {fileID: 664046597}
   - 114: {fileID: 664046596}
+  - 114: {fileID: 664046598}
   m_Layer: 5
   m_Name: Clothing Slot
   m_TagString: Untagged
@@ -1646,6 +1662,19 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 1977117657}
   m_GameObject: {fileID: 664046594}
+--- !u!114 &664046598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11468506, guid: 46a8594c67a3af543b1adb21334d838a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1977117657}
+  m_GameObject: {fileID: 664046594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59544eae40fe1f94691c7c92a220f541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 664046596}
 --- !u!1 &670293084
 GameObject:
   m_ObjectHideFlags: 0
@@ -1952,6 +1981,7 @@ GameObject:
   - 224: {fileID: 752711479}
   - 222: {fileID: 752711481}
   - 114: {fileID: 752711480}
+  - 114: {fileID: 752711482}
   m_Layer: 5
   m_Name: Clothing Slot
   m_TagString: Untagged
@@ -2006,6 +2036,19 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 98542716}
   m_GameObject: {fileID: 752711478}
+--- !u!114 &752711482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11468506, guid: 46a8594c67a3af543b1adb21334d838a,
+    type: 2}
+  m_PrefabInternal: {fileID: 98542716}
+  m_GameObject: {fileID: 752711478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59544eae40fe1f94691c7c92a220f541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 752711480}
 --- !u!1001 &781147723
 Prefab:
   m_ObjectHideFlags: 0
@@ -3199,6 +3242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shopStyle: 8
   equipButton: {fileID: 1043490146}
+  battleButton: {fileID: 0}
   equipImage: {fileID: 21300000, guid: efc8122f3163c16469fdce1f835c4540, type: 3}
   unequipImage: {fileID: 21300000, guid: ab4fdaf0947bcda43a8f0ed15fc523bc, type: 3}
   preview: {fileID: 2061966520}
@@ -3506,8 +3550,8 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ignoreReversedGraphics: 1
-  blockingObjects: 0
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -3864,6 +3908,7 @@ GameObject:
   - 224: {fileID: 1456059546}
   - 222: {fileID: 1456059548}
   - 114: {fileID: 1456059547}
+  - 114: {fileID: 1456059549}
   m_Layer: 5
   m_Name: Clothing Slot
   m_TagString: Untagged
@@ -3918,6 +3963,19 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 1676209241}
   m_GameObject: {fileID: 1456059545}
+--- !u!114 &1456059549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11468506, guid: 46a8594c67a3af543b1adb21334d838a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1676209241}
+  m_GameObject: {fileID: 1456059545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59544eae40fe1f94691c7c92a220f541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 1456059547}
 --- !u!1 &1480171599
 GameObject:
   m_ObjectHideFlags: 0
@@ -4359,6 +4417,7 @@ GameObject:
   - 224: {fileID: 1626971645}
   - 222: {fileID: 1626971647}
   - 114: {fileID: 1626971646}
+  - 114: {fileID: 1626971648}
   m_Layer: 5
   m_Name: Clothing Slot
   m_TagString: Untagged
@@ -4413,6 +4472,19 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 1366740874}
   m_GameObject: {fileID: 1626971644}
+--- !u!114 &1626971648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11468506, guid: 46a8594c67a3af543b1adb21334d838a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1366740874}
+  m_GameObject: {fileID: 1626971644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59544eae40fe1f94691c7c92a220f541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 1626971646}
 --- !u!1 &1633909843
 GameObject:
   m_ObjectHideFlags: 0
@@ -5051,8 +5123,8 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 58.5, y: -181.583405}
-  m_SizeDelta: {x: 60, y: 35.8333626}
+  m_AnchoredPosition: {x: 58.5, y: -127.871002}
+  m_SizeDelta: {x: 60, y: 51}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1794712246
 MonoBehaviour:
@@ -6060,8 +6132,8 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ignoreReversedGraphics: 1
-  blockingObjects: 0
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -6714,6 +6786,7 @@ GameObject:
   - 224: {fileID: 2140192706}
   - 222: {fileID: 2140192708}
   - 114: {fileID: 2140192707}
+  - 114: {fileID: 2140192709}
   m_Layer: 5
   m_Name: Clothing Slot
   m_TagString: Untagged
@@ -6768,6 +6841,19 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 885506235}
   m_GameObject: {fileID: 2140192705}
+--- !u!114 &2140192709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11468506, guid: 46a8594c67a3af543b1adb21334d838a,
+    type: 2}
+  m_PrefabInternal: {fileID: 885506235}
+  m_GameObject: {fileID: 2140192705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59544eae40fe1f94691c7c92a220f541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 2140192707}
 --- !u!1 &2145703595
 GameObject:
   m_ObjectHideFlags: 0

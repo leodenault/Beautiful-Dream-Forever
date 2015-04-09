@@ -353,17 +353,17 @@
 			<y>73.0</y>
 		</Location>
 	</ClothingData>
-	<!--ClothingData>
-	<Name>Peter Pan Dress</Name>
-	<Path>clothing/preppy/Preppy_Cute_Dress_Oragne2_Muted_Orange_Muted_Green_Muted_Cotton_PeterPanCollar</Path>
-	<Slot>DRESS</Slot>
-	<Style>PREPPY</Style>
-	<Essence>CUTE</Essence>
-	<Location>
-		<x>35.0</x>
-		<y>69.0</y>
-	</Location>
-	</ClothingData-->
+	<ClothingData>
+		<Name>Peter Pan Dress</Name>
+		<Path>clothing/preppy/Preppy_Cute_Dress_Oragne2_Muted_Orange_Muted_Green_Muted_Cotton_PeterPanCollar</Path>
+		<Slot>DRESS</Slot>
+		<Style>PREPPY</Style>
+		<Essence>CUTE</Essence>
+		<Location>
+			<x>35.0</x>
+			<y>69.0</y>
+		</Location>
+	</ClothingData>
 	<ClothingData>
 		<Name>Pointe Sweatshirt</Name>
 		<Path>clothing/athletic/Athletic_Cute_Top_Green2_Light_Pink_DarkDark_Cotton_PointeSweatshirt</Path>

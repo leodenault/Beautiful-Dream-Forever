@@ -29,6 +29,7 @@ class Outfit {
 
 	public void SetItem(ClothingData item) {
 		clothing[item.Slot].Item = item;
+		handleDresses(item.Slot);
 	}
 
 	public void RemoveItem(ClothingData item) {
@@ -38,6 +39,15 @@ class Outfit {
 	public void Clear() {
 		foreach (OutfitItem item in clothing.Values) {
 			item.RemoveItem();
+		}
+	}
+
+	private void handleDresses(ClothingData.ClothingSlot slot) {
+		if (slot == ClothingData.ClothingSlot.TOP || slot == ClothingData.ClothingSlot.BOTTOM) {
+			clothing[ClothingData.ClothingSlot.DRESS].RemoveItem();
+		} else if (slot == ClothingData.ClothingSlot.DRESS) {
+			clothing[ClothingData.ClothingSlot.TOP].RemoveItem();
+			clothing[ClothingData.ClothingSlot.BOTTOM].RemoveItem();
 		}
 	}
 }
