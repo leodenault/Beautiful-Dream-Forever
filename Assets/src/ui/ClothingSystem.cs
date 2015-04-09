@@ -44,7 +44,7 @@ public class ClothingSystem : MonoBehaviour {
 		clothingSlotSystem.Init(clothingArea, selectSlotCallback);
 		displayPreview(activeTile.Sprite);
 
-		if (controller.AllItemsAreOwned()) {
+		if (controller.AllItemsAreOwned() && battleButton != null) {
 			battleButton.image.sprite = controller.DisabledBattleButton();
 			Debug.Log(controller.DisabledBattleButton());
 			battleButton.interactable = false;
