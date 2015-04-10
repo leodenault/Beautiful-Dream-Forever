@@ -30,9 +30,20 @@ public class CheatsController {
 		KeyCode.UpArrow,
 		KeyCode.UpArrow
 	};
+	private static CheatSequence battleAllShopsSequence = new CheatSequence {
+		KeyCode.LeftArrow,
+		KeyCode.RightArrow,
+		KeyCode.DownArrow,
+		KeyCode.UpArrow,
+		KeyCode.LeftArrow,
+		KeyCode.RightArrow,
+		KeyCode.DownArrow,
+		KeyCode.UpArrow
+	};
 	private IDictionary<CheatSequence, CheatOperation> operations = new Dictionary<CheatSequence, CheatOperation> {
 		{ fillInventorySequence, fillInventory },
-		{ clearInventorySequence, clearInventory }
+		{ clearInventorySequence, clearInventory },
+		{ battleAllShopsSequence,  battleAllShops }
 	};
 
 	private CheatsController() {}
@@ -59,5 +70,15 @@ public class CheatsController {
 
 	private static void clearInventory() {
 		Protagonist.GetInstance().Inventory.Clear();
+	}
+
+	private static void battleAllShops() {
+		ShopController controller = ShopController.GetInstance();
+		ClothingData.ClothingStyle[] styles = (ClothingData.ClothingStyle[])Enum.GetValues(typeof(ClothingData.ClothingStyle));
+		foreach (ClothingData.ClothingStyle style in styles) {
+			if (style != ClothingData.ClothingStyle.NONE) {
+				controller.BattleShop(style);
+			}
+		}
 	}
 }

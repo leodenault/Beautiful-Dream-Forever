@@ -8,9 +8,16 @@ public class Shop {
 		set { prizes = value; }
 	}
 
+	private bool battled;
+	public bool Battled {
+		get { return battled; }
+		set { battled = value; }
+	}
+
 	private IList<ClothingData> availableClothing;
 
 	public Shop(ClothingData.ClothingStyle shopStyle) {
+		battled = false;
 		availableClothing = new List<ClothingData>(ClothingManager.GetInstance().GetClothingDataExceptPlayerInventory(shopStyle));
 	}
 
@@ -36,6 +43,7 @@ public class Shop {
 	public void AwardPrize(ClothingData prize) {
 		availableClothing.Remove(prize);
 		Protagonist.GetInstance().Inventory.Add(prize);
+		battled = true;
 	}
 
 	private int generateIndex(int max, Random generator, List<int> previous) {

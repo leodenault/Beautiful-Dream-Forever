@@ -51,4 +51,12 @@ public class ShopController {
 		shop.AwardPrize(prize);
 		shop.GenerateBattlePrizes(NUM_PRIZES);
 	}
+
+	public bool ShopBattled(ClothingData.ClothingStyle shopStyle) {
+		return shops[shopStyle].Battled;
+	}
+
+	public void BattleShop(ClothingData.ClothingStyle shopStyle) {
+		shops[shopStyle].Battled = true;
+	}
 }
