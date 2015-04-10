@@ -6,8 +6,11 @@ public class BattleResultsPanel : MonoBehaviour {
 	public BattleController Controller {
 		set { controller = value; }
 	}
+	private DialogueManager dialogueManager;
 
 	public float prizeSideLength;
+	public GameObject blurbObject;
+	public Text blurb;
 	public GameObject resultsPanel;
 	public GameObject winMessage;
 	public GameObject loseMessage;
@@ -15,8 +18,8 @@ public class BattleResultsPanel : MonoBehaviour {
 
 	public void EndBattle() {
 		controller.EndBattle();
-		resultsPanel.gameObject.SetActive(true);
 
+		resultsPanel.gameObject.SetActive(true);
 		if (controller.IsSuccessful()) {
 			float maxWidth = prize.rectTransform.rect.width;
 			float maxHeight = prize.rectTransform.rect.height;
@@ -27,7 +30,9 @@ public class BattleResultsPanel : MonoBehaviour {
 		}
 	}
 
-	public void Exit() {
-		GlobalController.GetInstance().Back();
+	public void ShowResultsBlurb() {
+		blurb.text = controller.GetResultsBlurb();
+		blurbObject.gameObject.SetActive(true);
 	}
+	
 }

@@ -24,6 +24,7 @@ public class BattleScreen : MonoBehaviour {
 	public GameObject clothingConveyor;
 	public GameObject results;
 	public Button conveyorItem;
+	public Text battleBlurb;
 	public Text timerText;
 	public Text outfitScore;
 	public Text targetScore;
@@ -45,6 +46,7 @@ public class BattleScreen : MonoBehaviour {
 		clothingSlotSystem = itemSlotsPanel.GetComponentInChildren<ClothingSlotSystem>();
 		clothingSlotSystem.Init(clothingArea, RemoveItem);
 
+		battleBlurb.text = controller.GetBattleBlurb();
 		targetScore.text = controller.TargetScore.ToString();
 		timerText.text = controller.RemainingTime(0);
 		Sprite shopkeeperSprite = controller.GetShopkeeper();
@@ -89,6 +91,10 @@ public class BattleScreen : MonoBehaviour {
 
 	public void StartBattle() {
 		running = true;
+	}
+
+	public void Exit() {
+		GlobalController.GetInstance().Back();
 	}
 
 	private Button generateNextItem() {

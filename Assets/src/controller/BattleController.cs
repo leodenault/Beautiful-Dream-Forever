@@ -10,6 +10,8 @@ public class BattleController {
 	private Battle battle;
 	private IDictionary<string, Sprite> itemSprites;
 	private ShopController shopController;
+	private DialogueManager dialogueManager;
+	private DialogueManager.DialogueCharacterEnum enCharacter;
 
 	public int TargetScore {
 		get { return 70; }
@@ -17,6 +19,7 @@ public class BattleController {
 
 	public BattleController(float timeLimit) {
 		shopController = ShopController.GetInstance();
+		dialogueManager = DialogueManager.GetInstance();
 		ClothingManager manager = ClothingManager.GetInstance();
 		// TODO: Make target score dynamic for battle
 		battle = new Battle(manager, shopController.ShopStyle, 70, timeLimit);
@@ -25,6 +28,13 @@ public class BattleController {
 		foreach (ClothingData datum in manager.GetClothingData()) {
 			itemSprites.Add(datum.Path, Resources.Load<Sprite>(datum.Path));
 		}
+
+		/* Given the choice between a gross enum-to-string-to-enum hack and
+		 * a gross huge switch statement, I went with the former. 
+		 * Also update this when the time comes for NPCs, obviously. */
+		string characterString = string.Format("SHOPKEEPER_{0}", shopController.ShopStyle.ToString());
+		enCharacter = (DialogueManager.DialogueCharacterEnum) 
+			Enum.Parse(typeof(DialogueManager.DialogueCharacterEnum), characterString);
 	}
 
 	public ClothingData GenerateRandomItem() {
@@ -67,6 +77,20 @@ public class BattleController {
 	public Sprite GetShopkeeper() {
 		string pathSuffix = Util.ConvertStyleEnumToReadable(shopController.ShopStyle);
 		return Resources.Load<Sprite>(string.Format("{0}{1}", SHOPKEEPER_PREFIX, pathSuffix));
+	}
+
+	public string GetBattleBlurb() {
+		DialogueManager.DialogueEventEnum enEvent = DialogueManager.DialogueEventEnum.Battle;
+		return dialogueManager.GetResponseText(enCharacter, enEvent);
+	}
+
+	public string GetResultsBlurb() {
+		DialogueManager.DialogueEventEnum enEvent;
+		if (battle.IsSuccessful ())
+			enEvent = DialogueManager.DialogueEventEnum.PlayerWin;
+		else
+			enEvent = DialogueManager.DialogueEventEnum.PlayerLose;
+		return dialogueManager.GetResponseText(enCharacter, enEvent);
 	}
 
 	public bool IsSuccessful() {
