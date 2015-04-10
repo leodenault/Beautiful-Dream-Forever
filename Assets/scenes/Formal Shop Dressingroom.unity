@@ -3189,6 +3189,18 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 4d5b738fc72998a4aafa9658eca689fb,
         type: 3}
+    - target: {fileID: 11490666, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
+      propertyPath: equipButton
+      value: 
+      objectReference: {fileID: 809811878}
+    - target: {fileID: 11490666, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
+      propertyPath: battleButton
+      value: 
+      objectReference: {fileID: 1087977870}
+    - target: {fileID: 11490666, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
+      propertyPath: shopStyle
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
   m_RootGameObject: {fileID: 985941419}
@@ -3672,9 +3684,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f181674666514cb4c950830fc599fcd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shopStyle: 8
-  equipButton: {fileID: 0}
-  battleButton: {fileID: 0}
+  shopStyle: 4
+  equipButton: {fileID: 809811878}
+  battleButton: {fileID: 1087977870}
   equipImage: {fileID: 21300000, guid: efc8122f3163c16469fdce1f835c4540, type: 3}
   unequipImage: {fileID: 21300000, guid: ab4fdaf0947bcda43a8f0ed15fc523bc, type: 3}
   preview: {fileID: 1864034209}

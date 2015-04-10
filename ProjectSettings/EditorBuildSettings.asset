@@ -45,3 +45,9 @@ EditorBuildSettings:
     path: Assets/scenes/Cosplay Shop Dressingroom.unity
   - enabled: 1
     path: Assets/scenes/Formal Shop Dressingroom.unity
+  - enabled: 1
+    path: Assets/scenes/Idealist Shop Dressingroom.unity
+  - enabled: 1
+    path: Assets/scenes/Hardcore Shop Dressingroom.unity
+  - enabled: 1
+    path: Assets/scenes/Hipster Shop Dressingroom.unity
