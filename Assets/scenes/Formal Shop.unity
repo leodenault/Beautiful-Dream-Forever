@@ -771,7 +771,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 890403433}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 993099897}
+        m_MethodName: LoadDressingRoom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &890403433
@@ -814,6 +826,7 @@ GameObject:
   - 124: {fileID: 993099892}
   - 81: {fileID: 993099891}
   - 114: {fileID: 993099896}
+  - 114: {fileID: 993099897}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -897,6 +910,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56287acc2df9fa949b06b1e4ce935460, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &993099897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 993099890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f018837d83e7ee149b55c7142d9ebccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shopStyle: 4
 --- !u!1001 &1101190798
 Prefab:
   m_ObjectHideFlags: 0
