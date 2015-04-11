@@ -56,9 +56,8 @@ public class ClothingSlotSystem : MonoBehaviour {
 		activeSlot.Clothing = data;
 	}
 
-	public Sprite UnsetActiveSlot() {
-		Sprite activeSprite = null;
-
+	// Return the next slot that contains an item. If none exist, then return null
+	public ClothingSelection UnsetActiveSlot() {
 		if (activeSlot != null) {
 			unsetSlot(activeSlot);
 			activeSlot = null;
@@ -66,11 +65,10 @@ public class ClothingSlotSystem : MonoBehaviour {
 			// See if another slot is currently filled. If it is, make it the active slot
 			ClothingSelection slot = findNextEquipped();
 			if (slot != null) {
-				activeSprite = slot.Sprite;
 				activeSlot = slot;
 			}
 		}
-		return activeSprite;
+		return activeSlot;
 	}
 
 	public void Clear() {

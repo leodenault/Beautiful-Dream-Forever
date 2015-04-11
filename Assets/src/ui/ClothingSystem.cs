@@ -10,7 +10,7 @@ public class ClothingSystem : MonoBehaviour {
 
 	private bool isEquipped;
 	private ClothingSystemController controller;
-	private ClothingSelection activeTile;
+	private ClothingRepresentation selected;
 	private	ClothingArea clothingArea;
 	private ClothingSlotSystem clothingSlotSystem;
 	private Button[] pageTiles;
@@ -34,7 +34,8 @@ public class ClothingSystem : MonoBehaviour {
 		controller = new ClothingSystemController(shopStyle, pageTiles.Length);
 		controller.CurrentPage(pageTiles);
 
-		activeTile = pageTiles[0].GetComponentInChildren<ClothingSelection>();
+		selected = new ClothingRepresentation();
+		updateSelected(pageTiles[0].GetComponentInChildren<ClothingSelection>());
 		// Add the button click listeners for the page tiles
 		foreach (Button button in pageTiles) {
 			ClothingSelection pageTile = button.GetComponentInChildren<ClothingSelection>();
@@ -42,17 +43,15 @@ public class ClothingSystem : MonoBehaviour {
 		}
 
 		clothingSlotSystem.Init(clothingArea, selectSlotCallback);
-		displayPreview(activeTile.Sprite);
 
 		if (controller.AllItemsAreOwned() && battleButton != null) {
 			battleButton.image.sprite = controller.DisabledBattleButton();
-			Debug.Log(controller.DisabledBattleButton());
 			battleButton.interactable = false;
 		}
 	}
 
 	public void Equip() {
-		if (activeTile.Clothing != null) {
+		if (selected.Clothing != null) {
 			if (isEquipped)
 			{
 				unequipClothing();
@@ -66,18 +65,15 @@ public class ClothingSystem : MonoBehaviour {
 
 	public void PreviousPage() {
 		controller.PreviousPage(pageTiles);
-		displayPreview(activeTile.Sprite);
 	}
 
 	public void NextPage() {
 		controller.NextPage(pageTiles);
-		displayPreview(activeTile.Sprite);
 	}
 
 	private void selectClothing(ClothingSelection pageTile) {
 		if (pageTile.Clothing != null) {
-			activeTile = pageTile;
-			displayPreview(activeTile.Sprite);
+			updateSelected(pageTile);
 
 			if (clothingSlotSystem.MakeActive(pageTile.Clothing)) {
 				setEquip(false);
@@ -110,19 +106,25 @@ public class ClothingSystem : MonoBehaviour {
 	}
 
 	private void equipClothing() {
-		if (activeTile.Clothing != null) {
-			clothingSlotSystem.UpdateActiveSlot(activeTile.Clothing);
+		if (selected.Clothing != null) {
+			clothingSlotSystem.UpdateActiveSlot(selected.Clothing);
 		}
 		setEquip(false);
 	}
 
 	private void unequipClothing() {
-		Sprite activeSprite = clothingSlotSystem.UnsetActiveSlot();
-		setEquip(activeSprite == null);
+		ClothingSelection activeSelection = clothingSlotSystem.UnsetActiveSlot();
+		setEquip(activeSelection == null);
 
-		if (activeSprite == null) {
-			activeSprite = activeTile.Sprite;
+		if (activeSelection == null) {
+			displayPreview(selected.Sprite);
+		} else {
+			updateSelected(activeSelection);
 		}
-		displayPreview(activeSprite);
+	}
+
+	private void updateSelected(ClothingSelection selection) {
+		selected.Clothing = selection.Clothing;
+		displayPreview(selected.Sprite);
 	}
 }
