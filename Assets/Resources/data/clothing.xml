@@ -2,6 +2,39 @@
 <ArrayOfClothingData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <!-- THIS DATA SHOULD STAY ALPHABETIZED -->
 	<ClothingData>
+		<Name>Idealist Wig Cute</Name>
+		<Path>clothing/idealist/Idealist_Cute_Wig_Black</Path>
+		<Slot>WIG</Slot>
+		<Style>IDEALIST</Style>
+		<Essence>CUTE</Essence>
+		<Location>
+			<x>67.0</x>
+			<y>17.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Fluffy Tutu</Name>
+		<Path>clothing/hardcore/Hardcore_Cute_Bottom_Red_Light_Cotton_Tutu</Path>
+		<Slot>BOTTOM</Slot>
+		<Style>HARDCORE</Style>
+		<Essence>CUTE</Essence>
+		<Location>
+			<x>38.0</x>
+			<y>150.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Hipster Wig Cute</Name>
+		<Path>clothing/hipster/Hipster_Cute_Wig_Gradient</Path>
+		<Slot>WIG</Slot>
+		<Style>HIPSTER</Style>
+		<Essence>CUTE</Essence>
+		<Location>
+			<x>65.0</x>
+			<y>13</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
 		<Name>Athletic Halter Top</Name>
 		<Path>clothing/athletic/Athletic_Classy_Top_Black_Teal_Light_White_Cotton_HalterTankTop</Path>
 		<Slot>TOP</Slot>
