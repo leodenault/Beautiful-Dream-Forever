@@ -149,7 +149,9 @@
 	<Character>ATTENDANT_ROOK</Character>
 	<Responses>
 		<CheckFail>Come now. You should know that you need two validations before we can proceed. Or are you testing me?</CheckFail>
-		<CheckPass>Nicely done. You're almost there. Now, which is the more genuine expression of the self: a falsehood firmly believed, or a truth ignored?</CheckPass>
+		<!-- TODO: Remove this Battle event once the Red Queen is in. Just using it now for temporary random uses
+		<CheckPass>Nicely done. You're almost there. Now, which is the more genuine expression of the self: a falsehood firmly believed, or a truth ignored?</CheckPass-->
+		<CheckPass>Congratulations, you have defeated all of the shopkeepers!</CheckPass>
 		<AnswerYes>They say ignorance is bliss. But is it real?</AnswerYes>
 		<AnswerNo>WE NEED DIALOGUE HERE YO</AnswerNo>
 	</Responses>
@@ -169,7 +171,7 @@
 		<EnterShop>A challenger approaches! Know, peon, that you stand before Nikki Sunfyre, Empress of All Stars!</EnterShop>
 		<Battle>Reality is a lie that we tell ourselves. But do not despair! For in revealing this solitary truth, I have opened the gateway to a thousand new realities. Lie to yourself! Lie until you are who you wish to be! Lie until you are GOD!.</Battle>
 		<PlayerWin>This is not even my FINAL FORM! Now I shall destroy you!!! ...but instead, why don't I validate your ticket? Truly I am a merciful goddess!</PlayerWin>
-		<PlayerLose>HAHAHAHA you cling to your foolish “reality” like an anchor. And so it weighs you down.</PlayerLose>
+		<PlayerLose>HAHAHAHA you cling to your foolish reality like an anchor. And so it weighs you down.</PlayerLose>
 	</Responses>
 	</DialogueObject>
 	<DialogueObject>

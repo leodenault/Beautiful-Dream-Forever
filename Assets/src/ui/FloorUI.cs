@@ -24,13 +24,20 @@ public class FloorUI : MonoBehaviour {
 		shopController = ShopController.GetInstance();
 		escalatorAttendantController = EscalatorAttendantController.GetInstance();
 
-		escalator.interactable = shopsBattled();
-		escalatorAttendant.gameObject.SetActive(!escalatorAttendantController.IsAnswered(upperFloorName));
+		if (escalator != null) {
+			escalator.interactable = shopsBattled();
+		}
+
+		if (escalatorAttendant != null) {
+			escalatorAttendant.gameObject.SetActive(!escalatorAttendantController.IsAnswered(upperFloorName));
+		}
 	}
 
 	public void DisplayAttendantText() {
 		attendantText.gameObject.SetActive(true);
 		
+		// TODO: I'm so sorry for this crappy type checking. Removing this as soon as we can
+		// get a Red Queen in the game
 		if (shopsBattled()) {
 			showQuestionText();
 		} else {
@@ -38,10 +45,10 @@ public class FloorUI : MonoBehaviour {
 		}
 	}
 
-	public void AnswerQuestion(bool yes) {
-		escalatorAttendantController.AddAnswer(upperFloorName, yes);
+	public void AnswerQuestion(bool first) {
+		escalatorAttendantController.AddAnswer(upperFloorName, first);
 		questionBlurb.gameObject.SetActive(false);
-		if (yes)
+		if (first)
 			yesBlurb.gameObject.SetActive(true);
 		else
 			noBlurb.gameObject.SetActive(true);
