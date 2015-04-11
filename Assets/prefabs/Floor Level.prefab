@@ -1531,6 +1531,8 @@ MonoBehaviour:
   attendantText: {fileID: 102008}
   blockingBlurb: {fileID: 102002}
   questionBlurb: {fileID: 101996}
+  yesBlurb: {fileID: 0}
+  noBlurb: {fileID: 0}
 --- !u!114 &11458224
 MonoBehaviour:
   m_ObjectHideFlags: 1

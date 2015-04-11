@@ -20,21 +20,9 @@
 	<Character>ATTENDANT_CHESSMAN</Character>
 	<Responses>
 		<CheckFail>You don't have a stamped ticket? Why don't you go shop for a bit?</CheckFail>
-		<CheckPass>
-			<Question>
-				<Prompt>Ready to go? Say, what do you think is safest, to be the greatest of the weak, or anonymous among the great?</Prompt>
-				<Answers>
-					<Answer>
-						<AnswerText>The greatest of the weak</AnswerText>
-						<AnswerResponse>It's good to be on top, but how high is the pile?</AnswerResponse>
-					</Answer>
-					<Answer>
-						<AnswerText>Anonymous among the great</AnswerText>
-						<AnswerResponse>Great company is good. But why are you there?</AnswerResponse>
-					</Answer>
-				</Answers>	
-			</Question>
-		</CheckPass>
+		<CheckPass>Ready to go? Say, what do you think is safest, to be the greatest of the weak, or anonymous among the great?</CheckPass>
+		<AnswerYes>It's good to be on top, but how high is the pile?</AnswerYes>
+		<AnswerNo>Great company is good. But why are you there?</AnswerNo>
 	</Responses>
 	</DialogueObject>
 	<DialogueObject>
@@ -75,21 +63,9 @@
 	<Character>ATTENDANT_KNIGHT</Character>
 	<Responses>
 		<CheckFail>You know how this works. Get your ticket validated, then we'll talk.</CheckFail>
-		<CheckPass>
-			<Question>
-				<Prompt>All set? Then how should one stand out: be the best at something conventional, or create something entirely new?</Prompt>
-				<Answers>
-					<Answer>
-						<AnswerText>Be the best at something conventional</AnswerText>
-						<AnswerResponse>Stand on the shoulders of giants, huh? Be careful not to fall.</AnswerResponse>
-					</Answer>
-					<Answer>
-						<AnswerText>Create something new</AnswerText>
-						<AnswerResponse>The road less traveled, huh? Watch out for bears.</AnswerResponse>
-					</Answer>
-				</Answers>	
-			</Question>
-		</CheckPass>
+		<CheckPass>All set? Then how should one stand out: be the best at something conventional, or create something entirely new?</CheckPass>
+		<AnswerYes>Stand on the shoulders of giants, huh? Be careful not to fall.</AnswerYes>
+		<AnswerNo>The road less traveled, huh? Watch out for bears.</AnswerNo>
 	</Responses>
 	</DialogueObject>
 	<DialogueObject>
@@ -130,21 +106,9 @@
 	<Character>ATTENDANT_BISHOP</Character>
 	<Responses>
 		<CheckFail>Go on back. Go on. You know the drill: validations, then ascension.</CheckFail>
-		<CheckPass>
-			<Question>
-				<Prompt>You're almost there. But answer me this: what deserves success--strong effort or great desire?</Prompt>
-				<Answers>
-					<Answer>
-						<AnswerText>Strong effort</AnswerText>
-						<AnswerResponse>Of course actions speak louder than words. Try not to deafen anyone.</AnswerResponse>
-					</Answer>
-					<Answer>
-						<AnswerText>Great desire</AnswerText>
-						<AnswerResponse>Of course feelings are inherently valid. But can they be trusted?</AnswerResponse>
-					</Answer>
-				</Answers>	
-			</Question>
-		</CheckPass>
+		<CheckPass>You're almost there. But answer me this: what deserves success--strong effort or great desire?</CheckPass>
+		<AnswerNo>Of course feelings are inherently valid. But can they be trusted?</AnswerNo>
+		<AnswerYes>Of course actions speak louder than words. Try not to deafen anyone.</AnswerYes>
 	</Responses>
 	</DialogueObject>
 	<DialogueObject>
@@ -185,21 +149,9 @@
 	<Character>ATTENDANT_ROOK</Character>
 	<Responses>
 		<CheckFail>Come now. You should know that you need two validations before we can proceed. Or are you testing me?</CheckFail>
-		<CheckPass>
-			<Question>
-				<Prompt>Nicely done. You're almost there. Now, which is the more genuine expression of the self: a falsehood firmly believed, or a truth ignored?</Prompt>
-				<Answers>
-					<Answer>
-						<AnswerText>A falsehood firmly believed</AnswerText>
-						<AnswerResponse>They say ignorance is bliss. But is it real?</AnswerResponse>
-					</Answer>
-					<Answer>
-						<AnswerText>A truth ignored</AnswerText>
-						<AnswerResponse>WE NEED DIALOGUE HERE YO</AnswerResponse>
-					</Answer>
-				</Answers>	
-			</Question>
-		</CheckPass>
+		<CheckPass>Nicely done. You're almost there. Now, which is the more genuine expression of the self: a falsehood firmly believed, or a truth ignored?</CheckPass>
+		<AnswerYes>They say ignorance is bliss. But is it real?</AnswerYes>
+		<AnswerNo>WE NEED DIALOGUE HERE YO</AnswerNo>
 	</Responses>
 	</DialogueObject>
 	<DialogueObject>

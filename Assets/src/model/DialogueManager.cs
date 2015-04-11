@@ -15,7 +15,7 @@ public class DialogueManager {
 	}
 	
 	public enum DialogueEventEnum {
-		Battle, EnterShop, PlayerWin, PlayerLose, CheckFail, CheckPass, NONE
+		Battle, EnterShop, PlayerWin, PlayerLose, CheckFail, CheckPass, AnswerYes, AnswerNo, NONE
 	}
 
 	private static DialogueManager INSTANCE;

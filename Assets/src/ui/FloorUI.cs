@@ -16,6 +16,8 @@ public class FloorUI : MonoBehaviour {
 	public GameObject attendantText;
 	public GameObject blockingBlurb;
 	public GameObject questionBlurb;
+	public GameObject yesBlurb;
+	public GameObject noBlurb;
 
 	public void Start() {
 		controller = GlobalController.GetInstance();
@@ -29,7 +31,7 @@ public class FloorUI : MonoBehaviour {
 	public void DisplayAttendantText() {
 		attendantText.gameObject.SetActive(true);
 		
-		if (shopsBattled()) {
+		if (shopsBattled() || true) {
 			showQuestionText();
 		} else {
 			showBlockingText();
@@ -38,7 +40,11 @@ public class FloorUI : MonoBehaviour {
 
 	public void AnswerQuestion(bool yes) {
 		escalatorAttendantController.AddAnswer(upperFloorName, yes);
-		LoadUpperFloor();
+		questionBlurb.gameObject.SetActive(false);
+		if (yes)
+			yesBlurb.gameObject.SetActive(true);
+		else
+			noBlurb.gameObject.SetActive(true);
 	}
 
 	public void LoadUpperFloor() {
@@ -59,4 +65,5 @@ public class FloorUI : MonoBehaviour {
 	private void showQuestionText() {
 		questionBlurb.gameObject.SetActive(true);
 	}
+	
 }
