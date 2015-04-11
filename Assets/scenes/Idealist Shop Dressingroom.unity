@@ -317,7 +317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numPrizes: 3
-  shopStyle: 2
+  shopStyle: 0
   prizeButtonPrefab: {fileID: 119476, guid: 7d025698b2ab0224fb281c178f470e35, type: 2}
   prizeSelector: {fileID: 1468427859}
   acceptButton: {fileID: 258883320}
@@ -6396,6 +6396,10 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 4a5baa9b2bb5be242bc559eca7d2e7d6,
         type: 3}
+    - target: {fileID: 11470596, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
+      propertyPath: shopStyle
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 40bcb626e31e206459958c6e2a93def3, type: 2}
   m_RootGameObject: {fileID: 427996706}
