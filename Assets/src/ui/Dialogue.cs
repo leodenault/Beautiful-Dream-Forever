@@ -10,16 +10,10 @@ public class Dialogue : MonoBehaviour {
 	public DialogueManager.DialogueEventEnum Event;
 	public Text blurb;
 
-	private DialogueManager dialogueManager;
+	protected DialogueManager dialogueManager;
 
-	// Use this for initialization
-	void Start () {
+	public void Start () {
 		dialogueManager = DialogueManager.GetInstance();
 		blurb.text = dialogueManager.GetResponseText(Character, Event);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
 	}
 }

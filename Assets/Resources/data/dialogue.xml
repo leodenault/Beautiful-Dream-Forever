@@ -21,8 +21,10 @@
 	<Responses>
 		<CheckFail>You don't have a stamped ticket? Why don't you go shop for a bit?</CheckFail>
 		<CheckPass>Ready to go? Say, what do you think is safest, to be the greatest of the weak, or anonymous among the great?</CheckPass>
-		<AnswerYes>It's good to be on top, but how high is the pile?</AnswerYes>
-		<AnswerNo>Great company is good. But why are you there?</AnswerNo>
+		<AText>Greatest of the weak</AText>
+		<BText>Anonymous among the great</BText>
+		<AnswerA>It's good to be on top, but how high is the pile?</AnswerA>
+		<AnswerB>Great company is good. But why are you there?</AnswerB>
 	</Responses>
 	</DialogueObject>
 	<DialogueObject>
@@ -64,8 +66,10 @@
 	<Responses>
 		<CheckFail>You know how this works. Get your ticket validated, then we'll talk.</CheckFail>
 		<CheckPass>All set? Then how should one stand out: be the best at something conventional, or create something entirely new?</CheckPass>
-		<AnswerYes>Stand on the shoulders of giants, huh? Be careful not to fall.</AnswerYes>
-		<AnswerNo>The road less traveled, huh? Watch out for bears.</AnswerNo>
+		<AText>Best at conventional</AText>
+		<BText>Create something new</BText>
+		<AnswerA>Stand on the shoulders of giants, huh? Be careful not to fall.</AnswerA>
+		<AnswerB>The road less traveled, huh? Watch out for bears.</AnswerB>
 	</Responses>
 	</DialogueObject>
 	<DialogueObject>
@@ -107,8 +111,10 @@
 	<Responses>
 		<CheckFail>Go on back. Go on. You know the drill: validations, then ascension.</CheckFail>
 		<CheckPass>You're almost there. But answer me this: what deserves success--strong effort or great desire?</CheckPass>
-		<AnswerNo>Of course feelings are inherently valid. But can they be trusted?</AnswerNo>
-		<AnswerYes>Of course actions speak louder than words. Try not to deafen anyone.</AnswerYes>
+		<AText>Strong effort</AText>
+		<BText>Great desire</BText>
+		<AnswerB>Of course feelings are inherently valid. But can they be trusted?</AnswerB>
+		<AnswerA>Of course actions speak louder than words. Try not to deafen anyone.</AnswerA>
 	</Responses>
 	</DialogueObject>
 	<DialogueObject>
@@ -152,8 +158,10 @@
 		<!-- TODO: Remove this Battle event once the Red Queen is in. Just using it now for temporary random uses
 		<CheckPass>Nicely done. You're almost there. Now, which is the more genuine expression of the self: a falsehood firmly believed, or a truth ignored?</CheckPass-->
 		<CheckPass>Congratulations, you have defeated all of the shopkeepers!</CheckPass>
-		<AnswerYes>They say ignorance is bliss. But is it real?</AnswerYes>
-		<AnswerNo>WE NEED DIALOGUE HERE YO</AnswerNo>
+		<AText>Falsehood believed</AText>
+		<BText>Truth ignored</BText>
+		<AnswerA>They say ignorance is bliss. But is it real?</AnswerA>
+		<AnswerB>WE NEED DIALOGUE HERE YO</AnswerB>
 	</Responses>
 	</DialogueObject>
 	<DialogueObject>

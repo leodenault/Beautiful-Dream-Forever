@@ -16,8 +16,8 @@ public class FloorUI : MonoBehaviour {
 	public GameObject attendantText;
 	public GameObject blockingBlurb;
 	public GameObject questionBlurb;
-	public GameObject yesBlurb;
-	public GameObject noBlurb;
+	public GameObject ABlurb;
+	public GameObject BBlurb;
 
 	public void Start() {
 		controller = GlobalController.GetInstance();
@@ -49,9 +49,9 @@ public class FloorUI : MonoBehaviour {
 		escalatorAttendantController.AddAnswer(upperFloorName, first);
 		questionBlurb.gameObject.SetActive(false);
 		if (first)
-			yesBlurb.gameObject.SetActive(true);
+			ABlurb.gameObject.SetActive(true);
 		else
-			noBlurb.gameObject.SetActive(true);
+			BBlurb.gameObject.SetActive(true);
 	}
 
 	public void LoadUpperFloor() {
