@@ -24,12 +24,14 @@ public class FloorUI : MonoBehaviour {
 		shopController = ShopController.GetInstance();
 		escalatorAttendantController = EscalatorAttendantController.GetInstance();
 
+		bool showAttendant = !escalatorAttendantController.IsAnswered(upperFloorName);
+
 		if (escalator != null) {
-			escalator.interactable = shopsBattled();
+			escalator.interactable = shopsBattled() && !showAttendant;
 		}
 
 		if (escalatorAttendant != null) {
-			escalatorAttendant.gameObject.SetActive(!escalatorAttendantController.IsAnswered(upperFloorName));
+			escalatorAttendant.gameObject.SetActive(showAttendant);
 		}
 	}
 
