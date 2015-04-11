@@ -31,7 +31,7 @@ public class FloorUI : MonoBehaviour {
 	public void DisplayAttendantText() {
 		attendantText.gameObject.SetActive(true);
 		
-		if (shopsBattled() || true) {
+		if (shopsBattled()) {
 			showQuestionText();
 		} else {
 			showBlockingText();
