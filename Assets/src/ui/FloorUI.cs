@@ -36,8 +36,6 @@ public class FloorUI : MonoBehaviour {
 	public void DisplayAttendantText() {
 		attendantText.gameObject.SetActive(true);
 		
-		// TODO: I'm so sorry for this crappy type checking. Removing this as soon as we can
-		// get a Red Queen in the game
 		if (shopsBattled()) {
 			showQuestionText();
 		} else {
