@@ -167,6 +167,336 @@
 		</Location>
 	</ClothingData>
 	<ClothingData>
+		<Name>Cosplay Wig Classy</Name>
+		<Path>clothing/cosplay/Cosplay_Classy_Wig_Lavender</Path>
+		<Slot>WIG</Slot>
+		<Style>COSPLAY</Style>
+		<Essence>CLASSY</Essence>
+		<Location>
+			<x>65.0</x>
+			<y>15.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Fake Military Fur Jacket</Name>
+		<Path>clothing/cosplay/Cosplay_Classy_Top_Pink_DarkDark_Black_White_Fur</Path>
+		<Slot>TOP</Slot>
+		<Style>COSPLAY</Style>
+		<Essence>CLASSY</Essence>
+		<Location>
+			<x>30.0</x>
+			<y>62.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Cosplay Classy Shorts</Name>
+		<Path>clothing/cosplay/Cosplay_Classy_Bottoms_Black_White_Orange_Dark_Cotton_SideZipper</Path>
+		<Slot>BOTTOM</Slot>
+		<Style>COSPLAY</Style>
+		<Essence>CLASSY</Essence>
+		<Location>
+			<x>57.0</x>
+			<y>145.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Stripper Stiletto Heels omg</Name>
+		<Path>clothing/cosplay/Cosplay_Classy_Shoes_Black_White_Cotton_Stilettos</Path>
+		<Slot>SHOES</Slot>
+		<Style>COSPLAY</Style>
+		<Essence>CLASSY</Essence>
+		<Location>
+			<x>60.0</x>
+			<y>220.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Fake Military Hat</Name>
+		<Path>clothing/cosplay/Cosplay_Classy_Accessory_Black_Yellow_Dark_White_Pink_DarkDark_Cotton_Hat</Path>
+		<Slot>ACCESSORY</Slot>
+		<Style>COSPLAY</Style>
+		<Essence>CLASSY</Essence>
+		<Location>
+			<x>66.0</x>
+			<y>-5.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Steampunk Wig</Name>
+		<Path>clothing/cosplay/Cosplay_Cool_Wig_Blue</Path>
+		<Slot>WIG</Slot>
+		<Style>COSPLAY</Style>
+		<Essence>COOL</Essence>
+		<Location>
+			<x>61.0</x>
+			<y>11.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Steampunk Pirate Top</Name>
+		<Path>clothing/cosplay/Cosplay_Cool_Top_Red_Dark_White_Red_Muted_Cotton_PuffyCorset</Path>
+		<Slot>TOP</Slot>
+		<Style>COSPLAY</Style>
+		<Essence>COOL</Essence>
+		<Location>
+			<x>29.0</x>
+			<y>71.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Skinny Leather Steampunk Pants</Name>
+		<Path>clothing/cosplay/Cosplay_Cool_Bottom_Orange2_DarkDark_Leather_Pants</Path>
+		<Slot>BOTTOM</Slot>
+		<Style>COSPLAY</Style>
+		<Essence>COOL</Essence>
+		<Location>
+			<x>59.0</x>
+			<y>138.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Leather Steampunk Adventure Boots</Name>
+		<Path>clothing/cosplay/Cosplay_Cool_Shoes_Orange1_DarkDark_Red_DarkDark_Leather_Boots</Path>
+		<Slot>SHOES</Slot>
+		<Style>COSPLAY</Style>
+		<Essence>COOL</Essence>
+		<Location>
+			<x>67.0</x>
+			<y>261.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Steampunk Goggles</Name>
+		<Path>clothing/cosplay/Cosplay_Cool_Accessory_Red_Darkdark_Orange2_DarkDark_Leather_Goggles</Path>
+		<Slot>ACCESSORY</Slot>
+		<Style>COSPLAY</Style>
+		<Essence>COOL</Essence>
+		<Location>
+			<x>79.0</x>
+			<y>14.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Swashbuckling Belt</Name>
+		<Path>clothing/cosplay/Cosplay_Cool_Accessory_Red_DarkMuted_Yellow_Light_Leather_Holster</Path>
+		<Slot>ACCESSORY</Slot>
+		<Style>COSPLAY</Style>
+		<Essence>COOL</Essence>
+		<Location>
+			<x>58.0</x>
+			<y>157.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Anime Schoolgirl Wig</Name>
+		<Path>clothing/cosplay/Cosplay_Cute_Wig_Pink_Light</Path>
+		<Slot>WIG</Slot>
+		<Style>COSPLAY</Style>
+		<Essence>CUTE</Essence>
+		<Location>
+			<x>63.0</x>
+			<y>18.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Anime Schoolgirl Shirt</Name>
+		<Path>clothing/cosplay/Cosplay_Cute_Top_White_Teal_DarkDark_Pink_DarkDark_Cotton_Sailor</Path>
+		<Slot>TOP</Slot>
+		<Style>COSPLAY</Style>
+		<Essence>CUTE</Essence>
+		<Location>
+			<x>49.0</x>
+			<y>74.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Anime Schoolgirl Skirt</Name>
+		<Path>clothing/cosplay/Cosplay_Cute_Bottom_Teal_DarkDark_Pink_DarkDark_Cotton_PlaidSkirt</Path>
+		<Slot>BOTTOM</Slot>
+		<Style>COSPLAY</Style>
+		<Essence>CUTE</Essence>
+		<Location>
+			<x>51.0</x>
+			<y>155.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Anime Schoolgirl Loafers</Name>
+		<Path>clothing/cosplay/Cosplay_Cute_Shoes_Pink_DarkDark_Cotton</Path>
+		<Slot>SHOES</Slot>
+		<Style>COSPLAY</Style>
+		<Essence>CUTE</Essence>
+		<Location>
+			<x>72.0</x>
+			<y>339.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Butterfly Hair Clip</Name>
+		<Path>clothing/cosplay/Cosplay_Cute_Accessory_Teal_Pink_DarkDark_Teal_Light_Cotton_ButterflyHairTies</Path>
+		<Slot>ACCESSORY</Slot>
+		<Style>COSPLAY</Style>
+		<Essence>CUTE</Essence>
+		<Location>
+			<x>79.0</x>
+			<y>94.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Anime Schoolgirl Socks</Name>
+		<Path>clothing/cosplay/Cosplay_Cute_Accessory_White_Pink_DarkDark_Cotton_Socks</Path>
+		<Slot>ACCESSORY</Slot>
+		<Style>COSPLAY</Style>
+		<Essence>CUTE</Essence>
+		<Location>
+			<x>64.0</x>
+			<y>221.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Thigh Stars</Name>
+		<Path>clothing/cosplay/Cosplay_Cute_Accessory_Yellow_Light_Pink_DarkDark_Teal_Light_Cotton_StarStickers</Path>
+		<Slot>ACCESSORY</Slot>
+		<Style>COSPLAY</Style>
+		<Essence>CUTE</Essence>
+		<Location>
+			<x>63.0</x>
+			<y>185.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Star Hair Clip</Name>
+		<Path>clothing/cosplay/Cosplay_Cute_Accessory_Yellow_Light_Pink_DarkDark_White_Metal_StarHairClip</Path>
+		<Slot>ACCESSORY</Slot>
+		<Style>COSPLAY</Style>
+		<Essence>CUTE</Essence>
+		<Location>
+			<x>73.0</x>
+			<y>31.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Braided Updo</Name>
+		<Path>clothing/formal/Formal_Classy_Wig_Brown_BraidBun</Path>
+		<Slot>WIG</Slot>
+		<Style>FORMAL</Style>
+		<Essence>CLASSY</Essence>
+		<Location>
+			<x>64.0</x>
+			<y>12.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Little Black Dress</Name>
+		<Path>clothing/formal/Formal_Classy_Dress_Black_Grey_Linen</Path>
+		<Slot>DRESS</Slot>
+		<Style>FORMAL</Style>
+		<Essence>CLASSY</Essence>
+		<Location>
+			<x>37.0</x>
+			<y>73.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Formal Classy Shoes</Name>
+		<Path>clothing/formal/Formal_Classy_Shoes_Black_Red_Dark_Cotton</Path>
+		<Slot>SHOES</Slot>
+		<Style>FORMAL</Style>
+		<Essence>CLASSY</Essence>
+		<Location>
+			<x>73.0</x>
+			<y>332.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Diamond Bracelet</Name>
+		<Path>clothing/formal/Formal_Classy_Accessory_White_Grey_Metal_Bracelet</Path>
+		<Slot>ACCESSORY</Slot>
+		<Style>FORMAL</Style>
+		<Essence>CLASSY</Essence>
+		<Location>
+			<x>36.0</x>
+			<y>192.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Diamond Headpiece</Name>
+		<Path>clothing/formal/Formal_Classy_Accessory_White_Grey_Metal_Headpiece</Path>
+		<Slot>ACCESSORY</Slot>
+		<Style>FORMAL</Style>
+		<Essence>CLASSY</Essence>
+		<Location>
+			<x>72.0</x>
+			<y>21.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Formal Cool Wig</Name>
+		<Path>clothing/formal/Formal_Cool_Wig_Blonde_Braid</Path>
+		<Slot>WIG</Slot>
+		<Style>FORMAL</Style>
+		<Essence>COOL</Essence>
+		<Location>
+			<x>74.0</x>
+			<y>19.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Orange FLower Dress</Name>
+		<Path>clothing/formal/Formal_Cool_Dress_Orange2_Light_Orange2_Dark_Lace_Slinky</Path>
+		<Slot>DRESS</Slot>
+		<Style>FORMAL</Style>
+		<Essence>COOL</Essence>
+		<Location>
+			<x>59.0</x>
+			<y>78.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Formal Cool Shoes Teal</Name>
+		<Path>clothing/formal/Formal_Cool_Shoes_Blue_Cotton</Path>
+		<Slot>SHOES</Slot>
+		<Style>FORMAL</Style>
+		<Essence>COOL</Essence>
+		<Location>
+			<x>73.0</x>
+			<y>325.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Teal Armband</Name>
+		<Path>clothing/formal/Formal_Cool_Accessory_Teal_Light_Metal_ArmBand</Path>
+		<Slot>ACCESSORY</Slot>
+		<Style>FORMAL</Style>
+		<Essence>COOL</Essence>
+		<Location>
+			<x>125.0</x>
+			<y>97.0</y>	
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Teal Rings Bracelet</Name>
+		<Path>clothing/formal/Formal_Cool_Accessory_Teal_Light_Metal_Bracelet</Path>
+		<Slot>ACCESSORY</Slot>
+		<Style>FORMAL</Style>
+		<Essence>COOL</Essence>
+		<Location>
+			<x>36.0</x>
+			<y>191.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Teal Rings Necklace</Name>
+		<Path>clothing/formal/Formal_Cool_Accessory_Teal_Light_Metal_EgyptianNecklace</Path>
+		<Slot>ACCESSORY</Slot>
+		<Style>FORMAL</Style>
+		<Essence>COOL</Essence>
+		<Location>
+			<x>80.0</x>
+			<y>68.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
 		<Name>Formal Cute Wig Dark</Name>
 		<Path>clothing/formal/Formal_Cute_Wig_Brown_Dark</Path>
 		<Slot>WIG</Slot>
@@ -178,6 +508,17 @@
 		</Location>
 	</ClothingData>
 	<ClothingData>
+		<Name>Formal Cute Dress</Name>
+		<Path>clothing/formal/Formal_Cute_Dress_Teal_Muted_Yellow_Light_Cotton</Path>
+		<Slot>DRESS</Slot>
+		<Style>FORMAL</Style>
+		<Essence>CUTE</Essence>
+		<Location>
+			<x>43.0</x>
+			<y>76.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
 		<Name>Formal Cute Shoes</Name>
 		<Path>clothing/formal/Formal_Cute_Shoes_Orange2_Muted_Yellow_Light_Cotton_BowFlats</Path>
 		<Slot>SHOES</Slot>
@@ -186,6 +527,28 @@
 		<Location>
 			<x>73.0</x>
 			<y>344.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Formal Cute Purse</Name>
+		<Path>clothing/formal/Formal_Cute_Accessory_Yellow_Light_Teal_Muted_Cotton_Purse</Path>
+		<Slot>ACCESSORY</Slot>
+		<Style>FORMAL</Style>
+		<Essence>CUTE</Essence>
+		<Location>
+			<x>45.0</x>
+			<y>82.0</y>
+		</Location>
+	</ClothingData>
+	<ClothingData>
+		<Name>Formal Cute Waist Belt</Name>
+		<Path>clothing/formal/Formal_Cute_Accessory_Yellow_Light_Cotton_BowWaist</Path>
+		<Slot>ACCESSORY</Slot>
+		<Style>FORMAL</Style>
+		<Essence>CUTE</Essence>
+		<Location>
+			<x>73.0</x>
+			<y>136.0</y>
 		</Location>
 	</ClothingData>
 	<ClothingData>
