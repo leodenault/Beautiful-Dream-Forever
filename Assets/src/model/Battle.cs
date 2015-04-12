@@ -3,13 +3,15 @@ using System.Collections.Generic;
 
 public class Battle {
 	private const float DEFAULT_TIME_LIMIT = 60.0f;
-	private const int SHOP_PROBABILITY = 34;
-	private const int PLAYER_PROBABILITY = 67;
+	private const int DEFAULT_SHOP_PROBABILITY = 34;
+	private const int DEFAULT_PLAYER_PROBABILITY = 67;
 	private const int MAX_PROBABILITY = 100;
 
 	private float timeLimit;
 	private float elapsedTime;
 	private int targetScore;
+	private int shopProbability;
+	private int playerProbability;
 	private ClothingManager manager;
 	private Outfit outfit;
 	private IList<ClothingData> shopClothing;
@@ -33,6 +35,8 @@ public class Battle {
 	public Battle(ClothingManager manager, ClothingData.ClothingStyle style, int targetScore, float timeLimit) {
 		this.manager = manager;
 		this.targetScore = targetScore;
+		shopProbability = DEFAULT_SHOP_PROBABILITY;
+		playerProbability = DEFAULT_PLAYER_PROBABILITY;
 		setupClothingSets(style);
 		outfit = new Outfit();
 		categorySelector = new Random();
@@ -46,9 +50,9 @@ public class Battle {
 
 	public ClothingData GenerateRandomItem() {
 		int categoryTest = categorySelector.Next(MAX_PROBABILITY);
-		if (categoryTest <= SHOP_PROBABILITY) {
+		if (categoryTest <= shopProbability) {
 			currentItem = pickRandomItem(shopSelector, shopClothing);
-		} else if (categoryTest <= PLAYER_PROBABILITY) {
+		} else if (categoryTest <= playerProbability) {
 			if (playerClothing.Count == 0) {
 				currentItem = pickRandomItem(shopSelector, shopClothing);
 			} else {
@@ -93,15 +97,22 @@ public class Battle {
 	}
 
 	private void setupClothingSets(ClothingData.ClothingStyle style) {
-		HashSet<ClothingData> shopSet = new HashSet<ClothingData>(manager.GetClothingDataExceptPlayerInventory(style));
+		HashSet<ClothingData> shopSet = new HashSet<ClothingData>(manager.GetClothingData(style));
 		HashSet<ClothingData> playerSet = new HashSet<ClothingData>(manager.GetClothingData(ClothingData.ClothingStyle.NONE));
 		HashSet<ClothingData> otherSet = new HashSet<ClothingData>(manager.GetClothingData());
+		playerSet.ExceptWith(shopSet);
 		otherSet.ExceptWith(shopSet);
 		otherSet.ExceptWith(playerSet);
 
 		shopClothing = new List<ClothingData>(shopSet);
 		playerClothing = new List<ClothingData>(playerSet);
-		otherClothing = new List<ClothingData>(otherSet);
+
+		if (otherSet.Count == 0) {
+			shopProbability = 50;
+			playerProbability = MAX_PROBABILITY;
+		} else {
+			otherClothing = new List<ClothingData>(otherSet);
+		}
 	}
 
 	private ClothingData pickRandomItem(Random selector, IList<ClothingData> group) {
