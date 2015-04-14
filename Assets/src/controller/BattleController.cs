@@ -5,11 +5,9 @@ using System.Collections.Generic;
 public class BattleController {
 	private static BattleController INSTANCE;
 
-	private const string SHOPKEEPER_PREFIX = "shopkeepers/Shopkeeper_";
-
 	private Battle battle;
 	private IDictionary<string, Sprite> itemSprites;
-	private ShopController shopController;
+	private PrizeController prizeController;
 	private DialogueManager dialogueManager;
 	private DialogueManager.DialogueCharacterEnum enCharacter;
 
@@ -17,24 +15,23 @@ public class BattleController {
 		get { return 70; }
 	}
 
+	public int MoneyWon {
+		get { return prizeController.MoneyWon; }
+	}
+
 	public BattleController(float timeLimit) {
-		shopController = ShopController.GetInstance();
+		prizeController = PrizeController.GetInstance();
 		dialogueManager = DialogueManager.GetInstance();
 		ClothingManager manager = ClothingManager.GetInstance();
 		// TODO: Make target score dynamic for battle
-		battle = new Battle(manager, shopController.ShopStyle, 70, timeLimit);
+		battle = new Battle(manager, prizeController.ShopStyle, 70, timeLimit);
 		itemSprites = new Dictionary<string, Sprite>();
 
 		foreach (ClothingData datum in manager.GetClothingData()) {
 			itemSprites.Add(datum.Path, Resources.Load<Sprite>(datum.Path));
 		}
 
-		/* Given the choice between a gross enum-to-string-to-enum hack and
-		 * a gross huge switch statement, I went with the former. 
-		 * Also update this when the time comes for NPCs, obviously. */
-		string characterString = string.Format("SHOPKEEPER_{0}", shopController.ShopStyle.ToString());
-		enCharacter = (DialogueManager.DialogueCharacterEnum) 
-			Enum.Parse(typeof(DialogueManager.DialogueCharacterEnum), characterString);
+		enCharacter = prizeController.Opponent;
 	}
 
 	public ClothingData GenerateRandomItem() {
@@ -70,13 +67,12 @@ public class BattleController {
 
 	public void EndBattle() {
 		if (battle.IsSuccessful()) {
-			shopController.AwardPrize();
+			prizeController.AwardPrize();
 		}
 	}
 
-	public Sprite GetShopkeeper() {
-		string pathSuffix = Util.ConvertStyleEnumToReadable(shopController.ShopStyle);
-		return Resources.Load<Sprite>(string.Format("{0}{1}", SHOPKEEPER_PREFIX, pathSuffix));
+	public Sprite GetOpponent() {
+		return prizeController.OpponentSprite;
 	}
 
 	public string GetBattleBlurb() {
@@ -98,7 +94,11 @@ public class BattleController {
 	}
 
 	public Sprite PrizeSprite() {
-		return Resources.Load<Sprite>(shopController.Prize.Path);
+		return Resources.Load<Sprite>(prizeController.Prize.Path);
+	}
+
+	public bool WonPrize() {
+		return prizeController.WonPrize();
 	}
 
 	private string generateNumberFormat(int number, int index) {

@@ -73,7 +73,7 @@ public class CheatsController {
 	}
 
 	private static void battleAllShops() {
-		ShopController controller = ShopController.GetInstance();
+		PrizeController controller = PrizeController.GetInstance();
 		ClothingData.ClothingStyle[] styles = (ClothingData.ClothingStyle[])Enum.GetValues(typeof(ClothingData.ClothingStyle));
 		foreach (ClothingData.ClothingStyle style in styles) {
 			if (style != ClothingData.ClothingStyle.NONE) {

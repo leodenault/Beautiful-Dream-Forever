@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class FloorUI : MonoBehaviour {
 
-	private ShopController shopController;
+	private PrizeController prizeController;
 	private EscalatorAttendantController escalatorAttendantController;
 
 	protected GlobalController controller;
@@ -21,7 +21,7 @@ public class FloorUI : MonoBehaviour {
 
 	public void Start() {
 		controller = GlobalController.GetInstance();
-		shopController = ShopController.GetInstance();
+		prizeController = PrizeController.GetInstance();
 		escalatorAttendantController = EscalatorAttendantController.GetInstance();
 
 		bool showAttendant = !escalatorAttendantController.IsAnswered(upperFloorName);
@@ -61,8 +61,8 @@ public class FloorUI : MonoBehaviour {
 	}
 
 	private bool shopsBattled() {
-		return shopController.ShopBattled(shopStyle1)
-			&& shopController.ShopBattled(shopStyle2);
+		return prizeController.ShopBattled(shopStyle1)
+			&& prizeController.ShopBattled(shopStyle2);
 	}
 
 	private void showBlockingText() {

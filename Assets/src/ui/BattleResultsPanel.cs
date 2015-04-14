@@ -11,8 +11,10 @@ public class BattleResultsPanel : MonoBehaviour {
 	public float prizeSideLength;
 	public GameObject blurbObject;
 	public Text blurb;
+	public Text money;
 	public GameObject resultsPanel;
-	public GameObject winMessage;
+	public GameObject winPrizeMessage;
+	public GameObject winMoneyMessage;
 	public GameObject loseMessage;
 	public Image prize;
 
@@ -21,10 +23,15 @@ public class BattleResultsPanel : MonoBehaviour {
 
 		resultsPanel.gameObject.SetActive(true);
 		if (controller.IsSuccessful()) {
-			float maxWidth = prize.rectTransform.rect.width;
-			float maxHeight = prize.rectTransform.rect.height;
-			Util.ScaleImageToMaxDimensions(prize, controller.PrizeSprite(), maxWidth, maxHeight, 1.0f);
-			winMessage.gameObject.SetActive(true);
+			if (controller.WonPrize()) {
+				float maxWidth = prize.rectTransform.rect.width;
+				float maxHeight = prize.rectTransform.rect.height;
+				Util.ScaleImageToMaxDimensions(prize, controller.PrizeSprite(), maxWidth, maxHeight, 1.0f);
+				winPrizeMessage.gameObject.SetActive(true);
+			} else {
+				money.text = controller.MoneyWon.ToString();
+				winMoneyMessage.gameObject.SetActive(true);
+			}
 		} else {
 			loseMessage.gameObject.SetActive(true);
 		}

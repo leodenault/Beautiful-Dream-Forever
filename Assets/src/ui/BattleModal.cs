@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public class BattleModal : MonoBehaviour {
 
-	private ShopController shopController;
+	private PrizeController shopController;
 	private PrizeButton activeButton;
 
 	public int numPrizes;
@@ -16,7 +16,7 @@ public class BattleModal : MonoBehaviour {
 	public GameObject selectItemText;
 
 	public void Start () {
-		shopController = ShopController.GetInstance();
+		shopController = PrizeController.GetInstance();
 		shopController.ShopStyle = shopStyle;
 		IList<ClothingData> prizes = shopController.GetPrizes();
 

@@ -5,7 +5,7 @@ public class QuestionDialogue : Dialogue {
 	public Text answerAText;
 	public Text answerBText;
 
-	public void Start() {
+	public new void Start() {
 		base.Start();
 		answerAText.text = dialogueManager.GetResponseText(Character, DialogueManager.DialogueEventEnum.AText);
 		answerBText.text = dialogueManager.GetResponseText(Character, DialogueManager.DialogueEventEnum.BText);

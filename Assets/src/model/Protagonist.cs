@@ -2,6 +2,7 @@
 
 class Protagonist {
 	private static Protagonist INSTANCE;
+	private static int MAX_MONEY = 99;
 
 	private int balance;
 	public int Balance {
@@ -34,7 +35,7 @@ class Protagonist {
 			return false;
 		}
 
-		balance += difference;
+		balance = Math.Min(balance + difference, MAX_MONEY);
 		return true;
 	}
 }

@@ -50,9 +50,9 @@ public class Battle {
 
 	public ClothingData GenerateRandomItem() {
 		int categoryTest = categorySelector.Next(MAX_PROBABILITY);
-		if (categoryTest <= shopProbability) {
+		if (categoryTest < shopProbability) {
 			currentItem = pickRandomItem(shopSelector, shopClothing);
-		} else if (categoryTest <= playerProbability) {
+		} else if (categoryTest < playerProbability) {
 			if (playerClothing.Count == 0) {
 				currentItem = pickRandomItem(shopSelector, shopClothing);
 			} else {
@@ -97,21 +97,28 @@ public class Battle {
 	}
 
 	private void setupClothingSets(ClothingData.ClothingStyle style) {
-		HashSet<ClothingData> shopSet = new HashSet<ClothingData>(manager.GetClothingData(style));
-		HashSet<ClothingData> playerSet = new HashSet<ClothingData>(manager.GetClothingData(ClothingData.ClothingStyle.NONE));
 		HashSet<ClothingData> otherSet = new HashSet<ClothingData>(manager.GetClothingData());
-		playerSet.ExceptWith(shopSet);
-		otherSet.ExceptWith(shopSet);
-		otherSet.ExceptWith(playerSet);
-
-		shopClothing = new List<ClothingData>(shopSet);
-		playerClothing = new List<ClothingData>(playerSet);
-
-		if (otherSet.Count == 0) {
-			shopProbability = 50;
-			playerProbability = MAX_PROBABILITY;
-		} else {
+		
+		if (style == ClothingData.ClothingStyle.NONE) { // Battle with another shopper
+			shopProbability = 0;
+			playerProbability = 0;
 			otherClothing = new List<ClothingData>(otherSet);
+		} else {
+			HashSet<ClothingData> shopSet = new HashSet<ClothingData>(manager.GetClothingData(style));
+			HashSet<ClothingData> playerSet = new HashSet<ClothingData>(manager.GetClothingData(ClothingData.ClothingStyle.NONE));
+			playerSet.ExceptWith(shopSet);
+			otherSet.ExceptWith(shopSet);
+			otherSet.ExceptWith(playerSet);
+
+			shopClothing = new List<ClothingData>(shopSet);
+			playerClothing = new List<ClothingData>(playerSet);
+
+			if (otherSet.Count == 0) {
+				shopProbability = 50;
+				playerProbability = MAX_PROBABILITY;
+			} else {
+				otherClothing = new List<ClothingData>(otherSet);
+			}
 		}
 	}
 

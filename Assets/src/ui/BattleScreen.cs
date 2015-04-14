@@ -49,7 +49,7 @@ public class BattleScreen : MonoBehaviour {
 		battleBlurb.text = controller.GetBattleBlurb();
 		targetScore.text = controller.TargetScore.ToString();
 		timerText.text = controller.RemainingTime(0);
-		Sprite shopkeeperSprite = controller.GetShopkeeper();
+		Sprite shopkeeperSprite = controller.GetOpponent();
 		shopkeeper.sprite = shopkeeperSprite;
 		shopkeeper.rectTransform.sizeDelta = new Vector2(shopkeeperSprite.rect.width, shopkeeperSprite.rect.height);
 		resultsPanel = results.GetComponent<BattleResultsPanel>();
