@@ -626,7 +626,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: cb388424da9cd8d4f8e30d14578c3634, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2b62173fd5cad544d985316f46667713, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3243,12 +3243,16 @@ MonoBehaviour:
   shopStyle: 8
   equipButton: {fileID: 1043490146}
   battleButton: {fileID: 0}
+  buyButton: {fileID: 0}
   equipImage: {fileID: 21300000, guid: efc8122f3163c16469fdce1f835c4540, type: 3}
   unequipImage: {fileID: 21300000, guid: ab4fdaf0947bcda43a8f0ed15fc523bc, type: 3}
   preview: {fileID: 2061966520}
   clothingAreaContainer: {fileID: 187627238}
   pageTilePanel: {fileID: 1737032823}
   itemSlotsPanel: {fileID: 1118857480}
+  battleModal: {fileID: 0}
+  buyModal: {fileID: 0}
+  moneyCount: {fileID: 0}
 --- !u!1 &1247967882
 GameObject:
   m_ObjectHideFlags: 0
