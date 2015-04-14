@@ -1,6 +1,6 @@
 {
   "name": "beautiful-dream-forever",
-  "version": "1.0",
+  "version": "1.0.0",
   "author": "RAMA",
   "description": "A fashion game",
   "main": "server.js",
