@@ -5,15 +5,20 @@ using System.Collections;
 
 public class ClothingSystemController {
 	private static string DISABLED_BATTLE_BUTTON_FILE = "buttons/Battle Button GREY";
+	private static string DISABLED_BUY_BUTTON_FILE = "buttons/Buy Button GREY";
 
 	private ClothingManager manager;
+	private Protagonist protagonist;
 	private WardrobePaginator<ClothingData> paginator;
 	private ClothingData.ClothingStyle style;
+	private PrizeController prizeController;
 
 	public ClothingSystemController(ClothingData.ClothingStyle style, int pageSize) {
 		this.style = style;
 		this.manager = ClothingManager.GetInstance();
+		protagonist = Protagonist.GetInstance();
 		paginator = new WardrobePaginator<ClothingData>(manager.GetClothingData(style), pageSize);
+		prizeController = PrizeController.GetInstance();
 	}
 
     public void CurrentPage(Button[] wardrobeButtons) {
@@ -28,19 +33,37 @@ public class ClothingSystemController {
 		fillButtons(wardrobeButtons, paginator.Next());
 	}
 
-	// TODO: This could be optimized for way better performance
+	public bool IsOwned(ClothingData item) {
+		return prizeController.IsOwned(item, style);
+	}
+
 	public bool AllItemsAreOwned() {
-		Inventory inventory = Protagonist.GetInstance().Inventory;
-		foreach (ClothingData item in manager.GetClothingData(style)) {
-			if (!inventory.Contains(item)) {
-				return false;
-			}
-		}
-		return true;
+		return prizeController.AllItemsAreOwned(style);
 	}
 
 	public Sprite DisabledBattleButton() {
 		return Resources.Load<Sprite>(DISABLED_BATTLE_BUTTON_FILE);
+	}
+
+	public Sprite DisabledBuyButton() {
+		return Resources.Load<Sprite>(DISABLED_BUY_BUTTON_FILE);
+	}
+
+	public int GetBalance() {
+		return protagonist.Balance;
+	}
+
+	public bool Purchasable(ClothingData item) {
+		return protagonist.CanPurchase(item.Price);
+	}
+
+	public bool Buy(ClothingData item) {
+		if (!protagonist.modifyBalance(-item.Price)) {
+			return false;
+		} else {
+			prizeController.Buy(item);
+			return true;
+		}
 	}
 
 	private void fillButtons(Button[] wardrobeButtons, ClothingData[] set) {

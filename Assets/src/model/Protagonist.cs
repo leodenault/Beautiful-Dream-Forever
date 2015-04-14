@@ -17,7 +17,7 @@ class Protagonist {
 	private Outfit outfit;
 
 	private Protagonist() {
-		balance = 0;
+		balance = 99;
 		outfit = new Outfit();
 		inventory = new Inventory();
 	}
@@ -37,5 +37,9 @@ class Protagonist {
 
 		balance = Math.Min(balance + difference, MAX_MONEY);
 		return true;
+	}
+
+	public bool CanPurchase(int price) {
+		return (price >= 0) && balance - price >= 0;
 	}
 }

@@ -66,10 +66,12 @@ public class CheatsController {
 
 	private static void fillInventory() {
 		Protagonist.GetInstance().Inventory.Items = ClothingManager.GetInstance().GetClothingData();
+		PrizeController.GetInstance().AcquireAllItems();
 	}
 
 	private static void clearInventory() {
 		Protagonist.GetInstance().Inventory.Clear();
+		PrizeController.GetInstance().ReturnAllItems();
 	}
 
 	private static void battleAllShops() {

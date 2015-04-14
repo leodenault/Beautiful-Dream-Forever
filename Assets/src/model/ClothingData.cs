@@ -20,6 +20,7 @@ public class ClothingData {
 
 	public int Id;
 	public int Layer;
+	public int Price;
 	public string Name;
 	public string Path;
 	public string Description;

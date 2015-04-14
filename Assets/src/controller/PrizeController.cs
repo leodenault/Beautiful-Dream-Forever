@@ -100,6 +100,11 @@ public class PrizeController {
 		}
 	}
 
+	public void Buy(ClothingData item) {
+		Shop shop = shops[item.Style];
+		shop.Buy(item);
+	}
+
 	public bool ShopBattled(ClothingData.ClothingStyle shopStyle) {
 		return shops[shopStyle].Battled;
 	}
@@ -110,6 +115,26 @@ public class PrizeController {
 
 	public bool WonPrize() {
 		return !(shopStyle == ClothingData.ClothingStyle.NONE);
+	}
+
+	public bool IsOwned(ClothingData item, ClothingData.ClothingStyle shopStyle) {
+		return shopStyle != ClothingData.ClothingStyle.NONE && shops[shopStyle].IsOwned(item);
+	}
+
+	public bool AllItemsAreOwned(ClothingData.ClothingStyle shopStyle) {
+		return shopStyle != ClothingData.ClothingStyle.NONE && shops[shopStyle].AllItemsAreOwned();
+	}
+
+	public void AcquireAllItems() {
+		foreach (Shop shop in shops.Values) {
+			shop.AcquireAllItems();
+		}
+	}
+
+	public void ReturnAllItems() {
+		foreach (Shop shop in shops.Values) {
+			shop.ReturnAllItems();
+		}
 	}
 
 	private int generateRandomMonetaryPrize() {

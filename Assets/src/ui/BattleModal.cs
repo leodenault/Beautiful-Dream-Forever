@@ -5,6 +5,8 @@ using System.Collections.Generic;
 
 public class BattleModal : MonoBehaviour {
 
+
+	private bool initialized = false;
 	private PrizeController shopController;
 	private PrizeButton activeButton;
 
@@ -16,20 +18,15 @@ public class BattleModal : MonoBehaviour {
 	public GameObject selectItemText;
 
 	public void Start () {
-		shopController = PrizeController.GetInstance();
-		shopController.ShopStyle = shopStyle;
-		IList<ClothingData> prizes = shopController.GetPrizes();
+		init();
+		SetupPrizes();
+	}
 
-		foreach (ClothingData prize in prizes) {
-			GameObject prizeObject = Instantiate(prizeButtonPrefab) as GameObject;
-			prizeObject.transform.SetParent(prizeSelector.transform);
-			prizeObject.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-
-			PrizeButton prizeButton = prizeObject.GetComponent<PrizeButton>();
-			prizeButton.Data = prize;
-
-			Button button = prizeObject.GetComponentInChildren<Button>();
-			button.onClick.AddListener(() => { selectItem(prizeButton); });
+	private void init() {
+		if (!initialized) {
+			shopController = PrizeController.GetInstance();
+			shopController.ShopStyle = shopStyle;
+			initialized = true;
 		}
 	}
 
@@ -47,6 +44,27 @@ public class BattleModal : MonoBehaviour {
 	public void AcceptItem() {
 		shopController.Prize = activeButton.Data;
 		GlobalController.GetInstance().Forward("Battle Screen");
+	}
+
+	public void SetupPrizes() {
+		init();
+
+		foreach (Transform child in prizeSelector.transform) {
+			Destroy(child.gameObject);
+		}
+
+		IList<ClothingData> prizes = shopController.GetPrizes();
+		foreach (ClothingData prize in prizes) {
+			GameObject prizeObject = Instantiate(prizeButtonPrefab) as GameObject;
+			prizeObject.transform.SetParent(prizeSelector.transform);
+			prizeObject.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+
+			PrizeButton prizeButton = prizeObject.GetComponent<PrizeButton>();
+			prizeButton.Data = prize;
+
+			Button button = prizeObject.GetComponentsInChildren<Button>(true)[0];
+			button.onClick.AddListener(() => { selectItem(prizeButton); });
+		}
 	}
 
 	private void selectItem(PrizeButton selected) {
