@@ -17,7 +17,7 @@ class Protagonist {
 	private Outfit outfit;
 
 	private Protagonist() {
-		balance = 99;
+		balance = 0;
 		outfit = new Outfit();
 		inventory = new Inventory();
 	}
