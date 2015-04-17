@@ -153,7 +153,6 @@ public class ClothingSystem : MonoBehaviour {
 	private void updateBuyButtonStatus(ClothingRepresentation item) {
 		if (buyButton != null) {
 			if (controller.IsOwned(item.Clothing)) {
-				buySprite = buyButton.image.sprite;
 				buyButton.image.sprite = controller.DisabledBuyButton();
 				buyButton.interactable = false;
 			} else {
