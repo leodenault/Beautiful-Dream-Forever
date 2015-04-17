@@ -8,6 +8,7 @@ public class PrizeController {
 	private static int NUM_PRIZES = 3;
 	private static int MIN_MONEY = 5;
 	private static int MAX_MONEY = 15;
+	private static int SHOPPER_BATTLE_TARGET_SCORE = 100;
 
 	private const string SHOPKEEPER_PREFIX = "shopkeepers/Shopkeeper_";
 
@@ -135,6 +136,10 @@ public class PrizeController {
 		foreach (Shop shop in shops.Values) {
 			shop.ReturnAllItems();
 		}
+	}
+
+	public int GetTargetScore() {
+		return (shopStyle == ClothingData.ClothingStyle.NONE) ? SHOPPER_BATTLE_TARGET_SCORE : shops[shopStyle].TargetScore;
 	}
 
 	private int generateRandomMonetaryPrize() {

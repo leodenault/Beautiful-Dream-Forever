@@ -12,7 +12,7 @@ public class BattleController {
 	private DialogueManager.DialogueCharacterEnum enCharacter;
 
 	public int TargetScore {
-		get { return 70; }
+		get { return prizeController.GetTargetScore(); }
 	}
 
 	public int MoneyWon {
@@ -23,8 +23,7 @@ public class BattleController {
 		prizeController = PrizeController.GetInstance();
 		dialogueManager = DialogueManager.GetInstance();
 		ClothingManager manager = ClothingManager.GetInstance();
-		// TODO: Make target score dynamic for battle
-		battle = new Battle(manager, prizeController.ShopStyle, 70, timeLimit);
+		battle = new Battle(manager, prizeController.ShopStyle, prizeController.GetTargetScore(), timeLimit);
 		itemSprites = new Dictionary<string, Sprite>();
 
 		foreach (ClothingData datum in manager.GetClothingData()) {
