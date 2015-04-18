@@ -2,18 +2,9 @@
 using System.Collections.Generic;
 
 public class Shop {
-	private static float TARGET_SCORE_NUM_INCREASES = 3.0f;
+	private static float TARGET_SCORE_NUM_INCREASES = 4.0f;
 	private static int TARGET_SCORE_INCREASE = 10;
-	private static IDictionary<ClothingData.ClothingStyle, int> INITIAL_POINTS = new Dictionary<ClothingData.ClothingStyle, int>() {
-		{ ClothingData.ClothingStyle.PREPPY,	80 },
-		{ ClothingData.ClothingStyle.UNIFORM,	90 },
-		{ ClothingData.ClothingStyle.HIPSTER,	100 },
-		{ ClothingData.ClothingStyle.ATHLETIC,	110 },
-		{ ClothingData.ClothingStyle.IDEALIST,	120 },
-		{ ClothingData.ClothingStyle.HARDCORE,	130 },
-		{ ClothingData.ClothingStyle.FORMAL,	140 },
-		{ ClothingData.ClothingStyle.COSPLAY,	150 }
-	};
+	private static int INITIAL_TARGET_SCORE = 100;
 
 	private IList<ClothingData> prizes;
 	public IList<ClothingData> Prizes {
@@ -41,7 +32,7 @@ public class Shop {
 		battled = false;
 		this.shopStyle = shopStyle;
 		clothingEarned = 0;
-		targetScore = INITIAL_POINTS[shopStyle];
+		targetScore = INITIAL_TARGET_SCORE;
 		availableClothing = new List<ClothingData>(ClothingManager.GetInstance().GetClothingDataExceptPlayerInventory(shopStyle));
 		targetScoreIncreaseInterval = (int)Math.Ceiling(availableClothing.Count / (TARGET_SCORE_NUM_INCREASES + 1.0f));
 		protagonist = Protagonist.GetInstance();
