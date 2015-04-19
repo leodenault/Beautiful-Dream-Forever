@@ -37,6 +37,9 @@ public class ClothingArea : MonoBehaviour {
 		}
 	}
 
+	// Layers that are lower in the ClothingSlot need to be displayed HIGHER. Example:
+	// an item on layer 3 displays OVER an item on layer 1. Unity's layers are the opposite of this.
+	// You can thank Rachel for this "feature"
 	private void orderInLayer(ClothingSlot slot, int layer) {
 		List<ClothingSlot> slots = new List<ClothingSlot>(enumSlotDictionary.Values);
 		slots.Sort((x, y) => x.image.transform.GetSiblingIndex().CompareTo(y.image.transform.GetSiblingIndex()));
@@ -46,7 +49,7 @@ public class ClothingArea : MonoBehaviour {
 		// Move through the list and see where it fits
 		foreach (ClothingSlot current in slots) {
 			if (!current.Equals(slot)) {
-				if (slot.Layer > current.Layer) {
+				if (slot.Layer < current.Layer) {
 					slot.image.transform.SetSiblingIndex(current.image.transform.GetSiblingIndex());
 					placed = true;
 					break;

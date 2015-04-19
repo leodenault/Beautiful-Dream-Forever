@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class ClothingSlot : MonoBehaviour {
 
-	private int layer;
+	private int layer = int.MaxValue;
 	public int Layer {
 		get { return layer; }
 	}
