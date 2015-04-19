@@ -31,6 +31,7 @@ public class ClothingSystem : MonoBehaviour {
 	public BattleModal battleModal;
 	public BuyModal buyModal;
 	public MoneyCount moneyCount;
+	public Text priceText;
 
 	public void Start()
 	{
@@ -139,6 +140,11 @@ public class ClothingSystem : MonoBehaviour {
 		selected.Clothing = selection.Clothing;
 		updateBuyButtonStatus(selected);
 		displayPreview(selected.Sprite);
+
+		// TODO: SERIOUSLY NEED to refactor this class!!!
+		if (priceText != null) {
+			priceText.text = selection.Clothing.Price.ToString();
+		}
 	}
 
 	private void updateBattleButtonStatus() {
