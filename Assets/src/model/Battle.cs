@@ -106,7 +106,6 @@ public class Battle {
 		} else {
 			HashSet<ClothingData> shopSet = new HashSet<ClothingData>(manager.GetClothingData(style));
 			HashSet<ClothingData> playerSet = new HashSet<ClothingData>(manager.GetClothingData(ClothingData.ClothingStyle.NONE));
-			playerSet.ExceptWith(shopSet);
 			otherSet.ExceptWith(shopSet);
 			otherSet.ExceptWith(playerSet);
 
