@@ -46,7 +46,7 @@
 		<Slot>SHOES</Slot>
 		<Style>ATHLETIC</Style>
 		<Essence>CLASSY</Essence>
-		<Layer>6</Layer>
+		<Layer>8</Layer>
 		<Price>20</Price>
 		<Location>
 			<x>73.0</x>
@@ -124,7 +124,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>ATHLETIC</Style>
 		<Essence>COOL</Essence>
-		<Layer>7</Layer>
+		<Layer>9</Layer>
 		<Price>10</Price>
 		<Location>
 			<x>36.0</x>
@@ -176,7 +176,7 @@
 		<Slot>SHOES</Slot>
 		<Style>ATHLETIC</Style>
 		<Essence>CUTE</Essence>
-		<Layer>6</Layer>
+		<Layer>8</Layer>
 		<Price>20</Price>
 		<Location>
 			<x>74.0</x>
@@ -189,7 +189,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>ATHLETIC</Style>
 		<Essence>CUTE</Essence>
-		<Layer>7</Layer>
+		<Layer>9</Layer>
 		<Price>10</Price>
 		<Location>
 			<x>66.0</x>
@@ -241,7 +241,7 @@
 		<Slot>SHOES</Slot>
 		<Style>COSPLAY</Style>
 		<Essence>CLASSY</Essence>
-		<Layer>6</Layer>
+		<Layer>8</Layer>
 		<Price>20</Price>
 		<Location>
 			<x>60.0</x>
@@ -293,7 +293,7 @@
 		<Slot>BOTTOM</Slot>
 		<Style>COSPLAY</Style>
 		<Essence>COOL</Essence>
-		<Layer>5</Layer>
+		<Layer>7</Layer>
 		<Price>30</Price>
 		<Location>
 			<x>59.0</x>
@@ -306,7 +306,7 @@
 		<Slot>SHOES</Slot>
 		<Style>COSPLAY</Style>
 		<Essence>COOL</Essence>
-		<Layer>4</Layer>
+		<Layer>6</Layer>
 		<Price>20</Price>
 		<Location>
 			<x>67.0</x>
@@ -384,7 +384,7 @@
 		<Slot>SHOES</Slot>
 		<Style>COSPLAY</Style>
 		<Essence>CUTE</Essence>
-		<Layer>6</Layer>
+		<Layer>8</Layer>
 		<Price>20</Price>
 		<Location>
 			<x>72.0</x>
@@ -410,7 +410,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>COSPLAY</Style>
 		<Essence>CUTE</Essence>
-		<Layer>7</Layer>
+		<Layer>9</Layer>
 		<Price>10</Price>
 		<Location>
 			<x>64.0</x>
@@ -475,7 +475,7 @@
 		<Slot>SHOES</Slot>
 		<Style>FORMAL</Style>
 		<Essence>CLASSY</Essence>
-		<Layer>6</Layer>
+		<Layer>8</Layer>
 		<Price>20</Price>
 		<Location>
 			<x>73.0</x>
@@ -488,7 +488,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>FORMAL</Style>
 		<Essence>CLASSY</Essence>
-		<Layer>7</Layer>
+		<Layer>9</Layer>
 		<Price>10</Price>
 		<Location>
 			<x>36.0</x>
@@ -566,7 +566,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>FORMAL</Style>
 		<Essence>COOL</Essence>
-		<Layer>7</Layer>
+		<Layer>9</Layer>
 		<Price>10</Price>
 		<Location>
 			<x>36.0</x>
@@ -618,7 +618,7 @@
 		<Slot>SHOES</Slot>
 		<Style>FORMAL</Style>
 		<Essence>CUTE</Essence>
-		<Layer>6</Layer>
+		<Layer>8</Layer>
 		<Price>20</Price>
 		<Location>
 			<x>73.0</x>
@@ -735,7 +735,7 @@
 		<Slot>BOTTOM</Slot>
 		<Style>HARDCORE</Style>
 		<Essence>COOL</Essence>
-		<Layer>5</Layer>
+		<Layer>7</Layer>
 		<Price>30</Price>
 		<Location>
 			<x>59.0</x>
@@ -826,7 +826,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>HARDCORE</Style>
 		<Essence>CUTE</Essence>
-		<Layer>7</Layer>
+		<Layer>9</Layer>
 		<Price>10</Price>
 		<Location>
 			<x>27.0</x>
@@ -865,7 +865,7 @@
 		<Slot>BOTTOM</Slot>
 		<Style>HIPSTER</Style>
 		<Essence>CLASSY</Essence>
-		<Layer>5</Layer>
+		<Layer>7</Layer>
 		<Price>30</Price>
 		<Location>
 			<x>59.0</x>
@@ -930,7 +930,7 @@
 		<Slot>BOTTOM</Slot>
 		<Style>HIPSTER</Style>
 		<Essence>COOL</Essence>
-		<Layer>5</Layer>
+		<Layer>7</Layer>
 		<Price>30</Price>
 		<Location>
 			<x>45.0</x>
@@ -1008,7 +1008,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>HIPSTER</Style>
 		<Essence>CUTE</Essence>
-		<Layer>7</Layer>
+		<Layer>9</Layer>
 		<Price>10</Price>
 		<Location>
 			<x>57.0</x>
@@ -1255,7 +1255,7 @@
 		<Slot>SHOES</Slot>
 		<Style>UNIFORM</Style>
 		<Essence>CLASSY</Essence>
-		<Layer>6</Layer>
+		<Layer>8</Layer>
 		<Price>20</Price>
 		<Location>
 			<x>73.0</x>
@@ -1398,7 +1398,7 @@
 		<Slot>SHOES</Slot>
 		<Style>UNIFORM</Style>
 		<Essence>CUTE</Essence>
-		<Layer>6</Layer>
+		<Layer>8</Layer>
 		<Price>20</Price>
 		<Location>
 			<x>72.0</x>
@@ -1424,7 +1424,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>UNIFORM</Style>
 		<Essence>CUTE</Essence>
-		<Layer>6</Layer>
+		<Layer>9</Layer>
 		<Price>10</Price>
 		<Location>
 			<x>62.0</x>
