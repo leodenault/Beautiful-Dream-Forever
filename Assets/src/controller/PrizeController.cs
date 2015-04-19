@@ -50,7 +50,7 @@ public class PrizeController {
 			if (shopStyle == ClothingData.ClothingStyle.NONE) {
 				return opponentSprite;
 			} else {
-				string pathSuffix = Util.ConvertStyleEnumToReadable(shopStyle);
+				string pathSuffix = Util.ReadableEnumName<ClothingData.ClothingStyle>(shopStyle);
 				return Resources.Load<Sprite>(string.Format("{0}{1}", SHOPKEEPER_PREFIX, pathSuffix));
 			}
 		}

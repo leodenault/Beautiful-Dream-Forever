@@ -28,6 +28,7 @@ public class ClothingSystem : MonoBehaviour {
 	public GameObject clothingAreaContainer;
 	public GameObject pageTilePanel;
 	public GameObject itemSlotsPanel;
+	public StatsPanel statsPanel;
 	public BattleModal battleModal;
 	public BuyModal buyModal;
 	public MoneyCount moneyCount;
@@ -140,6 +141,7 @@ public class ClothingSystem : MonoBehaviour {
 		selected.Clothing = selection.Clothing;
 		updateBuyButtonStatus(selected);
 		displayPreview(selected.Sprite);
+		statsPanel.UpdateStats(selection.Clothing);
 
 		// TODO: SERIOUSLY NEED to refactor this class!!!
 		if (priceText != null) {

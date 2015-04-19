@@ -46,8 +46,8 @@ public static class Util
 		return result;
 	}
 
-	public static string ConvertStyleEnumToReadable(ClothingData.ClothingStyle style) {
-		string name = Enum.GetName(typeof(ClothingData.ClothingStyle), style);
+	public static string ReadableEnumName<T>(T style) {
+		string name = Enum.GetName(typeof(T), style);
 		return name.Substring(0, 1) + name.Substring(1).ToLower();
 	}
 }

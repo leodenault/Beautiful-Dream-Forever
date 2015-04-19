@@ -14,7 +14,7 @@ public class ShopkeeperButton : MonoBehaviour
     }
 
     public void LoadDressingRoom() {
-		string shopType = Util.ConvertStyleEnumToReadable(shopStyle);
+		string shopType = Util.ReadableEnumName<ClothingData.ClothingStyle>(shopStyle);
         controller.Forward(string.Format("{0}{1}", shopType, DRESSINGROOM_SCENE_SUFFIX));
     }
 
