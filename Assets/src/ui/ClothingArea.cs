@@ -48,12 +48,10 @@ public class ClothingArea : MonoBehaviour {
 
 		// Move through the list and see where it fits
 		foreach (ClothingSlot current in slots) {
-			if (!current.Equals(slot)) {
-				if (slot.Layer < current.Layer) {
-					slot.image.transform.SetSiblingIndex(current.image.transform.GetSiblingIndex());
-					placed = true;
-					break;
-				}
+			if (slot.Layer <= current.Layer) {
+				slot.image.transform.SetSiblingIndex(current.image.transform.GetSiblingIndex());
+				placed = true;
+				break;
 			}
 		}
 
