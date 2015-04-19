@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Entry>
+		<Opponent>IDEALIST</Opponent>
+		<Path>Shopkeeper_Idealist RESIZE</Path>
+	</Entry>
+	<Entry>
+		<Opponent>HARDCORE</Opponent>
+		<Path>Shopkeeper_Harcore RESIZE</Path>
+	</Entry>
+	<Entry>
+		<Opponent>ATHLETIC</Opponent>
+		<Path>Shopkeeper_Athletic RESIZE</Path>
+	</Entry>
+	<Entry>
+		<Opponent>UNIFORM</Opponent>
+		<Path>Shopkeeper_Uniform RESIZE</Path>
+	</Entry>
+	<Entry>
+		<Opponent>FORMAL</Opponent>
+		<Path>Shopkeeper_Formal RESIZE</Path>
+	</Entry>
+	<Entry>
+		<Opponent>COSPLAY</Opponent>
+		<Path>Shopkeeper_Cosplay RESIZE</Path>
+	</Entry>
+	<Entry>
+		<Opponent>PREPPY</Opponent>
+		<Path>Shopkeeper_Preppy RESIZE</Path>
+	</Entry>
+	<Entry>
+		<Opponent>HIPSTER</Opponent>
+		<Path>Shopkeeper_Hipster RESIZE</Path>
+	</Entry>
+	<Entry>
+		<Opponent>NPC_FLOWERS</Opponent>
+		<Path>Flower Girls Shoppers RESIZE 2</Path>
+	</Entry>
+</ArrayOfEntry>

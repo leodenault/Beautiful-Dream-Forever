@@ -5,7 +5,6 @@ using System.Collections.Generic;
 
 public class BattleModal : MonoBehaviour {
 
-
 	private bool initialized = false;
 	private PrizeController shopController;
 	private PrizeButton activeButton;
@@ -43,6 +42,7 @@ public class BattleModal : MonoBehaviour {
 
 	public void AcceptItem() {
 		shopController.Prize = activeButton.Data;
+		shopController.OpponentSprite = OpponentSpriteManager.GetInstance().FetchSprite(shopStyle);
 		GlobalController.GetInstance().Forward("Battle Screen");
 	}
 

@@ -43,17 +43,9 @@ public class PrizeController {
 		set { opponent = value; }
 	}
 
-	// TODO: Again, make sure to fix the shopkeeper situation
 	private Sprite opponentSprite;
 	public Sprite OpponentSprite {
-		get {
-			if (shopStyle == ClothingData.ClothingStyle.NONE) {
-				return opponentSprite;
-			} else {
-				string pathSuffix = Util.ReadableEnumName<ClothingData.ClothingStyle>(shopStyle);
-				return Resources.Load<Sprite>(string.Format("{0}{1}", SHOPKEEPER_PREFIX, pathSuffix));
-			}
-		}
+		get { return opponentSprite; }
 		set { opponentSprite = value; }
 	}
 

@@ -13,10 +13,10 @@ public class Shopper : MonoBehaviour {
 		prizeController = PrizeController.GetInstance();
 	}
 
-	public void InitiateShopperBattle(Shopper shopper) {
+	public void InitiateShopperBattle() {
 		prizeController.ShopStyle = ClothingData.ClothingStyle.NONE;
-		prizeController.Opponent = shopper.shopper;
-		prizeController.OpponentSprite = image.sprite;
+		prizeController.Opponent = shopper;
+		prizeController.OpponentSprite = OpponentSpriteManager.GetInstance().FetchSprite(shopper);
 		controller.Forward("Battle Screen");
 	}
 }
