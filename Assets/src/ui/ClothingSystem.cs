@@ -33,6 +33,7 @@ public class ClothingSystem : MonoBehaviour {
 	public BuyModal buyModal;
 	public MoneyCount moneyCount;
 	public Text priceText;
+	public Text amountText;
 
 	public void Start()
 	{
@@ -144,8 +145,14 @@ public class ClothingSystem : MonoBehaviour {
 		statsPanel.UpdateStats(selection.Clothing);
 
 		// TODO: SERIOUSLY NEED to refactor this class!!!
-		if (priceText != null) {
-			priceText.text = selection.Clothing.Price.ToString();
+		if (priceText != null && amountText != null) {
+			if (controller.IsOwned(selection.Clothing)) {
+				priceText.text = "Owned";
+				amountText.text = "";
+			} else {
+				priceText.text = "Price";
+				amountText.text = selection.Clothing.Price.ToString();
+			}
 		}
 	}
 
