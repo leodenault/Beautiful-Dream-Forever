@@ -7,6 +7,7 @@
 		<Slot>WIG</Slot>
 		<Style>ATHLETIC</Style>
 		<Essence>CLASSY</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>67</x>
 			<y>17</y>
@@ -18,6 +19,7 @@
 		<Slot>TOP</Slot>
 		<Style>ATHLETIC</Style>
 		<Essence>CLASSY</Essence>
+		<Price>30</Price>
 		<Location>
 			<x>60.0</x>
 			<y>77.0</y>
@@ -29,6 +31,7 @@
 		<Slot>BOTTOM</Slot>
 		<Style>ATHLETIC</Style>
 		<Essence>CLASSY</Essence>
+		<Price>30</Price>
 		<Location>
 			<x>56.0</x>
 			<y>163.0</y>
@@ -40,6 +43,7 @@
 		<Slot>SHOES</Slot>
 		<Style>ATHLETIC</Style>
 		<Essence>CLASSY</Essence>
+		<Price>20</Price>
 		<Location>
 			<x>73.0</x>
 			<y>341.0</y>
@@ -51,6 +55,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>ATHLETIC</Style>
 		<Essence>CLASSY</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>78.0</x>
 			<y>16.0</y>
@@ -62,6 +67,7 @@
 		<Slot>WIG</Slot>
 		<Style>ATHLETIC</Style>
 		<Essence>COOL</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>73.0</x>
 			<y>19.0</y>
@@ -73,6 +79,7 @@
 		<Slot>TOP</Slot>
 		<Style>ATHLETIC</Style>
 		<Essence>COOL</Essence>
+		<Price>30</Price>
 		<Location>
 			<x>73.0</x>
 			<y>77.0</y>
@@ -84,6 +91,7 @@
 		<Slot>BOTTOM</Slot>
 		<Style>ATHLETIC</Style>
 		<Essence>COOL</Essence>
+		<Price>30</Price>
 		<Location>
 			<x>29.0</x>
 			<y>152.0</y>
@@ -95,6 +103,7 @@
 		<Slot>SHOES</Slot>
 		<Style>ATHLETIC</Style>
 		<Essence>COOL</Essence>
+		<Price>20</Price>
 		<Location>
 			<x>73.0</x>
 			<y>326.0</y>
@@ -106,6 +115,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>ATHLETIC</Style>
 		<Essence>COOL</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>36.0</x>
 			<y>170.0</y>
@@ -117,6 +127,7 @@
 		<Slot>WIG</Slot>
 		<Style>ATHLETIC</Style>
 		<Essence>CUTE</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>71.0</x>
 			<y>17.0</y>
@@ -128,6 +139,7 @@
 		<Slot>TOP</Slot>
 		<Style>ATHLETIC</Style>
 		<Essence>CUTE</Essence>
+		<Price>30</Price>
 		<Location>
 			<x>34.0</x>
 			<y>78.0</y>
@@ -139,6 +151,7 @@
 		<Slot>BOTTOM</Slot>
 		<Style>ATHLETIC</Style>
 		<Essence>CUTE</Essence>
+		<Price>30</Price>
 		<Location>
 			<x>57.0</x>
 			<y>158.0</y>
@@ -150,6 +163,7 @@
 		<Slot>SHOES</Slot>
 		<Style>ATHLETIC</Style>
 		<Essence>CUTE</Essence>
+		<Price>20</Price>
 		<Location>
 			<x>74.0</x>
 			<y>344.0</y>
@@ -161,6 +175,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>ATHLETIC</Style>
 		<Essence>CUTE</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>66.0</x>
 			<y>263.0</y>
@@ -172,6 +187,7 @@
 		<Slot>WIG</Slot>
 		<Style>COSPLAY</Style>
 		<Essence>CLASSY</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>65.0</x>
 			<y>15.0</y>
@@ -183,6 +199,7 @@
 		<Slot>TOP</Slot>
 		<Style>COSPLAY</Style>
 		<Essence>CLASSY</Essence>
+		<Price>30</Price>
 		<Location>
 			<x>30.0</x>
 			<y>62.0</y>
@@ -194,6 +211,7 @@
 		<Slot>BOTTOM</Slot>
 		<Style>COSPLAY</Style>
 		<Essence>CLASSY</Essence>
+		<Price>30</Price>
 		<Location>
 			<x>57.0</x>
 			<y>145.0</y>
@@ -205,6 +223,7 @@
 		<Slot>SHOES</Slot>
 		<Style>COSPLAY</Style>
 		<Essence>CLASSY</Essence>
+		<Price>20</Price>
 		<Location>
 			<x>60.0</x>
 			<y>220.0</y>
@@ -216,6 +235,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>COSPLAY</Style>
 		<Essence>CLASSY</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>66.0</x>
 			<y>-5.0</y>
@@ -227,6 +247,7 @@
 		<Slot>WIG</Slot>
 		<Style>COSPLAY</Style>
 		<Essence>COOL</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>61.0</x>
 			<y>11.0</y>
@@ -238,6 +259,7 @@
 		<Slot>TOP</Slot>
 		<Style>COSPLAY</Style>
 		<Essence>COOL</Essence>
+		<Price>30</Price>
 		<Location>
 			<x>29.0</x>
 			<y>71.0</y>
@@ -249,6 +271,7 @@
 		<Slot>BOTTOM</Slot>
 		<Style>COSPLAY</Style>
 		<Essence>COOL</Essence>
+		<Price>30</Price>
 		<Location>
 			<x>59.0</x>
 			<y>138.0</y>
@@ -260,6 +283,7 @@
 		<Slot>SHOES</Slot>
 		<Style>COSPLAY</Style>
 		<Essence>COOL</Essence>
+		<Price>20</Price>
 		<Location>
 			<x>67.0</x>
 			<y>261.0</y>
@@ -271,6 +295,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>COSPLAY</Style>
 		<Essence>COOL</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>79.0</x>
 			<y>14.0</y>
@@ -282,6 +307,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>COSPLAY</Style>
 		<Essence>COOL</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>58.0</x>
 			<y>157.0</y>
@@ -293,6 +319,7 @@
 		<Slot>WIG</Slot>
 		<Style>COSPLAY</Style>
 		<Essence>CUTE</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>63.0</x>
 			<y>18.0</y>
@@ -304,6 +331,7 @@
 		<Slot>TOP</Slot>
 		<Style>COSPLAY</Style>
 		<Essence>CUTE</Essence>
+		<Price>30</Price>
 		<Location>
 			<x>49.0</x>
 			<y>74.0</y>
@@ -315,6 +343,7 @@
 		<Slot>BOTTOM</Slot>
 		<Style>COSPLAY</Style>
 		<Essence>CUTE</Essence>
+		<Price>30</Price>
 		<Location>
 			<x>51.0</x>
 			<y>155.0</y>
@@ -326,6 +355,7 @@
 		<Slot>SHOES</Slot>
 		<Style>COSPLAY</Style>
 		<Essence>CUTE</Essence>
+		<Price>20</Price>
 		<Location>
 			<x>72.0</x>
 			<y>339.0</y>
@@ -337,6 +367,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>COSPLAY</Style>
 		<Essence>CUTE</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>79.0</x>
 			<y>94.0</y>
@@ -348,6 +379,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>COSPLAY</Style>
 		<Essence>CUTE</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>64.0</x>
 			<y>221.0</y>
@@ -359,6 +391,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>COSPLAY</Style>
 		<Essence>CUTE</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>63.0</x>
 			<y>185.0</y>
@@ -370,6 +403,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>COSPLAY</Style>
 		<Essence>CUTE</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>73.0</x>
 			<y>31.0</y>
@@ -381,6 +415,7 @@
 		<Slot>WIG</Slot>
 		<Style>FORMAL</Style>
 		<Essence>CLASSY</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>64.0</x>
 			<y>12.0</y>
@@ -392,6 +427,7 @@
 		<Slot>DRESS</Slot>
 		<Style>FORMAL</Style>
 		<Essence>CLASSY</Essence>
+		<Price>60</Price>
 		<Location>
 			<x>37.0</x>
 			<y>73.0</y>
@@ -403,6 +439,7 @@
 		<Slot>SHOES</Slot>
 		<Style>FORMAL</Style>
 		<Essence>CLASSY</Essence>
+		<Price>20</Price>
 		<Location>
 			<x>73.0</x>
 			<y>332.0</y>
@@ -414,6 +451,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>FORMAL</Style>
 		<Essence>CLASSY</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>36.0</x>
 			<y>192.0</y>
@@ -425,6 +463,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>FORMAL</Style>
 		<Essence>CLASSY</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>72.0</x>
 			<y>21.0</y>
@@ -436,6 +475,7 @@
 		<Slot>WIG</Slot>
 		<Style>FORMAL</Style>
 		<Essence>COOL</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>74.0</x>
 			<y>19.0</y>
@@ -447,6 +487,7 @@
 		<Slot>DRESS</Slot>
 		<Style>FORMAL</Style>
 		<Essence>COOL</Essence>
+		<Price>60</Price>
 		<Location>
 			<x>59.0</x>
 			<y>78.0</y>
@@ -458,6 +499,7 @@
 		<Slot>SHOES</Slot>
 		<Style>FORMAL</Style>
 		<Essence>COOL</Essence>
+		<Price>20</Price>
 		<Location>
 			<x>73.0</x>
 			<y>325.0</y>
@@ -469,6 +511,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>FORMAL</Style>
 		<Essence>COOL</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>125.0</x>
 			<y>97.0</y>	
@@ -480,6 +523,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>FORMAL</Style>
 		<Essence>COOL</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>36.0</x>
 			<y>191.0</y>
@@ -491,6 +535,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>FORMAL</Style>
 		<Essence>COOL</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>80.0</x>
 			<y>68.0</y>
@@ -502,6 +547,7 @@
 		<Slot>WIG</Slot>
 		<Style>FORMAL</Style>
 		<Essence>CUTE</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>65.0</x>
 			<y>14.0</y>
@@ -513,6 +559,7 @@
 		<Slot>DRESS</Slot>
 		<Style>FORMAL</Style>
 		<Essence>CUTE</Essence>
+		<Price>60</Price>
 		<Location>
 			<x>43.0</x>
 			<y>76.0</y>
@@ -524,6 +571,7 @@
 		<Slot>SHOES</Slot>
 		<Style>FORMAL</Style>
 		<Essence>CUTE</Essence>
+		<Price>20</Price>
 		<Location>
 			<x>73.0</x>
 			<y>344.0</y>
@@ -535,6 +583,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>FORMAL</Style>
 		<Essence>CUTE</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>45.0</x>
 			<y>82.0</y>
@@ -546,6 +595,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>FORMAL</Style>
 		<Essence>CUTE</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>73.0</x>
 			<y>136.0</y>
@@ -557,6 +607,7 @@
 		<Slot>WIG</Slot>
 		<Style>HARDCORE</Style>
 		<Essence>CLASSY</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>68.0</x>
 			<y>14.0</y>
@@ -568,6 +619,7 @@
 		<Slot>DRESS</Slot>
 		<Style>HARDCORE</Style>
 		<Essence>CLASSY</Essence>
+		<Price>60</Price>
 		<Location>
 			<x>57.0</x>
 			<y>77.0</y>
@@ -579,6 +631,7 @@
 		<Slot>SHOES</Slot>
 		<Style>HARDCORE</Style>
 		<Essence>CLASSY</Essence>
+		<Price>20</Price>
 		<Location>
 			<x>73.0</x>
 			<y>344.0</y>
@@ -590,6 +643,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>HARDCORE</Style>
 		<Essence>CLASSY</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>50.0</x>
 			<y>72.0</y>
@@ -601,6 +655,7 @@
 		<Slot>WIG</Slot>
 		<Style>HARDCORE</Style>
 		<Essence>COOL</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>75.0</x>
 			<y>20.0</y>
@@ -612,6 +667,7 @@
 		<Slot>TOP</Slot>
 		<Style>HARDCORE</Style>
 		<Essence>COOL</Essence>
+		<Price>30</Price>
 		<Location>
 			<x>35.0</x>
 			<y>67.0</y>
@@ -623,6 +679,7 @@
 		<Slot>BOTTOM</Slot>
 		<Style>HARDCORE</Style>
 		<Essence>COOL</Essence>
+		<Price>30</Price>
 		<Location>
 			<x>59.0</x>
 			<y>151.0</y>
@@ -634,6 +691,7 @@
 		<Slot>SHOES</Slot>
 		<Style>HARDCORE</Style>
 		<Essence>COOL</Essence>
+		<Price>20</Price>
 		<Location>
 			<x>66.0</x>
 			<y>291.0</y>
@@ -645,6 +703,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>HARDCORE</Style>
 		<Essence>COOL</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>66.0</x>
 			<y>15.0</y>
@@ -656,6 +715,7 @@
 		<Slot>WIG</Slot>
 		<Style>HARDCORE</Style>
 		<Essence>CUTE</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>72.0</x>
 			<y>17.0</y>
@@ -667,6 +727,7 @@
 		<Slot>TOP</Slot>
 		<Style>HARDCORE</Style>
 		<Essence>CUTE</Essence>
+		<Price>30</Price>
 		<Location>
 			<x>63.0</x>
 			<y>71.0</y>
@@ -678,6 +739,7 @@
 		<Slot>BOTTOM</Slot>
 		<Style>HARDCORE</Style>
 		<Essence>CUTE</Essence>
+		<Price>30</Price>
 		<Location>
 			<x>38.0</x>
 			<y>150.0</y>
@@ -689,6 +751,7 @@
 		<Slot>SHOES</Slot>
 		<Style>HARDCORE</Style>
 		<Essence>CUTE</Essence>
+		<Price>20</Price>
 		<Location>
 			<x>49.0</x>
 			<y>263.0</y>
@@ -700,6 +763,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>HARDCORE</Style>
 		<Essence>CUTE</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>27.0</x>
 			<y>218.0</y>
@@ -711,6 +775,7 @@
 		<Slot>WIG</Slot>
 		<Style>HIPSTER</Style>
 		<Essence>CLASSY</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>65.0</x>
 			<y>14.0</y>
@@ -722,6 +787,7 @@
 		<Slot>TOP</Slot>
 		<Style>HIPSTER</Style>
 		<Essence>CLASSY</Essence>
+		<Price>30</Price>
 		<Location>
 			<x>69.0</x>
 			<y>78.0</y>
@@ -733,6 +799,7 @@
 		<Slot>BOTTOM</Slot>
 		<Style>HIPSTER</Style>
 		<Essence>CLASSY</Essence>
+		<Price>30</Price>
 		<Location>
 			<x>59.0</x>
 			<y>145.0</y>
@@ -744,6 +811,7 @@
 		<Slot>SHOES</Slot>
 		<Style>HIPSTER</Style>
 		<Essence>CLASSY</Essence>
+		<Price>20</Price>
 		<Location>
 			<x>72.0</x>
 			<y>341.0</y>
@@ -755,6 +823,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>HIPSTER</Style>
 		<Essence>CLASSY</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>90.0</x>
 			<y>37.0</y>
@@ -766,6 +835,7 @@
 		<Slot>WIG</Slot>
 		<Style>HIPSTER</Style>
 		<Essence>COOL</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>75.0</x>
 			<y>19.0</y>
@@ -777,6 +847,7 @@
 		<Slot>TOP</Slot>
 		<Style>HIPSTER</Style>
 		<Essence>COOL</Essence>
+		<Price>30</Price>
 		<Location>
 			<x>39.0</x>
 			<y>73.0</y>
@@ -788,6 +859,7 @@
 		<Slot>BOTTOM</Slot>
 		<Style>HIPSTER</Style>
 		<Essence>COOL</Essence>
+		<Price>30</Price>
 		<Location>
 			<x>45.0</x>
 			<y>147.0</y>
@@ -799,6 +871,7 @@
 		<Slot>SHOES</Slot>
 		<Style>HIPSTER</Style>
 		<Essence>COOL</Essence>
+		<Price>20</Price>
 		<Location>
 			<x>71.0</x>
 			<y>321.0</y>
@@ -810,6 +883,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>HIPSTER</Style>
 		<Essence>COOL</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>69.0</x>
 			<y>17.0</y>
@@ -821,6 +895,7 @@
 		<Slot>WIG</Slot>
 		<Style>HIPSTER</Style>
 		<Essence>CUTE</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>65.0</x>
 			<y>13</y>
@@ -832,6 +907,7 @@
 		<Slot>DRESS</Slot>
 		<Style>HIPSTER</Style>
 		<Essence>CUTE</Essence>
+		<Price>60</Price>
 		<Location>
 			<x>27.0</x>
 			<y>73.0</y>
@@ -843,6 +919,7 @@
 		<Slot>SHOES</Slot>
 		<Style>HIPSTER</Style>
 		<Essence>CUTE</Essence>
+		<Price>20</Price>
 		<Location>
 			<x>73.0</x>
 			<y>341.0</y>
@@ -854,6 +931,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>HIPSTER</Style>
 		<Essence>CUTE</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>57.0</x>
 			<y>199.0</y>
@@ -865,6 +943,7 @@
 		<Slot>WIG</Slot>
 		<Style>IDEALIST</Style>
 		<Essence>CUTE</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>67.0</x>
 			<y>17.0</y>
@@ -876,6 +955,7 @@
 		<Slot>WIG</Slot>
 		<Style>PREPPY</Style>
 		<Essence>CLASSY</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>71</x>
 			<y>18</y>
@@ -887,6 +967,7 @@
 		<Slot>TOP</Slot>
 		<Style>PREPPY</Style>
 		<Essence>CLASSY</Essence>
+		<Price>30</Price>
 		<Location>
 			<x>38.0</x>
 			<y>78.0</y>
@@ -898,6 +979,7 @@
 		<Slot>BOTTOM</Slot>
 		<Style>PREPPY</Style>
 		<Essence>CLASSY</Essence>
+		<Price>30</Price>
 		<Location>
 			<x>35.0</x>
 			<y>144.0</y>
@@ -909,6 +991,7 @@
 		<Slot>SHOES</Slot>
 		<Style>PREPPY</Style>
 		<Essence>CLASSY</Essence>
+		<Price>20</Price>
 		<Location>
 			<x>73.0</x>
 			<y>336.0</y>
@@ -920,6 +1003,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>PREPPY</Style>
 		<Essence>CLASSY</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>80.0</x>
 			<y>73.0</y>
@@ -931,6 +1015,7 @@
 		<Slot>WIG</Slot>
 		<Style>PREPPY</Style>
 		<Essence>COOL</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>73.0</x>
 			<y>18.0</y>
@@ -942,6 +1027,7 @@
 		<Slot>TOP</Slot>
 		<Style>PREPPY</Style>
 		<Essence>COOL</Essence>
+		<Price>30</Price>
 		<Location>
 			<x>36.0</x>
 			<y>70.0</y>
@@ -953,6 +1039,7 @@
 		<Slot>BOTTOM</Slot>
 		<Style>PREPPY</Style>
 		<Essence>COOL</Essence>
+		<Price>30</Price>
 		<Location>
 			<x>53.0</x>
 			<y>151.0</y>
@@ -964,6 +1051,7 @@
 		<Slot>SHOES</Slot>
 		<Style>PREPPY</Style>
 		<Essence>COOL</Essence>
+		<Price>20</Price>
 		<Location>
 			<x>74.0</x>
 			<y>333.0</y>
@@ -975,6 +1063,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>PREPPY</Style>
 		<Essence>COOL</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>90.0</x>
 			<y>85.0</y>
@@ -986,6 +1075,7 @@
 		<Slot>WIG</Slot>
 		<Style>PREPPY</Style>
 		<Essence>CUTE</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>75.0</x>
 			<y>20.0</y>
@@ -997,6 +1087,7 @@
 		<Slot>DRESS</Slot>
 		<Style>PREPPY</Style>
 		<Essence>CUTE</Essence>
+		<Price>60</Price>
 		<Location>
 			<x>35.0</x>
 			<y>69.0</y>
@@ -1008,6 +1099,7 @@
 		<Slot>SHOES</Slot>
 		<Style>PREPPY</Style>
 		<Essence>CUTE</Essence>
+		<Price>20</Price>
 		<Location>
 			<x>73.0</x>
 			<y>339.0</y>
@@ -1019,6 +1111,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>PREPPY</Style>
 		<Essence>CUTE</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>69.0</x>
 			<y>26.0</y>
@@ -1030,6 +1123,7 @@
 		<Slot>WIG</Slot>
 		<Style>UNIFORM</Style>
 		<Essence>CLASSY</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>69.0</x>
 			<y>18.0</y>
@@ -1041,6 +1135,7 @@
 		<Slot>TOP</Slot>
 		<Style>UNIFORM</Style>
 		<Essence>CLASSY</Essence>
+		<Price>30</Price>
 		<Location>
 			<x>36.0</x>
 			<y>70.0</y>
@@ -1052,6 +1147,7 @@
 		<Slot>BOTTOM</Slot>
 		<Style>UNIFORM</Style>
 		<Essence>CLASSY</Essence>
+		<Price>30</Price>
 		<Location>
 			<x>58.0</x>
 			<y>142.0</y>
@@ -1063,6 +1159,7 @@
 		<Slot>SHOES</Slot>
 		<Style>UNIFORM</Style>
 		<Essence>CLASSY</Essence>
+		<Price>20</Price>
 		<Location>
 			<x>73.0</x>
 			<y>341.0</y>
@@ -1074,6 +1171,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>UNIFORM</Style>
 		<Essence>CLASSY</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>77.0</x>
 			<y>69.0</y>
@@ -1085,6 +1183,7 @@
 		<Slot>WIG</Slot>
 		<Style>UNIFORM</Style>
 		<Essence>COOL</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>76.0</x>
 			<y>20.0</y>
@@ -1096,6 +1195,7 @@
 		<Slot>TOP</Slot>
 		<Style>UNIFORM</Style>
 		<Essence>COOL</Essence>
+		<Price>30</Price>
 		<Location>
 			<x>36.0</x>
 			<y>67.0</y>
@@ -1107,6 +1207,7 @@
 		<Slot>BOTTOM</Slot>
 		<Style>UNIFORM</Style>
 		<Essence>COOL</Essence>
+		<Price>30</Price>
 		<Location>
 			<x>53.0</x>
 			<y>141.0</y>
@@ -1118,6 +1219,7 @@
 		<Slot>SHOES</Slot>
 		<Style>UNIFORM</Style>
 		<Essence>COOL</Essence>
+		<Price>20</Price>
 		<Location>
 			<x>67.0</x>
 			<y>272.0</y>
@@ -1129,6 +1231,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>UNIFORM</Style>
 		<Essence>COOL</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>66.0</x>
 			<y>80.0</y>
@@ -1140,6 +1243,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>UNIFORM</Style>
 		<Essence>COOL</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>67.0</x>
 			<y>9.0</y>
@@ -1151,6 +1255,7 @@
 		<Slot>WIG</Slot>
 		<Style>UNIFORM</Style>
 		<Essence>CUTE</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>70.0</x>
 			<y>18.0</y>
@@ -1162,6 +1267,7 @@
 		<Slot>TOP</Slot>
 		<Style>UNIFORM</Style>
 		<Essence>CUTE</Essence>
+		<Price>30</Price>
 		<Location>
 			<x>36.0</x>
 			<y>72.0</y>
@@ -1173,6 +1279,7 @@
 		<Slot>BOTTOM</Slot>
 		<Style>UNIFORM</Style>
 		<Essence>CUTE</Essence>
+		<Price>30</Price>
 		<Location>
 			<x>55.0</x>
 			<y>144.0</y>
@@ -1184,6 +1291,7 @@
 		<Slot>SHOES</Slot>
 		<Style>UNIFORM</Style>
 		<Essence>CUTE</Essence>
+		<Price>20</Price>
 		<Location>
 			<x>72.0</x>
 			<y>339.0</y>
@@ -1195,6 +1303,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>UNIFORM</Style>
 		<Essence>CUTE</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>93.0</x>
 			<y>78.0</y>
@@ -1206,6 +1315,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>UNIFORM</Style>
 		<Essence>CUTE</Essence>
+		<Price>10</Price>
 		<Location>
 			<x>62.0</x>
 			<y>217.0</y>

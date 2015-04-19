@@ -31,8 +31,6 @@ public class ClothingManager {
 	private void assignIds() {
 		foreach (ClothingData item in clothingData) {
 			item.Id = NEXT_ID++;
-			// TODO: Add item prices to clothing XML file
-			item.Price = item.Id + 1;
 		}
 	}
 
