@@ -36,4 +36,8 @@
 		<Opponent>NPC_FLOWERS</Opponent>
 		<Path>Flower Girls Shoppers RESIZE 2</Path>
 	</Entry>
+	<Entry>
+		<Opponent>NPC_BUSINESSPERSON</Opponent>
+		<Path>Wall Street Shopper</Path>
+	</Entry>
 </ArrayOfEntry>
