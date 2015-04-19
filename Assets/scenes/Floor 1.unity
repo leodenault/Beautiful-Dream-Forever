@@ -3145,8 +3145,8 @@ RectTransform:
   m_RootOrder: 5
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 71, y: -126}
-  m_SizeDelta: {x: 151, y: 151.631302}
+  m_AnchoredPosition: {x: 62, y: -126}
+  m_SizeDelta: {x: 151, y: 138}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1751514936
 MonoBehaviour:
@@ -3230,7 +3230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: a3621261a96dfcb4b84a064297f570f7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 906470e2fd4e41f458d68e34423aa379, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3405,7 +3405,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22439422, guid: ba031950a88f3964b903a2108c3c7f03, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 71
+      value: 62
       objectReference: {fileID: 0}
     - target: {fileID: 22439422, guid: ba031950a88f3964b903a2108c3c7f03, type: 2}
       propertyPath: m_AnchoredPosition.y
@@ -3417,7 +3417,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22439422, guid: ba031950a88f3964b903a2108c3c7f03, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 151.631302
+      value: 138
       objectReference: {fileID: 0}
     - target: {fileID: 22439422, guid: ba031950a88f3964b903a2108c3c7f03, type: 2}
       propertyPath: m_AnchorMin.x
@@ -3446,7 +3446,7 @@ Prefab:
     - target: {fileID: 11439424, guid: ba031950a88f3964b903a2108c3c7f03, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: a3621261a96dfcb4b84a064297f570f7,
+      objectReference: {fileID: 21300000, guid: 906470e2fd4e41f458d68e34423aa379,
         type: 3}
     - target: {fileID: 11439426, guid: ba031950a88f3964b903a2108c3c7f03, type: 2}
       propertyPath: shopper
