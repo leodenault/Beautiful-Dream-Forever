@@ -49,21 +49,15 @@ public class OutfitTest {
 		outfit.SetItem(wig);
 		outfit.SetItem(top);
 		outfit.SetItem(bottom);
-		synergyStubs[0].IsSynergetic(wig, bottom).Returns<bool>(true);
-		synergyStubs[1].IsSynergetic(top, bottom).Returns<bool>(true);
-		synergyStubs[2].IsSynergetic(bottom, top).Returns<bool>(true);
-		synergyStubs[0].GetPoints().Returns<int>(2);
-		synergyStubs[1].GetPoints().Returns<int>(3);
-		synergyStubs[2].GetPoints().Returns<int>(1);
+		synergyStubs[0].GetPoints(wig, bottom).Returns<int>(2);
+		synergyStubs[1].GetPoints(top, bottom).Returns<int>(3);
+		synergyStubs[2].GetPoints(bottom, top).Returns<int>(1);
 		Assert.AreEqual(210, outfit.GetPoints());
 	}
 
 	[Test]
 	public void MultipleCallsToGetPointsGivesSameResult() {
-		synergyStubs[0].IsSynergetic(Arg.Any<ClothingData>(), Arg.Any<ClothingData>()).Returns<bool>(true);
-		synergyStubs[1].IsSynergetic(Arg.Any<ClothingData>(), Arg.Any<ClothingData>()).Returns<bool>(false);
-		synergyStubs[2].IsSynergetic(Arg.Any<ClothingData>(), Arg.Any<ClothingData>()).Returns<bool>(false);
-		synergyStubs[0].GetPoints().Returns<int>(3);
+		synergyStubs[0].GetPoints(Arg.Any<ClothingData>(), Arg.Any<ClothingData>()).Returns<int>(3);
 		outfit.SetItem(Substitute.For<ClothingData>());
 		int points = outfit.GetPoints();
 		Assert.AreEqual(points, outfit.GetPoints());

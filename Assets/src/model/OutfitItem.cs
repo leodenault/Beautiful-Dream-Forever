@@ -38,9 +38,9 @@ public class OutfitItem {
 		item = EMPTY;
 	}
 
-	public void ApplySynergy(ISynergy synergy) {
+	public void ApplySynergyPoints(int points) {
 		if (item != EMPTY) {
-			points += synergy.GetPoints();
+			this.points += points;
 		}
 	}
 

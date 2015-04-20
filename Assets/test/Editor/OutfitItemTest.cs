@@ -26,23 +26,25 @@ public class OutfitItemTest {
 
 	[Test]
 	public void PointsShouldReturnSynergizedTotalIfSynergies() {
+		int synergyPoints = 4;
 		ClothingData itemStub = Substitute.For<ClothingData>();
 		itemStub.Slot = ClothingData.ClothingSlot.TOP;
 		item.Item = itemStub;
 		ISynergy synergyStub = Substitute.For<ISynergy>();
-		synergyStub.GetPoints().Returns<int>(4);
-		item.ApplySynergy(synergyStub);
+		synergyStub.GetPoints(Arg.Any<ClothingData>(), Arg.Any<ClothingData>()).Returns<int>(synergyPoints);
+		item.ApplySynergyPoints(synergyPoints);
 		Assert.AreEqual(150, item.Points);
 	}
 
 	[Test]
 	public void PointsShouldReturnBaseIfSynergiesCleared() {
+		int synergyPoints = 4;
 		ClothingData itemStub = Substitute.For<ClothingData>();
 		itemStub.Slot = ClothingData.ClothingSlot.TOP;
 		item.Item = itemStub;
 		ISynergy synergyStub = Substitute.For<ISynergy>();
-		synergyStub.GetPoints().Returns<int>(4);
-		item.ApplySynergy(synergyStub);
+		synergyStub.GetPoints(Arg.Any<ClothingData>(), Arg.Any<ClothingData>()).Returns<int>(synergyPoints);
+		item.ApplySynergyPoints(synergyPoints);
 		Assert.AreEqual(150, item.Points);
 		item.ClearSynergies();
 		Assert.AreEqual(30, item.Points);

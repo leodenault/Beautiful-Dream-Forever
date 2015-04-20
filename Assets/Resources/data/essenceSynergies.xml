@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfEssenceSynergy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<EssenceSynergy>
-	<Essence>CUTE</Essence>
-	<Styles>
-		<ClothingStyle>ATHLETIC</ClothingStyle>
-		<ClothingStyle>COSPLAY</ClothingStyle>
-	</Styles>
-	<Points>2</Points>
+		<Essence>CUTE</Essence>
+		<Styles>
+			<ClothingStyle>ATHLETIC</ClothingStyle>
+			<ClothingStyle>COSPLAY</ClothingStyle>
+		</Styles>
+		<Points>2</Points>
 	</EssenceSynergy>
 	<EssenceSynergy>
 		<Essence>COOL</Essence>

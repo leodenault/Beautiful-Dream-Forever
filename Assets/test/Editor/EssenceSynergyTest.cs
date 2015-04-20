@@ -34,10 +34,12 @@ public class EssenceSynergyTest {
 	[Test]
 	public void IsSynergeticReturnsTrueIfEssenceAndStyleMatch() {
 		synergy.Essence = ClothingData.ClothingEssence.CLASSY;
-		synergy.Styles = new ClothingData.ClothingStyle[3];
-		synergy.Styles[0] = ClothingData.ClothingStyle.ATHLETIC;
-		synergy.Styles[1] = ClothingData.ClothingStyle.COSPLAY;
-		synergy.Styles[2] = ClothingData.ClothingStyle.FORMAL;
+		ClothingData.ClothingStyle[] styles = {
+			ClothingData.ClothingStyle.ATHLETIC,
+			ClothingData.ClothingStyle.COSPLAY,
+			ClothingData.ClothingStyle.FORMAL
+		};
+		synergy.Styles = styles;
 		ClothingData left = createLeft(ClothingData.ClothingEssence.CLASSY);
 
 		Assert.IsTrue(synergy.IsSynergetic(left, createRight(ClothingData.ClothingStyle.COSPLAY)));
@@ -48,9 +50,11 @@ public class EssenceSynergyTest {
 	[Test]
 	public void IsSynergeticReturnsFalseIfEssenceDoesntMatch() {
 		synergy.Essence = ClothingData.ClothingEssence.COOL;
-		synergy.Styles = new ClothingData.ClothingStyle[2];
-		synergy.Styles[0] = ClothingData.ClothingStyle.IDEALIST;
-		synergy.Styles[1] = ClothingData.ClothingStyle.UNIFORM;
+		ClothingData.ClothingStyle[] styles = {
+			ClothingData.ClothingStyle.IDEALIST,
+			ClothingData.ClothingStyle.UNIFORM
+		};
+		synergy.Styles = styles;
 
 		Assert.IsFalse(synergy.IsSynergetic(createLeft(ClothingData.ClothingEssence.CUTE), createRight(ClothingData.ClothingStyle.IDEALIST)));
 		Assert.IsFalse(synergy.IsSynergetic(createLeft(ClothingData.ClothingEssence.CLASSY), createRight(ClothingData.ClothingStyle.UNIFORM)));
@@ -59,11 +63,13 @@ public class EssenceSynergyTest {
 	[Test]
 	public void IsSynergeticReturnsFalseIfStyleDoesntMatch() {
 		synergy.Essence = ClothingData.ClothingEssence.CUTE;
-		synergy.Styles = new ClothingData.ClothingStyle[4];
-		synergy.Styles[0] = ClothingData.ClothingStyle.IDEALIST;
-		synergy.Styles[1] = ClothingData.ClothingStyle.UNIFORM;
-		synergy.Styles[2] = ClothingData.ClothingStyle.PREPPY;
-		synergy.Styles[3] = ClothingData.ClothingStyle.HIPSTER;
+		ClothingData.ClothingStyle[] styles = {
+			ClothingData.ClothingStyle.IDEALIST,
+			ClothingData.ClothingStyle.UNIFORM,
+			ClothingData.ClothingStyle.PREPPY,
+			ClothingData.ClothingStyle.HIPSTER
+		};
+		synergy.Styles = styles;
 		ClothingData left = createLeft(ClothingData.ClothingEssence.CUTE);
 
 		Assert.IsFalse(synergy.IsSynergetic(left, createRight(ClothingData.ClothingStyle.ATHLETIC)));

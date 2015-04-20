@@ -69,9 +69,7 @@ public class Outfit {
 			foreach (OutfitItem right in clothing.Values) {
 				if (!left.Equals(right)) {
 					foreach (ISynergy synergy in synergies) {
-						if (synergy.IsSynergetic(left.Item, right.Item)) {
-							left.ApplySynergy(synergy);
-						}
+						left.ApplySynergyPoints(synergy.GetPoints(left.Item, right.Item));
 					}
 				}
 			}

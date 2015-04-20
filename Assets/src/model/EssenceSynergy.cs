@@ -1,10 +1,12 @@
 ﻿public class EssenceSynergy : ISynergy {
+	private static string FILE = "data/essenceSynergies";
+
 	public ClothingData.ClothingEssence Essence;
 	public ClothingData.ClothingStyle[] Styles;
 	public int Points;
 
-	public int GetPoints() {
-		return Points;
+	public int GetPoints(ClothingData left, ClothingData right) {
+		return IsSynergetic(left, right) ? Points : 0;
 	}
 
 	public bool IsSynergetic(ClothingData left, ClothingData right) {
@@ -17,5 +19,9 @@
 		}
 
 		return false;
+	}
+
+	public static string FileName() {
+		return FILE;
 	}
 }
