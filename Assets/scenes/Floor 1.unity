@@ -1917,11 +1917,11 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2104254276}
-  m_RootOrder: 4
+  m_Father: {fileID: 1073910455}
+  m_RootOrder: 6
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 453, y: -116}
+  m_AnchoredPosition: {x: 468, y: -107}
   m_SizeDelta: {x: 41, y: 200}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &857127040
@@ -2207,6 +2207,7 @@ RectTransform:
   - {fileID: 1908875728}
   - {fileID: 1092604777}
   - {fileID: 1751514935}
+  - {fileID: 857127039}
   m_Father: {fileID: 245425391}
   m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 0}
@@ -2270,7 +2271,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
 --- !u!1 &1092604776
 GameObject:
   m_ObjectHideFlags: 0
@@ -2737,7 +2738,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 2104254276}
+    m_TransformParent: {fileID: 1073910455}
     m_Modifications:
     - target: {fileID: 22439422, guid: ba031950a88f3964b903a2108c3c7f03, type: 2}
       propertyPath: m_LocalPosition.x
@@ -2769,15 +2770,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22439422, guid: ba031950a88f3964b903a2108c3c7f03, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 22439422, guid: ba031950a88f3964b903a2108c3c7f03, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 453
+      value: 468
       objectReference: {fileID: 0}
     - target: {fileID: 22439422, guid: ba031950a88f3964b903a2108c3c7f03, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -116
+      value: -107
       objectReference: {fileID: 0}
     - target: {fileID: 22439422, guid: ba031950a88f3964b903a2108c3c7f03, type: 2}
       propertyPath: m_SizeDelta.x
@@ -3392,8 +3393,8 @@ RectTransform:
   m_RootOrder: 5
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 62, y: -126}
-  m_SizeDelta: {x: 151, y: 138}
+  m_AnchoredPosition: {x: 70, y: -120}
+  m_SizeDelta: {x: 215, y: 196}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1751514936
 MonoBehaviour:
@@ -3477,7 +3478,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 906470e2fd4e41f458d68e34423aa379, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 652b7eeb501c1f14ab8135e679efe5ad, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3652,19 +3653,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22439422, guid: ba031950a88f3964b903a2108c3c7f03, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 62
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 22439422, guid: ba031950a88f3964b903a2108c3c7f03, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -126
+      value: -120
       objectReference: {fileID: 0}
     - target: {fileID: 22439422, guid: ba031950a88f3964b903a2108c3c7f03, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 151
+      value: 215
       objectReference: {fileID: 0}
     - target: {fileID: 22439422, guid: ba031950a88f3964b903a2108c3c7f03, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 138
+      value: 196
       objectReference: {fileID: 0}
     - target: {fileID: 22439422, guid: ba031950a88f3964b903a2108c3c7f03, type: 2}
       propertyPath: m_AnchorMin.x
@@ -3693,7 +3694,7 @@ Prefab:
     - target: {fileID: 11439424, guid: ba031950a88f3964b903a2108c3c7f03, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 906470e2fd4e41f458d68e34423aa379,
+      objectReference: {fileID: 21300000, guid: 652b7eeb501c1f14ab8135e679efe5ad,
         type: 3}
     - target: {fileID: 11439426, guid: ba031950a88f3964b903a2108c3c7f03, type: 2}
       propertyPath: shopper
@@ -4182,7 +4183,6 @@ RectTransform:
   - {fileID: 658920716}
   - {fileID: 87149257}
   - {fileID: 146461801}
-  - {fileID: 857127039}
   m_Father: {fileID: 245425391}
   m_RootOrder: 3
   m_AnchorMin: {x: 0, y: 0}

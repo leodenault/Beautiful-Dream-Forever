@@ -44,4 +44,8 @@
 		<Opponent>NPC_MUSIC_PERSON</Opponent>
 		<Path>Music Shopper</Path>
 	</Entry>
+	<Entry>
+		<Opponent>NPC_GAS_MASK</Opponent>
+		<Path>Gas Mask Shopper</Path>
+	</Entry>
 </ArrayOfEntry>
