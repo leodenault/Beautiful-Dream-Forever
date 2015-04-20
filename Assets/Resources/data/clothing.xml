@@ -241,7 +241,7 @@
 		<Slot>SHOES</Slot>
 		<Style>COSPLAY</Style>
 		<Essence>CLASSY</Essence>
-		<Layer>8</Layer>
+		<Layer>6</Layer>
 		<Price>20</Price>
 		<Location>
 			<x>60.0</x>
@@ -1203,7 +1203,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>PREPPY</Style>
 		<Essence>CUTE</Essence>
-		<Layer>3</Layer>
+		<Layer>1</Layer>
 		<Price>10</Price>
 		<Location>
 			<x>69.0</x>

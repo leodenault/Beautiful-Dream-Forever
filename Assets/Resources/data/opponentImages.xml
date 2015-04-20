@@ -34,10 +34,14 @@
 	</Entry>
 	<Entry>
 		<Opponent>NPC_FLOWERS</Opponent>
-		<Path>Flower Girls Shoppers RESIZE 2</Path>
+		<Path>Flower Girls Shoppers RESIZE 3</Path>
 	</Entry>
 	<Entry>
 		<Opponent>NPC_BUSINESSPERSON</Opponent>
 		<Path>Wall Street Shopper</Path>
+	</Entry>
+	<Entry>
+		<Opponent>NPC_MUSIC_PERSON</Opponent>
+		<Path>Music Shopper</Path>
 	</Entry>
 </ArrayOfEntry>
