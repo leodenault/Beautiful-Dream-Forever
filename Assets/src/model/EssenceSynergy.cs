@@ -7,10 +7,10 @@
 		return Points;
 	}
 
-	public bool IsSynergetic(ClothingData data) {
-		if (data != null && data.Essence == Essence) {
+	public bool IsSynergetic(ClothingData left, ClothingData right) {
+		if (left != null && right != null && left.Essence == Essence) {
 			foreach (ClothingData.ClothingStyle style in Styles) {
-				if (data.Style == style) {
+				if (right.Style == style) {
 					return true;
 				}
 			}
