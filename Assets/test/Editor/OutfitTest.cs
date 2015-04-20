@@ -56,6 +56,45 @@ public class OutfitTest {
 	}
 
 	[Test]
+	public void GetPointsShouldReturnMultipliedPointsForFullSetAndSingleEssenceForTopBottom() {
+		ClothingData wig = Substitute.For<ClothingData>();
+		ClothingData top = Substitute.For<ClothingData>();
+		ClothingData bottom = Substitute.For<ClothingData>();
+		ClothingData shoes = Substitute.For<ClothingData>();
+		ClothingData accessory = Substitute.For<ClothingData>();
+		wig.Slot = ClothingData.ClothingSlot.WIG;
+		top.Slot = ClothingData.ClothingSlot.TOP;
+		bottom.Slot = ClothingData.ClothingSlot.BOTTOM;
+		shoes.Slot = ClothingData.ClothingSlot.SHOES;
+		accessory.Slot = ClothingData.ClothingSlot.ACCESSORY;
+		outfit.SetItem(wig);
+		outfit.SetItem(top);
+		outfit.SetItem(bottom);
+		outfit.SetItem(shoes);
+		outfit.SetItem(accessory);
+		synergyStubs[1].GetPoints(top, bottom).Returns<int>(2);
+		Assert.AreEqual(255, outfit.GetPoints());
+	}
+
+	[Test]
+	public void GetPointsShouldReturnMultipliedPointsForFullSetAndSingleEssenceForDresses() {
+		ClothingData wig = Substitute.For<ClothingData>();
+		ClothingData dress = Substitute.For<ClothingData>();
+		ClothingData shoes = Substitute.For<ClothingData>();
+		ClothingData accessory = Substitute.For<ClothingData>();
+		wig.Slot = ClothingData.ClothingSlot.WIG;
+		dress.Slot = ClothingData.ClothingSlot.DRESS;
+		shoes.Slot = ClothingData.ClothingSlot.SHOES;
+		accessory.Slot = ClothingData.ClothingSlot.ACCESSORY;
+		outfit.SetItem(wig);
+		outfit.SetItem(dress);
+		outfit.SetItem(shoes);
+		outfit.SetItem(accessory);
+		synergyStubs[1].GetPoints(accessory, wig).Returns<int>(3);
+		Assert.AreEqual(207, outfit.GetPoints());
+	}
+
+	[Test]
 	public void MultipleCallsToGetPointsGivesSameResult() {
 		synergyStubs[0].GetPoints(Arg.Any<ClothingData>(), Arg.Any<ClothingData>()).Returns<int>(3);
 		outfit.SetItem(Substitute.For<ClothingData>());
