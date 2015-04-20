@@ -1,21 +1,20 @@
 ﻿using System.Collections.Generic;
 
 public class OutfitItem {
-	private static int WIG_MULTIPLIER = 10;
-	private static int TOP_MULTIPLIER = 30;
-	private static int BOTTOM_MULTIPLIER = 30;
-	private static int DRESS_MULTIPLIER = 60;
-	private static int SHOES_MULTIPLIER = 20;
-	private static int ACCESSORY_MULTIPLIER = 10;
+	private static IDictionary<ClothingData.ClothingSlot, int> SLOT_MULTIPLIERS = new Dictionary<ClothingData.ClothingSlot, int>() {
+		{ ClothingData.ClothingSlot.WIG, 10 },
+		{ ClothingData.ClothingSlot.TOP, 30 },
+		{ ClothingData.ClothingSlot.BOTTOM, 30 },
+		{ ClothingData.ClothingSlot.DRESS, 60 },
+		{ ClothingData.ClothingSlot.SHOES, 20 },
+		{ ClothingData.ClothingSlot.ACCESSORY, 10 }
+	};
 
 	private const ClothingData EMPTY = null;
 
-	private ISynergyManager synergyManager;
-	private IList<ISynergy> synergies;
-
 	private int points;
 	public int Points {
-		get { return points; }
+		get { return (item == EMPTY) ? 0 : points * SLOT_MULTIPLIERS[item.Slot]; }
 	}
 
 	private ClothingData item;
@@ -23,70 +22,33 @@ public class OutfitItem {
 		get { return item; }
 		set {
 			item = value;
-			computePoints();
+			points = (value == EMPTY) ? 0 : 1;
 		}
 	}
 
 	public OutfitItem() {
-		init(EMPTY, SynergyManager.GetInstance());
+		init(EMPTY);
 	}
 
 	public OutfitItem(ClothingData item) {
-		init(item, SynergyManager.GetInstance());
-	}
-
-	public OutfitItem(ClothingData item, ISynergyManager synergyManager) {
-		init(item, synergyManager);
+		init(item);
 	}
 
 	public void RemoveItem() {
 		item = EMPTY;
-		computePoints();
 	}
 
-	private void init(ClothingData item, ISynergyManager synergyManager) {
-		this.item = item;
-		this.synergyManager = synergyManager;
-		computePoints();
-	}
-
-	private static int getMultiplierForSlot(ClothingData.ClothingSlot slot) {
-		switch (slot) {
-			case ClothingData.ClothingSlot.WIG:
-				return WIG_MULTIPLIER;
-			case ClothingData.ClothingSlot.TOP:
-				return TOP_MULTIPLIER;
-			case ClothingData.ClothingSlot.BOTTOM:
-				return BOTTOM_MULTIPLIER;
-			case ClothingData.ClothingSlot.DRESS:
-				return DRESS_MULTIPLIER;
-			case ClothingData.ClothingSlot.SHOES:
-				return SHOES_MULTIPLIER;
-			default:
-				return ACCESSORY_MULTIPLIER;
-		}
-	}
-
-	private void computePoints() {
-		points = 0;
-
+	public void ApplySynergy(ISynergy synergy) {
 		if (item != EMPTY) {
-			// TODO: This is a terribly slow way of getting a list of synergies applying
-			// to the given outfit. It iterates through
-			// ALL of the synergies from the SynergyManager. There should be some level
-			// of caching to improve performance
-			ISynergy[] allSynergies = synergyManager.GetSynergies();
-			synergies = new List<ISynergy>();
-
-			foreach (ISynergy synergy in allSynergies) {
-				if (synergy.IsSynergetic(item)) {
-					synergies.Add(synergy);
-					points += synergy.GetPoints();
-				}
-			}
-
-			int multiplier = getMultiplierForSlot(item.Slot);
-			points = (points == 0) ? multiplier : points * multiplier;
+			points += synergy.GetPoints();
 		}
+	}
+
+	public void ClearSynergies() {
+		points = (item == EMPTY) ? 0 : 1;
+	}
+
+	private void init(ClothingData item) {
+		this.item = item;
 	}
 }
