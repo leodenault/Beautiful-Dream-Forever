@@ -16,7 +16,7 @@ public class CameraScroll : MonoBehaviour {
 	public void Start () {
 		/* Determine camera bounds based on screen size and stuff. Based on
 		 * http://answers.unity3d.com/questions/501893/calculating-2d-camera-bounds.html */
-		float cameraWidth = GetComponent<Camera>().orthographicSize * Screen.width / Screen.height;
+		float cameraWidth = GetComponent<Camera>().camera.orthographicSize * Screen.width / Screen.height;
 		X_MIN = cameraWidth - 6.65f; //6.65 was determined by testing until it worked
 		X_MAX = 6.65f - cameraWidth;
 		translation = 0.0f;
