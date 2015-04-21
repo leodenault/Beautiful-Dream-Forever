@@ -19,7 +19,7 @@ public class ClothingData {
 	}
 
 	public enum ClothingColour {
-		NONE, RED, ORANGE1, ORANGE2, YELLOW, GREEN1, GREEN2, TEAL, BLUE, INDIGO, PURPLE, PINK
+		NONE, RED, ORANGE1, ORANGE2, YELLOW, GREEN1, GREEN2, TEAL, BLUE, INDIGO, PURPLE, PINK, BLACK, GREY, WHITE
 	}
 
 	public int Id;

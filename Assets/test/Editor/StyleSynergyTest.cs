@@ -2,12 +2,10 @@
 using NUnit.Framework;
 
 [TestFixture]
-public class StyleSynergyTest {
-
-	private StyleSynergy synergy;
+public class StyleSynergyTest : SynergyTest<ClothingData.ClothingStyle, ClothingData.ClothingStyle> {
 
 	[SetUp]
-	public void SetUp() {
+	public override void SetUp() {
 		synergy = new StyleSynergy();
 	}
 
@@ -15,29 +13,6 @@ public class StyleSynergyTest {
 		ClothingData data = new ClothingData();
 		data.Style = style;
 		return data;
-	}
-
-	private StyleSynergy.Compatibility[] createCompatibilities(ClothingData.ClothingStyle[] styles) {
-		StyleSynergy.Compatibility[] compatibilities = new StyleSynergy.Compatibility[styles.Length];
-		for (int i = 0; i < styles.Length; i++) {
-			compatibilities[i] = new StyleSynergy.Compatibility();
-			compatibilities[i].Style = styles[i];
-		}
-		return compatibilities;
-	}
-
-	private StyleSynergy.Compatibility[] createCompatibilities(ClothingData.ClothingStyle[] styles, int[] points) {
-		if (styles.Length != points.Length) {
-			throw new InvalidOperationException("Styles and points must have the same length");
-		}
-
-		StyleSynergy.Compatibility[] compatibilities = new StyleSynergy.Compatibility[styles.Length];
-		for (int i = 0; i < styles.Length; i++) {
-			compatibilities[i] = new StyleSynergy.Compatibility();
-			compatibilities[i].Style = styles[i];
-			compatibilities[i].Points = points[i];
-		}
-		return compatibilities;
 	}
 
 	[Test]
@@ -52,7 +27,7 @@ public class StyleSynergyTest {
 	[Test]
 	public void IsSynergeticReturnsTrueIfStylesAreCompatible() {
 		ClothingData.ClothingStyle style = ClothingData.ClothingStyle.ATHLETIC;
-		synergy.Style = style;
+		synergy.Tag = style;
 		ClothingData.ClothingStyle[] compatibilities = {
 			ClothingData.ClothingStyle.ATHLETIC,
 			ClothingData.ClothingStyle.COSPLAY,
@@ -69,7 +44,7 @@ public class StyleSynergyTest {
 	[Test]
 	public void IsSynergeticReturnsFalseIfStylesAreNotCompatible() {
 		ClothingData.ClothingStyle style = ClothingData.ClothingStyle.HARDCORE;
-		synergy.Style = style;
+		synergy.Tag = style;
 		ClothingData.ClothingStyle[] compatibilities = {
 			ClothingData.ClothingStyle.IDEALIST,
 			ClothingData.ClothingStyle.HIPSTER
@@ -84,7 +59,7 @@ public class StyleSynergyTest {
 
 	[Test]
 	public void IsSynergeticReturnsFalseIfLeftStyleDoesntMatch() {
-		synergy.Style = ClothingData.ClothingStyle.UNIFORM;
+		synergy.Tag = ClothingData.ClothingStyle.UNIFORM;
 		ClothingData.ClothingStyle[] compatibilities = {
 			ClothingData.ClothingStyle.IDEALIST,
 			ClothingData.ClothingStyle.HIPSTER,
@@ -103,7 +78,7 @@ public class StyleSynergyTest {
 	[Test]
 	public void GetPointsReturnsZeroIfStylesAreNotCompatible() {
 		ClothingData.ClothingStyle style = ClothingData.ClothingStyle.HARDCORE;
-		synergy.Style = style;
+		synergy.Tag = style;
 		ClothingData.ClothingStyle[] compatibilities = {
 			ClothingData.ClothingStyle.IDEALIST,
 			ClothingData.ClothingStyle.HIPSTER,
@@ -120,7 +95,7 @@ public class StyleSynergyTest {
 
 	[Test]
 	public void GetPointsReturnsZeroIfLeftStyleDoesntMatch() {
-		synergy.Style = ClothingData.ClothingStyle.HARDCORE;
+		synergy.Tag = ClothingData.ClothingStyle.HARDCORE;
 		ClothingData.ClothingStyle[] compatibilities = {
 			ClothingData.ClothingStyle.IDEALIST,
 			ClothingData.ClothingStyle.HIPSTER,
@@ -139,7 +114,7 @@ public class StyleSynergyTest {
 	[Test]
 	public void GetPointsReturnsPointsForCompatibilityIfCompatible() {
 		ClothingData.ClothingStyle style = ClothingData.ClothingStyle.ATHLETIC;
-		synergy.Style = style;
+		synergy.Tag = style;
 		ClothingData.ClothingStyle[] compatibilities = {
 			ClothingData.ClothingStyle.ATHLETIC,
 			ClothingData.ClothingStyle.COSPLAY,

@@ -1,12 +1,10 @@
 ﻿using NUnit.Framework;
 
 [TestFixture]
-public class EssenceSynergyTest {
-
-	private EssenceSynergy synergy;
+public class EssenceSynergyTest : SynergyTest<ClothingData.ClothingEssence, ClothingData.ClothingStyle> {
 
 	[SetUp]
-	public void SetUp() {
+	public override void SetUp() {
 		synergy = new EssenceSynergy();
 	}
 
@@ -33,13 +31,13 @@ public class EssenceSynergyTest {
 
 	[Test]
 	public void IsSynergeticReturnsTrueIfEssenceAndStyleMatch() {
-		synergy.Essence = ClothingData.ClothingEssence.CLASSY;
-		ClothingData.ClothingStyle[] styles = {
+		synergy.Tag = ClothingData.ClothingEssence.CLASSY;
+		ClothingData.ClothingStyle[] compatibilities = {
 			ClothingData.ClothingStyle.ATHLETIC,
 			ClothingData.ClothingStyle.COSPLAY,
 			ClothingData.ClothingStyle.FORMAL
 		};
-		synergy.Styles = styles;
+		synergy.Compatibilities = createCompatibilities(compatibilities);
 		ClothingData left = createLeft(ClothingData.ClothingEssence.CLASSY);
 
 		Assert.IsTrue(synergy.IsSynergetic(left, createRight(ClothingData.ClothingStyle.COSPLAY)));
@@ -49,12 +47,12 @@ public class EssenceSynergyTest {
 
 	[Test]
 	public void IsSynergeticReturnsFalseIfEssenceDoesntMatch() {
-		synergy.Essence = ClothingData.ClothingEssence.COOL;
-		ClothingData.ClothingStyle[] styles = {
+		synergy.Tag  = ClothingData.ClothingEssence.COOL;
+		ClothingData.ClothingStyle[] compatibilities = {
 			ClothingData.ClothingStyle.IDEALIST,
 			ClothingData.ClothingStyle.UNIFORM
 		};
-		synergy.Styles = styles;
+		synergy.Compatibilities = createCompatibilities(compatibilities);
 
 		Assert.IsFalse(synergy.IsSynergetic(createLeft(ClothingData.ClothingEssence.CUTE), createRight(ClothingData.ClothingStyle.IDEALIST)));
 		Assert.IsFalse(synergy.IsSynergetic(createLeft(ClothingData.ClothingEssence.CLASSY), createRight(ClothingData.ClothingStyle.UNIFORM)));
@@ -62,14 +60,14 @@ public class EssenceSynergyTest {
 
 	[Test]
 	public void IsSynergeticReturnsFalseIfStyleDoesntMatch() {
-		synergy.Essence = ClothingData.ClothingEssence.CUTE;
-		ClothingData.ClothingStyle[] styles = {
+		synergy.Tag  = ClothingData.ClothingEssence.CUTE;
+		ClothingData.ClothingStyle[] compatibilities = {
 			ClothingData.ClothingStyle.IDEALIST,
 			ClothingData.ClothingStyle.UNIFORM,
 			ClothingData.ClothingStyle.PREPPY,
 			ClothingData.ClothingStyle.HIPSTER
 		};
-		synergy.Styles = styles;
+		synergy.Compatibilities = createCompatibilities(compatibilities);
 		ClothingData left = createLeft(ClothingData.ClothingEssence.CUTE);
 
 		Assert.IsFalse(synergy.IsSynergetic(left, createRight(ClothingData.ClothingStyle.ATHLETIC)));

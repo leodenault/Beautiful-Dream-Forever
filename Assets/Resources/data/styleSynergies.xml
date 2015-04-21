@@ -1,139 +1,139 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ArrayOfStyleSynergy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<StyleSynergy>
-		<Style>IDEALIST</Style>
+		<Tag>IDEALIST</Tag>
 		<Compatibilities>
-			<Compatibility>
-				<Style>HARDCORE</Style>
+			<CompatibilityOfClothingStyle>
+				<Synergy>HARDCORE</Synergy>
 				<Points>3</Points>
-			</Compatibility>
-			<Compatibility>
-				<Style>HIPSTER</Style>
+			</CompatibilityOfClothingStyle>
+			<CompatibilityOfClothingStyle>
+				<Synergy>HIPSTER</Synergy>
 				<Points>3</Points>
-			</Compatibility>
-			<Compatibility>
-				<Style>IDEALIST</Style>
+			</CompatibilityOfClothingStyle>
+			<CompatibilityOfClothingStyle>
+				<Synergy>IDEALIST</Synergy>
 				<Points>5</Points>
-			</Compatibility>
+			</CompatibilityOfClothingStyle>
 		</Compatibilities>
 	</StyleSynergy>
 	<StyleSynergy>
-		<Style>HARDCORE</Style>
+		<Tag>HARDCORE</Tag>
 		<Compatibilities>
-			<Compatibility>
-				<Style>IDEALIST</Style>
+			<CompatibilityOfClothingStyle>
+				<Synergy>IDEALIST</Synergy>
 				<Points>3</Points>
-			</Compatibility>
-			<Compatibility>
-				<Style>ATHLETIC</Style>
+			</CompatibilityOfClothingStyle>
+			<CompatibilityOfClothingStyle>
+				<Synergy>ATHLETIC</Synergy>
 				<Points>3</Points>
-			</Compatibility>
-			<Compatibility>
-				<Style>HARDCORE</Style>
+			</CompatibilityOfClothingStyle>
+			<CompatibilityOfClothingStyle>
+				<Synergy>HARDCORE</Synergy>
 				<Points>5</Points>
-			</Compatibility>
+			</CompatibilityOfClothingStyle>
 		</Compatibilities>
 	</StyleSynergy>
 	<StyleSynergy>
-		<Style>ATHLETIC</Style>
+		<Tag>ATHLETIC</Tag>
 		<Compatibilities>
-			<Compatibility>
-				<Style>HARDCORE</Style>
+			<CompatibilityOfClothingStyle>
+				<Synergy>HARDCORE</Synergy>
 				<Points>3</Points>
-			</Compatibility>
-			<Compatibility>
-				<Style>UNIFORM</Style>
+			</CompatibilityOfClothingStyle>
+			<CompatibilityOfClothingStyle>
+				<Synergy>UNIFORM</Synergy>
 				<Points>3</Points>
-			</Compatibility>
-			<Compatibility>
-				<Style>ATHLETIC</Style>
+			</CompatibilityOfClothingStyle>
+			<CompatibilityOfClothingStyle>
+				<Synergy>ATHLETIC</Synergy>
 				<Points>5</Points>
-			</Compatibility>
+			</CompatibilityOfClothingStyle>
 		</Compatibilities>
 	</StyleSynergy>
 	<StyleSynergy>
-		<Style>UNIFORM</Style>
+		<Tag>UNIFORM</Tag>
 		<Compatibilities>
-			<Compatibility>
-				<Style>ATHLETIC</Style>
+			<CompatibilityOfClothingStyle>
+				<Synergy>ATHLETIC</Synergy>
 				<Points>3</Points>
-			</Compatibility>
-			<Compatibility>
-				<Style>FORMAL</Style>
+			</CompatibilityOfClothingStyle>
+			<CompatibilityOfClothingStyle>
+				<Synergy>FORMAL</Synergy>
 				<Points>3</Points>
-			</Compatibility>
-			<Compatibility>
-				<Style>UNIFORM</Style>
+			</CompatibilityOfClothingStyle>
+			<CompatibilityOfClothingStyle>
+				<Synergy>UNIFORM</Synergy>
 				<Points>5</Points>
-			</Compatibility>
+			</CompatibilityOfClothingStyle>
 		</Compatibilities>
 	</StyleSynergy>
 	<StyleSynergy>
-		<Style>FORMAL</Style>
+		<Tag>FORMAL</Tag>
 		<Compatibilities>
-			<Compatibility>
-				<Style>COSPLAY</Style>
+			<CompatibilityOfClothingStyle>
+				<Synergy>COSPLAY</Synergy>
 				<Points>3</Points>
-			</Compatibility>
-			<Compatibility>
-				<Style>UNIFORM</Style>
+			</CompatibilityOfClothingStyle>
+			<CompatibilityOfClothingStyle>
+				<Synergy>UNIFORM</Synergy>
 				<Points>3</Points>
-			</Compatibility>
-			<Compatibility>
-				<Style>IDEALIST</Style>
+			</CompatibilityOfClothingStyle>
+			<CompatibilityOfClothingStyle>
+				<Synergy>IDEALIST</Synergy>
 				<Points>5</Points>
-			</Compatibility>
+			</CompatibilityOfClothingStyle>
 		</Compatibilities>
 	</StyleSynergy>
 	<StyleSynergy>
-		<Style>COSPLAY</Style>
+		<Tag>COSPLAY</Tag>
 		<Compatibilities>
-			<Compatibility>
-				<Style>FORMAL</Style>
+			<CompatibilityOfClothingStyle>
+				<Synergy>FORMAL</Synergy>
 				<Points>3</Points>
-			</Compatibility>
-			<Compatibility>
-				<Style>HIPSTER</Style>
+			</CompatibilityOfClothingStyle>
+			<CompatibilityOfClothingStyle>
+				<Synergy>HIPSTER</Synergy>
 				<Points>3</Points>
-			</Compatibility>
-			<Compatibility>
-				<Style>COSPLAY</Style>
+			</CompatibilityOfClothingStyle>
+			<CompatibilityOfClothingStyle>
+				<Synergy>COSPLAY</Synergy>
 				<Points>5</Points>
-			</Compatibility>
+			</CompatibilityOfClothingStyle>
 		</Compatibilities>
 	</StyleSynergy>
 	<StyleSynergy>
-		<Style>PREPPY</Style>
+		<Tag>PREPPY</Tag>
 		<Compatibilities>
-			<Compatibility>
-				<Style>HIPSTER</Style>
+			<CompatibilityOfClothingStyle>
+				<Synergy>HIPSTER</Synergy>
 				<Points>3</Points>
-			</Compatibility>
-			<Compatibility>
-				<Style>COSPLAY</Style>
+			</CompatibilityOfClothingStyle>
+			<CompatibilityOfClothingStyle>
+				<Synergy>COSPLAY</Synergy>
 				<Points>3</Points>
-			</Compatibility>
-			<Compatibility>
-				<Style>PREPPY</Style>
+			</CompatibilityOfClothingStyle>
+			<CompatibilityOfClothingStyle>
+				<Synergy>PREPPY</Synergy>
 				<Points>5</Points>
-			</Compatibility>
+			</CompatibilityOfClothingStyle>
 		</Compatibilities>
 	</StyleSynergy>
 	<StyleSynergy>
-		<Style>HIPSTER</Style>
+		<Tag>HIPSTER</Tag>
 		<Compatibilities>
-			<Compatibility>
-				<Style>PREPPY</Style>
+			<CompatibilityOfClothingStyle>
+				<Synergy>PREPPY</Synergy>
 				<Points>3</Points>
-			</Compatibility>
-			<Compatibility>
-				<Style>IDEALIST</Style>
+			</CompatibilityOfClothingStyle>
+			<CompatibilityOfClothingStyle>
+				<Synergy>IDEALIST</Synergy>
 				<Points>3</Points>
-			</Compatibility>
-			<Compatibility>
-				<Style>HIPSTER</Style>
+			</CompatibilityOfClothingStyle>
+			<CompatibilityOfClothingStyle>
+				<Synergy>HIPSTER</Synergy>
 				<Points>5</Points>
-			</Compatibility>
+			</CompatibilityOfClothingStyle>
 		</Compatibilities>
 	</StyleSynergy>
 </ArrayOfStyleSynergy>
