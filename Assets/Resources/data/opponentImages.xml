@@ -48,4 +48,8 @@
 		<Opponent>NPC_GAS_MASK</Opponent>
 		<Path>Gas Mask Shopper</Path>
 	</Entry>
+	<Entry>
+		<Opponent>NPC_CATGIRL</Opponent>
+		<Path>Mecha Cat Girl Shopper</Path>
+	</Entry>
 </ArrayOfEntry>
