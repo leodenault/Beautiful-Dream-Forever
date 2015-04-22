@@ -101,7 +101,7 @@ public class BattleScreen : MonoBehaviour {
 	private Button generateNextItem() {
 		Button newItem = Instantiate(conveyorItem) as Button;
 		ClothingData item = controller.GenerateRandomItem();
-		newItem.onClick.AddListener(() => { selectConveyorItem(newItem, item); });
+		newItem.GetComponent<ConveyorItem>().onPointerDown = (() => { selectConveyorItem(newItem, item); });
 		newItem.image.sprite = controller.GetCurrentItemSprite();
 		Util.ScaleImageToMaxDimensions(newItem.image, newItem.image.sprite, conveyorTransform.rect.width, maxHeight);
 		((RectTransform)newItem.transform).sizeDelta = new Vector2(conveyorTransform.rect.width,
