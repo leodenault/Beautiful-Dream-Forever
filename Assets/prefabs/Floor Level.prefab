@@ -1531,8 +1531,8 @@ MonoBehaviour:
   attendantText: {fileID: 102008}
   blockingBlurb: {fileID: 102002}
   questionBlurb: {fileID: 101996}
-  yesBlurb: {fileID: 0}
-  noBlurb: {fileID: 0}
+  ABlurb: {fileID: 0}
+  BBlurb: {fileID: 0}
 --- !u!114 &11458224
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2174,7 +2174,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
 --- !u!223 &22342720
 Canvas:
   m_ObjectHideFlags: 1
@@ -2208,7 +2208,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
 --- !u!223 &22358222
 Canvas:
   m_ObjectHideFlags: 1
