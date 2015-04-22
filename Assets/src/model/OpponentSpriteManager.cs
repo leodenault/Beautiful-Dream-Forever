@@ -47,12 +47,12 @@ public class OpponentSpriteManager {
 					ClothingData.ClothingStyle style = (ClothingData.ClothingStyle)Enum.Parse(typeof(ClothingData.ClothingStyle), entry.Opponent);
 					shopkeeperSprites.Add(style, sprite);
 				}
-				catch (ArgumentException e1) {
+				catch (ArgumentException) {
 					try {
 						DialogueManager.DialogueCharacterEnum style = (DialogueManager.DialogueCharacterEnum)Enum.Parse(typeof(DialogueManager.DialogueCharacterEnum), entry.Opponent);
 						shopperSprites.Add(style, sprite);
 					}
-					catch (ArgumentException e2) {
+					catch (ArgumentException) {
 						Debug.LogError(string.Format("Could not load battle screen image for {0} opponent because {0} doesn't exist as a character", entry.Opponent));
 						continue;
 					}
