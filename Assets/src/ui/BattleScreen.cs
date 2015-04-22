@@ -37,12 +37,12 @@ public class BattleScreen : MonoBehaviour {
 		controller = new BattleController(timeLimit);
 		conveyorTransform = clothingConveyor.transform as RectTransform;
 		conveyorItems = new List<Button>();
-		nextItem = generateNextItem();
 
 		if (maxHeight == 0) {
 			maxHeight = conveyorTransform.rect.width;
 		}
 
+		nextItem = generateNextItem();
 		clothingArea = clothingAreaContainer.GetComponentInChildren<ClothingArea>();
 		clothingSlotSystem = itemSlotsPanel.GetComponentInChildren<ClothingSlotSystem>();
 		clothingSlotSystem.Init(clothingArea, RemoveItem);
