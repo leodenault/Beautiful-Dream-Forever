@@ -97,27 +97,14 @@ public class Battle {
 	}
 
 	private void setupClothingSets(ClothingData.ClothingStyle style) {
-		HashSet<ClothingData> otherSet = new HashSet<ClothingData>(manager.GetClothingData());
+		otherClothing = new List<ClothingData>(manager.GetClothingData());
 		
 		if (style == ClothingData.ClothingStyle.NONE) { // Battle with another shopper
 			shopProbability = 0;
 			playerProbability = 0;
-			otherClothing = new List<ClothingData>(otherSet);
 		} else {
-			HashSet<ClothingData> shopSet = new HashSet<ClothingData>(manager.GetClothingData(style));
-			HashSet<ClothingData> playerSet = new HashSet<ClothingData>(manager.GetClothingData(ClothingData.ClothingStyle.NONE));
-			otherSet.ExceptWith(shopSet);
-			otherSet.ExceptWith(playerSet);
-
-			shopClothing = new List<ClothingData>(shopSet);
-			playerClothing = new List<ClothingData>(playerSet);
-
-			if (otherSet.Count == 0) {
-				shopProbability = 50;
-				playerProbability = MAX_PROBABILITY;
-			} else {
-				otherClothing = new List<ClothingData>(otherSet);
-			}
+			shopClothing = new List<ClothingData>(manager.GetClothingData(style));
+			playerClothing = new List<ClothingData>(manager.GetClothingData(ClothingData.ClothingStyle.NONE));
 		}
 	}
 
