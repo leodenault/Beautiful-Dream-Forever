@@ -7,6 +7,7 @@ using System.Collections.Generic;
 public class BattleScreen : MonoBehaviour {
 	private const float DEFAULT_CONVEYOR_SPEED = 0.01f;
 	private const float CONVEYOR_ITEM_PADDING = 20.0f;
+	private const float CONVEYOR_BUTTON_PADDING = 1.5f;
 
 	private bool running;
 	private BattleController controller;
@@ -103,13 +104,15 @@ public class BattleScreen : MonoBehaviour {
 		newItem.onClick.AddListener(() => { selectConveyorItem(newItem, item); });
 		newItem.image.sprite = controller.GetCurrentItemSprite();
 		Util.ScaleImageToMaxDimensions(newItem.image, newItem.image.sprite, conveyorTransform.rect.width, maxHeight);
+		((RectTransform)newItem.transform).sizeDelta = new Vector2(conveyorTransform.rect.width,
+			Math.Min(newItem.image.rectTransform.rect.height * CONVEYOR_BUTTON_PADDING, maxHeight));
 		return newItem;
 	}
 
 	private void setupNextItem() {
 		nextItem.transform.SetParent(conveyorTransform);
-		nextItem.image.rectTransform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-		nextItem.transform.localPosition = new Vector3(0.0f, nextItem.image.rectTransform.rect.height, 0.0f);
+		nextItem.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+		nextItem.transform.localPosition = new Vector3(0.0f, ((RectTransform)nextItem.transform).sizeDelta.y, 0.0f);
 		conveyorItems.Insert(0, nextItem);
 		nextItem = generateNextItem();
 	}
