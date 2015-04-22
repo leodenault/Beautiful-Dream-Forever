@@ -3,8 +3,8 @@ using System.Collections.Generic;
 
 public class Shop {
 	private static float TARGET_SCORE_NUM_INCREASES = 4.0f;
-	private static int TARGET_SCORE_INCREASE = 10;
-	private static int INITIAL_TARGET_SCORE = 100;
+	private static int TARGET_SCORE_INCREASE = 625;
+	private static int INITIAL_TARGET_SCORE = 1750;
 
 	private IList<ClothingData> prizes;
 	public IList<ClothingData> Prizes {
