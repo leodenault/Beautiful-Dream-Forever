@@ -52,4 +52,8 @@
 		<Opponent>NPC_CATGIRL</Opponent>
 		<Path>Mecha Cat Girl Shopper</Path>
 	</Entry>
+	<Entry>
+		<Opponent>NPC_GALLANT</Opponent>
+		<Path>Gallant Shopper</Path>
+	</Entry>
 </ArrayOfEntry>
