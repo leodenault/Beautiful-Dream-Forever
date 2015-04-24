@@ -55,3 +55,5 @@ EditorBuildSettings:
     path: Assets/scenes/Floor 4.unity
   - enabled: 1
     path: Assets/scenes/Credits.unity
+  - enabled: 1
+    path: Assets/scenes/Title Screen.unity
