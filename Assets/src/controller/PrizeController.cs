@@ -8,7 +8,7 @@ public class PrizeController {
 	private static int NUM_PRIZES = 3;
 	private static int MIN_MONEY = 5;
 	private static int MAX_MONEY = 15;
-	private static int SHOPPER_BATTLE_TARGET_SCORE = 1500;
+	private static int SHOPPER_BATTLE_TARGET_SCORE = 1000;
 
 	private const string SHOPKEEPER_PREFIX = "shopkeepers/Shopkeeper_";
 
