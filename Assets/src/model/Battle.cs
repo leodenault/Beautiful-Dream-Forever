@@ -98,13 +98,13 @@ public class Battle {
 
 	private void setupClothingSets(ClothingData.ClothingStyle style) {
 		otherClothing = new List<ClothingData>(manager.GetClothingData());
+		playerClothing = new List<ClothingData>(manager.GetClothingData(ClothingData.ClothingStyle.NONE));
 		
 		if (style == ClothingData.ClothingStyle.NONE) { // Battle with another shopper
 			shopProbability = 0;
-			playerProbability = 0;
+			playerProbability = playerClothing.Count == 0 ? 0 : 34;
 		} else {
 			shopClothing = new List<ClothingData>(manager.GetClothingData(style));
-			playerClothing = new List<ClothingData>(manager.GetClothingData(ClothingData.ClothingStyle.NONE));
 		}
 	}
 
