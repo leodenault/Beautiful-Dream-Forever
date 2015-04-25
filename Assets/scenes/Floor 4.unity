@@ -2795,7 +2795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopper: 9
-  image: {fileID: 1646946621}
+  floor: 4
 --- !u!114 &1646946620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3216,7 +3216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopper: 6
-  image: {fileID: 1820456130}
+  floor: 4
 --- !u!114 &1820456129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3411,6 +3411,10 @@ Prefab:
     - target: {fileID: 11439426, guid: ba031950a88f3964b903a2108c3c7f03, type: 2}
       propertyPath: shopper
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11439426, guid: ba031950a88f3964b903a2108c3c7f03, type: 2}
+      propertyPath: floor
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ba031950a88f3964b903a2108c3c7f03, type: 2}
@@ -3887,6 +3891,10 @@ Prefab:
     - target: {fileID: 11439426, guid: ba031950a88f3964b903a2108c3c7f03, type: 2}
       propertyPath: shopper
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 11439426, guid: ba031950a88f3964b903a2108c3c7f03, type: 2}
+      propertyPath: floor
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ba031950a88f3964b903a2108c3c7f03, type: 2}

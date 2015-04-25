@@ -8,7 +8,6 @@ public class PrizeController {
 	private static int NUM_PRIZES = 3;
 	private static int MIN_MONEY = 5;
 	private static int MAX_MONEY = 15;
-	private static int SHOPPER_BATTLE_TARGET_SCORE = 1000;
 
 	private const string SHOPKEEPER_PREFIX = "shopkeepers/Shopkeeper_";
 
@@ -16,6 +15,11 @@ public class PrizeController {
 	public ClothingData.ClothingStyle ShopStyle {
 		get { return shopStyle; }
 		set { shopStyle = value; }
+	}
+
+	private ShopperData shopper;
+	public int ShopperFloor {
+		set { shopper = new ShopperData(value); }
 	}
 
 	private ClothingData prize;
@@ -84,7 +88,7 @@ public class PrizeController {
 
 	public void AwardPrize() {
 		if (shopStyle == ClothingData.ClothingStyle.NONE) {
-			moneyWon = generateRandomMonetaryPrize();
+			moneyWon = shopper.GenerateMoneyDrop();
 			Protagonist.GetInstance().modifyBalance(moneyWon);
 		} else {
 			Shop shop = shops[shopStyle];
@@ -131,11 +135,6 @@ public class PrizeController {
 	}
 
 	public int GetTargetScore() {
-		return (shopStyle == ClothingData.ClothingStyle.NONE) ? SHOPPER_BATTLE_TARGET_SCORE : shops[shopStyle].TargetScore;
-	}
-
-	private int generateRandomMonetaryPrize() {
-		System.Random random = new System.Random();
-		return random.Next(MIN_MONEY, MAX_MONEY);
+		return (shopStyle == ClothingData.ClothingStyle.NONE) ? shopper.GenerateTargetScore() : shops[shopStyle].TargetScore;
 	}
 }

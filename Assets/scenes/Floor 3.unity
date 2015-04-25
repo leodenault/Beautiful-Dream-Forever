@@ -595,6 +595,10 @@ Prefab:
       propertyPath: shopper
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 11439426, guid: ba031950a88f3964b903a2108c3c7f03, type: 2}
+      propertyPath: floor
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ba031950a88f3964b903a2108c3c7f03, type: 2}
   m_RootGameObject: {fileID: 1637773539}
@@ -3065,7 +3069,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopper: 10
-  image: {fileID: 1637773543}
+  floor: 3
 --- !u!114 &1637773542
 MonoBehaviour:
   m_ObjectHideFlags: 0

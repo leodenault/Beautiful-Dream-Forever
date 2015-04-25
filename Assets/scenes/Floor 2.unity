@@ -401,7 +401,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopper: 12
-  image: {fileID: 170746123}
+  floor: 2
 --- !u!114 &170746122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3996,6 +3996,10 @@ Prefab:
     - target: {fileID: 11439422, guid: ba031950a88f3964b903a2108c3c7f03, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 11439426, guid: ba031950a88f3964b903a2108c3c7f03, type: 2}
+      propertyPath: floor
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ba031950a88f3964b903a2108c3c7f03, type: 2}

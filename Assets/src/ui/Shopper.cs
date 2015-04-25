@@ -6,7 +6,7 @@ public class Shopper : MonoBehaviour {
 	private PrizeController prizeController;
 
 	public DialogueManager.DialogueCharacterEnum shopper;
-	public Image image;
+	public int floor;
 
 	public void Start() {
 		controller = GlobalController.GetInstance();
@@ -17,6 +17,7 @@ public class Shopper : MonoBehaviour {
 		prizeController.ShopStyle = ClothingData.ClothingStyle.NONE;
 		prizeController.Opponent = shopper;
 		prizeController.OpponentSprite = OpponentSpriteManager.GetInstance().FetchSprite(shopper);
+		prizeController.ShopperFloor = floor;
 		controller.Forward("Battle Screen");
 	}
 }
