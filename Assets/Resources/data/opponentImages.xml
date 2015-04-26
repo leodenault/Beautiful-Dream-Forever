@@ -55,5 +55,9 @@
 	<Entry>
 		<Opponent>NPC_GALLANT</Opponent>
 		<Path>Gallant Shopper</Path>
+	<Entry>
+		<Opponent>NPC_GYM_RAT</Opponent>
+		<Path>Gym Rat Shopper</Path>
+	</Entry>
 	</Entry>
 </ArrayOfEntry>
