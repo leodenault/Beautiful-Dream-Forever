@@ -3,8 +3,8 @@ using System.Collections.Generic;
 
 public class Battle {
 	private const float DEFAULT_TIME_LIMIT = 60.0f;
-	private const int DEFAULT_SHOP_PROBABILITY = 34;
-	private const int DEFAULT_PLAYER_PROBABILITY = 67;
+	private const int DEFAULT_PLAYER_PROBABILITY = 34;
+	private const int DEFAULT_SHOP_PROBABILITY = 67;
 	private const int MAX_PROBABILITY = 100;
 
 	private float timeLimit;
@@ -50,14 +50,10 @@ public class Battle {
 
 	public ClothingData GenerateRandomItem() {
 		int categoryTest = categorySelector.Next(MAX_PROBABILITY);
-		if (categoryTest < shopProbability) {
+		if (categoryTest < playerProbability) {
+			currentItem = pickRandomItem(playerSelector, playerClothing);
+		} else if (categoryTest < shopProbability) {
 			currentItem = pickRandomItem(shopSelector, shopClothing);
-		} else if (categoryTest < playerProbability) {
-			if (playerClothing.Count == 0) {
-				currentItem = pickRandomItem(shopSelector, shopClothing);
-			} else {
-				currentItem = pickRandomItem(playerSelector, playerClothing);
-			}
 		} else {
 			currentItem = pickRandomItem(otherSelector, otherClothing);
 		}
@@ -100,11 +96,16 @@ public class Battle {
 		otherClothing = new List<ClothingData>(manager.GetClothingData());
 		playerClothing = new List<ClothingData>(manager.GetClothingData(ClothingData.ClothingStyle.NONE));
 		
+		float playerItems = playerClothing.Count;
+		float allItems = otherClothing.Count;
+		// Make sure to make the player probability relative to the number of items in the inventory
+		playerProbability = (int)Math.Round((playerItems / allItems) * DEFAULT_PLAYER_PROBABILITY);
+		
 		if (style == ClothingData.ClothingStyle.NONE) { // Battle with another shopper
 			shopProbability = 0;
-			playerProbability = playerClothing.Count == 0 ? 0 : 34;
 		} else {
 			shopClothing = new List<ClothingData>(manager.GetClothingData(style));
+			shopProbability = DEFAULT_SHOP_PROBABILITY - ((DEFAULT_PLAYER_PROBABILITY - playerProbability) / 2);
 		}
 	}
 
