@@ -1034,7 +1034,7 @@
 		<Slot>TOP</Slot>
 		<Style>IDEALIST</Style>
 		<Essence>CLASSY</Essence>
-		<Layer>2</Layer>
+		<Layer>4</Layer>
 		<Price>30</Price>
 		<Location>
 			<x>59.0</x>
@@ -1047,7 +1047,7 @@
 		<Slot>BOTTOM</Slot>
 		<Style>IDEALIST</Style>
 		<Essence>CLASSY</Essence>
-		<Layer>2</Layer>
+		<Layer>5</Layer>
 		<Price>30</Price>
 		<Location>
 			<x>47.0</x>
@@ -1060,7 +1060,7 @@
 		<Slot>SHOES</Slot>
 		<Style>IDEALIST</Style>
 		<Essence>CLASSY</Essence>
-		<Layer>2</Layer>
+		<Layer>8</Layer>
 		<Price>10</Price>
 		<Location>
 			<x>74.0</x>
@@ -1073,7 +1073,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>IDEALIST</Style>
 		<Essence>CLASSY</Essence>
-		<Layer>2</Layer>
+		<Layer>3</Layer>
 		<Price>10</Price>
 		<Location>
 			<x>84.0</x>
@@ -1086,7 +1086,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>IDEALIST</Style>
 		<Essence>CLASSY</Essence>
-		<Layer>2</Layer>
+		<Layer>9</Layer>
 		<Price>10</Price>
 		<Location>
 			<x>35.0</x>
@@ -1099,7 +1099,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>IDEALIST</Style>
 		<Essence>CLASSY</Essence>
-		<Layer>2</Layer>
+		<Layer>9</Layer>
 		<Price>10</Price>
 		<Location>
 			<x>36.0</x>
@@ -1125,7 +1125,7 @@
 		<Slot>TOP</Slot>
 		<Style>IDEALIST</Style>
 		<Essence>COOL</Essence>
-		<Layer>2</Layer>
+		<Layer>4</Layer>
 		<Price>30</Price>
 		<Location>
 			<x>52.0</x>
@@ -1138,7 +1138,7 @@
 		<Slot>BOTTOM</Slot>
 		<Style>IDEALIST</Style>
 		<Essence>COOL</Essence>
-		<Layer>2</Layer>
+		<Layer>5</Layer>
 		<Price>30</Price>
 		<Location>
 			<x>56.0</x>
@@ -1151,7 +1151,7 @@
 		<Slot>SHOES</Slot>
 		<Style>IDEALIST</Style>
 		<Essence>COOL</Essence>
-		<Layer>2</Layer>
+		<Layer>8</Layer>
 		<Price>10</Price>
 		<Location>
 			<x>73.0</x>
@@ -1164,7 +1164,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>IDEALIST</Style>
 		<Essence>COOL</Essence>
-		<Layer>2</Layer>
+		<Layer>3</Layer>
 		<Price>10</Price>
 		<Location>
 			<x>56.0</x>
@@ -1177,7 +1177,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>IDEALIST</Style>
 		<Essence>COOL</Essence>
-		<Layer>2</Layer>
+		<Layer>3</Layer>
 		<Price>10</Price>
 		<Location>
 			<x>77.0</x>
@@ -1190,7 +1190,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>IDEALIST</Style>
 		<Essence>COOL</Essence>
-		<Layer>2</Layer>
+		<Layer>9</Layer>
 		<Price>10</Price>
 		<Location>
 			<x>68.0</x>
@@ -1203,7 +1203,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>IDEALIST</Style>
 		<Essence>COOL</Essence>
-		<Layer>2</Layer>
+		<Layer>9</Layer>
 		<Price>10</Price>
 		<Location>
 			<x>35.0</x>
@@ -1229,7 +1229,7 @@
 		<Slot>DRESS</Slot>
 		<Style>IDEALIST</Style>
 		<Essence>CUTE</Essence>
-		<Layer>2</Layer>
+		<Layer>4</Layer>
 		<Price>60</Price>
 		<Location>
 			<x>41.0</x>
@@ -1242,7 +1242,7 @@
 		<Slot>SHOES</Slot>
 		<Style>IDEALIST</Style>
 		<Essence>CUTE</Essence>
-		<Layer>2</Layer>
+		<Layer>6</Layer>
 		<Price>10</Price>
 		<Location>
 			<x>54.0</x>
@@ -1255,7 +1255,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>IDEALIST</Style>
 		<Essence>CUTE</Essence>
-		<Layer>2</Layer>
+		<Layer>1</Layer>
 		<Price>10</Price>
 		<Location>
 			<x>90.0</x>
@@ -1268,7 +1268,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>IDEALIST</Style>
 		<Essence>CUTE</Essence>
-		<Layer>2</Layer>
+		<Layer>9</Layer>
 		<Price>10</Price>
 		<Location>
 			<x>62.0</x>
@@ -1281,7 +1281,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>IDEALIST</Style>
 		<Essence>CUTE</Essence>
-		<Layer>2</Layer>
+		<Layer>9</Layer>
 		<Price>10</Price>
 		<Location>
 			<x>34.0</x>
@@ -1294,7 +1294,7 @@
 		<Slot>ACCESSORY</Slot>
 		<Style>IDEALIST</Style>
 		<Essence>CUTE</Essence>
-		<Layer>2</Layer>
+		<Layer>3</Layer>
 		<Price>10</Price>
 		<Location>
 			<x>37.0</x>
