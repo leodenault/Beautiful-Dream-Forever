@@ -21,7 +21,7 @@ public class Playlist {
 
 			if (list.Count > 0) {
 				this.playlistName = playlistName;
-				playlist = randomize(list);
+				playlist = randomize(list, true);
 				playNext();
 			}
 		}
@@ -48,6 +48,10 @@ public class Playlist {
 	}
 
 	private List<AudioClip> randomize(List<AudioClip> original) {
+		return randomize(original, false);
+	}
+
+	private List<AudioClip> randomize(List<AudioClip> original, bool allowRepeat) {
 		List<AudioClip> randomized;
 		
 		if (original.Count == 1) {
@@ -59,9 +63,7 @@ public class Playlist {
 			int first = random.Next(source.Count);
 			AudioClip firstClip = source[first];
 
-			// TODO: This will bug out if the playlist is 2 songs long, where the playlist
-			// will ALWAYS start with the first song
-			if (firstClip.name.Equals(original[original.Count - 1].name)) {
+			if (firstClip.name.Equals(original[original.Count - 1].name) && !allowRepeat) {
 				first = (first + 1) % source.Count;
 			}
 

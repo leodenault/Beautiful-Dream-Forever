@@ -69,6 +69,8 @@ if (isStaging and branch == "staging") or (not isStaging and branch == "prod"):
 	if autoMerge:
 		sourceBranch = "master" if isStaging else "staging"
 		destBranch = "staging" if isStaging else "prod"
+		print(str.format("Pulling changes from {repo} branch {branch}", repo=SOURCE_REPO, branch=destBranch))
+		execute_command("git", "pull", "--commit", SOURCE_REPO, destBranch)
 		print(str.format("Merging branch {src} into branch {dest}", src=sourceBranch, dest=destBranch))
 		execute_command("git", "merge", sourceBranch)
 
