@@ -104,6 +104,7 @@ if (isStaging and branch == "staging") or (not isStaging and branch == "prod"):
 
 	# Push the tag to Github
 	env = "staging" if isStaging else "prod"
+	execute_command("git", "pull", "--commit", SOURCE_REPO, env)
 	execute_command("git", "push", SOURCE_REPO, str.format("{branch}:{env}", branch=branch, env=env), "--tags")
 	print(str.format("Pushed tag {tag} to {repo}", tag=next_tag, repo=SOURCE_REPO))
 
