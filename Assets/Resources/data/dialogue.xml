@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfDialogueObjects xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<DialogueObject>
+		<Character>NPC_FLOWERS</Character>
+		<Responses>
+			<Battle>We're the best, you know. All of us.</Battle>
+			<PlayerWin>Ugh, no fair! My friend was holding us back.</PlayerWin>
+			<PlayerLose>How can you be better than us when you aren't anything like us?</PlayerLose>
+		</Responses>
+	</DialogueObject>
+	<DialogueObject>
+		<Character>NPC_BUSINESSPERSON</Character>
+		<Responses>
+			<Battle>You should dress for the job you want. I wonder what you want to do with your life?</Battle>
+			<PlayerWin>Well, I'd say you're moving up in the world.</PlayerWin>
+			<PlayerLose>If you don't fit in, how are you supposed to stand out?</PlayerLose>
+		</Responses>
+	</DialogueObject>
+	<DialogueObject>
+		<Character>ATTENDANT_CHESSMAN</Character>
+		<Responses>
+			<CheckFail>You don't have a stamped ticket? Why don't you go shop for a bit?</CheckFail>
+			<CheckPass>Ready to go? Say, what do you think is safest, to be the greatest of the weak, or anonymous among the great?</CheckPass>
+			<AText>Greatest of the weak</AText>
+			<BText>Anonymous among the great</BText>
+			<AnswerA>It's good to be on top, but how high is the pile?</AnswerA>
+			<AnswerB>Great company is good. But why are you there?</AnswerB>
+		</Responses>
+	</DialogueObject>
+	<DialogueObject>
+		<Character>SHOPKEEPER_PREPPY</Character>
+		<Responses>
+			<EnterShop>Welcome to my shop. Try not to soil anything.</EnterShop>
+			<Battle>Ugh. They'll let anyone into the Tower these days. This is a place for the best and most beautiful. It's my job to keep out riff-raff like you.</Battle>
+			<PlayerWin>Oh, I beg your pardon ma'am. Please, by all means, best of luck to you!</PlayerWin>
+			<PlayerLose>You see, I was right about you.</PlayerLose>
+		</Responses>
+	</DialogueObject>
+	<DialogueObject>
+		<Character>SHOPKEEPER_UNIFORM</Character>
+		<Responses>
+			<EnterShop>Are you enjoying the Tower? You'll find that it's easier to stand out if you fit in a little. How can you be yourself if you look completely different?</EnterShop>
+			<Battle>Fighting me is like comparing apples and oranges. You might get what you want but do you want what you get?</Battle>
+			<PlayerWin>That's more like the way I think you want to be.</PlayerWin>
+			<PlayerLose>I guess you're not who you thought you wanted to be.</PlayerLose>
+		</Responses>
+	</DialogueObject>
+	<DialogueObject>
+		<Character>NPC_GYM_RAT</Character>
+		<Responses>
+			<Battle>Working out isn't just a physical experience, you know? Sometimes 	I feel like dressing for the gym is the real exercise!</Battle>
+			<PlayerWin>You go girl! We should work out together sometime!</PlayerWin>
+			<PlayerLose>If you want to up your game, you should up your wardrobe.</PlayerLose>
+		</Responses>
+	</DialogueObject>
+	<DialogueObject>
+		<Character>NPC_MUSIC_PERSON</Character>
+		<Responses>
+			<Battle>There's a lot of good ideas in olden times. After all, fashion is fleeting, but style is eternal.</Battle>
+			<PlayerWin>Nice! Very old school. Well done old sport!</PlayerWin>
+			<PlayerLose>You see? Style, like music, improves with age.</PlayerLose>
+		</Responses>
+	</DialogueObject>
+	<DialogueObject>
+		<Character>ATTENDANT_KNIGHT</Character>
+		<Responses>
+			<CheckFail>You know how this works. Get your ticket validated, then we'll talk.</CheckFail>
+			<CheckPass>All set? Then how should one stand out: be the best at something conventional, or create something entirely new?</CheckPass>
+			<AText>Best at conventional</AText>
+			<BText>Create something new</BText>
+			<AnswerA>Stand on the shoulders of giants, huh? Be careful not to fall.</AnswerA>
+			<AnswerB>The road less traveled, huh? Watch out for bears.</AnswerB>
+		</Responses>
+	</DialogueObject>
+	<DialogueObject>
+		<Character>SHOPKEEPER_ATHLETIC</Character>
+		<Responses>
+			<EnterShop>You here to burn off your old clothes? Find something better fitted to you?</EnterShop>
+			<Battle>You beat Kate and Cheshire--not bad. But not yet good, and far from great. You'll find that in the Tower, everything is perfectly fair: the strong rise and the weak stay behind. Let's find out what you are!</Battle>
+			<PlayerWin>Wonderful! I am honored to have been defeated by you. I hope one day to return the favor of demonstrating a superior technique!</PlayerWin>
+			<PlayerLose>You are not yet stronger than I. Return when you are ready.</PlayerLose>
+		</Responses>
+	</DialogueObject>
+	<DialogueObject>
+		<Character>SHOPKEEPER_HIPSTER</Character>
+		<Responses>
+			<EnterShop>Hm. How very predictable. Not bad, not bad. But highly conventional.</EnterShop>
+			<Battle>The whole point of life is to become yourself, without blemish or adulteration. There's no point to an existence that follows in the footsteps of others. It takes a great deal of effort to be as genuine as me!</Battle>
+			<PlayerWin>Whatever. I'm still the best rocket-skateboard polo player in the world.</PlayerWin>
+			<PlayerLose>If you've found me consummate at this mundane sartorial engagement, you should aspire to some innovative raison d'etre.</PlayerLose>
+		</Responses>
+	</DialogueObject>
+	<DialogueObject>
+		<Character>NPC_GAS_MASK</Character>
+		<Responses>
+			<Battle>Who am I? Beyond body and face and past, I am who I want to be. Behind this mask, no one can define me. In anonymity, I can be me.</Battle>
+			<PlayerWin>I don't know who you are, but you clearly do.</PlayerWin>
+			<PlayerLose>Your identity holds you back. Let it go, and become yourself.</PlayerLose>
+		</Responses>
+	</DialogueObject>
+	<DialogueObject>
+		<Character>NPC_CHEMIST</Character>
+		<Responses>
+			<Battle>You can call me Jekyll but I'm not gonna Hyde. There is more of the self in a quaff or a puff than a thousand tracts of ancient Greek. The universe is singing and the stuff is my megaphone!</Battle>
+			<PlayerWin>You found yourself in yourself? That's Greek to me.</PlayerWin>
+			<PlayerLose>Tune in to yourself, then we'll talk.</PlayerLose>
+		</Responses>
+	</DialogueObject>
+	<DialogueObject>
+		<Character>ATTENDANT_BISHOP</Character>
+		<Responses>
+			<CheckFail>Go on back. Go on. You know the drill: validations, then ascension.</CheckFail>
+			<CheckPass>You're almost there. But answer me this: what deserves success--strong effort or great desire?</CheckPass>
+			<AText>Strong effort</AText>
+			<BText>Great desire</BText>
+			<AnswerB>Of course feelings are inherently valid. But can they be trusted?</AnswerB>
+			<AnswerA>Of course actions speak louder than words. Try not to deafen anyone.</AnswerA>
+		</Responses>
+	</DialogueObject>
+	<DialogueObject>
+		<Character>SHOPKEEPER_IDEALIST</Character>
+		<Responses>
+			<EnterShop>This is a place of love. I hope you find what you're looking for.</EnterShop>
+			<Battle>What do you love? What do you hate? There is your whole world. We are shadows, and only the flickers of our hearts tells us that we are real.</Battle>
+			<PlayerWin>Truly, your passion for victory exceeds my own. Nurture your flame, and it shall propel you to greater heights.</PlayerWin>
+			<PlayerLose>You are as yet insufficiently desirous of victory. Do you really want this?</PlayerLose>
+		</Responses>
+	</DialogueObject>
+	<DialogueObject>
+		<Character>SHOPKEEPER_HARDCORE</Character>
+		<Responses>
+			<EnterShop>If you're here for praise, it's the wrong place. You either accept what you are, or you're nothing.</EnterShop>
+			<Battle>If you love someone, embrace them. If you are sad, weep. If you feel, act. Until you tell the world your will, it's crap on the walls of your brain.</Battle>
+			<PlayerWin>You have fought and won. You deserve this.</PlayerWin>
+			<PlayerLose>Nothing comes easy. If you want this, try harder.</PlayerLose>
+		</Responses>
+	</DialogueObject>
+	<DialogueObject>
+		<Character>NPC_GALLANT</Character>
+		<Responses>
+			<Battle>Are you here for the same reason I am? Of course you are!</Battle>
+			<PlayerWin>How splendid a figure you cut!</PlayerWin>
+			<PlayerLose>As I suspected, you're nothing compared to me!</PlayerLose>
+		</Responses>
+	</DialogueObject>
+	<DialogueObject>
+		<Character>NPC_CATGIRL</Character>
+		<Responses>
+			<Battle>They said I was trying too many things, but really, they were just boring!</Battle>
+			<PlayerWin>Maybe I can dial back my reference pools and still be interesting...</PlayerWin>
+			<PlayerLose>Quantity has a quality all of its own!</PlayerLose>
+		</Responses>
+	</DialogueObject>
+	<DialogueObject>
+		<Character>ATTENDANT_ROOK</Character>
+		<Responses>
+			<CheckFail>Come now. You should know that you need two validations before we can proceed. Or are you testing me?</CheckFail>
+			<!-- TODO: Remove this Battle event once the Red Queen is in. Just using it now for temporary random uses
+		<CheckPass>Nicely done. You're almost there. Now, which is the more genuine expression of the self: a falsehood firmly believed, or a truth ignored?</CheckPass-->
+			<CheckPass>Congratulations, you have defeated all of the shopkeepers!</CheckPass>
+			<AText>Falsehood believed</AText>
+			<BText>Truth ignored</BText>
+			<AnswerA>They say ignorance is bliss. But is it real?</AnswerA>
+			<AnswerB>WE NEED DIALOGUE HERE YO</AnswerB>
+		</Responses>
+	</DialogueObject>
+	<DialogueObject>
+		<Character>SHOPKEEPER_FORMAL</Character>
+		<Responses>
+			<EnterShop>Darling, welcome! I hope we can find exactly something to suit you.</EnterShop>
+			<Battle>If you know yourself, you cannot help but succeed. Do you know yourself, in all your glory and tawdry mortality? We shall see.</Battle>
+			<PlayerWin>It is a difficult thing, to know what you truly are. I wonder what illusions you have lost?</PlayerWin>
+			<PlayerLose>Still you fool yourself with lies and illusions. I suggest a good strong look in the mirror, if you want to progress from here.</PlayerLose>
+		</Responses>
+	</DialogueObject>
+	<DialogueObject>
+		<Character>SHOPKEEPER_COSPLAY</Character>
+		<Responses>
+			<EnterShop>A challenger approaches! Know, peon, that you stand before Nikki Sunfyre, Empress of All Stars!</EnterShop>
+			<Battle>Reality is a lie that we tell ourselves. But do not despair! For in revealing this solitary truth, I have opened the gateway to a thousand new realities. Lie to yourself! Lie until you are who you wish to be! Lie until you are GOD!.</Battle>
+			<PlayerWin>This is not even my FINAL FORM! Now I shall destroy you!!! ...but instead, why don't I validate your ticket? Truly I am a merciful goddess!</PlayerWin>
+			<PlayerLose>HAHAHAHA you cling to your foolish reality like an anchor. And so it weighs you down.</PlayerLose>
+		</Responses>
+	</DialogueObject>
+	<DialogueObject>
+		<Character>BOSS_RED_QUEEN</Character>
+		<Responses>
+			<Battle>
+				<ArrayOfQuestions>
+					<Question>
+						<ID>0</ID>
+						<Prompt>What will you do when I crush you and cast you from the Tower?</Prompt>
+						<Answers>
+							<Answer>
+								<AnswerType>W</AnswerType>
+								<AnswerText>I will find a new tower to climb, one whose steps match my spirit.</AnswerText>
+							</Answer>
+							<Answer>
+								<AnswerType>R</AnswerType>
+								<AnswerText>I will become stronger, fight my way back, and triumph!</AnswerText>
+							</Answer>
+						</Answers>
+					</Question>
+					<Question>
+						<ID>1</ID>
+						<Prompt>What would you do if you somehow manage to defeat me?</Prompt>
+						<Answers>
+							<Answer>
+								<AnswerType>W</AnswerType>
+								<AnswerText>I will leave, satisfied with what I have accomplished.</AnswerText>
+							</Answer>
+							<Answer>
+								<AnswerType>R</AnswerType>
+								<AnswerText>I will rule, waiting for a new challenger to test me.</AnswerText>
+							</Answer>
+						</Answers>
+					</Question>
+					<Question>
+						<ID>2</ID>
+						<Prompt>Who are you? Who ARE you? WHO ARE YOU?</Prompt>
+						<Answers>
+							<Answer>
+								<AnswerType>W</AnswerType>
+								<AnswerText>I am who I am.</AnswerText>
+							</Answer>
+							<Answer>
+								<AnswerType>R</AnswerType>
+								<AnswerText>I am who I need to be! *pow*</AnswerText>
+							</Answer>
+						</Answers>
+					</Question>
+				</ArrayOfQuestions>
+			</Battle>
+		</Responses>
+	</DialogueObject>
+</ArrayOfDialogueObjects>

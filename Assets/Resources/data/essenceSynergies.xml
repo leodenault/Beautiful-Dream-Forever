@@ -1,29 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfEssenceSynergy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<EssenceSynergy>
-	<Essence>CUTE</Essence>
-	<Styles>
-		<ClothingStyle>ATHLETIC</ClothingStyle>
-		<ClothingStyle>COSPLAY</ClothingStyle>
-	</Styles>
-	<Points>2</Points>
+		<Tag>CUTE</Tag>
+		<Compatibilities>
+			<CompatibilityOfClothingStyle>
+				<Synergy>ATHLETIC</Synergy>
+				<Points>2</Points>
+			</CompatibilityOfClothingStyle>
+			<CompatibilityOfClothingStyle>
+				<Synergy>COSPLAY</Synergy>
+				<Points>2</Points>
+			</CompatibilityOfClothingStyle>
+		</Compatibilities>
 	</EssenceSynergy>
 	<EssenceSynergy>
-		<Essence>COOL</Essence>
-		<Styles>
-			<ClothingStyle>HARDCORE</ClothingStyle>
-			<ClothingStyle>IDEALIST</ClothingStyle>
-			<ClothingStyle>HIPSTER</ClothingStyle>
-		</Styles>
-		<Points>2</Points>
+		<Tag>COOL</Tag>
+		<Compatibilities>
+			<CompatibilityOfClothingStyle>
+				<Synergy>HARDCORE</Synergy>
+				<Points>2</Points>
+			</CompatibilityOfClothingStyle>
+			<CompatibilityOfClothingStyle>
+				<Synergy>IDEALIST</Synergy>
+				<Points>2</Points>
+			</CompatibilityOfClothingStyle>
+			<CompatibilityOfClothingStyle>
+				<Synergy>HIPSTER</Synergy>
+				<Points>2</Points>
+			</CompatibilityOfClothingStyle>
+		</Compatibilities>
 	</EssenceSynergy>
 	<EssenceSynergy>
-		<Essence>CLASSY</Essence>
-		<Styles>
-			<ClothingStyle>FORMAL</ClothingStyle>
-			<ClothingStyle>UNIFORM</ClothingStyle>
-			<ClothingStyle>PREPPY</ClothingStyle>
-		</Styles>
-		<Points>2</Points>
+		<Tag>CLASSY</Tag>
+		<Compatibilities>
+			<CompatibilityOfClothingStyle>
+				<Synergy>FORMAL</Synergy>
+				<Points>2</Points>
+			</CompatibilityOfClothingStyle>
+			<CompatibilityOfClothingStyle>
+				<Synergy>UNIFORM</Synergy>
+				<Points>2</Points>
+			</CompatibilityOfClothingStyle>
+			<CompatibilityOfClothingStyle>
+				<Synergy>PREPPY</Synergy>
+				<Points>2</Points>
+			</CompatibilityOfClothingStyle>
+		</Compatibilities>
 	</EssenceSynergy>
 </ArrayOfEssenceSynergy>

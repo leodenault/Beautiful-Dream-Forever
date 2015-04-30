@@ -1,15 +1,18 @@
-﻿using UnityEngine;
-using System.IO;
-using System.Xml.Serialization;
+﻿using System.Collections.Generic;
 
 public class SynergyManager : ISynergyManager {
 	private static SynergyManager INSTANCE;
-	private static string FILE = "data/essenceSynergies";
 
-	private EssenceSynergy[] essenceSynergies;
+	private List<ISynergy> synergies;
 
 	private SynergyManager() {
-		essenceSynergies = Util.LoadXmlFile<EssenceSynergy[]>(FILE);
+		IList<ISynergy> essenceSynergies = new List<ISynergy>(Util.LoadXmlFile<EssenceSynergy[]>(EssenceSynergy.FILE));
+		IList<ISynergy> styleSynergies = new List<ISynergy>(Util.LoadXmlFile<StyleSynergy[]>(StyleSynergy.FILE));
+		IList<ISynergy> colourSynergies = new List<ISynergy>(Util.LoadXmlFile<ColourSynergy[]>(ColourSynergy.FILE));
+		synergies = new List<ISynergy>(essenceSynergies.Count + styleSynergies.Count + colourSynergies.Count);
+		synergies.AddRange(essenceSynergies);
+		synergies.AddRange(styleSynergies);
+		synergies.AddRange(colourSynergies);
 	}
 
 	public static SynergyManager GetInstance() {
@@ -21,6 +24,6 @@ public class SynergyManager : ISynergyManager {
 	}
 
 	public ISynergy[] GetSynergies() {
-		return essenceSynergies;
+		return synergies.ToArray();
 	}
 }

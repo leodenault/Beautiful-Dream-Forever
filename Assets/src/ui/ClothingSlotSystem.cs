@@ -7,6 +7,9 @@ public class ClothingSlotSystem : MonoBehaviour {
 	private IList<ClothingSelection> slotList;
 	private ClothingSelection activeSlot;
 	private ClothingArea clothingArea;
+	private Button dressButton;
+	private Button topButton;
+	private Button bottomButton;
 
 	public delegate void SelectSlotCallback(ClothingSelection activeSelection);
 
@@ -22,12 +25,20 @@ public class ClothingSlotSystem : MonoBehaviour {
 	public void Init(ClothingArea clothingArea, SelectSlotCallback selectSlotCallback) {
 		slotList = new List<ClothingSelection>();
 		this.clothingArea = clothingArea;
-		Button[] clothingSlots = GetComponentsInChildren<Button>();
+		Button[] clothingSlots = GetComponentsInChildren<Button>(true);
 
 		// Add the button click listeners for the clothing slots
 		foreach (Button button in clothingSlots) {
-			ClothingSelection slotSelection = button.GetComponentInChildren<ClothingSelection>();
+			ClothingSelection slotSelection = button.GetComponentsInChildren<ClothingSelection>(true)[0]; // AAGGHHHH WHYYY UNITY!?
 			button.onClick.AddListener(() => { selectSlot(slotSelection, selectSlotCallback); });
+
+			if (slotSelection.Equals(dressSlot)) {
+				dressButton = button;
+			} else if (slotSelection.Equals(topSlot)) {
+				topButton = button;
+			} else if (slotSelection.Equals(bottomSlot)) {
+				bottomButton = button;
+			}
 		}
 
 		slotList.Add(wigSlot);
@@ -50,21 +61,15 @@ public class ClothingSlotSystem : MonoBehaviour {
 	}
 
 	public void UpdateActiveSlot(ClothingData data) {
-		Sprite sprite = Resources.Load<Sprite>(data.Path);
-		Image slot = clothingArea.GetImageForSlot(data.Slot);
-
-		slot.sprite = sprite;
-		slot.rectTransform.sizeDelta = new Vector2(sprite.rect.width, sprite.rect.height);
-		slot.rectTransform.localPosition = data.Location;
-		slot.gameObject.SetActive(true);
+		clothingArea.SetSlot(data);
+		handleDresses(data.Slot);
 
 		activeSlot = getClothingSelectionForSlot(data.Slot);
 		activeSlot.Clothing = data;
 	}
 
-	public Sprite UnsetActiveSlot() {
-		Sprite activeSprite = null;
-
+	// Return the next slot that contains an item. If none exist, then return null
+	public ClothingSelection UnsetActiveSlot() {
 		if (activeSlot != null) {
 			unsetSlot(activeSlot);
 			activeSlot = null;
@@ -72,11 +77,10 @@ public class ClothingSlotSystem : MonoBehaviour {
 			// See if another slot is currently filled. If it is, make it the active slot
 			ClothingSelection slot = findNextEquipped();
 			if (slot != null) {
-				activeSprite = slot.Sprite;
 				activeSlot = slot;
 			}
 		}
-		return activeSprite;
+		return activeSlot;
 	}
 
 	public void Clear() {
@@ -88,9 +92,7 @@ public class ClothingSlotSystem : MonoBehaviour {
 	private void unsetSlot(ClothingSelection slot) {
 		if (slot.Clothing != null) {
 			// Remove clothing area sprite
-			Image slotTarget = clothingArea.GetImageForSlot(slot.Clothing.Slot);
-			slotTarget.sprite = null;
-			slotTarget.gameObject.SetActive(false);
+			clothingArea.ClearSlot(slot.Clothing);
 
 			// Unset the slot
 			slot.Clothing = null;
@@ -130,5 +132,20 @@ public class ClothingSlotSystem : MonoBehaviour {
 		}
 
 		return null;
+	}
+
+	private void handleDresses(ClothingData.ClothingSlot slot) {
+		if (slot == ClothingData.ClothingSlot.DRESS) {
+			topButton.gameObject.SetActive(false);
+			bottomButton.gameObject.SetActive(false);
+			dressButton.gameObject.SetActive(true);
+			unsetSlot(topSlot);
+			unsetSlot(bottomSlot);
+		} else if (slot == ClothingData.ClothingSlot.TOP || slot == ClothingData.ClothingSlot.BOTTOM) {
+			topButton.gameObject.SetActive(true);
+			bottomButton.gameObject.SetActive(true);
+			dressButton.gameObject.SetActive(false);
+			unsetSlot(dressSlot);
+		}
 	}
 }

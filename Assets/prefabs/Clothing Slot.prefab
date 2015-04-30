@@ -10,6 +10,7 @@ GameObject:
   - 224: {fileID: 22489566}
   - 222: {fileID: 22289566}
   - 114: {fileID: 11489566}
+  - 114: {fileID: 11468506}
   m_Layer: 5
   m_Name: Clothing Slot
   m_TagString: Untagged
@@ -17,6 +18,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &11468506
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59544eae40fe1f94691c7c92a220f541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 11489566}
 --- !u!114 &11489566
 MonoBehaviour:
   m_ObjectHideFlags: 1

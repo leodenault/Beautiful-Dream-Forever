@@ -3,15 +3,19 @@ using System.Collections;
 
 public class ShopkeeperButton : MonoBehaviour
 {
+	private static string DRESSINGROOM_SCENE_SUFFIX = " Shop Dressingroom";
 
-    GlobalController controller;
+    private GlobalController controller;
+
+	public ClothingData.ClothingStyle shopStyle;
 
     public void Start() {
         controller = GlobalController.GetInstance();
     }
 
-    public void LoadAthleticDressing() {
-        controller.Forward("Athletic Shop Dressingroom");
+    public void LoadDressingRoom() {
+		string shopType = Util.ReadableEnumName<ClothingData.ClothingStyle>(shopStyle);
+        controller.Forward(string.Format("{0}{1}", shopType, DRESSINGROOM_SCENE_SUFFIX));
     }
 
 }

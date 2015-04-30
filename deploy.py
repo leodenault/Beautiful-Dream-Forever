@@ -3,9 +3,9 @@ import sys, getopt
 from subprocess import Popen, PIPE
 from decimal import getcontext, Decimal
 
-SOURCE_REPO = "git@github.com:leodenault/fashion.git"
-STAGING_REPO = "git@heroku.com:fashion-game-staging.git"
-PROD_REPO = "git@heroku.com:fashion-game.git"
+SOURCE_REPO = "git@github.com:leodenault/Beautiful-Dream-Forever.git"
+STAGING_REPO = "git@heroku.com:beautiful-dream-forever-stg.git"
+PROD_REPO = "git@heroku.com:beautiful-dream-forever.git"
 USAGE_TEXT = "Usage: deploy.py [-h|--help] [-m|--automerge] <environment>\n\nParameters:\n\tenvironment:\tEither \"staging\" for the staging environment or \"prod\" for the production environment"
 
 def execute_command(command, *args):

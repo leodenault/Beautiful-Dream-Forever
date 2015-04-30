@@ -10,25 +10,23 @@ public class ClothingSelection : MonoBehaviour {
 	public GameObject container;
 	public Image clothingPreview;
 
-	private ClothingData clothing;
+	private ClothingRepresentation representation = new ClothingRepresentation();
+
 	public ClothingData Clothing {
-		get { return clothing; }
+		get { return representation.Clothing; }
 		set {
 			if (value == null) {
-				sprite = null;
-				clothing = null;
+				representation.Clothing = null;
 				clothingPreview.gameObject.SetActive(false);
 			} else {
-				this.clothing = value;
-				sprite = Resources.Load<Sprite>(clothing.Path);
-				Util.ScaleImageToMaxDimensions(clothingPreview, sprite, maxWidth, maxHeight);
+				representation.Clothing = value;
+				Util.ScaleImageToMaxDimensions(clothingPreview, representation.Sprite, maxWidth, maxHeight);
 				clothingPreview.gameObject.SetActive(true);
 			}
 		}
 	}
 
-	private Sprite sprite;
 	public Sprite Sprite {
-		get { return sprite; }
+		get { return representation.Sprite; }
 	}
 }

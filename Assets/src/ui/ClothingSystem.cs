@@ -4,25 +4,36 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
+// TODO: Split this class into a base class with subclasses for wardrobe and
+// dressing room variations
 public class ClothingSystem : MonoBehaviour {
 	private static float PREVIEW_WIDTH = 74.0f;
 	private static float PREVIEW_HEIGHT = 104.0f;
 
 	private bool isEquipped;
+	private Sprite buySprite;
 	private ClothingSystemController controller;
-	private ClothingSelection activeTile;
+	private ClothingRepresentation selected;
 	private	ClothingArea clothingArea;
 	private ClothingSlotSystem clothingSlotSystem;
 	private Button[] pageTiles;
 
 	public ClothingData.ClothingStyle shopStyle;
 	public Button equipButton;
+	public Button battleButton;
+	public Button buyButton;
 	public Sprite equipImage;
 	public Sprite unequipImage;
 	public Image preview;
 	public GameObject clothingAreaContainer;
 	public GameObject pageTilePanel;
 	public GameObject itemSlotsPanel;
+	public StatsPanel statsPanel;
+	public BattleModal battleModal;
+	public BuyModal buyModal;
+	public MoneyCount moneyCount;
+	public Text priceText;
+	public Text amountText;
 
 	public void Start()
 	{
@@ -33,7 +44,12 @@ public class ClothingSystem : MonoBehaviour {
 		controller = new ClothingSystemController(shopStyle, pageTiles.Length);
 		controller.CurrentPage(pageTiles);
 
-		activeTile = pageTiles[0].GetComponentInChildren<ClothingSelection>();
+		if (buyButton != null) {
+			buySprite = buyButton.image.sprite;
+		}
+
+		selected = new ClothingRepresentation();
+		updateSelected(pageTiles[0].GetComponentInChildren<ClothingSelection>());
 		// Add the button click listeners for the page tiles
 		foreach (Button button in pageTiles) {
 			ClothingSelection pageTile = button.GetComponentInChildren<ClothingSelection>();
@@ -41,11 +57,11 @@ public class ClothingSystem : MonoBehaviour {
 		}
 
 		clothingSlotSystem.Init(clothingArea, selectSlotCallback);
-		displayPreview(activeTile.Sprite);
+		updateBattleButtonStatus();
 	}
 
 	public void Equip() {
-		if (activeTile.Clothing != null) {
+		if (selected.Clothing != null) {
 			if (isEquipped)
 			{
 				unequipClothing();
@@ -59,18 +75,20 @@ public class ClothingSystem : MonoBehaviour {
 
 	public void PreviousPage() {
 		controller.PreviousPage(pageTiles);
-		displayPreview(activeTile.Sprite);
 	}
 
 	public void NextPage() {
 		controller.NextPage(pageTiles);
-		displayPreview(activeTile.Sprite);
+	}
+
+	public void Buy() {
+		buyModal.Controller = controller;
+		buyModal.Show(selected, updateSystemWithNewPurchase);
 	}
 
 	private void selectClothing(ClothingSelection pageTile) {
 		if (pageTile.Clothing != null) {
-			activeTile = pageTile;
-			displayPreview(activeTile.Sprite);
+			updateSelected(pageTile);
 
 			if (clothingSlotSystem.MakeActive(pageTile.Clothing)) {
 				setEquip(false);
@@ -103,19 +121,66 @@ public class ClothingSystem : MonoBehaviour {
 	}
 
 	private void equipClothing() {
-		if (activeTile.Clothing != null) {
-			clothingSlotSystem.UpdateActiveSlot(activeTile.Clothing);
+		if (selected.Clothing != null) {
+			clothingSlotSystem.UpdateActiveSlot(selected.Clothing);
 		}
 		setEquip(false);
 	}
 
 	private void unequipClothing() {
-		Sprite activeSprite = clothingSlotSystem.UnsetActiveSlot();
-		setEquip(activeSprite == null);
+		ClothingSelection activeSelection = clothingSlotSystem.UnsetActiveSlot();
+		setEquip(activeSelection == null);
 
-		if (activeSprite == null) {
-			activeSprite = activeTile.Sprite;
+		if (activeSelection == null) {
+			displayPreview(selected.Sprite);
+		} else {
+			updateSelected(activeSelection);
 		}
-		displayPreview(activeSprite);
+	}
+
+	private void updateSelected(ClothingSelection selection) {
+		selected.Clothing = selection.Clothing;
+		updateBuyButtonStatus(selected);
+		displayPreview(selected.Sprite);
+		statsPanel.UpdateStats(selection.Clothing);
+
+		// TODO: SERIOUSLY NEED to refactor this class!!!
+		if (priceText != null && amountText != null) {
+			if (controller.IsOwned(selection.Clothing)) {
+				priceText.text = "Owned";
+				amountText.text = "";
+			} else {
+				priceText.text = "Price";
+				amountText.text = selection.Clothing.Price.ToString();
+			}
+		}
+	}
+
+	private void updateBattleButtonStatus() {
+		if (controller.AllItemsAreOwned()) {
+			if (battleButton != null) {
+				battleButton.image.sprite = controller.DisabledBattleButton();
+				battleButton.interactable = false;
+			}
+		}
+	}
+
+	private void updateBuyButtonStatus(ClothingRepresentation item) {
+		if (buyButton != null) {
+			if (controller.IsOwned(item.Clothing)) {
+				buyButton.image.sprite = controller.DisabledBuyButton();
+				buyButton.interactable = false;
+			} else {
+				buyButton.image.sprite = buySprite;
+				buyButton.interactable = true;
+			}
+		}
+	}
+
+	private void updateSystemWithNewPurchase() {
+		updateBattleButtonStatus();
+		updateBuyButtonStatus(selected);
+		battleModal.SetupPrizes();
+		moneyCount.UpdateFunds();
 	}
 }

@@ -1,21 +1,11 @@
-﻿public class EssenceSynergy : ISynergy {
-	public ClothingData.ClothingEssence Essence;
-	public ClothingData.ClothingStyle[] Styles;
-	public int Points;
+﻿public class EssenceSynergy : Synergy<ClothingData.ClothingEssence, ClothingData.ClothingStyle> {
+	public static string FILE = "data/essenceSynergies";
 
-	public int GetPoints() {
-		return Points;
+	protected override ClothingData.ClothingEssence extractLeftProperty(ClothingData left) {
+		return left.Essence;
 	}
 
-	public bool IsSynergetic(ClothingData data) {
-		if (data != null && data.Essence == Essence) {
-			foreach (ClothingData.ClothingStyle style in Styles) {
-				if (data.Style == style) {
-					return true;
-				}
-			}
-		}
-
-		return false;
+	protected override ClothingData.ClothingStyle extractRightProperty(ClothingData right) {
+		return right.Style;
 	}
 }

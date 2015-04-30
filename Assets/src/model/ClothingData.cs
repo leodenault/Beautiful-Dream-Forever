@@ -18,7 +18,13 @@ public class ClothingData {
 		PVC, METAL, DENIM, COTTON, PATTERN, LEATHER
 	}
 
+	public enum ClothingColour {
+		NONE, RED, ORANGE1, ORANGE2, YELLOW, GREEN1, GREEN2, TEAL, BLUE, INDIGO, PURPLE, PINK, BLACK, GREY, WHITE
+	}
+
 	public int Id;
+	public int Layer;
+	public int Price;
 	public string Name;
 	public string Path;
 	public string Description;
@@ -27,4 +33,5 @@ public class ClothingData {
 	public ClothingStyle Style;
 	public ClothingEssence Essence;
 	public ClothingTexture Texture;
+	public ClothingColour Colour;
 }

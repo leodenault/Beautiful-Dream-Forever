@@ -1,13 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Floor2UI : MonoBehaviour {
-
-	GlobalController controller;
-
-	public void Start() {
-		controller = GlobalController.GetInstance();
-	}              
+public class Floor2UI : FloorUI {
 
 	public void LoadHipster() {
 		controller.Forward("Hipster Shop");
@@ -15,10 +9,6 @@ public class Floor2UI : MonoBehaviour {
 
     public void LoadAthletic() {
         controller.Forward("Athletic Shop");
-    }
-
-    public void LoadFloor3() {
-        controller.Forward("Floor 3");
     }
 
     public void LoadFloor2() {
