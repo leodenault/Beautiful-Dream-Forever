@@ -69,6 +69,8 @@ if (isStaging and branch == "staging") or (not isStaging and branch == "prod"):
 	if autoMerge:
 		sourceBranch = "master" if isStaging else "staging"
 		destBranch = "staging" if isStaging else "prod"
+		print(str.format("Pulling changes from {repo} branch {branch}", repo=SOURCE_REPO, branch=destBranch))
+		execute_command("git", "pull", "--commit", SOURCE_REPO, destBranch)
 		print(str.format("Merging branch {src} into branch {dest}", src=sourceBranch, dest=destBranch))
 		execute_command("git", "merge", sourceBranch)
 
@@ -104,7 +106,6 @@ if (isStaging and branch == "staging") or (not isStaging and branch == "prod"):
 
 	# Push the tag to Github
 	env = "staging" if isStaging else "prod"
-	execute_command("git", "pull", "--commit", SOURCE_REPO, env)
 	execute_command("git", "push", SOURCE_REPO, str.format("{branch}:{env}", branch=branch, env=env), "--tags")
 	print(str.format("Pushed tag {tag} to {repo}", tag=next_tag, repo=SOURCE_REPO))
 
