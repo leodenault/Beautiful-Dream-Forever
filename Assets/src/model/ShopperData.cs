@@ -21,7 +21,7 @@ public class ShopperData {
 
 	public int GenerateMoneyDrop() {
 		int square = floor * floor;
-		int min = square - (int)Math.Floor(square / 8.0f);
+		int min = square - (int)Math.Floor(square / 8.0f) + 2;
 		int gap = floor * 2;
 		Random random = new Random();
 		return random.Next(min, min + gap + 1);
