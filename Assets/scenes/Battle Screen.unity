@@ -7716,7 +7716,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1754230944}
-  - 82: {fileID: 1754230943}
   - 114: {fileID: 1754230942}
   m_Layer: 0
   m_Name: Playlist
@@ -7737,67 +7736,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8637f2dfd53b60428d0c0e5b384f69e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playlist: battle
-  source: {fileID: 1754230943}
---- !u!82 &1754230943
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 8229868, guid: 37e306cdf9acb4245832f15eefdb3da2,
-    type: 2}
-  m_PrefabInternal: {fileID: 1897974864}
-  m_GameObject: {fileID: 1754230941}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 402fc04388b2e5c48bd58eea337c4459, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
+  playlist: default
+  source: {fileID: 8296144, guid: cd5323fcb459db9479b6d55b8583e015, type: 2}
 --- !u!4 &1754230944
 Transform:
   m_ObjectHideFlags: 0
@@ -8190,7 +8130,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11429868, guid: 37e306cdf9acb4245832f15eefdb3da2, type: 2}
       propertyPath: playlist
-      value: battle
+      value: default
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37e306cdf9acb4245832f15eefdb3da2, type: 2}
