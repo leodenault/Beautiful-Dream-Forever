@@ -115,7 +115,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11429868, guid: 37e306cdf9acb4245832f15eefdb3da2, type: 2}
       propertyPath: playlist
-      value: battle
+      value: default
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37e306cdf9acb4245832f15eefdb3da2, type: 2}
@@ -574,8 +574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8637f2dfd53b60428d0c0e5b384f69e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playlist: battle
-  text: {fileID: 0}
+  playlist: default
   source: {fileID: 8296144, guid: cd5323fcb459db9479b6d55b8583e015, type: 2}
 --- !u!4 &1879100077
 Transform:

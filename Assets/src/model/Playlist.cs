@@ -22,6 +22,7 @@ public class Playlist {
 			if (list.Count > 0) {
 				this.playlistName = playlistName;
 				playlist = randomize(list, true);
+				checkForCatCafe(); // TODO: Reinvestigate this later
 				playNext();
 			}
 		}
@@ -79,5 +80,15 @@ public class Playlist {
 
 		position = 0;
 		return randomized;
+	}
+
+	private void checkForCatCafe() {
+		for (int i = 0; i < playlist.Count; i++ ) {
+			AudioClip clip = playlist[i];
+			if (clip.name.Equals("01 Cat Cafe") && i > 0) {
+				playlist.RemoveAt(i);
+				playlist.Insert(0, clip);
+			}
+		}
 	}
 }
