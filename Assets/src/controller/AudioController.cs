@@ -16,11 +16,12 @@ public class AudioController {
 
 	public void LoadPlaylist(AudioSource source, string name) {
 		if (this.source == null) {
-			this.source = source;
-			GameObject.DontDestroyOnLoad(source);
-			this.playlist = new Playlist(source);
+			this.source = GameObject.Instantiate(source) as AudioSource;
+			GameObject.DontDestroyOnLoad(this.source);
+			this.playlist = new Playlist(this.source);
 		}
-		playlist.Play(name);
+
+		this.playlist.Play(name);
 	}
 
 	public void Update(float delta) {
