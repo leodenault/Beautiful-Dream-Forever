@@ -1,9 +1,26 @@
 ﻿using System;
+using System.Collections.Generic;
 
 public class ShopperData {
 
-	private static int BASE_SCORE = 1000;
-	private static int SCORE_JUMP = 400;
+	private class MoneyRange {
+		public int Min;
+		public int Max;
+
+		public MoneyRange(int min, int max) {
+			Min = min;
+			Max = max;
+		}
+	}
+
+	private static int BASE_SCORE = 750;
+	private static int SCORE_JUMP = 250;
+	private static IDictionary<int, MoneyRange> FLOOR_RANGES = new Dictionary<int, MoneyRange>() {
+		{ 1, new MoneyRange(6, 10) },
+		{ 2, new MoneyRange(12, 20)},
+		{ 3, new MoneyRange(14, 30) },
+		{ 4, new MoneyRange(27, 50) }
+	};
 
 	private int floor;
 
@@ -20,10 +37,8 @@ public class ShopperData {
 	}
 
 	public int GenerateMoneyDrop() {
-		int square = floor * floor;
-		int min = square - (int)Math.Floor(square / 8.0f) + 2;
-		int gap = floor * 2;
 		Random random = new Random();
-		return random.Next(min, min + gap + 1);
+		MoneyRange range = FLOOR_RANGES[floor];
+		return random.Next(range.Min, range.Max);
 	}
 }
