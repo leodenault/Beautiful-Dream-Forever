@@ -69,11 +69,25 @@ public class ClothingManager {
         }
     }
 
+	/// <returns>All clothing data</returns>
+	public ClothingData[] GetClothingData() {
+		return clothingData;
+	}
+
+	/// <param name="style">The clothing style of the clothing data to return</param>
+	/// <returns>The clothing data matching the given style</returns>
     public ClothingData[] GetClothingData(ClothingData.ClothingStyle style) {
         if (style == ClothingData.ClothingStyle.NONE) {
-            return clothingData;
+            return Protagonist.GetInstance().Inventory.Items;
         }
 
         return categories[style].ToArray();
     }
+
+	public ClothingData[] GetClothingDataExceptPlayerInventory(ClothingData.ClothingStyle style) {
+		HashSet<ClothingData> styleData = new HashSet<ClothingData>(GetClothingData(style));
+		HashSet<ClothingData> playerData = new HashSet<ClothingData>(Protagonist.GetInstance().Inventory.Items);
+		styleData.ExceptWith(playerData);
+		return new List<ClothingData>(styleData).ToArray();
+	}
 }

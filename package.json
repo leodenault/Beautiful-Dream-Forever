@@ -1,6 +1,6 @@
 {
-  "name": "fashion",
-  "version": "0.0.1",
+  "name": "beautiful-dream-forever",
+  "version": "1.0.0",
   "author": "RAMA",
   "description": "A fashion game",
   "main": "server.js",
@@ -14,8 +14,8 @@
         "express": "4.10.6"
   },
   "engines": {
-    "node": "0.10.x",
-    "npm": "2.1.x"
+    "node": "6.11.x",
+    "npm": "3.10.x"
   },
   "repository": {
     "type": "git"

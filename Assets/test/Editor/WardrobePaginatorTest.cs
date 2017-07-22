@@ -69,4 +69,22 @@ public class WardrobePaginatorTest {
 		Assert.AreEqual(new int [] {4, 5, 6}, paginator.Previous());
 		Assert.AreEqual(new int[] { 1, 2, 3 }, paginator.Previous());
 	}
+
+	[Test]
+	public void CurrentReturnsEmptyIfPaginatorIsEmpty() {
+		WardrobePaginator<int> paginator = new WardrobePaginator<int>(new int[] {});
+		Assert.AreEqual(new int[] {}, paginator.Current());
+	}
+
+	[Test]
+	public void PreviousReturnsEmptyIfPaginatorIsEmpty() {
+		WardrobePaginator<int> paginator = new WardrobePaginator<int>(new int[] {});
+		Assert.AreEqual(new int[] {}, paginator.Previous());
+	}
+
+	[Test]
+	public void NextReturnsEmptyIfPaginatorIsEmpty() {
+		WardrobePaginator<int> paginator = new WardrobePaginator<int>(new int[] {});
+		Assert.AreEqual(new int[] {}, paginator.Next());
+	}
 }

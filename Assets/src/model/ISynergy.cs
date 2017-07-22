@@ -1,4 +1,4 @@
 ﻿public interface ISynergy {
-	int GetPoints();
-	bool IsSynergetic(ClothingData data);
+	int GetPoints(ClothingData left, ClothingData right);
+	bool IsSynergetic(ClothingData left, ClothingData right);
 }

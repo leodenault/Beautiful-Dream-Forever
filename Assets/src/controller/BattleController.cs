@@ -7,20 +7,30 @@ public class BattleController {
 
 	private Battle battle;
 	private IDictionary<string, Sprite> itemSprites;
+	private PrizeController prizeController;
+	private DialogueManager dialogueManager;
+	private DialogueManager.DialogueCharacterEnum enCharacter;
 
 	public int TargetScore {
-		get { return 70; }
+		get { return prizeController.GetTargetScore(); }
 	}
 
-	public BattleController(ClothingData.ClothingStyle style) {
+	public int MoneyWon {
+		get { return prizeController.MoneyWon; }
+	}
+
+	public BattleController(float timeLimit) {
+		prizeController = PrizeController.GetInstance();
+		dialogueManager = DialogueManager.GetInstance();
 		ClothingManager manager = ClothingManager.GetInstance();
-		// TODO: Make target score dynamic for battle
-		battle = new Battle(manager, style, 70);
+		battle = new Battle(manager, prizeController.ShopStyle, prizeController.GetTargetScore(), timeLimit);
 		itemSprites = new Dictionary<string, Sprite>();
 
-		foreach (ClothingData datum in manager.GetClothingData(ClothingData.ClothingStyle.NONE)) {
+		foreach (ClothingData datum in manager.GetClothingData()) {
 			itemSprites.Add(datum.Path, Resources.Load<Sprite>(datum.Path));
 		}
+
+		enCharacter = prizeController.Opponent;
 	}
 
 	public ClothingData GenerateRandomItem() {
@@ -54,8 +64,40 @@ public class BattleController {
 		return battle.OutfitScore;
 	}
 
-	// TODO: Handle end of battle sequence
-	public void AcceptOutfit() {
+	public void EndBattle() {
+		if (battle.IsSuccessful()) {
+			prizeController.AwardPrize();
+		}
+	}
+
+	public Sprite GetOpponent() {
+		return prizeController.OpponentSprite;
+	}
+
+	public string GetBattleBlurb() {
+		DialogueManager.DialogueEventEnum enEvent = DialogueManager.DialogueEventEnum.Battle;
+		return dialogueManager.GetResponseText(enCharacter, enEvent);
+	}
+
+	public string GetResultsBlurb() {
+		DialogueManager.DialogueEventEnum enEvent;
+		if (battle.IsSuccessful ())
+			enEvent = DialogueManager.DialogueEventEnum.PlayerWin;
+		else
+			enEvent = DialogueManager.DialogueEventEnum.PlayerLose;
+		return dialogueManager.GetResponseText(enCharacter, enEvent);
+	}
+
+	public bool IsSuccessful() {
+		return battle.IsSuccessful();
+	}
+
+	public Sprite PrizeSprite() {
+		return Resources.Load<Sprite>(prizeController.Prize.Path);
+	}
+
+	public bool WonPrize() {
+		return prizeController.WonPrize();
 	}
 
 	private string generateNumberFormat(int number, int index) {

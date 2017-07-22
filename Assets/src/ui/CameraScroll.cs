@@ -16,10 +16,20 @@ public class CameraScroll : MonoBehaviour {
 	public void Start () {
 		/* Determine camera bounds based on screen size and stuff. Based on
 		 * http://answers.unity3d.com/questions/501893/calculating-2d-camera-bounds.html */
-		float cameraWidth = Camera.main.camera.orthographicSize * Screen.width / Screen.height;
+		float cameraWidth = GetComponent<Camera>().orthographicSize * Screen.width / Screen.height;
 		X_MIN = cameraWidth - 6.65f; //6.65 was determined by testing until it worked
 		X_MAX = 6.65f - cameraWidth;
 		translation = 0.0f;
+	}
+
+	public void Update() {
+		float axis = Input.GetAxisRaw("Horizontal");
+		if (axis != 0.0f) {
+			translation = axis * scrollSpeed;
+		} else if ((translation < 0.0f && (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.A))) ||
+			(translation > 0.0f && (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.D)))) {
+			EndScroll();
+		}
 	}
 
 	public void FixedUpdate() {
