@@ -14,8 +14,8 @@
         "express": "4.10.6"
   },
   "engines": {
-    "node": "0.10.x",
-    "npm": "2.1.x"
+    "node": "6.11.x",
+    "npm": "3.10.x"
   },
   "repository": {
     "type": "git"
